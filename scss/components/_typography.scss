@@ -1,0 +1,27 @@
+a {
+  text-decoration: none;
+}
+
+html{
+	line-height: 1.5;
+	font-size: 18px;
+	font-family: segoeui, sans-serif;
+	font-weight: 300;
+	color: $base-text-color;
+}
+
+// Text Styles
+em { font-style: italic; }
+strong { font-weight: bolder; }
+small { font-size: 75%; }
+.light { font-weight: 300; }
+.thin { font-weight: 200; }
+
+.page-title {
+	margin: 4*$gutter 0 $gutter;
+	font-size: 30px;
+	color: $base-text-color;
+	@media #{$medium-and-up}{
+		font-size: 40px;
+	}
+}

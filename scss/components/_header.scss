@@ -1,0 +1,61 @@
+// header
+.header {
+	border: 1px solid #ededed;
+	padding: $gutter*1.5 $gutter*2;
+	font-size: 20px;
+	.phone-box {
+		position: absolute;
+		right: 0;
+		top: 2px;
+		text-align: right;
+	}
+	.phone {
+		color: $base-text-color;
+	}
+	.btn-menu {
+		width: 1.5rem;
+		height: 1.5rem;
+		vertical-align: middle;
+	}
+	
+	@media #{$medium-and-up}{
+		border-width: 0 0 1px 0;
+		padding: 0;
+		.header-content {
+			border-bottom: 1px solid #ededed;
+			padding: $gutter 0;
+		}
+		.logo-box {
+			@extend .m2;
+		}
+		.phone-box {
+			position: relative;
+			right: auto;
+			top: auto;
+			@extend .m4;
+			padding-top: $gutter*3;
+		}
+		.btns-box {
+			@extend .m6;
+			text-align: right;
+			padding-top: $gutter*2;
+			.btn-icon {
+				margin-left: 5%;
+			}
+		}
+	}
+	@media screen and (min-width: 750px){
+		.logo-box {
+			width: 33.33333%;
+		}
+		.phone-box {
+			width: 25%;
+		}
+		.btns-box {
+			width: 41.66667%;
+			.btn-icon {
+				margin-left: 25px;
+			}
+		}
+	}
+}

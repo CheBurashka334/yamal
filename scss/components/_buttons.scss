@@ -1,0 +1,89 @@
+// shared styles
+.btn, .btn-icon {
+	border: 1px solid;
+	border-radius: 3.06em;
+	display: inline-block;
+	font-size: 17px;
+	height: 3.06em;
+	line-height: 2.94em;
+	// margin-bottom: 15px;
+	outline: 0;
+	vertical-align: middle;
+	// Gets rid of tap active state
+	-webkit-tap-highlight-color: transparent;
+	&.center {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+// default
+.btn {
+	width: 190px;
+	text-decoration: none;
+	color: $btn-color;
+	border-color: $btn-color;
+	background-color: transparent;
+	text-align: center;
+	cursor: pointer;
+	&:hover,
+	&:active {
+		background-color: $btn-color;
+		color: #fff;
+  }
+}
+// primary
+.btn.primary {
+	background-color: $btn-color;
+	border-color: $btn-color;
+	color: #fff;
+	&:hover,
+	&:active {
+		background-color: $btn-color-lighten;
+		border-color: $btn-color-lighten;
+	}
+}
+// btn-icon 
+.btn-icon {
+	width: 3em;
+	background: transparent;
+	border-color: $btn-icon-color;
+	padding: 0 15px;
+	.icon {
+		width: 100%;
+		height: 100%;
+		fill: $btn-icon-color;
+	}
+	&:hover,
+	&:active {
+		background: $btn-icon-bg;
+		border-color: $btn-icon-bg;
+		.icon {
+			fill: #fff;
+		}
+	}
+	&.small {
+		width: 38px;
+		height: 38px;
+		line-height: 38px;
+		border-color: #ededed;
+	}
+	&.default {
+		border: 0;
+		line-height: 1em;
+		height: 1em;
+		width: 1em;
+		padding: 0;
+		.icon {
+			fill: $btn-icon-bg;
+		}
+		&:hover,
+		&:active {
+			background: transparent;
+			.icon {
+				fill: $btn-icon-bg;
+			}	
+		}
+	}
+}
