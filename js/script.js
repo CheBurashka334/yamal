@@ -2,6 +2,18 @@ $(document).ready(function(){
 	
 	$('#svg-placeholder').html(svg);
 	
+	// search 
+	$('.search').keyup(function(){
+		$(this).change();
+	});
+	$('.search').change(function(){
+		if($(this).val().length > 0){
+			$(this).addClass('dirty');
+		} else {
+			$(this).removeClass('dirty');
+		}
+	});
+	
 	/*
 	$(window).scroll(function(){
 		if($(window).scrollTop() > 50) {

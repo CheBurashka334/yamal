@@ -1,0 +1,28 @@
+// main-menu
+.main-menu {
+	margin: 0;
+	padding: 0;
+	height: 60px;
+	top: -1px;
+	font-size: 17px;
+	.menu-link {
+		display: block;
+		padding: 0 1em;
+		line-height: 60px;
+		vertical-align: middle;
+		border-right: 1px solid #ededed;
+		&:hover,
+		&.active {
+			color: #fff;
+			background: $primary-bg;
+			border-color: $primary-bg;
+		}
+	}
+	.menu-item {
+		display: inline-block;
+		float: left;
+		&:first-of-type .menu-link {
+			border-left: 1px solid #ededed;
+		}
+	}
+}
