@@ -2,7 +2,7 @@
 	<div class="footer">
 		<div class="footer-content">
 			<div class="row container">
-				<div class="footer-menus col l9 m8 hide-on-small-only">
+				<div class="footer-menus row col l9 m8 hide-on-small-only">
 					<ul class="footer-menu col l4 m6">
 						<li class="menu-item"><a href="#" class="menu-link">О Ямале</a></li>
 						<li class="menu-item"><a href="#" class="menu-link">Новости</a></li>
