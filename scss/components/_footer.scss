@@ -1,0 +1,39 @@
+// footer 
+.footer {
+	border-top: 1px solid #eeeeee;
+	font-size: 17px;
+	.footer-content {
+		padding-top: 2*$gutter;
+		padding-bottom: 2*$gutter;
+	}
+	p {
+		margin: $gutter 0;
+	}
+	.phone {
+		font-size: 1.3em;
+	}
+	.soc .btn-icon {
+		margin-right: $gutter*2;
+	}
+	.footer-menus {
+		margin-top: $gutter;
+	}
+	.footer-menu {
+		margin: 0;
+		.menu-link {
+			color: inherit;
+			&:hover {
+				color: $primary-color;
+			}
+		}
+		.menu-item {
+			margin: 0 0 $gutter;
+		}
+	}
+	.footer-bottom {
+		border-top: 1px solid #eeeeee;
+		padding-top: $gutter*2;
+		padding-bottom: $gutter*2;
+		font-size: 0.88em;
+	}
+}
