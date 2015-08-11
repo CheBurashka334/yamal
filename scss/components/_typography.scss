@@ -3,7 +3,7 @@ a {
 }
 
 html{
-	line-height: 1.5;
+	line-height: 1.55;
 	font-size: 18px;
 	font-family: segoeui, sans-serif;
 	font-weight: 300;
@@ -18,10 +18,15 @@ small { font-size: 75%; }
 .thin { font-weight: 200; }
 
 .page-title {
-	margin: 4*$gutter 0 $gutter;
+	margin: 3*$gutter 0 3.5*$gutter;
 	font-size: 30px;
+	line-height: 35px;
 	color: $base-text-color;
 	@media #{$medium-and-up}{
 		font-size: 40px;
+		line-height: 50px;
+	}
+	@media #{$large-and-up}{
+		margin: 4*$gutter 0 $gutter;
 	}
 }

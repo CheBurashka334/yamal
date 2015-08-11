@@ -1,7 +1,7 @@
 <?include('header.php');?>
 <div class="page-title">Банк проектов</div>
 <div class="filter row">
-	<div class="col l4 m6 s12 field-box">
+	<div class="col l3 m6 s12 field-box">
 		<select class="customize-select hide-on-large-only" id="type" data-placeholder="Тип проекта">
 			<option value="v0">Тип проекта</option>
 			<option value="v1">Социальный проект</option>
@@ -10,7 +10,7 @@
 		</select>
 		<label for="type" class="triangle"></label>
 	</div>
-	<div class="col l4 m6 s12 field-box">
+	<div class="col l3 m6 s12 field-box">
 		<select class="customize-select hide-on-large-only" id="depart" data-placeholder="Отрасль">
 			<option value="v0">Отрасль</option>
 			<option value="v1">Отрасль 1</option>
@@ -19,7 +19,7 @@
 		</select>
 		<label for="depart" class="triangle"></label>
 	</div>
-	<div class="col l4 m12 s12 search-box">
+	<div class="col l6 m12 s12 search-box">
 		<input type="text" class="search" id="name-search" placeholder="Поиск по названию проекта" />
 		<label for="name-search" class="btn-icon btn-search default"><svg class="icon"><use xlink:href="#magnifying-glass"/></svg></label>
 	</div>

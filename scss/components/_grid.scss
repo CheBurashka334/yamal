@@ -5,28 +5,36 @@
 }
 .container {
 	margin: 0 auto;
-	max-width: 1210px;
+	max-width: 1200px;
 	width: 100%;
 	padding: 0 $gutter*2;
 	&.row {
-		padding: 0 $gutter;
+		padding: 0 $gutter*2;
 	}
 	.row {
-		width: calc(100% + #{$gutter*4});
-		margin-left: -2*$gutter;
-		margin-right: -2*$gutter;
-	}
-}
-@media #{$medium-and-up} {
-	.container .row {
 		width: calc(100% + #{$gutter*2});
 		margin-left: -1*$gutter;
 		margin-right: -1*$gutter;
 	}
 }
+@media #{$medium-and-up} {
+	.container {
+		&.row {
+			padding: 0 $gutter;
+		}
+		.row {
+			width: calc(100% + #{$gutter*2});
+			margin-left: -1*$gutter;
+			margin-right: -1*$gutter;
+		}
+	}
+}
 @media #{$large-and-up} {
 	.container {
-		padding: 0 $gutter*3;
+		padding: 0 $gutter*1.5;
+		&.row {
+			padding: 0;
+		}
 		.row {
 			width: calc(100% + #{$gutter*3});
 			margin-left: - $gutter*1.5;
@@ -51,8 +59,8 @@
 		float: left;
 		box-sizing: border-box;
 		width: 100%;
-		padding-left: $gutter*2;
-		padding-right: $gutter*2;
+		padding-left: $gutter;
+		padding-right: $gutter;
 
 		$i: 1;
 		@while $i <= $cols {
@@ -92,9 +100,16 @@
 				$i: $i + 1;
 			}
 		}
+	}
+	@media #{$large-and-up} {
+		&.col {
+			margin-left: -1.5*$gutter;
+			margin-right: -1.5*$gutter;
+		}
 
-		@media #{$large-and-up} {
-			padding: 0 $gutter*1.5;
+		.col {
+			padding-left: $gutter*1.5;
+			padding-right: $gutter*1.5;
 			$i: 1;
 			@while $i <= $cols {
 				$perc: unquote((100 / ($cols / $i)) + "%");

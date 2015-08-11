@@ -1,0 +1,75 @@
+// share
+.like_button{
+	display: inline-block; 
+	position: relative; 
+	white-space: nowrap; 
+	z-index: 1;
+	.but {
+		position: relative;
+		display: inline-block; 
+		border-radius: 3px;
+		overflow: hidden; 
+		vertical-align: top;
+		background: #263854;
+		background: #6f8fc0; 
+		color: #fff;
+		padding-left: 30px;
+		cursor: pointer;
+		&:hover {
+			background: #5B7BAD;
+		}
+	}
+	.logo,
+	.logo-icon {
+		position: absolute; 
+		height: 100%;
+		z-index: 2; 
+		width: 30px; 
+		cursor: pointer;
+	}
+	.logo {
+		left: 0; 
+		top: 0; 
+		border-right: 1px solid #7c9bca;
+		&:before {
+			content: ''; 
+			display: block;
+			width: 17px; 
+			height: 13px;
+			position: absolute;
+			left: 50%; 
+			top: 50%; 
+			margin-top: -7px; 
+			margin-left: -9px;
+			background: url('images/icons_like.png') no-repeat;
+		}
+	}
+	.logo_icon {
+		left: 0px; 
+		top: 0px; 
+		border-right: 1px solid #e3e6ec;
+		padding: 6px 0 0 6px; 
+		width: 24px;
+	}
+	.text {
+		display: inline-block;
+		padding: 6px 12px; 
+		font-size: 13px;
+		line-height: 14px;
+	}
+	.count {
+		display: inline-block;
+		background: #fff;
+		border-radius: 3px; 
+		font-weight: bold;
+		padding: 6px 8px;
+		line-height: 14px; 
+		font-size: 13px;
+		color: #8b9db9;
+	}
+}
+.like_button.facebook > .but{background: #3b5998;}
+.like_button.facebook > .but:hover{background: #214695;}
+.like_button.facebook > .but .logo{border-color: #5474b5;}
+.like_button.facebook .logo:before{background-position: -19px 0}
+.like_button.white_bg .count{box-shadow: 0 0 0 1px #e9edf4 inset}

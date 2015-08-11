@@ -24,9 +24,11 @@
 					</ul>
 				</div>
 				<div class="footer-contacts col l3 m4 s12">
-					<p class="phone"><a class="nostyle" href="callto:+73492252825">+7&nbsp;(349)&nbsp;225&#8209;28&#8209;25</a></p>
-					<p class="email"><a class="nostyle" href="mailto:info@mb89.ru">info@mb89.ru</a></p>
-					<p class="address">г. Салехард, ул. Комсомольская, 13</p>
+					<p>
+						<span class="phone"><a class="nostyle" href="callto:+73492252825">+7&nbsp;(349)&nbsp;225&#8209;28&#8209;25</a></span><br/>
+						<span class="email"><a class="nostyle" href="mailto:info@mb89.ru">info@mb89.ru</a></span><br/>
+						<span class="address">г. Салехард, ул. Комсомольская, 13</span>
+					</p>
 					<p class="soc">
 						<a class="btn-icon small vk" href="#" target="_blank"><svg class="icon"><use xlink:href="#vk"</svg></a>
 						<a class="btn-icon small fb" href="#" target="_blank"><svg class="icon"><use xlink:href="#fb"</svg></a>
