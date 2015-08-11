@@ -1,0 +1,54 @@
+.select2-selection--single {
+  background-color: #fff;
+  border: 1px solid #e2e2e2;
+
+  .select2-selection__rendered {
+    color: $base-text-color;
+    line-height: 2.67;
+  }
+
+  .select2-selection__clear {
+    cursor: pointer;
+    float: right;
+    font-weight: bold;
+  }
+
+  .select2-selection__placeholder {
+    color: $base-text-color;
+  }
+
+  .select2-selection__arrow {
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 2em;
+    b {
+      border-color: $base-text-color transparent transparent transparent;
+      border-style: solid;
+      border-width: 7px 4px 0 4px;
+      height: 0;
+      left: 50%;
+      margin-left: -4px;
+      margin-top: -2px;
+      position: absolute;
+      top: 50%;
+      width: 0;
+    }
+  }
+}
+
+&.select2-container--open,
+&:hover {
+	.select2-selection {
+		border-color: $btn-icon-bg;
+		.select2-selection__placeholder {
+			color: $btn-icon-bg;
+		}
+		.select2-selection__arrow {
+			b {
+				border-top-color: $btn-icon-bg;
+			}
+		}
+	}
+}

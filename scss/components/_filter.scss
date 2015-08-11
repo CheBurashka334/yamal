@@ -1,0 +1,77 @@
+// filter
+.filter {
+	margin: 2*$gutter 0 3*$gutter;
+	.field-box {
+		margin-bottom: 3*$gutter;
+		@media #{$large-and-up}{
+			margin-bottom: 0;
+		}
+	}
+	.search-box {
+		.search {
+			height: 2.53em;
+			border: 1px solid #e1e1e1;
+			padding: 0.7em 1em;
+		}
+		.btn-search {
+			top: 0.7em;
+			right: 3*$gutter;
+			.icon {
+				fill: #9d9d9d;
+			}
+		}
+		.search:hover,
+		.search:focus {
+			border-color: $btn-icon-bg;
+			& + .btn-search .icon {
+				fill: $btn-icon-bg;
+			}
+		}
+	}
+	select {
+		width: 100%;
+		font-size: 15px;
+		line-height: 2.67;
+		vertical-align: middle;
+		height: 2.67em;
+		border: 1px solid #e2e2e2;
+		padding: 0 2em 0 1em;
+		option {
+			max-width: 100%;
+			color: $base-text-color;
+		}
+	}
+	select + .triangle {
+		position: absolute;
+		top: 1px;
+		right: 21px;
+		width: 2em;
+		height: 2.5em;
+		background: #fff;
+		font-size: 15px;
+		@media #{$medium-and-up}{
+			right: 16px;
+		}
+		&:after {
+			content: '';
+			display: block;
+			position: absolute;
+			top: 17px;
+			right: 20px;
+			width: 0;
+			height: 0;
+			border-top: 7px solid $base-text-color;
+			border-right: 4px solid transparent;
+			border-left: 4px solid transparent;
+		}
+	}
+	select:hover,
+	select:focus {
+		color: $btn-icon-bg;
+		border-color: $btn-icon-bg;
+		outline: none;
+		& + .triangle:after {
+			border-top-color: $btn-icon-bg;
+		}
+	}
+}

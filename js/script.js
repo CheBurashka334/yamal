@@ -13,6 +13,14 @@ $(document).ready(function(){
 			$(this).removeClass('dirty');
 		}
 	});
+	// select
+	if($(window).outerWidth() > 992){
+		$('.customize-select option:first-child').removeAttr('value').text('');
+		$('.customize-select').select2({
+			language: "ru"
+		});
+		$('.select2-container').removeAttr('style');
+	}
 	
 	/*
 	$(window).scroll(function(){

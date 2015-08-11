@@ -17,11 +17,13 @@
 		margin-right: -2*$gutter;
 	}
 }
-/*@media #{$medium-and-up} {
-	.container {
-		width: 94.8%;
+@media #{$medium-and-up} {
+	.container .row {
+		width: calc(100% + #{$gutter*2});
+		margin-left: -1*$gutter;
+		margin-right: -1*$gutter;
 	}
-}*/
+}
 @media #{$large-and-up} {
 	.container {
 		padding: 0 $gutter*3;

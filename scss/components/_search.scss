@@ -4,24 +4,36 @@
 	font-size: 17px;
 	.btn-search {
 		position: absolute;
-		top: 22px;
-		right: $gutter * -0.5;
+		top: 0;
+		right: 0;
 		cursor: pointer;
 		background: #fff;
-		width: calc(1em + #{$gutter*2});
-		padding-right: $gutter*2;
 		z-index: 2;
 	}
 	.search {
 		width: 100%;
-		border: 0;
 		line-height: 1.3;
 		height: 1.3em;
 		vertical-align: middle;
+		vertical-align: baseline;
+		&:focus {
+			outline: none;
+		}
+	}
+}
+.header .search-box {
+	.btn-search {
+		top: 22px;
+		right: $gutter * -0.5;
+		background: #fff;
+		width: calc(1em + #{$gutter*2});
+		padding-right: $gutter*2;
+	}
+	.search {
+		border: 0;
 		left: 100%;
 		transition: left .5s;
 		cursor: default;
-		vertical-align: baseline;
 	}
 	.placeholder{
 		position: absolute;
@@ -34,7 +46,6 @@
 	}
 	.search:focus {
 		left: 0;
-		outline: none;
 		cursor: auto;
 		&:not(.dirty) ~ .placeholder {
 			left: $gutter*1.5;
