@@ -1,15 +1,15 @@
 <?include('header.php');?>
 <div class="project-single">
 	<div class="project-info row">
-		<div class="item-title col l9 m7 s12">ОАО «Ямалтрансстрой»</div>
-		<div class="item-logo col l3 m5 hide-on-small-only">
+		<div class="item-title col l9 m8 s12">ОАО «Ямалтрансстрой»</div>
+		<div class="item-desc col l9 m8 s12">Строительство и эксплуатация железнодорожной магистрали</div>
+		<div class="item-logo hide-on-small-only">
 			<img class="logo" src="images/content/project-logo.png" />
 		</div>
-		<div class="item-desc col l9 m7 s12">
-			<p>Строительство и эксплуатация железнодорожной магистрали</p>
-			<p><a href="#" target="_blank">Перейти на сайт компании</a></p>
-		</div>
-		<div class="share-box col l3 m5 s12">
+	</div>
+	<div class="project-links row">
+		<div class="col l9 m6 s12"><a href="#" target="_blank">Перейти на сайт компании</a></div>
+		<div class="share-box col l3 m6 s12">
 			<!-- Сережа сказал пиздить отсюда 
 			https://spark.ru/startup/546dae36cfa4a/blog/10783/vadim-malich-kak-prokachat-proekt-s-pomoschiu-onlajn-programmi-i-najti-investora 
 			утащила все что нашла, самого скрипта не нашла((( -->
@@ -34,19 +34,19 @@
 	</div>
 	<div class="project-indicators row">
 		<div class="indic-item col l3 m6 s12">
-			<span><span class="large">700</span>единиц</span>
+			<span><span class="large">700</span> единиц</span>
 			<p>Строительной и ремонтной техники</p>
 		</div>
 		<div class="indic-item col l3 m6 s12">
-			<span><span class="large">12</span>млн. м/куб</span>
+			<span><span class="large">12</span> млн. м/куб</span>
 			<p>Объем выполняемых земляных работ в год</p>
 		</div>
 		<div class="indic-item col l3 m6 s12">
-			<span><span class="large">120</span>км</span>
+			<span><span class="large">120</span> км</span>
 			<p>Профильной насыпи в год</p>
 		</div>
 		<div class="indic-item col l3 m6 s12">
-			<span><span class="large">2000</span>человек</span>
+			<span><span class="large">2000</span> человек</span>
 			<p>Трудятся в филиалах и главном офисе компании</p>
 		</div>
 	</div>
@@ -59,11 +59,9 @@
 	</div>
 	<div class="project-contacts">
 		<div class="block-title">Контактные данные</div>
-		<p>
-			Гусева Светлана Леонидовна<br/>
-			Контактный телефон: <a class="nostyle" href="callto:+73492222413">+7 (34922) 2-24-13</a><br/>
-			Email: <a class="nostyle" href="mailto:de@yanao.ru">de@yanao.ru</a>
-		</p>
+		<p>Гусева Светлана Леонидовна</p>
+		<p>Контактный телефон: <a class="nostyle" href="callto:+73492222413">+7&nbsp;(34922)&nbsp;2&#8209;24&#8209;13</a></p>
+		<p>Email: <a class="nostyle" href="mailto:de@yanao.ru">de@yanao.ru</a></p>
 	</div>
 </div>
 <a class="btn center" href="#">Вернуться к списку</a>

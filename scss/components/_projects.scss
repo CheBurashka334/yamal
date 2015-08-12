@@ -23,9 +23,6 @@
 				background: transparent;
 				transition: background .2s;
 			}
-			&:hover:after {
-				background: rgba(0,0,0,.2);
-			}
 		}
 		img {
 			display: block;
@@ -38,6 +35,14 @@
 		margin-top: 1.5*$gutter;
 		font-size: 26px;
 		line-height: 30px;
+	}
+	&:hover {
+		.item-img a:after {
+			background: rgba(0,0,0,.2);
+		}
+		.item-title a {
+			color: $secondary-color;
+		}
 	}
 }
 @media #{$medium-and-up}{
@@ -67,5 +72,126 @@
 
 // project single
 .project-single {
-	
+	line-height: 25px;
+	.item-title {
+		@extend .page-title;
+		margin-bottom: $gutter;
+	}
+	.item-logo {
+		position: absolute;
+		top: 2*$gutter;
+		right: 0;
+		max-width: 255px;
+	}
+	.project-links {
+		margin-top: 2*$gutter;
+	}
+	.share-box {
+		margin-top: 2*$gutter;
+		.like_button:first-of-type {
+			margin-right: 1.5*$gutter;
+		}
+	}
+	.project-img {
+		margin-top: 4*$gutter;
+		height: 210px;
+		overflow: hidden;
+		.img {
+			height: 100%;
+			width: auto;
+			max-width: 500%;
+			min-width: 100%;
+		}
+	}
+	.project-indicators {
+		text-align: center;
+		padding: 0 $gutter;
+		margin-bottom: 2.5*$gutter;
+		.indic-item {
+			padding: 2*$gutter 0 0.5*$gutter;
+			border-bottom: 1px solid #e1e1e1;
+		}
+	}
+	.project-text {
+		padding-bottom: 1.2*$gutter;
+		border-bottom: 1px solid #e1e1e1;
+	}
+	.project-contacts {
+		margin-bottom: 4*$gutter;
+		p {
+			margin: 0.5em 0;
+		}
+	}
+}
+@media #{$medium-and-up} {
+	.project-single {
+		.item-title,
+		.item-desc {
+			max-width: calc(100% - 255px);
+		}
+		.share-box {
+			margin-top: 0;
+			.social_sharing {
+				text-align: right;
+			}
+		}
+		.project-img {
+			height: 380px;
+		}
+		.project-indicators {
+			margin-bottom: 3.5*$gutter;
+			.indic-item {
+				padding: 4*$gutter 0 1.5*$gutter;
+				height: 190px;
+			}
+		}
+		.project-text {
+			padding-bottom: 2.2*$gutter;
+		}
+		.project-contacts p {
+			margin: 0.3em 0;
+		}
+	}
+}
+@media #{$large-and-up} {
+	.project-single {
+		.item-title {
+			margin-bottom: 3*$gutter;
+		}
+		.item-logo {
+			top: 3*$gutter;
+			right: 1.5*$gutter;
+		}
+		.project-links{
+			margin-top: 0.5*$gutter;
+		}
+		.share-box {
+			margin-top: -7px;
+		}
+		.project-img {
+			margin-top: 3.5*$gutter;
+		}
+		.project-indicators {
+			margin-bottom: 4*$gutter;
+			padding: 0 1.5*$gutter;
+			.indic-item {
+				padding: 5*$gutter 0 2.5*$gutter;
+				height: 210px;
+				p {
+					margin-top: 2.5*$gutter;
+				}
+			}
+		}
+		.project-text {
+			padding: 0 11.6% 2.2*$gutter;
+			line-height: 28px;
+			p {
+				margin: 25px 0;
+			}
+		}
+		.project-contacts {
+			padding: 0 11.6%;
+			margin-bottom: 7*$gutter;
+		}
+	}
 }

@@ -504,7 +504,8 @@ ul li {
 }
 
 /* line 66, scss/components/_global.scss */
-.loader {
+.loader,
+.btn.loader {
   margin: 60px auto;
   font-size: 10px;
   position: relative;
@@ -520,9 +521,17 @@ ul li {
   animation: load8 1.1s infinite linear;
 }
 
-/* line 81, scss/components/_global.scss */
+/* line 82, scss/components/_global.scss */
+.btn.loader {
+  -webkit-transition: all .3s;
+          transition: all .3s;
+}
+
+/* line 85, scss/components/_global.scss */
 .loader,
-.loader:after {
+.btn.loader,
+.loader:after,
+.btn.loader:after {
   border-radius: 50%;
   width: 50px;
   height: 50px;
@@ -548,17 +557,17 @@ ul li {
     transform: rotate(360deg);
   }
 }
-/* line 109, scss/components/_global.scss */
+/* line 115, scss/components/_global.scss */
 .map-box {
   overflow: hidden;
   margin-top: 30px;
   margin-bottom: 30px;
 }
-/* line 113, scss/components/_global.scss */
+/* line 119, scss/components/_global.scss */
 .map-box .map {
   height: 760px;
 }
-/* line 116, scss/components/_global.scss */
+/* line 122, scss/components/_global.scss */
 .map-box .loader {
   position: absolute;
   top: 20%;
@@ -566,66 +575,66 @@ ul li {
   margin: 0;
 }
 
-/* line 126, scss/components/_global.scss */
+/* line 132, scss/components/_global.scss */
 .divider {
   height: 1px;
   overflow: hidden;
   background-color: color("grey", "lighten-2");
 }
 
-/* line 135, scss/components/_global.scss */
+/* line 141, scss/components/_global.scss */
 blockquote {
   margin: 20px 0;
   padding-left: 1.5rem;
   border-left: 5px solid #2d4e9d;
 }
 
-/* line 143, scss/components/_global.scss */
+/* line 149, scss/components/_global.scss */
 i {
   line-height: inherit;
 }
-/* line 146, scss/components/_global.scss */
+/* line 152, scss/components/_global.scss */
 i.left {
   float: left;
   margin-right: 15px;
 }
-/* line 150, scss/components/_global.scss */
+/* line 156, scss/components/_global.scss */
 i.right {
   float: right;
   margin-left: 15px;
 }
-/* line 154, scss/components/_global.scss */
+/* line 160, scss/components/_global.scss */
 i.tiny {
   font-size: 1rem;
 }
-/* line 157, scss/components/_global.scss */
+/* line 163, scss/components/_global.scss */
 i.small {
   font-size: 2rem;
 }
-/* line 160, scss/components/_global.scss */
+/* line 166, scss/components/_global.scss */
 i.medium {
   font-size: 4rem;
 }
-/* line 163, scss/components/_global.scss */
+/* line 169, scss/components/_global.scss */
 i.large {
   font-size: 6rem;
 }
 
-/* line 168, scss/components/_global.scss */
+/* line 174, scss/components/_global.scss */
 img.responsive-img,
 video.responsive-video {
   max-width: 100%;
   height: auto;
 }
 
-/* line 175, scss/components/_global.scss */
+/* line 181, scss/components/_global.scss */
 .parallax-container {
   position: relative;
   overflow: hidden;
   height: 500px;
 }
 
-/* line 181, scss/components/_global.scss */
+/* line 187, scss/components/_global.scss */
 .parallax {
   position: absolute;
   top: 0;
@@ -634,7 +643,7 @@ video.responsive-video {
   bottom: 0;
   z-index: -1;
 }
-/* line 189, scss/components/_global.scss */
+/* line 195, scss/components/_global.scss */
 .parallax img {
   display: none;
   position: absolute;
@@ -649,12 +658,12 @@ video.responsive-video {
           transform: translateX(-50%);
 }
 
-/* line 203, scss/components/_global.scss */
+/* line 209, scss/components/_global.scss */
 .pin-top, .pin-bottom {
   position: relative;
 }
 
-/* line 206, scss/components/_global.scss */
+/* line 212, scss/components/_global.scss */
 .pinned {
   position: fixed !important;
 }
@@ -662,12 +671,12 @@ video.responsive-video {
 /*********************
   Transition Classes
 **********************/
-/* line 214, scss/components/_global.scss */
+/* line 220, scss/components/_global.scss */
 ul.staggered-list li {
   opacity: 0;
 }
 
-/* line 218, scss/components/_global.scss */
+/* line 224, scss/components/_global.scss */
 .fade-in {
   opacity: 0;
   -webkit-transform-origin: 0 50%;
@@ -675,7 +684,7 @@ ul.staggered-list li {
           transform-origin: 0 50%;
 }
 
-/* line 224, scss/components/_global.scss */
+/* line 230, scss/components/_global.scss */
 .video-container {
   position: relative;
   padding-bottom: 56.25%;
@@ -683,11 +692,11 @@ ul.staggered-list li {
   height: 0;
   overflow: hidden;
 }
-/* line 230, scss/components/_global.scss */
+/* line 236, scss/components/_global.scss */
 .video-container.no-controls {
   padding-top: 0;
 }
-/* line 234, scss/components/_global.scss */
+/* line 240, scss/components/_global.scss */
 .video-container iframe, .video-container object, .video-container embed {
   position: absolute;
   top: 0;
@@ -699,37 +708,37 @@ ul.staggered-list li {
 /*******************
   Utility Classes
 *******************/
-/* line 248, scss/components/_global.scss */
+/* line 254, scss/components/_global.scss */
 .hide {
   display: none !important;
 }
 
-/* line 253, scss/components/_global.scss */
+/* line 259, scss/components/_global.scss */
 .left-align {
   text-align: left;
 }
 
-/* line 256, scss/components/_global.scss */
+/* line 262, scss/components/_global.scss */
 .right-align {
   text-align: right;
 }
 
-/* line 259, scss/components/_global.scss */
+/* line 265, scss/components/_global.scss */
 .center, .center-align {
   text-align: center;
 }
 
-/* line 263, scss/components/_global.scss */
+/* line 269, scss/components/_global.scss */
 .left {
   float: left !important;
 }
 
-/* line 266, scss/components/_global.scss */
+/* line 272, scss/components/_global.scss */
 .right {
   float: right !important;
 }
 
-/* line 271, scss/components/_global.scss */
+/* line 277, scss/components/_global.scss */
 .no-select {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
@@ -739,19 +748,19 @@ ul.staggered-list li {
   user-select: none;
 }
 
-/* line 280, scss/components/_global.scss */
+/* line 286, scss/components/_global.scss */
 .circle {
   border-radius: 50%;
 }
 
-/* line 284, scss/components/_global.scss */
+/* line 290, scss/components/_global.scss */
 .center-block {
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
 
-/* line 290, scss/components/_global.scss */
+/* line 296, scss/components/_global.scss */
 .truncate {
   display: block;
   white-space: nowrap;
@@ -759,12 +768,12 @@ ul.staggered-list li {
   text-overflow: ellipsis;
 }
 
-/* line 297, scss/components/_global.scss */
+/* line 303, scss/components/_global.scss */
 .no-padding {
   padding: 0 !important;
 }
 
-/* line 301, scss/components/_global.scss */
+/* line 307, scss/components/_global.scss */
 .large {
   font-size: 40px;
 }
@@ -1393,7 +1402,7 @@ a {
 
 /* line 5, scss/components/_typography.scss */
 html {
-  line-height: 1.55;
+  line-height: 1.5;
   font-size: 18px;
   font-family: segoeui, sans-serif;
   font-weight: 300;
@@ -1426,7 +1435,7 @@ small {
 }
 
 /* line 20, scss/components/_typography.scss */
-.page-title {
+.page-title, .project-single .item-title {
   margin: 30px 0 35px;
   font-size: 30px;
   line-height: 35px;
@@ -1434,15 +1443,28 @@ small {
 }
 @media only screen and (min-width: 601px) {
   /* line 20, scss/components/_typography.scss */
-  .page-title {
+  .page-title, .project-single .item-title {
     font-size: 40px;
     line-height: 50px;
   }
 }
 @media only screen and (min-width: 993px) {
   /* line 20, scss/components/_typography.scss */
-  .page-title {
+  .page-title, .project-single .item-title {
     margin: 40px 0 10px;
+  }
+}
+
+/* line 33, scss/components/_typography.scss */
+.block-title {
+  font-size: 26px;
+  line-height: 28px;
+  margin: 30px auto;
+}
+@media only screen and (min-width: 601px) {
+  /* line 33, scss/components/_typography.scss */
+  .block-title {
+    margin-top: 40px;
   }
 }
 
@@ -2326,53 +2348,209 @@ small {
   -webkit-transition: background .2s;
           transition: background .2s;
 }
-/* line 26, scss/components/_projects.scss */
-.project-item .item-img a:hover:after {
-  background: rgba(0, 0, 0, 0.2);
-}
-/* line 30, scss/components/_projects.scss */
+/* line 27, scss/components/_projects.scss */
 .project-item .item-img img {
   display: block;
   min-width: 100%;
   min-height: 100%;
   max-width: 500%;
 }
-/* line 37, scss/components/_projects.scss */
+/* line 34, scss/components/_projects.scss */
 .project-item .item-title {
   margin-top: 15px;
   font-size: 26px;
   line-height: 30px;
 }
+/* line 40, scss/components/_projects.scss */
+.project-item:hover .item-img a:after {
+  background: rgba(0, 0, 0, 0.2);
+}
+/* line 43, scss/components/_projects.scss */
+.project-item:hover .item-title a {
+  color: #c7213a;
+}
 
 @media only screen and (min-width: 601px) {
-  /* line 44, scss/components/_projects.scss */
+  /* line 49, scss/components/_projects.scss */
   .project-list {
     margin: 45px 0 30px;
   }
 
-  /* line 47, scss/components/_projects.scss */
+  /* line 52, scss/components/_projects.scss */
   .project-item {
     margin-bottom: 45px;
   }
-  /* line 49, scss/components/_projects.scss */
+  /* line 54, scss/components/_projects.scss */
   .project-item .item-img {
     height: 280px;
     margin-bottom: 25px;
   }
-  /* line 53, scss/components/_projects.scss */
+  /* line 58, scss/components/_projects.scss */
   .project-item .item-title {
     font-size: 26px;
     margin-top: 25px;
   }
 }
 @media only screen and (min-width: 993px) {
-  /* line 60, scss/components/_projects.scss */
+  /* line 65, scss/components/_projects.scss */
   .project-list {
     margin: 35px 0 65px;
   }
 
-  /* line 63, scss/components/_projects.scss */
+  /* line 68, scss/components/_projects.scss */
   .project-item {
     margin-bottom: 35px;
+  }
+}
+/* line 74, scss/components/_projects.scss */
+.project-single {
+  line-height: 25px;
+}
+/* line 76, scss/components/_projects.scss */
+.project-single .item-title {
+  margin-bottom: 10px;
+}
+/* line 80, scss/components/_projects.scss */
+.project-single .item-logo {
+  position: absolute;
+  top: 20px;
+  right: 0;
+  max-width: 255px;
+}
+/* line 86, scss/components/_projects.scss */
+.project-single .project-links {
+  margin-top: 20px;
+}
+/* line 89, scss/components/_projects.scss */
+.project-single .share-box {
+  margin-top: 20px;
+}
+/* line 91, scss/components/_projects.scss */
+.project-single .share-box .like_button:first-of-type {
+  margin-right: 15px;
+}
+/* line 95, scss/components/_projects.scss */
+.project-single .project-img {
+  margin-top: 40px;
+  height: 210px;
+  overflow: hidden;
+}
+/* line 99, scss/components/_projects.scss */
+.project-single .project-img .img {
+  height: 100%;
+  width: auto;
+  max-width: 500%;
+  min-width: 100%;
+}
+/* line 106, scss/components/_projects.scss */
+.project-single .project-indicators {
+  text-align: center;
+  padding: 0 10px;
+  margin-bottom: 25px;
+}
+/* line 110, scss/components/_projects.scss */
+.project-single .project-indicators .indic-item {
+  padding: 20px 0 5px;
+  border-bottom: 1px solid #e1e1e1;
+}
+/* line 115, scss/components/_projects.scss */
+.project-single .project-text {
+  padding-bottom: 12px;
+  border-bottom: 1px solid #e1e1e1;
+}
+/* line 119, scss/components/_projects.scss */
+.project-single .project-contacts {
+  margin-bottom: 40px;
+}
+/* line 121, scss/components/_projects.scss */
+.project-single .project-contacts p {
+  margin: 0.5em 0;
+}
+
+@media only screen and (min-width: 601px) {
+  /* line 128, scss/components/_projects.scss */
+  .project-single .item-title,
+  .project-single .item-desc {
+    max-width: calc(100% - 255px);
+  }
+  /* line 132, scss/components/_projects.scss */
+  .project-single .share-box {
+    margin-top: 0;
+  }
+  /* line 134, scss/components/_projects.scss */
+  .project-single .share-box .social_sharing {
+    text-align: right;
+  }
+  /* line 138, scss/components/_projects.scss */
+  .project-single .project-img {
+    height: 380px;
+  }
+  /* line 141, scss/components/_projects.scss */
+  .project-single .project-indicators {
+    margin-bottom: 35px;
+  }
+  /* line 143, scss/components/_projects.scss */
+  .project-single .project-indicators .indic-item {
+    padding: 40px 0 15px;
+    height: 190px;
+  }
+  /* line 148, scss/components/_projects.scss */
+  .project-single .project-text {
+    padding-bottom: 22px;
+  }
+  /* line 151, scss/components/_projects.scss */
+  .project-single .project-contacts p {
+    margin: 0.3em 0;
+  }
+}
+@media only screen and (min-width: 993px) {
+  /* line 158, scss/components/_projects.scss */
+  .project-single .item-title {
+    margin-bottom: 30px;
+  }
+  /* line 161, scss/components/_projects.scss */
+  .project-single .item-logo {
+    top: 30px;
+    right: 15px;
+  }
+  /* line 165, scss/components/_projects.scss */
+  .project-single .project-links {
+    margin-top: 5px;
+  }
+  /* line 168, scss/components/_projects.scss */
+  .project-single .share-box {
+    margin-top: -7px;
+  }
+  /* line 171, scss/components/_projects.scss */
+  .project-single .project-img {
+    margin-top: 35px;
+  }
+  /* line 174, scss/components/_projects.scss */
+  .project-single .project-indicators {
+    margin-bottom: 40px;
+    padding: 0 15px;
+  }
+  /* line 177, scss/components/_projects.scss */
+  .project-single .project-indicators .indic-item {
+    padding: 50px 0 25px;
+    height: 210px;
+  }
+  /* line 180, scss/components/_projects.scss */
+  .project-single .project-indicators .indic-item p {
+    margin-top: 25px;
+  }
+  /* line 185, scss/components/_projects.scss */
+  .project-single .project-text {
+    padding: 0 11.6% 22px;
+    line-height: 28px;
+  }
+  /* line 188, scss/components/_projects.scss */
+  .project-single .project-text p {
+    margin: 25px 0;
+  }
+  /* line 192, scss/components/_projects.scss */
+  .project-single .project-contacts {
+    padding: 0 11.6%;
+    margin-bottom: 70px;
   }
 }

@@ -63,7 +63,8 @@ ul {
 }
 
 // loader
-.loader {
+.loader,
+.btn.loader {
   margin: 60px auto;
   font-size: 10px;
   position: relative;
@@ -78,8 +79,13 @@ ul {
   -webkit-animation: load8 1.1s infinite linear;
   animation: load8 1.1s infinite linear;
 }
+.btn.loader {
+	transition: all .3s;
+}
 .loader,
-.loader:after {
+.btn.loader,
+.loader:after,
+.btn.loader:after {
   border-radius: 50%;
   width: 50px;
   height: 50px;
