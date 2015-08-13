@@ -11,10 +11,15 @@
 	&.row {
 		padding: 0 $gutter*2;
 	}
-	.row {
+	.row{
 		width: calc(100% + #{$gutter*2});
 		margin-left: -1*$gutter;
 		margin-right: -1*$gutter;
+	}
+	@media #{$small-and-down}{
+		.row.col.s12{
+			width: calc(100% + #{$gutter*2});
+		}
 	}
 }
 @media #{$medium-and-up} {
@@ -22,7 +27,8 @@
 		&.row {
 			padding: 0 $gutter;
 		}
-		.row {
+		.row,
+		.row.col.m12{
 			width: calc(100% + #{$gutter*2});
 			margin-left: -1*$gutter;
 			margin-right: -1*$gutter;
@@ -35,7 +41,8 @@
 		&.row {
 			padding: 0;
 		}
-		.row {
+		.row,
+		.row.col.l12{
 			width: calc(100% + #{$gutter*3});
 			margin-left: - $gutter*1.5;
 			margin-right: - $gutter*1.5;

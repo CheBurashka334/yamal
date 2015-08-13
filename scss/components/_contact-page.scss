@@ -1,0 +1,62 @@
+// contact-page
+.contact-page {
+	
+	@media #{$large-and-up}{
+		margin-bottom: 20*$gutter;
+	}
+	.page-title {
+		margin-bottom: 2.5*$gutter;
+		
+		@media #{$large-and-up}{
+			margin-top: 2.5*$gutter;
+		}
+	}
+	.block-title {
+		margin-bottom: 3.5*$gutter;
+		
+		@media #{$medium-and-up}{
+			margin-bottom: 4.5*$gutter;
+		}
+		@media #{$large-and-up}{
+			margin-top: 1.5*$gutter;
+		}
+	}
+	.map-box {
+		height: 210px;
+		margin-bottom: $gutter;
+		
+		@media #{$medium-and-up}{
+			height: 380px;
+			margin-bottom: 2*$gutter;
+		}
+		@media #{$large-and-up}{
+			height: 440px;
+			margin-top: 4*$gutter;
+		}
+	}
+	.item {
+		p {
+			line-height: 40px;
+		}
+		
+		@media #{$medium-and-up}{
+			margin-bottom: 4*$gutter;
+			p {
+				line-height: 28px;
+			}
+		}
+		@media #{$large-and-up}{
+			.item-title ~ p {
+				margin-top: $gutter;
+			}
+		}
+	}
+	.logos {
+		@media #{$medium-and-up}{
+			margin-bottom: 2*$gutter;
+		}
+		@media #{$large-and-up}{
+			margin-bottom: 2.5*$gutter;
+		}
+	}
+}

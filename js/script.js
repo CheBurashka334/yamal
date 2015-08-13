@@ -14,11 +14,15 @@ $(document).ready(function(){
 		}
 	});
 	// select
+	// https://select2.github.io/
+	// http://materializecss.com/forms.html
+	
 	if($(window).outerWidth() > 992){
 		$('.customize-select option:first-child').removeAttr('value').text('');
 		$('.customize-select').select2({
 			language: "ru"
 		});
+		$('.dropdown-select').material_select();
 		$('.select2-container').removeAttr('style');
 	}
 	

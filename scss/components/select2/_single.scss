@@ -3,33 +3,21 @@
 	cursor: pointer;
 	display: block;
 	height: 43px;
-	line-height: 43px;
 	vertical-align: middle;
 	user-select: none;
 	-webkit-user-select: none;
-	
-	background-color: #fff;
-	border: 1px solid #e2e2e2;
 
 	.select2-selection__rendered {
 		display: block;
-		padding-left: 1.5*$gutter;
-		padding-right: 2em;
 
 		overflow: hidden;
 		text-overflow: ellipsis;
 		white-space: nowrap;
-		
-		color: $base-text-color;
-		line-height: 41px;
 	}
 	.select2-selection__clear {
 		cursor: pointer;
 		float: right;
 		font-weight: bold;
-	}
-	.select2-selection__placeholder {
-		color: $base-text-color;
 	}
 	.select2-selection__arrow {
 		height: 100%;
@@ -48,20 +36,6 @@
 			position: absolute;
 			top: 50%;
 			width: 0;
-		}
-	}
-}
-&.select2-container--open,
-&:hover {
-	.select2-selection {
-		border-color: $btn-icon-bg;
-		.select2-selection__placeholder {
-			color: $btn-icon-bg;
-		}
-		.select2-selection__arrow {
-			b {
-				border-top-color: $btn-icon-bg;
-			}
 		}
 	}
 }

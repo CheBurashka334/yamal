@@ -1,13 +1,12 @@
 .select2-selection--single {
 	background-color: #fff;
-	border: 1px solid #e2e2e2;
-	line-height: 43px;
+	height: 60px;
 
 	.select2-selection__rendered {
 		color: $base-text-color;
-		line-height: 41px;
-		padding-left: 1.5*$gutter;
-		padding-right: 2em;
+		line-height: inherit;
+		display: inline-block;
+		padding: 16px 0;
 	}
 
 	.select2-selection__clear {
@@ -21,22 +20,23 @@
 	}
 
 	.select2-selection__arrow {
+		position: relative;
+		display: inline-block;
 		height: 100%;
-		position: absolute;
+		width: $gutter;
 		top: 0px;
-		right: 0px;
-		width: 2em;
+		left: 1.5*$gutter;
 		b {
-			border-color: $base-text-color transparent transparent transparent;
-			border-style: solid;
-			border-width: 7px 4px 0 4px;
-			height: 0;
-			left: 50%;
-			margin-left: -4px;
-			margin-top: -2px;
 			position: absolute;
-			top: 50%;
+			top: 27px;
+			left: 0;
+			margin-top: 0;
+			margin-left: 0;
 			width: 0;
+			height: 0;
+			border-width: 7px 4px 0 4px;
+			border-style: solid;
+			border-color: $base-text-color transparent transparent transparent;
 		}
 	}
 }
