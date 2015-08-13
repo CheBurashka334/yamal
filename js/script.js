@@ -22,7 +22,11 @@ $(document).ready(function(){
 		$('.customize-select').select2({
 			language: "ru"
 		});
-		$('.dropdown-select').material_select();
+		$('.dropdown-select').select2({
+			language: "ru",
+			theme: 'dropdown'
+		});
+		//$('.dropdown-select').material_select();
 		$('.select2-container').removeAttr('style');
 	}
 	

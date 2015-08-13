@@ -8,7 +8,7 @@
 		margin-bottom: 2.5*$gutter;
 		
 		@media #{$large-and-up}{
-			margin-top: 2.5*$gutter;
+			margin-top: $gutter;
 		}
 	}
 	.block-title {
@@ -31,7 +31,7 @@
 		}
 		@media #{$large-and-up}{
 			height: 440px;
-			margin-top: 4*$gutter;
+			margin-top: 2*$gutter;
 		}
 	}
 	.item {

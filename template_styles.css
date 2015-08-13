@@ -1451,73 +1451,6 @@ small {
   }
 }
 
-/* line 1, scss/components/_dropdown.scss */
-.dropdown-select.initialized {
-  display: none;
-}
-
-/* line 4, scss/components/_dropdown.scss */
-.dropdown-select {
-  width: 225px;
-  font-size: 26px;
-  line-height: 28px;
-}
-/* line 8, scss/components/_dropdown.scss */
-.dropdown-select .caret {
-  display: none;
-}
-/* line 11, scss/components/_dropdown.scss */
-.dropdown-select input.select-dropdown {
-  padding: 16px 0;
-  border: 0;
-  cursor: pointer;
-}
-
-/* line 17, scss/components/_dropdown.scss */
-.dropdown-content {
-  background-color: #fff;
-  margin: 0;
-  display: none;
-  min-width: 100px;
-  max-height: 650px;
-  overflow-y: auto;
-  opacity: 0;
-  position: absolute;
-  z-index: 999;
-  will-change: width, height;
-}
-/* line 29, scss/components/_dropdown.scss */
-.dropdown-content li {
-  clear: both;
-  color: #434343;
-  cursor: pointer;
-  width: 100%;
-  text-align: left;
-  text-transform: none;
-  border: 1px solid #ededed;
-  border-top: 0;
-}
-/* line 39, scss/components/_dropdown.scss */
-.dropdown-content li:hover {
-  color: #2d4e9d;
-}
-/* line 42, scss/components/_dropdown.scss */
-.dropdown-content li.active {
-  background-color: #2d4e9d;
-  color: #fff;
-  border: 0;
-}
-/* line 48, scss/components/_dropdown.scss */
-.dropdown-content li > a, .dropdown-content li > span {
-  display: block;
-  padding: 16px 20px;
-}
-/* line 55, scss/components/_dropdown.scss */
-.dropdown-content li > a > i {
-  height: inherit;
-  line-height: inherit;
-}
-
 /* line 1, scss/components/_collapsible.scss */
 .collapsible-item {
   border-bottom: 1px solid #ededed;
@@ -1613,6 +1546,83 @@ small {
 .collapsible.popout > li.active {
   box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
   margin: 16px 0;
+}
+
+/* line 4, scss/components/_forms.scss */
+select {
+  width: 100%;
+  vertical-align: middle;
+  height: 2.67em;
+  padding: 0 2em 0 15px;
+}
+/* line 9, scss/components/_forms.scss */
+select option {
+  max-width: 100%;
+  color: #434343;
+}
+
+/* line 14, scss/components/_forms.scss */
+select + .triangle {
+  position: absolute;
+  top: 1px;
+  right: 11px;
+  width: 30px;
+  height: 2.5em;
+  background: #fff;
+  font-size: 15px;
+}
+@media only screen and (min-width: 601px) {
+  /* line 14, scss/components/_forms.scss */
+  select + .triangle {
+    right: 16px;
+  }
+}
+/* line 25, scss/components/_forms.scss */
+select + .triangle:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 17px;
+  right: 17px;
+  width: 0;
+  height: 0;
+  border-top: 7px solid #434343;
+  border-right: 4px solid transparent;
+  border-left: 4px solid transparent;
+}
+
+/* line 38, scss/components/_forms.scss */
+select:hover,
+select:focus {
+  color: #0d4f9e;
+  border-color: #0d4f9e;
+  outline: none;
+}
+/* line 43, scss/components/_forms.scss */
+select:hover + .triangle:after,
+select:focus + .triangle:after {
+  border-top-color: #0d4f9e;
+}
+
+/* line 47, scss/components/_forms.scss */
+.dropdown-select-box {
+  width: auto;
+  display: inline-block;
+}
+
+/* line 51, scss/components/_forms.scss */
+.dropdown-select {
+  display: inline-block;
+  padding-right: 30px;
+  border: 0;
+  padding: 0;
+  font-size: 18px;
+  line-height: 20px;
+}
+/* line 58, scss/components/_forms.scss */
+.dropdown-select + .triangle {
+  right: 0;
+  top: 3px;
 }
 
 /* line 1, scss/components/select2/_core.scss */
@@ -1912,7 +1922,7 @@ small {
 
 /* line 1, scss/components/select2/theme/dropdown/_layout.scss */
 .select2-container--dropdown {
-  width: 225px;
+  width: 240px;
   font-size: 26px;
   line-height: 28px;
 }
@@ -1945,7 +1955,7 @@ small {
   height: 100%;
   width: 10px;
   top: 0px;
-  left: 15px;
+  left: 10px;
 }
 /* line 29, scss/components/select2/theme/dropdown/_single.scss */
 .select2-container--dropdown .select2-selection--single .select2-selection__arrow b {
@@ -1961,16 +1971,25 @@ small {
   border-color: #434343 transparent transparent transparent;
 }
 /* line 46, scss/components/select2/theme/dropdown/_single.scss */
-.select2-container--dropdown.select2-container--open .select2-selection, .select2-container--dropdown:hover .select2-selection {
-  border-color: #0d4f9e;
-}
-/* line 48, scss/components/select2/theme/dropdown/_single.scss */
-.select2-container--dropdown.select2-container--open .select2-selection .select2-selection__placeholder, .select2-container--dropdown:hover .select2-selection .select2-selection__placeholder {
+.select2-container--dropdown:hover .select2-selection .select2-selection__rendered {
   color: #0d4f9e;
 }
-/* line 52, scss/components/select2/theme/dropdown/_single.scss */
-.select2-container--dropdown.select2-container--open .select2-selection .select2-selection__arrow b, .select2-container--dropdown:hover .select2-selection .select2-selection__arrow b {
+/* line 50, scss/components/select2/theme/dropdown/_single.scss */
+.select2-container--dropdown:hover .select2-selection .select2-selection__arrow b {
   border-top-color: #0d4f9e;
+}
+/* line 58, scss/components/select2/theme/dropdown/_single.scss */
+.select2-container--dropdown.select2-container--open .select2-selection, .select2-container--dropdown.select2-container--open:hover .select2-selection {
+  background: #0d4f9e;
+}
+/* line 60, scss/components/select2/theme/dropdown/_single.scss */
+.select2-container--dropdown.select2-container--open .select2-selection .select2-selection__rendered, .select2-container--dropdown.select2-container--open:hover .select2-selection .select2-selection__rendered {
+  padding-left: 20px;
+  color: #fff;
+}
+/* line 65, scss/components/select2/theme/dropdown/_single.scss */
+.select2-container--dropdown.select2-container--open .select2-selection .select2-selection__arrow b, .select2-container--dropdown.select2-container--open:hover .select2-selection .select2-selection__arrow b {
+  border-top-color: #fff;
 }
 /* line 8, scss/components/select2/theme/dropdown/_layout.scss */
 .select2-container--dropdown .select2-search--dropdown .select2-search__field {
@@ -1996,60 +2015,59 @@ small {
 .select2-container--dropdown .select2-results__option {
   border: 1px solid #ededed;
   border-top-width: 0;
-  padding: 20px 16px;
+  padding: 15px 16px;
+  line-height: 28px;
 }
-/* line 42, scss/components/select2/theme/dropdown/_layout.scss */
+/* line 43, scss/components/select2/theme/dropdown/_layout.scss */
 .select2-container--dropdown .select2-results__option[role=group] {
   padding: 0;
 }
-/* line 46, scss/components/select2/theme/dropdown/_layout.scss */
+/* line 47, scss/components/select2/theme/dropdown/_layout.scss */
 .select2-container--dropdown .select2-results__option[aria-disabled=true] {
   color: #999;
 }
-/* line 50, scss/components/select2/theme/dropdown/_layout.scss */
+/* line 51, scss/components/select2/theme/dropdown/_layout.scss */
 .select2-container--dropdown .select2-results__option[aria-selected=true] {
-  background-color: #2d4e9d;
-  color: #fff;
-  border: 0;
+  display: none;
 }
-/* line 56, scss/components/select2/theme/dropdown/_layout.scss */
+/* line 58, scss/components/select2/theme/dropdown/_layout.scss */
 .select2-container--dropdown .select2-results__option .select2-results__option {
   padding-left: 1em;
 }
-/* line 59, scss/components/select2/theme/dropdown/_layout.scss */
+/* line 61, scss/components/select2/theme/dropdown/_layout.scss */
 .select2-container--dropdown .select2-results__option .select2-results__option .select2-results__group {
   padding-left: 0;
 }
-/* line 63, scss/components/select2/theme/dropdown/_layout.scss */
+/* line 65, scss/components/select2/theme/dropdown/_layout.scss */
 .select2-container--dropdown .select2-results__option .select2-results__option .select2-results__option {
   margin-left: -1em;
   padding-left: 2em;
 }
-/* line 67, scss/components/select2/theme/dropdown/_layout.scss */
+/* line 69, scss/components/select2/theme/dropdown/_layout.scss */
 .select2-container--dropdown .select2-results__option .select2-results__option .select2-results__option .select2-results__option {
   margin-left: -2em;
   padding-left: 3em;
 }
-/* line 71, scss/components/select2/theme/dropdown/_layout.scss */
+/* line 73, scss/components/select2/theme/dropdown/_layout.scss */
 .select2-container--dropdown .select2-results__option .select2-results__option .select2-results__option .select2-results__option .select2-results__option {
   margin-left: -3em;
   padding-left: 4em;
 }
-/* line 75, scss/components/select2/theme/dropdown/_layout.scss */
+/* line 77, scss/components/select2/theme/dropdown/_layout.scss */
 .select2-container--dropdown .select2-results__option .select2-results__option .select2-results__option .select2-results__option .select2-results__option .select2-results__option {
   margin-left: -4em;
   padding-left: 5em;
 }
-/* line 79, scss/components/select2/theme/dropdown/_layout.scss */
+/* line 81, scss/components/select2/theme/dropdown/_layout.scss */
 .select2-container--dropdown .select2-results__option .select2-results__option .select2-results__option .select2-results__option .select2-results__option .select2-results__option .select2-results__option {
   margin-left: -5em;
   padding-left: 6em;
 }
-/* line 90, scss/components/select2/theme/dropdown/_layout.scss */
+/* line 92, scss/components/select2/theme/dropdown/_layout.scss */
 .select2-container--dropdown .select2-results__option--highlighted[aria-selected="false"] {
   color: #2d4e9d;
 }
-/* line 94, scss/components/select2/theme/dropdown/_layout.scss */
+/* line 96, scss/components/select2/theme/dropdown/_layout.scss */
 .select2-container--dropdown .select2-results__group {
   cursor: default;
   display: block;
@@ -2560,59 +2578,10 @@ small {
 }
 /* line 37, scss/components/_filter.scss */
 .filter select {
-  width: 100%;
   font-size: 15px;
   line-height: 2.67;
-  vertical-align: middle;
   height: 2.67em;
-  border: 1px solid #e2e2e2;
   padding: 0 2em 0 15px;
-}
-/* line 45, scss/components/_filter.scss */
-.filter select option {
-  max-width: 100%;
-  color: #434343;
-}
-/* line 50, scss/components/_filter.scss */
-.filter select + .triangle {
-  position: absolute;
-  top: 1px;
-  right: 11px;
-  width: 30px;
-  height: 2.5em;
-  background: #fff;
-  font-size: 15px;
-}
-@media only screen and (min-width: 601px) {
-  /* line 50, scss/components/_filter.scss */
-  .filter select + .triangle {
-    right: 16px;
-  }
-}
-/* line 61, scss/components/_filter.scss */
-.filter select + .triangle:after {
-  content: '';
-  display: block;
-  position: absolute;
-  top: 17px;
-  right: 17px;
-  width: 0;
-  height: 0;
-  border-top: 7px solid #434343;
-  border-right: 4px solid transparent;
-  border-left: 4px solid transparent;
-}
-/* line 74, scss/components/_filter.scss */
-.filter select:hover,
-.filter select:focus {
-  color: #0d4f9e;
-  border-color: #0d4f9e;
-  outline: none;
-}
-/* line 79, scss/components/_filter.scss */
-.filter select:hover + .triangle:after,
-.filter select:focus + .triangle:after {
-  border-top-color: #0d4f9e;
 }
 
 /* line 2, scss/components/_projects.scss */
@@ -2873,7 +2842,7 @@ small {
 @media only screen and (min-width: 993px) {
   /* line 7, scss/components/_contact-page.scss */
   .contact-page .page-title, .contact-page .project-single .item-title, .project-single .contact-page .item-title {
-    margin-top: 25px;
+    margin-top: 10px;
   }
 }
 /* line 14, scss/components/_contact-page.scss */
@@ -2908,7 +2877,7 @@ small {
   /* line 24, scss/components/_contact-page.scss */
   .contact-page .map-box {
     height: 440px;
-    margin-top: 40px;
+    margin-top: 20px;
   }
 }
 /* line 38, scss/components/_contact-page.scss */

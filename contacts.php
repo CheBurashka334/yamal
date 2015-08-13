@@ -1,13 +1,14 @@
 <?include('header.php');?>
 <div class="contact-page">
 	<div class="page-title">Контакты</div>
-	<div class="dropdown-list">
-		<select class="dropdown-select">
+	<div class="dropdown-select-box">
+		<select class="dropdown-select hide-on-large-only" id="city">
 			<option value="v1" selected>Салехард</option>
 			<option value="v2">Надым</option>
 			<option value="v3">Новый Уренгой</option>
 			<option value="v4">Губкинский</option>
 		</select>
+		<label for="city" class="triangle"></label>
 	</div>
 	<div class="map-box s-full-width m-full-width">
 		<div class="loader"></div>

@@ -1,0 +1,62 @@
+// forms 
+
+//select
+select {
+	width: 100%;
+	vertical-align: middle;
+	height: 2.67em;
+	padding: 0 2em 0 1.5*$gutter;
+	option {
+		max-width: 100%;
+		color: $base-text-color;
+	}
+}
+select + .triangle {
+	position: absolute;
+	top: 1px;
+	right: 11px;
+	width: 30px;
+	height: 2.5em;
+	background: #fff;
+	font-size: 15px;
+	@media #{$medium-and-up}{
+		right: 16px;
+	}
+	&:after {
+		content: '';
+		display: block;
+		position: absolute;
+		top: 17px;
+		right: 17px;
+		width: 0;
+		height: 0;
+		border-top: 7px solid $base-text-color;
+		border-right: 4px solid transparent;
+		border-left: 4px solid transparent;
+	}
+}
+select:hover,
+select:focus {
+	color: $btn-icon-bg;
+	border-color: $btn-icon-bg;
+	outline: none;
+	& + .triangle:after {
+		border-top-color: $btn-icon-bg;
+	}
+}
+.dropdown-select-box {
+	width: auto;
+	display: inline-block;
+}
+.dropdown-select {
+	display: inline-block;
+	padding-right: 30px;
+	border: 0;
+	padding: 0;
+	font-size: 18px;
+	line-height: 20px;
+	& + .triangle {
+		right: 0;
+		top: 3px;
+	}
+}

@@ -25,7 +25,7 @@
 		height: 100%;
 		width: $gutter;
 		top: 0px;
-		left: 1.5*$gutter;
+		left: $gutter;
 		b {
 			position: absolute;
 			top: 27px;
@@ -41,16 +41,29 @@
 	}
 }
 
-&.select2-container--open,
 &:hover {
 	.select2-selection {
-		border-color: $btn-icon-bg;
-		.select2-selection__placeholder {
+		.select2-selection__rendered {
 			color: $btn-icon-bg;
 		}
 		.select2-selection__arrow {
 			b {
 				border-top-color: $btn-icon-bg;
+			}
+		}
+	}
+}
+&.select2-container--open,
+&.select2-container--open:hover {
+	.select2-selection {
+		background: $btn-icon-bg;
+		.select2-selection__rendered {
+			padding-left: 20px;
+			color: #fff;
+		}
+		.select2-selection__arrow {
+			b {
+				border-top-color: #fff;
 			}
 		}
 	}
