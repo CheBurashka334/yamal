@@ -9,20 +9,7 @@
 		overflow: hidden;
 		height: 210px;
 		a {
-			display: block;
-			height: 100%;
-			&:after {
-				content: '';
-				display: block;
-				width: 100%;
-				height: 100%;
-				position: absolute;
-				top: 0;
-				left: 0;
-				z-index: 2;
-				background: transparent;
-				transition: background .2s;
-			}
+			@extend .img-link;
 		}
 		img {
 			display: block;
@@ -35,13 +22,16 @@
 		margin-top: 1.5*$gutter;
 		font-size: 26px;
 		line-height: 30px;
+		a {
+			@extend .title-link;
+		}
 	}
 	&:hover {
 		.item-img a:after {
-			background: rgba(0,0,0,.2);
+			@extend .img-link:hover:after;
 		}
 		.item-title a {
-			color: $secondary-color;
+			@extend .title-link:hover;
 		}
 	}
 }

@@ -1,0 +1,121 @@
+// news-page
+.news-page {
+	.filter {
+		margin-bottom: 4*$gutter;
+		.news-select {
+			padding-left: 0;
+			padding-bottom: $gutter;
+			border-width: 0 0 1px 0;
+			line-height: 2em;
+		}
+		.triangle:after {
+			top: 12px;
+		}
+	}
+}
+.news-list {
+	margin-bottom: 1.5*$gutter;
+	
+	@media #{$medium-and-up}{
+		margin-bottom: 4*$gutter;
+	}
+	
+	.news-item {
+		margin-bottom: 3.5*$gutter;
+		.item-title {
+			font-size: 26px;
+			line-height: 30px;
+			margin: $gutter 0 1.5*$gutter;
+			a {
+				@extend .title-link;
+			}
+		}
+		.item-img {
+			overflow: hidden;
+			margin-bottom: $gutter;
+			
+			a {
+				@extend .img-link;
+			}
+			
+			@media #{$medium-and-up}{
+				max-height: 280px;
+				margin-bottom: 2*$gutter;
+			
+				img {
+					display: block;
+					min-width: 100%;
+					max-width: 200%;
+					height: auto;
+				}
+			}
+		}
+		&:hover {
+			.item-img a:after {
+				@extend .img-link:hover:after;
+			}
+			.item-title a {
+				@extend .title-link:hover;
+			}
+		}
+	}
+}
+.news-single {
+	margin-bottom: 3*$gutter;
+	@media #{$large-and-up}{
+		margin-bottom: 7*$gutter;
+	}
+	.item-title {
+		margin-bottom: 2*$gutter;
+	}
+	.share-box {
+		margin: 3*$gutter 0;
+		.like_button {
+			margin-right: 3*$gutter;
+			&:last-of-type {
+				margin-right: 0;
+			}
+		}
+		@media #{$medium-and-up}{
+			margin-top: 0.5*$gutter;
+			.social_sharing {
+				text-align: right;
+			}
+		}
+	}
+	.item-date {
+		@media #{$medium-and-up}{
+			display: inline-block;
+			margin-top: 0.5*$gutter;
+		}
+	}
+	.item-text {
+		margin: 3*$gutter 0 4*$gutter;
+		@media #{$large-and-up}{
+			padding: 0 11%; 
+			margin-bottom: 3*$gutter;
+		}
+	}
+	.item-files {
+		@media #{$large-and-up}{
+			padding: 0 11%; 
+		}
+	}
+	& + .nav-links .btn,
+	& + .nav-links .btn:only-child{
+		margin: $gutter auto;
+		display: block;
+		font-size: 15px;
+	}
+	@media #{$medium-and-up}{
+		& + .nav-links .col .btn {
+			display: inline-block;
+		}
+		& + .nav-links .col:first-of-type {
+			text-align: right;
+		}
+		& + .nav-links .col:last-of-type {
+			text-align: left;
+		}
+	}
+}

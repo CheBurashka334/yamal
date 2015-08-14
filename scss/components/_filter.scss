@@ -40,4 +40,37 @@
 		height: 2.67em;
 		padding: 0 2em 0 1.5*$gutter;
 	}
+	.tabs-list {
+		@extend ul.nostyle;
+		border-bottom: 1px solid #ededed;
+		.tab-item {
+			display: inline-block;
+			margin-right: 3*$gutter;
+		}
+		.tab-inp {
+			display: none;
+		}
+		.tab-title {
+			display: block;
+			font-size: 18px;
+			line-height: 30px;
+			padding: 0 0 $gutter;
+			cursor: pointer;
+			&:after {
+				content: '';
+				display: block;
+				position: absolute;
+				left: 50%;
+				bottom: -1px;
+				width: 0;
+				height: 3px;
+				background: $primary-color;
+				transition: width .3s, left .3s;
+			}
+		}
+		.tab-inp:checked + .tab-title:after {
+			left: 0;
+			width: 100%;
+		}
+	}
 }
