@@ -37,13 +37,42 @@ a {
   // Gets rid of tap active state
   -webkit-tap-highlight-color: transparent;
 }
-[class*="title"] > a {
+.title-link {
 	color: inherit;
 	&:hover {
 		color: $primary-color;
 	}
 }
-
+.img-link {
+	display: block;
+	height: 100%;
+	&:after {
+		content: '';
+		display: block;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 2;
+		background: transparent;
+		transition: background .2s;
+	}
+	&:hover:after {
+		background: rgba(0,0,0,.2);
+	}
+}
+a.file {
+	display: inline-block;
+	vertical-align: middle;
+	min-height: 40px;
+	padding-left: 45px;
+	line-height: 25px;
+	&[href$=".doc"],
+	&[href$=".docx"] {
+		background: url('images/icon-doc.png') top left no-repeat;
+	}
+}
 
 
 ul {
@@ -51,6 +80,14 @@ ul {
   li {
     list-style-type: none;
   }
+}
+ul.nostyle,
+ol.nostyle {
+	padding: 0;
+	margin: 0;
+	li {
+		list-style-type: none;
+	}
 }
 
 // classic clearfix

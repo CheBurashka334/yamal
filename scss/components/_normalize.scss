@@ -266,6 +266,17 @@ textarea {
   font: inherit; /* 2 */
   margin: 0; /* 3 */
 }
+select,
+button,
+input[type="submit"] {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	background: none;
+	border: none;
+	&:focus {
+		outline: none;
+	}
+}
 
 /**
  * Address `overflow` set to `hidden` in IE 8/9/10/11.

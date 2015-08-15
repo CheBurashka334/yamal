@@ -24,21 +24,41 @@
 	.map-box {
 		height: 210px;
 		margin-bottom: $gutter;
+		.map {
+			height: 210px;
+		}
 		
 		@media #{$medium-and-up}{
 			height: 380px;
 			margin-bottom: 2*$gutter;
+			.map {
+				height: 380px;
+			}
 		}
 		@media #{$large-and-up}{
 			height: 440px;
 			margin-top: 2*$gutter;
+			.map {
+				height: 440px;
+			}
 		}
 	}
 	.item {
+		*:first-child {
+			margin-top: 0;
+		}
 		p {
 			line-height: 40px;
 		}
 		
+		@media #{$medium-only}{
+			&:nth-child(odd){
+				padding-right: 3*$gutter;
+			}
+			&:nth-child(even){
+				padding-left: 3*$gutter;
+			}
+		}
 		@media #{$medium-and-up}{
 			margin-bottom: 4*$gutter;
 			p {
