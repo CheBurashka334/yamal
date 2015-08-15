@@ -18,6 +18,11 @@ body {
 	width: 100%;
 	overflow-x: hidden;
 }
+.layout {
+	display: flex;
+	overflow: hidden;
+	align-items: stretch;
+}
 
 ul {
 	list-style-type: none;

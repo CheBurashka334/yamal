@@ -56,25 +56,24 @@ $(document).ready(function(){
 	*/
 	
 	// menu
-	/*
 	$('.js-menu').click(function(){
 		var act = $(this).attr('data-action');
 		switch(act){
 			case 'open':
-				position();
+				//position();
 				$('.page-aside').addClass('open');
 				$('.js-menu').attr('data-action', 'close');
 			break;
 			case 'close':
 			default:
-				var pos = parseInt($('.page').css('top'), 10);
+				//var pos = parseInt($('.page').css('top'), 10);
 				$('.page-aside').removeClass('open');
 				$('.js-menu').attr('data-action', 'open');
-				$('.page').css({'position': 'relative', 'top': '0px'});
-				$(window).scrollTop(-pos);
+				//$('.page').css({'position': 'relative', 'top': '0px'});
+				//$(window).scrollTop(-pos);
 		}
 	});
-	*/
+	
 	
 	/*
 	$('.dropdown-btn').dropdown({

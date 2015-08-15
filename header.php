@@ -24,6 +24,7 @@
 <div class="layout">
 <div class="page-aside hide-on-large-only">
 	<div class="inner">
+		<?include('mobile-menu.php');?>
 	</div>
 </div>
 <div class="page">
@@ -44,7 +45,7 @@
 		</div>
 		<div class="header-menu">
 			<div class="container row">
-				<button class="btn-menu btn-icon default hide-on-large-only"><svg class="icon"><use xlink:href="#menu"/></svg></button>
+				<button class="js-menu btn-menu btn-icon default hide-on-large-only" data-action="open"><svg class="icon"><use xlink:href="#menu"/></svg></button>
 				<div class="main-menu-box hide-on-med-and-down">
 					<ul class="main-menu">
 						<li class="menu-item"><a class="menu-link active" href="#">О Ямале</a></li>
