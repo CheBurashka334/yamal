@@ -12,7 +12,7 @@
 		<label for="newscat" class="triangle"></label>
 	</div>
 	<div class="col l12 m12 hide-on-small-only">
-		<ul class="tabs-list select-synh">
+		<ul class="tabs-list select-synh" data-select="news-cat">
 			<li class="tab-item">
 				<input class="tab-inp" type="radio" name="news-cat-rad" value="v0" id="news-cat-v0" checked="checked"/>
 				<label class="tab-title" for="news-cat-v0">Все новости</label>

@@ -29,6 +29,10 @@ $(document).ready(function(){
 		//$('.dropdown-select').material_select();
 		$('.select2-container').removeAttr('style');
 	}
+	$('.select-synh input[type="radio"]').change(function(){
+		var select = $(this).parent().parent('.select-synh').attr('data-select');
+		$('#'+select).val($(this).val());
+	});
 	
 	/*
 	$(window).scroll(function(){

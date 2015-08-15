@@ -66,6 +66,7 @@
 				height: 3px;
 				background: $primary-color;
 				transition: width .3s, left .3s;
+				z-index: 2;
 			}
 		}
 		.tab-inp:checked + .tab-title:after {
