@@ -1527,6 +1527,13 @@ small {
   color: #949494;
 }
 
+/* line 47, scss/components/_typography.scss */
+h2 {
+  font-size: 26px;
+  line-height: 28px;
+  margin: 20px 0 30px;
+}
+
 /* line 1, scss/components/_collapsible.scss */
 .collapsible-item {
   border-bottom: 1px solid #ededed;
@@ -3055,7 +3062,7 @@ select:focus + .triangle:after {
 }
 /* line 23, scss/components/_news.scss */
 .news-list .news-item {
-  margin-bottom: 35px;
+  margin-bottom: 15px;
 }
 /* line 25, scss/components/_news.scss */
 .news-list .news-item .item-title {
@@ -3064,17 +3071,22 @@ select:focus + .triangle:after {
   margin: 10px 0 15px;
 }
 /* line 33, scss/components/_news.scss */
+.news-list .news-item .item-date {
+  display: inline-block;
+  margin-bottom: 20px;
+}
+/* line 37, scss/components/_news.scss */
 .news-list .news-item .item-img {
   overflow: hidden;
   margin-bottom: 10px;
 }
 @media only screen and (min-width: 601px) {
-  /* line 33, scss/components/_news.scss */
+  /* line 37, scss/components/_news.scss */
   .news-list .news-item .item-img {
     max-height: 280px;
     margin-bottom: 20px;
   }
-  /* line 45, scss/components/_news.scss */
+  /* line 49, scss/components/_news.scss */
   .news-list .news-item .item-img img {
     display: block;
     min-width: 100%;
@@ -3083,82 +3095,82 @@ select:focus + .triangle:after {
   }
 }
 
-/* line 63, scss/components/_news.scss */
+/* line 67, scss/components/_news.scss */
 .news-single {
   margin-bottom: 30px;
 }
 @media only screen and (min-width: 993px) {
-  /* line 63, scss/components/_news.scss */
+  /* line 67, scss/components/_news.scss */
   .news-single {
     margin-bottom: 70px;
   }
 }
-/* line 68, scss/components/_news.scss */
+/* line 72, scss/components/_news.scss */
 .news-single .item-title {
   margin-bottom: 20px;
 }
-/* line 71, scss/components/_news.scss */
+/* line 75, scss/components/_news.scss */
 .news-single .share-box {
   margin: 30px 0;
 }
-/* line 73, scss/components/_news.scss */
+/* line 77, scss/components/_news.scss */
 .news-single .share-box .like_button {
   margin-right: 30px;
 }
-/* line 75, scss/components/_news.scss */
+/* line 79, scss/components/_news.scss */
 .news-single .share-box .like_button:last-of-type {
   margin-right: 0;
 }
 @media only screen and (min-width: 601px) {
-  /* line 71, scss/components/_news.scss */
+  /* line 75, scss/components/_news.scss */
   .news-single .share-box {
     margin-top: 5px;
   }
-  /* line 81, scss/components/_news.scss */
+  /* line 85, scss/components/_news.scss */
   .news-single .share-box .social_sharing {
     text-align: right;
   }
 }
 @media only screen and (min-width: 601px) {
-  /* line 86, scss/components/_news.scss */
+  /* line 90, scss/components/_news.scss */
   .news-single .item-date {
     display: inline-block;
     margin-top: 5px;
   }
 }
-/* line 92, scss/components/_news.scss */
+/* line 96, scss/components/_news.scss */
 .news-single .item-text {
   margin: 30px 0 40px;
 }
 @media only screen and (min-width: 993px) {
-  /* line 92, scss/components/_news.scss */
+  /* line 96, scss/components/_news.scss */
   .news-single .item-text {
     padding: 0 11%;
     margin-bottom: 30px;
   }
 }
 @media only screen and (min-width: 993px) {
-  /* line 99, scss/components/_news.scss */
+  /* line 103, scss/components/_news.scss */
   .news-single .item-files {
     padding: 0 11%;
   }
 }
-/* line 104, scss/components/_news.scss */
+/* line 108, scss/components/_news.scss */
 .news-single + .nav-links .btn, .news-single + .nav-links .btn:only-child {
   margin: 10px auto;
   display: block;
   font-size: 15px;
 }
 @media only screen and (min-width: 601px) {
-  /* line 111, scss/components/_news.scss */
+  /* line 115, scss/components/_news.scss */
   .news-single + .nav-links .col .btn {
     display: inline-block;
   }
-  /* line 114, scss/components/_news.scss */
+  /* line 118, scss/components/_news.scss */
   .news-single + .nav-links .col:first-of-type {
     text-align: right;
   }
-  /* line 117, scss/components/_news.scss */
+  /* line 121, scss/components/_news.scss */
   .news-single + .nav-links .col:last-of-type {
     text-align: left;
   }

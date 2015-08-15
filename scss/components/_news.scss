@@ -21,7 +21,7 @@
 	}
 	
 	.news-item {
-		margin-bottom: 3.5*$gutter;
+		margin-bottom: 1.5*$gutter;
 		.item-title {
 			font-size: 26px;
 			line-height: 30px;
@@ -29,6 +29,10 @@
 			a {
 				@extend .title-link;
 			}
+		}
+		.item-date {
+			display: inline-block;
+			margin-bottom: 2*$gutter;
 		}
 		.item-img {
 			overflow: hidden;
