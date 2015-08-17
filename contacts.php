@@ -38,6 +38,7 @@
 				E-mail: office@fondsmp.ru
 			</p>
 		</div>
+		<div class="clearfix"></div>
 		<div class="item col l6 m6 s12">
 			<div class="item-title big">Департамент Экономики Ямало-Ненецкого автономного округа</div>
 			<p>
