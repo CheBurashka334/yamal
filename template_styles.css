@@ -820,11 +820,6 @@ ul.staggered-list li {
   padding: 0 !important;
 }
 
-/* line 323, scss/components/_global.scss */
-.large {
-  font-size: 40px;
-}
-
 /* line 2, scss/components/_buttons.scss */
 .btn, .btn-icon {
   border: 1px solid;
@@ -1514,6 +1509,18 @@ small {
 }
 
 /* line 24, scss/components/_typography.scss */
+.large {
+  font-size: 40px;
+}
+
+/* line 27, scss/components/_typography.scss */
+.x-large {
+  font-size: 50px;
+  line-height: 1;
+  margin: 30px 0 25px;
+}
+
+/* line 32, scss/components/_typography.scss */
 .page-title, .project-single .item-title {
   margin: 30px 0 35px;
   font-size: 30px;
@@ -1521,69 +1528,69 @@ small {
   color: #434343;
 }
 @media only screen and (min-width: 601px) {
-  /* line 24, scss/components/_typography.scss */
+  /* line 32, scss/components/_typography.scss */
   .page-title, .project-single .item-title {
     font-size: 40px;
     line-height: 50px;
   }
 }
 @media only screen and (min-width: 993px) {
-  /* line 24, scss/components/_typography.scss */
+  /* line 32, scss/components/_typography.scss */
   .page-title, .project-single .item-title {
     margin: 40px 0 10px;
   }
 }
 
-/* line 37, scss/components/_typography.scss */
+/* line 45, scss/components/_typography.scss */
 .block-title {
   font-size: 26px;
   line-height: 28px;
   margin: 30px auto;
 }
 @media only screen and (min-width: 601px) {
-  /* line 37, scss/components/_typography.scss */
+  /* line 45, scss/components/_typography.scss */
   .block-title {
     margin-top: 40px;
   }
 }
 
-/* line 45, scss/components/_typography.scss */
+/* line 53, scss/components/_typography.scss */
 .light-text {
   color: #949494;
 }
 
-/* line 48, scss/components/_typography.scss */
+/* line 56, scss/components/_typography.scss */
 h2 {
   font-size: 26px;
   line-height: 28px;
   margin: 20px 0 30px;
 }
 
-/* line 53, scss/components/_typography.scss */
+/* line 61, scss/components/_typography.scss */
 .rouble {
   font-family: rouble;
 }
 
-/* line 57, scss/components/_typography.scss */
+/* line 65, scss/components/_typography.scss */
 ol:not(.nostyle) {
   margin: 10px 0 20px;
   padding: 0;
   list-style: none;
   counter-reset: item;
 }
-/* line 62, scss/components/_typography.scss */
+/* line 70, scss/components/_typography.scss */
 ol:not(.nostyle) li {
   margin: 10px 0;
   padding: 0;
 }
-/* line 65, scss/components/_typography.scss */
+/* line 73, scss/components/_typography.scss */
 ol:not(.nostyle) li:before {
   display: inline;
   counter-increment: item;
   content: counter(item) ") ";
 }
 @media only screen and (min-width: 601px) {
-  /* line 62, scss/components/_typography.scss */
+  /* line 70, scss/components/_typography.scss */
   ol:not(.nostyle) li {
     margin: 20px 0;
   }
@@ -3450,7 +3457,7 @@ select:focus + .triangle:after {
 
 /* line 3, scss/components/_news.scss */
 .news-page .filter {
-  margin-bottom: 40px;
+  margin-bottom: 0;
 }
 /* line 5, scss/components/_news.scss */
 .news-page .filter .news-select {
@@ -3463,44 +3470,49 @@ select:focus + .triangle:after {
 .news-page .filter .triangle:after {
   top: 12px;
 }
+/* line 14, scss/components/_news.scss */
+.news-page .filter .tabs-list .tab-title {
+  margin-right: 35px;
+}
 
-/* line 16, scss/components/_news.scss */
+/* line 19, scss/components/_news.scss */
 .news-list {
   margin-bottom: 15px;
+  margin-top: 40px;
 }
 @media only screen and (min-width: 601px) {
-  /* line 16, scss/components/_news.scss */
+  /* line 19, scss/components/_news.scss */
   .news-list {
     margin-bottom: 40px;
   }
 }
-/* line 23, scss/components/_news.scss */
+/* line 27, scss/components/_news.scss */
 .news-list .news-item {
   margin-bottom: 15px;
 }
-/* line 25, scss/components/_news.scss */
+/* line 29, scss/components/_news.scss */
 .news-list .news-item .item-title {
   font-size: 26px;
   line-height: 30px;
   margin: 10px 0 15px;
 }
-/* line 33, scss/components/_news.scss */
+/* line 37, scss/components/_news.scss */
 .news-list .news-item .item-date {
   display: inline-block;
   margin-bottom: 20px;
 }
-/* line 37, scss/components/_news.scss */
+/* line 41, scss/components/_news.scss */
 .news-list .news-item .item-img {
   overflow: hidden;
   margin-bottom: 10px;
 }
 @media only screen and (min-width: 601px) {
-  /* line 37, scss/components/_news.scss */
+  /* line 41, scss/components/_news.scss */
   .news-list .news-item .item-img {
     max-height: 280px;
     margin-bottom: 20px;
   }
-  /* line 49, scss/components/_news.scss */
+  /* line 53, scss/components/_news.scss */
   .news-list .news-item .item-img img {
     display: block;
     min-width: 100%;
@@ -3509,82 +3521,87 @@ select:focus + .triangle:after {
   }
 }
 
-/* line 67, scss/components/_news.scss */
+/* line 71, scss/components/_news.scss */
+.news-page .filter + .news-list {
+  margin-top: 10px;
+}
+
+/* line 74, scss/components/_news.scss */
 .news-single {
   margin-bottom: 30px;
 }
 @media only screen and (min-width: 993px) {
-  /* line 67, scss/components/_news.scss */
+  /* line 74, scss/components/_news.scss */
   .news-single {
     margin-bottom: 70px;
   }
 }
-/* line 72, scss/components/_news.scss */
+/* line 79, scss/components/_news.scss */
 .news-single .item-title {
   margin-bottom: 20px;
 }
-/* line 75, scss/components/_news.scss */
+/* line 82, scss/components/_news.scss */
 .news-single .share-box {
   margin: 30px 0;
 }
-/* line 77, scss/components/_news.scss */
+/* line 84, scss/components/_news.scss */
 .news-single .share-box .like_button {
   margin-right: 30px;
 }
-/* line 79, scss/components/_news.scss */
+/* line 86, scss/components/_news.scss */
 .news-single .share-box .like_button:last-of-type {
   margin-right: 0;
 }
 @media only screen and (min-width: 601px) {
-  /* line 75, scss/components/_news.scss */
+  /* line 82, scss/components/_news.scss */
   .news-single .share-box {
     margin-top: 5px;
   }
-  /* line 85, scss/components/_news.scss */
+  /* line 92, scss/components/_news.scss */
   .news-single .share-box .social_sharing {
     text-align: right;
   }
 }
 @media only screen and (min-width: 601px) {
-  /* line 90, scss/components/_news.scss */
+  /* line 97, scss/components/_news.scss */
   .news-single .item-date {
     display: inline-block;
     margin-top: 5px;
   }
 }
-/* line 96, scss/components/_news.scss */
+/* line 103, scss/components/_news.scss */
 .news-single .item-text {
   margin: 30px 0 40px;
 }
 @media only screen and (min-width: 993px) {
-  /* line 96, scss/components/_news.scss */
+  /* line 103, scss/components/_news.scss */
   .news-single .item-text {
     padding: 0 11%;
     margin-bottom: 30px;
   }
 }
 @media only screen and (min-width: 993px) {
-  /* line 103, scss/components/_news.scss */
+  /* line 110, scss/components/_news.scss */
   .news-single .item-files {
     padding: 0 11%;
   }
 }
-/* line 108, scss/components/_news.scss */
+/* line 115, scss/components/_news.scss */
 .news-single + .nav-links .btn, .news-single + .nav-links .btn:only-child {
   margin: 10px auto;
   display: block;
   font-size: 15px;
 }
 @media only screen and (min-width: 601px) {
-  /* line 115, scss/components/_news.scss */
+  /* line 122, scss/components/_news.scss */
   .news-single + .nav-links .col .btn {
     display: inline-block;
   }
-  /* line 118, scss/components/_news.scss */
+  /* line 125, scss/components/_news.scss */
   .news-single + .nav-links .col:first-of-type {
     text-align: right;
   }
-  /* line 121, scss/components/_news.scss */
+  /* line 128, scss/components/_news.scss */
   .news-single + .nav-links .col:last-of-type {
     text-align: left;
   }
@@ -3885,4 +3902,214 @@ select:focus + .triangle:after {
   .search-result-single .item-content {
     margin-top: 40px;
   }
+}
+/* line 3, scss/components/_sup-measures.scss */
+.sup-measures-page .sup-measures {
+  margin-top: 35px;
+  margin-bottom: 50px;
+}
+@media only screen and (min-width: 601px) {
+  /* line 3, scss/components/_sup-measures.scss */
+  .sup-measures-page .sup-measures {
+    margin-bottom: 40px;
+  }
+}
+@media only screen and (min-width: 993px) {
+  /* line 3, scss/components/_sup-measures.scss */
+  .sup-measures-page .sup-measures {
+    margin-bottom: 60px;
+  }
+}
+@media only screen and (min-width: 993px) and (max-width: 1115px) {
+  /* line 13, scss/components/_sup-measures.scss */
+  .sup-measures-page .tabs-list {
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-flex-wrap: nowrap;
+        -ms-flex-wrap: nowrap;
+            flex-wrap: nowrap;
+  }
+}
+@media only screen and (max-width: 720px) {
+  /* line 13, scss/components/_sup-measures.scss */
+  .sup-measures-page .tabs-list {
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-flex-wrap: nowrap;
+        -ms-flex-wrap: nowrap;
+            flex-wrap: nowrap;
+  }
+}
+/* line 22, scss/components/_sup-measures.scss */
+.sup-measures-page .tabs-list:after {
+  bottom: 24px;
+}
+/* line 26, scss/components/_sup-measures.scss */
+.sup-measures-page .tab-item {
+  margin-bottom: 25px;
+}
+/* line 28, scss/components/_sup-measures.scss */
+.sup-measures-page .tab-item .tab-title {
+  margin-right: 30px;
+}
+/* line 30, scss/components/_sup-measures.scss */
+.sup-measures-page .tab-item .tab-title .item-text {
+  font-size: 18px;
+}
+@media only screen and (min-width: 993px) and (max-width: 1115px) {
+  /* line 28, scss/components/_sup-measures.scss */
+  .sup-measures-page .tab-item .tab-title {
+    margin-right: 0;
+  }
+  /* line 35, scss/components/_sup-measures.scss */
+  .sup-measures-page .tab-item .tab-title .item-text {
+    font-size: 16px;
+  }
+}
+@media only screen and (max-width: 720px) {
+  /* line 28, scss/components/_sup-measures.scss */
+  .sup-measures-page .tab-item .tab-title {
+    margin-right: 0;
+  }
+  /* line 41, scss/components/_sup-measures.scss */
+  .sup-measures-page .tab-item .tab-title .item-text {
+    font-size: 16px;
+  }
+}
+/* line 46, scss/components/_sup-measures.scss */
+.sup-measures-page .tab-item:last-of-type .tab-title {
+  margin-right: 0;
+}
+@media only screen and (min-width: 993px) and (max-width: 1115px) {
+  /* line 50, scss/components/_sup-measures.scss */
+  .sup-measures-page .more {
+    min-width: 48%;
+  }
+}
+/* line 55, scss/components/_sup-measures.scss */
+.sup-measures-page .more-title {
+  cursor: pointer;
+  -webkit-transform: translate(0, 0);
+      -ms-transform: translate(0, 0);
+          transform: translate(0, 0);
+  -webkit-transition: all .3s;
+          transition: all .3s;
+  color: #2d4e9d;
+  top: -2px;
+}
+/* line 62, scss/components/_sup-measures.scss */
+.sup-measures-page .more-list {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+@media only screen and (min-width: 601px) and (max-width: 992px) {
+  /* line 62, scss/components/_sup-measures.scss */
+  .sup-measures-page .more-list {
+    position: absolute;
+    top: 0;
+    background: #fff;
+    z-index: 5;
+    overflow: hidden;
+    -webkit-transform: scale(1, 0) translate(0, -100%);
+        -ms-transform: scale(1, 0) translate(0, -100%);
+            transform: scale(1, 0) translate(0, -100%);
+    opacity: 0;
+    -webkit-transition: all .3s;
+            transition: all .3s;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.35);
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+@media only screen and (min-width: 993px) and (max-width: 1115px) {
+  /* line 62, scss/components/_sup-measures.scss */
+  .sup-measures-page .more-list {
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-flex-wrap: nowrap;
+        -ms-flex-wrap: nowrap;
+            flex-wrap: nowrap;
+  }
+}
+@media only screen and (min-width: 601px) and (max-width: 992px) {
+  /* line 84, scss/components/_sup-measures.scss */
+  .sup-measures-page .more.open .more-title {
+    -webkit-transform: translate(0, 10px);
+        -ms-transform: translate(0, 10px);
+            transform: translate(0, 10px);
+  }
+  /* line 87, scss/components/_sup-measures.scss */
+  .sup-measures-page .more.open .more-list {
+    -webkit-transform: scale(1) translate(0, 0);
+        -ms-transform: scale(1) translate(0, 0);
+            transform: scale(1) translate(0, 0);
+    opacity: 1;
+    top: -20px;
+  }
+  /* line 92, scss/components/_sup-measures.scss */
+  .sup-measures-page .more.open .tab-item {
+    margin-bottom: 0;
+    padding: 15px 20px;
+  }
+  /* line 95, scss/components/_sup-measures.scss */
+  .sup-measures-page .more.open .tab-item .tab-title {
+    padding: 0;
+  }
+  /* line 97, scss/components/_sup-measures.scss */
+  .sup-measures-page .more.open .tab-item .tab-title:after {
+    display: none;
+  }
+}
+/* line 104, scss/components/_sup-measures.scss */
+.sup-measures-page .content-item .item {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+@media only screen and (min-width: 601px) {
+  /* line 104, scss/components/_sup-measures.scss */
+  .sup-measures-page .content-item .item {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}
+@media only screen and (min-width: 993px) {
+  /* line 104, scss/components/_sup-measures.scss */
+  .sup-measures-page .content-item .item {
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+}
+/* line 115, scss/components/_sup-measures.scss */
+.sup-measures-page .content-item .item .block-title {
+  margin-top: 0;
+  margin-bottom: 25px;
+  color: #2d4e9d;
+}
+/* line 120, scss/components/_sup-measures.scss */
+.sup-measures-page .content-item .item a {
+  display: block;
+  padding: 20px 15px 10px;
+  color: #434343;
+  border: 1px solid #ededed;
+}
+/* line 125, scss/components/_sup-measures.scss */
+.sup-measures-page .content-item .item a:hover {
+  background: #2d4e9d;
+  border-color: #2d4e9d;
+  color: #fff;
+}
+/* line 129, scss/components/_sup-measures.scss */
+.sup-measures-page .content-item .item a:hover .block-title {
+  color: #fff;
 }

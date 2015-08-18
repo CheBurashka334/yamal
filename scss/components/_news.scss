@@ -1,7 +1,7 @@
 // news-page
 .news-page {
 	.filter {
-		margin-bottom: 4*$gutter;
+		margin-bottom: 0;
 		.news-select {
 			padding-left: 0;
 			padding-bottom: $gutter;
@@ -11,10 +11,14 @@
 		.triangle:after {
 			top: 12px;
 		}
+		.tabs-list .tab-title {
+			margin-right: 3.5*$gutter;
+		}
 	}
 }
 .news-list {
 	margin-bottom: 1.5*$gutter;
+	margin-top: 4*$gutter;
 	
 	@media #{$medium-and-up}{
 		margin-bottom: 4*$gutter;
@@ -63,6 +67,9 @@
 			}
 		}
 	}
+}
+.news-page .filter + .news-list {
+margin-top: $gutter;
 }
 .news-single {
 	margin-bottom: 3*$gutter;
