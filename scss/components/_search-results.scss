@@ -1,0 +1,12 @@
+// search-results-page
+.search-results-page .filter {
+	display: flex;
+	align-items: stretch;
+	.item {
+		//display: inline-block;
+		width: 20%;
+	}
+	.dropdown-value {
+		height: 170px;
+	}
+}

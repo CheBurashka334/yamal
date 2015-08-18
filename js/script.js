@@ -32,6 +32,58 @@ $(document).ready(function(){
 	$('.select-synh input[type="radio"]').change(function(){
 		var select = $(this).parent().parent('.select-synh').attr('data-select');
 		$('#'+select).val($(this).val());
+		$('#'+select).change();
+	});
+	
+	// dropdown init
+	$('.dropdown-box').each(function(){
+		var value = $(this).find('.dropdown-item[data-active="active"]').find('[data-value-text]');
+		$(this).find('.dropdown-value > .item-text').html(value.attr('data-value-text'));
+		if($(this).hasClass('with-icon')){
+			$(this).find('.dropdown-value > .item-icon > .icon > use').attr('xlink:href', value.attr('data-value-icon'));
+		}
+		if($(this).hasClass('with-text-icon')){
+			$(this).find('.dropdown-value > .item-icon > .icon').html(value.attr('data-value-icon'));
+		}
+	});
+	// dropdown open
+	$('.dropdown-box').click(function(e){
+		$('.dropdown-box').not($(this)).removeClass('open');
+		$(this).toggleClass('open');
+		e.stopPropagation()
+	});
+	$('.page').click(function(){
+		$('.dropdown-box').removeClass('open');
+	});
+	// dropdown change
+	$('.dropdown-box .dropdown-item').click(function(e){
+		var value = $(this).find('[data-value-text]');
+		var box = $(this).parent('.dropdown-list').parent('.dropdown-box');
+		
+		$(this).attr('data-active', 'active').siblings().removeAttr('data-active');
+		box.find('.dropdown-value > .item-text').html(value.attr('data-value-text'));
+		
+		if(box.hasClass('with-icon')){
+			box.find('.dropdown-value > .item-icon > .icon > use').attr('xlink:href', value.attr('data-value-icon'));
+		}
+		if(box.hasClass('with-text-icon')){
+			box.find('.dropdown-value > .item-icon > .icon').html(value.attr('data-value-icon'));
+		}
+		e.stopPropagation()
+		box.removeClass('open');
+	});
+	// tabs init
+	$('[data-tab-content]').each(function(){
+		var content = $(this).attr('data-tab-content');
+		var tab = $(this).val();
+		$('#'+content).find('[data-tab='+tab+']').addClass('active');
+	});
+	// tabs change
+	$('[data-tab-content]').change(function(){
+		var content = $(this).attr('data-tab-content');
+		var tab = $(this).val();
+		$('#'+content).find('[data-tab]').removeClass('active');
+		$('#'+content).find('[data-tab='+tab+']').addClass('active');
 	});
 	
 	/*
