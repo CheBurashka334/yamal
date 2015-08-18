@@ -73,9 +73,14 @@ a.file {
 	min-height: 40px;
 	padding-left: 45px;
 	line-height: 25px;
+	margin-bottom: 3*$gutter;
+	color: $base-text-color;
 	&[href$=".doc"],
 	&[href$=".docx"] {
 		background: url('images/icon-doc.png') top left no-repeat;
+	}
+	&[href$=".pdf"] {
+		background: url('images/icon-pdf.png') top left no-repeat;
 	}
 }
 

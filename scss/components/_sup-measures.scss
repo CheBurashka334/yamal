@@ -133,3 +133,23 @@
 		}
 	}
 }
+
+.sup-measures-single {
+	.order-btn {
+		margin-top: 4*$gutter;
+		margin-bottom: 5*$gutter;
+		@media #{$medium-and-up}{
+			margin-top: 6*$gutter;
+			margin-bottom: 9*$gutter;
+		}
+		@media #{$large-and-up}{
+			margin-top: 5*$gutter;
+			margin-bottom: 8*$gutter;
+		}
+	}
+	.item-content {
+		@media #{$medium-and-up}{
+			margin-top: 3*$gutter;
+		}
+	}
+}

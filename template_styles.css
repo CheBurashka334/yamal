@@ -549,39 +549,45 @@ a.file {
   min-height: 40px;
   padding-left: 45px;
   line-height: 25px;
+  margin-bottom: 30px;
+  color: #434343;
 }
-/* line 76, scss/components/_global.scss */
+/* line 78, scss/components/_global.scss */
 a.file[href$=".doc"], a.file[href$=".docx"] {
   background: url("images/icon-doc.png") top left no-repeat;
 }
+/* line 82, scss/components/_global.scss */
+a.file[href$=".pdf"] {
+  background: url("images/icon-pdf.png") top left no-repeat;
+}
 
-/* line 83, scss/components/_global.scss */
+/* line 88, scss/components/_global.scss */
 ul {
   padding: 0;
 }
-/* line 85, scss/components/_global.scss */
+/* line 90, scss/components/_global.scss */
 ul li {
   list-style-type: none;
 }
 
-/* line 89, scss/components/_global.scss */
+/* line 94, scss/components/_global.scss */
 ul.nostyle, .dropdown-list, .tabs-list,
 ol.nostyle {
   padding: 0;
   margin: 0;
 }
-/* line 93, scss/components/_global.scss */
+/* line 98, scss/components/_global.scss */
 ul.nostyle li, .dropdown-list li, .tabs-list li,
 ol.nostyle li {
   list-style-type: none;
 }
 
-/* line 99, scss/components/_global.scss */
+/* line 104, scss/components/_global.scss */
 .clearfix {
   clear: both;
 }
 
-/* line 108, scss/components/_global.scss */
+/* line 113, scss/components/_global.scss */
 .loader,
 .btn.loader {
   margin: 60px auto;
@@ -599,13 +605,13 @@ ol.nostyle li {
   animation: load8 1.1s infinite linear;
 }
 
-/* line 124, scss/components/_global.scss */
+/* line 129, scss/components/_global.scss */
 .btn.loader {
   -webkit-transition: all .3s;
           transition: all .3s;
 }
 
-/* line 127, scss/components/_global.scss */
+/* line 132, scss/components/_global.scss */
 .loader,
 .btn.loader,
 .loader:after,
@@ -635,17 +641,17 @@ ol.nostyle li {
     transform: rotate(360deg);
   }
 }
-/* line 157, scss/components/_global.scss */
+/* line 162, scss/components/_global.scss */
 .map-box {
   overflow: hidden;
   margin-top: 30px;
   margin-bottom: 30px;
 }
-/* line 161, scss/components/_global.scss */
+/* line 166, scss/components/_global.scss */
 .map-box .map {
   height: 760px;
 }
-/* line 164, scss/components/_global.scss */
+/* line 169, scss/components/_global.scss */
 .map-box .loader {
   position: absolute;
   top: 20%;
@@ -653,35 +659,35 @@ ol.nostyle li {
   margin: 0;
 }
 
-/* line 174, scss/components/_global.scss */
+/* line 179, scss/components/_global.scss */
 .divider {
   height: 1px;
   overflow: hidden;
   background-color: #e1e1e1;
 }
 
-/* line 183, scss/components/_global.scss */
+/* line 188, scss/components/_global.scss */
 blockquote {
   margin: 20px 0;
   padding-left: 1.5rem;
   border-left: 5px solid #2d4e9d;
 }
 
-/* line 190, scss/components/_global.scss */
+/* line 195, scss/components/_global.scss */
 img.responsive-img,
 video.responsive-video {
   max-width: 100%;
   height: auto;
 }
 
-/* line 197, scss/components/_global.scss */
+/* line 202, scss/components/_global.scss */
 .parallax-container {
   position: relative;
   overflow: hidden;
   height: 500px;
 }
 
-/* line 203, scss/components/_global.scss */
+/* line 208, scss/components/_global.scss */
 .parallax {
   position: absolute;
   top: 0;
@@ -690,7 +696,7 @@ video.responsive-video {
   bottom: 0;
   z-index: -1;
 }
-/* line 211, scss/components/_global.scss */
+/* line 216, scss/components/_global.scss */
 .parallax img {
   display: none;
   position: absolute;
@@ -705,12 +711,12 @@ video.responsive-video {
           transform: translateX(-50%);
 }
 
-/* line 225, scss/components/_global.scss */
+/* line 230, scss/components/_global.scss */
 .pin-top, .pin-bottom {
   position: relative;
 }
 
-/* line 228, scss/components/_global.scss */
+/* line 233, scss/components/_global.scss */
 .pinned {
   position: fixed !important;
 }
@@ -718,12 +724,12 @@ video.responsive-video {
 /*********************
   Transition Classes
 **********************/
-/* line 236, scss/components/_global.scss */
+/* line 241, scss/components/_global.scss */
 ul.staggered-list li {
   opacity: 0;
 }
 
-/* line 240, scss/components/_global.scss */
+/* line 245, scss/components/_global.scss */
 .fade-in {
   opacity: 0;
   -webkit-transform-origin: 0 50%;
@@ -731,7 +737,7 @@ ul.staggered-list li {
           transform-origin: 0 50%;
 }
 
-/* line 246, scss/components/_global.scss */
+/* line 251, scss/components/_global.scss */
 .video-container {
   position: relative;
   padding-bottom: 56.25%;
@@ -739,11 +745,11 @@ ul.staggered-list li {
   height: 0;
   overflow: hidden;
 }
-/* line 252, scss/components/_global.scss */
+/* line 257, scss/components/_global.scss */
 .video-container.no-controls {
   padding-top: 0;
 }
-/* line 256, scss/components/_global.scss */
+/* line 261, scss/components/_global.scss */
 .video-container iframe, .video-container object, .video-container embed {
   position: absolute;
   top: 0;
@@ -755,37 +761,37 @@ ul.staggered-list li {
 /*******************
   Utility Classes
 *******************/
-/* line 270, scss/components/_global.scss */
+/* line 275, scss/components/_global.scss */
 .hide {
   display: none !important;
 }
 
-/* line 275, scss/components/_global.scss */
+/* line 280, scss/components/_global.scss */
 .left-align {
   text-align: left;
 }
 
-/* line 278, scss/components/_global.scss */
+/* line 283, scss/components/_global.scss */
 .right-align {
   text-align: right;
 }
 
-/* line 281, scss/components/_global.scss */
+/* line 286, scss/components/_global.scss */
 .center, .center-align {
   text-align: center;
 }
 
-/* line 285, scss/components/_global.scss */
+/* line 290, scss/components/_global.scss */
 .left {
   float: left !important;
 }
 
-/* line 288, scss/components/_global.scss */
+/* line 293, scss/components/_global.scss */
 .right {
   float: right !important;
 }
 
-/* line 293, scss/components/_global.scss */
+/* line 298, scss/components/_global.scss */
 .no-select {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
@@ -795,19 +801,19 @@ ul.staggered-list li {
   user-select: none;
 }
 
-/* line 302, scss/components/_global.scss */
+/* line 307, scss/components/_global.scss */
 .circle {
   border-radius: 50%;
 }
 
-/* line 306, scss/components/_global.scss */
+/* line 311, scss/components/_global.scss */
 .center-block {
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
 
-/* line 312, scss/components/_global.scss */
+/* line 317, scss/components/_global.scss */
 .truncate {
   display: block;
   white-space: nowrap;
@@ -815,7 +821,7 @@ ul.staggered-list li {
   text-overflow: ellipsis;
 }
 
-/* line 319, scss/components/_global.scss */
+/* line 324, scss/components/_global.scss */
 .no-padding {
   padding: 0 !important;
 }
@@ -2642,6 +2648,105 @@ select:focus + .triangle:after {
   }
 }
 
+/* line 34, scss/components/_tables.scss */
+.table-tabs .select-box {
+  margin-bottom: 10px;
+}
+/* line 37, scss/components/_tables.scss */
+.table-tabs .content-block {
+  padding: 10px 0;
+  border-bottom: 1px solid #ededed;
+}
+/* line 40, scss/components/_tables.scss */
+.table-tabs .content-block .item-title,
+.table-tabs .content-block .item-value {
+  padding: 10px 0;
+}
+/* line 44, scss/components/_tables.scss */
+.table-tabs .content-block .item-title {
+  font-size: 20px;
+  line-height: 25px;
+}
+
+/* line 52, scss/components/_tables.scss */
+table.zaim th, table.zaim td {
+  padding: 20px 0;
+  border-bottom: 1px solid #ededed;
+}
+/* line 56, scss/components/_tables.scss */
+table.zaim th {
+  font-weight: normal;
+}
+/* line 58, scss/components/_tables.scss */
+table.zaim th:first-child {
+  width: 33.333%;
+  text-align: left;
+  font-size: 20px;
+  line-height: 25px;
+}
+@media only screen and (min-width: 993px) {
+  /* line 58, scss/components/_tables.scss */
+  table.zaim th:first-child {
+    width: 25%;
+  }
+}
+/* line 68, scss/components/_tables.scss */
+table.zaim td {
+  text-align: center;
+}
+/* line 71, scss/components/_tables.scss */
+table.zaim tr td:nth-child(2):not(:last-child),
+table.zaim tr th:nth-child(2):not(:last-child) {
+  position: relative;
+}
+/* line 74, scss/components/_tables.scss */
+table.zaim tr td:nth-child(2):not(:last-child):after,
+table.zaim tr th:nth-child(2):not(:last-child):after {
+  content: '';
+  display: inline-block;
+  width: 1px;
+  height: 30px;
+  background: #ededed;
+  position: absolute;
+  top: auto;
+  right: 0;
+}
+
+/* line 2, scss/components/_breadcrumbs.scss */
+.breadcrumbs {
+  margin: 15px 0;
+}
+@media only screen and (min-width: 601px) {
+  /* line 2, scss/components/_breadcrumbs.scss */
+  .breadcrumbs {
+    margin-top: 40px;
+  }
+}
+@media only screen and (min-width: 993px) {
+  /* line 2, scss/components/_breadcrumbs.scss */
+  .breadcrumbs {
+    margin-top: 50px;
+  }
+}
+/* line 10, scss/components/_breadcrumbs.scss */
+.breadcrumbs .breadcrumbs-item {
+  display: inline-block;
+}
+/* line 12, scss/components/_breadcrumbs.scss */
+.breadcrumbs .breadcrumbs-item:not(:last-of-type):after {
+  content: ' / ';
+}
+/* line 16, scss/components/_breadcrumbs.scss */
+.breadcrumbs .breadcrumbs-link {
+  font-size: 15px;
+  line-height: 20px;
+  color: #434343;
+}
+/* line 20, scss/components/_breadcrumbs.scss */
+.breadcrumbs .breadcrumbs-link:hover {
+  color: #c7213a;
+}
+
 /* line 2, scss/components/_header.scss */
 .header {
   border: 1px solid #ededed;
@@ -4112,4 +4217,30 @@ select:focus + .triangle:after {
 /* line 129, scss/components/_sup-measures.scss */
 .sup-measures-page .content-item .item a:hover .block-title {
   color: #fff;
+}
+
+/* line 138, scss/components/_sup-measures.scss */
+.sup-measures-single .order-btn {
+  margin-top: 40px;
+  margin-bottom: 50px;
+}
+@media only screen and (min-width: 601px) {
+  /* line 138, scss/components/_sup-measures.scss */
+  .sup-measures-single .order-btn {
+    margin-top: 60px;
+    margin-bottom: 90px;
+  }
+}
+@media only screen and (min-width: 993px) {
+  /* line 138, scss/components/_sup-measures.scss */
+  .sup-measures-single .order-btn {
+    margin-top: 50px;
+    margin-bottom: 80px;
+  }
+}
+@media only screen and (min-width: 601px) {
+  /* line 150, scss/components/_sup-measures.scss */
+  .sup-measures-single .item-content {
+    margin-top: 30px;
+  }
 }

@@ -29,3 +29,57 @@
 		}
 	}
 }
+
+.table-tabs {
+	.select-box {
+		margin-bottom: $gutter;
+	}
+	.content-block {
+		padding: $gutter 0;
+		border-bottom: 1px solid #ededed;
+		.item-title,
+		.item-value {
+			padding: $gutter 0;
+		}
+		.item-title {
+			font-size: 20px;
+			line-height: 25px;
+		}
+	}
+}
+
+table.zaim {
+	th, td {
+		padding: 2*$gutter 0;
+		border-bottom: 1px solid #ededed;
+	}
+	th {
+		font-weight: normal;
+		&:first-child {
+			width: 33.333%;
+			text-align: left;
+			font-size: 20px;
+			line-height: 25px;
+			@media #{$large-and-up}{
+				width: 25%;
+			}
+		}
+	}
+	td {
+		text-align: center;
+	}
+	tr td:nth-child(2):not(:last-child),
+	tr th:nth-child(2):not(:last-child) {
+		position: relative;
+		&:after {
+			content: '';
+			display: inline-block;
+			width: 1px;
+			height: 3*$gutter;
+			background: #ededed;
+			position: absolute;
+			top: auto;
+			right: 0;
+		}
+	}
+}
