@@ -40,6 +40,11 @@
 			<a href="#.doc" class="file">Постановление Правительства Ямало-Ненецкого автономного округа №197-1</a>
 		</div>
 	</div>
+	<!-- если понадобится граница между ссылками и регламентирующим документом, перенести .print-links в .item-content -->
+	<div class="print-links">
+		<a href="#" class="nostyle">Распечатать результат</a>
+		<a href="#" class="nostyle">Экспорт в PDF</a>
+	</div>
 	<a href="#" class="btn center">Вернуться к списку</a>
 </div>
 <?include('footer.php');?>

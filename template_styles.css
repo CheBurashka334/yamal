@@ -3838,11 +3838,11 @@ select:focus + .triangle:after {
 }
 
 /* line 83, scss/components/_search-results.scss */
-.search-results-page .print-links {
+.print-links {
   margin: 20px 0 50px;
 }
 /* line 85, scss/components/_search-results.scss */
-.search-results-page .print-links a {
+.print-links a {
   display: inline-block;
   margin-right: 20px;
 }
