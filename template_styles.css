@@ -1456,12 +1456,24 @@ ul.staggered-list li {
         url("fonts/segoeui-Bold.ttf") format("truetype");
     font-weight: 700;
 }*/
+@font-face {
+  font-family: rouble;
+  /*src: url('fonts/pt-'+$font+'.eot');
+  src: url('fonts/pt-'+$font+'.eot#iefix') format("embedded-opentype"),
+  	 url('fonts/pt-'+$font+'.woff') format("woff"),
+  	 url('fonts/pt-'+$font+'.ttf') format("truetype"),
+  	 url('fonts/pt-'+$font+'.svg') format("svg");*/
+  src: url("fonts/pt-rouble.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
 /* line 1, scss/components/_typography.scss */
 a {
   text-decoration: none;
+  word-wrap: break-word;
 }
 
-/* line 5, scss/components/_typography.scss */
+/* line 6, scss/components/_typography.scss */
 html {
   line-height: 1.5;
   font-size: 18px;
@@ -1470,38 +1482,38 @@ html {
   color: #434343;
 }
 
-/* line 14, scss/components/_typography.scss */
+/* line 15, scss/components/_typography.scss */
 em {
   font-style: italic;
 }
 
-/* line 15, scss/components/_typography.scss */
+/* line 16, scss/components/_typography.scss */
 strong {
   font-weight: bolder;
 }
 
-/* line 16, scss/components/_typography.scss */
+/* line 17, scss/components/_typography.scss */
 small {
   font-size: 75%;
 }
 
-/* line 17, scss/components/_typography.scss */
+/* line 18, scss/components/_typography.scss */
 .light {
   font-weight: 300;
 }
 
-/* line 18, scss/components/_typography.scss */
+/* line 19, scss/components/_typography.scss */
 .thin {
   font-weight: 200;
 }
 
-/* line 19, scss/components/_typography.scss */
+/* line 20, scss/components/_typography.scss */
 .big {
   font-size: 20px;
   line-height: 28px;
 }
 
-/* line 23, scss/components/_typography.scss */
+/* line 24, scss/components/_typography.scss */
 .page-title, .project-single .item-title {
   margin: 30px 0 35px;
   font-size: 30px;
@@ -1509,42 +1521,72 @@ small {
   color: #434343;
 }
 @media only screen and (min-width: 601px) {
-  /* line 23, scss/components/_typography.scss */
+  /* line 24, scss/components/_typography.scss */
   .page-title, .project-single .item-title {
     font-size: 40px;
     line-height: 50px;
   }
 }
 @media only screen and (min-width: 993px) {
-  /* line 23, scss/components/_typography.scss */
+  /* line 24, scss/components/_typography.scss */
   .page-title, .project-single .item-title {
     margin: 40px 0 10px;
   }
 }
 
-/* line 36, scss/components/_typography.scss */
+/* line 37, scss/components/_typography.scss */
 .block-title {
   font-size: 26px;
   line-height: 28px;
   margin: 30px auto;
 }
 @media only screen and (min-width: 601px) {
-  /* line 36, scss/components/_typography.scss */
+  /* line 37, scss/components/_typography.scss */
   .block-title {
     margin-top: 40px;
   }
 }
 
-/* line 44, scss/components/_typography.scss */
+/* line 45, scss/components/_typography.scss */
 .light-text {
   color: #949494;
 }
 
-/* line 47, scss/components/_typography.scss */
+/* line 48, scss/components/_typography.scss */
 h2 {
   font-size: 26px;
   line-height: 28px;
   margin: 20px 0 30px;
+}
+
+/* line 53, scss/components/_typography.scss */
+.rouble {
+  font-family: rouble;
+}
+
+/* line 57, scss/components/_typography.scss */
+ol:not(.nostyle) {
+  margin: 10px 0 20px;
+  padding: 0;
+  list-style: none;
+  counter-reset: item;
+}
+/* line 62, scss/components/_typography.scss */
+ol:not(.nostyle) li {
+  margin: 10px 0;
+  padding: 0;
+}
+/* line 65, scss/components/_typography.scss */
+ol:not(.nostyle) li:before {
+  display: inline;
+  counter-increment: item;
+  content: counter(item) ") ";
+}
+@media only screen and (min-width: 601px) {
+  /* line 62, scss/components/_typography.scss */
+  ol:not(.nostyle) li {
+    margin: 20px 0;
+  }
 }
 
 /* line 2, scss/components/_dropdown.scss */
@@ -2545,6 +2587,52 @@ select:focus + .triangle:after {
 /* line 101, scss/components/_tabs.scss */
 .tab-content .content-item.active {
   display: block;
+}
+
+/* line 2, scss/components/_tables.scss */
+.table {
+  display: table;
+}
+
+/* line 5, scss/components/_tables.scss */
+.table-row {
+  display: table-row;
+}
+
+/* line 8, scss/components/_tables.scss */
+.table-cell {
+  display: table-cell;
+  border-bottom: 1px solid #ededed;
+}
+@media only screen and (max-width: 600px) {
+  /* line 8, scss/components/_tables.scss */
+  .table-cell {
+    display: block;
+  }
+  /* line 13, scss/components/_tables.scss */
+  .table-cell:first-of-type {
+    padding: 20px 0 5px;
+    border-bottom: 0;
+  }
+  /* line 17, scss/components/_tables.scss */
+  .table-cell:last-of-type {
+    padding: 10px 0 20px;
+  }
+}
+@media only screen and (min-width: 601px) {
+  /* line 8, scss/components/_tables.scss */
+  .table-cell {
+    padding: 20px;
+  }
+  /* line 23, scss/components/_tables.scss */
+  .table-cell:first-of-type {
+    padding-left: 0;
+  }
+  /* line 26, scss/components/_tables.scss */
+  .table-cell:last-of-type {
+    padding-right: 0;
+    text-align: right;
+  }
 }
 
 /* line 2, scss/components/_header.scss */
@@ -3731,45 +3819,70 @@ select:focus + .triangle:after {
   }
 }
 /* line 70, scss/components/_search-results.scss */
-.search-results {
+.search-results,
+.search-result-single {
   margin-bottom: 20px;
 }
-/* line 72, scss/components/_search-results.scss */
-.search-results .content-block {
+/* line 73, scss/components/_search-results.scss */
+.search-results .content-block,
+.search-result-single .content-block {
   padding-bottom: 35px;
   margin-bottom: 20px;
   border-bottom: 1px solid #ededed;
 }
-/* line 76, scss/components/_search-results.scss */
-.search-results .content-block:last-of-type:not(:only-of-type) {
+/* line 77, scss/components/_search-results.scss */
+.search-results .content-block:last-of-type:not(:only-of-type),
+.search-result-single .content-block:last-of-type:not(:only-of-type) {
   border: 0;
   padding-bottom: 10px;
 }
 
-/* line 82, scss/components/_search-results.scss */
+/* line 83, scss/components/_search-results.scss */
 .search-results-page .print-links {
   margin: 20px 0 50px;
 }
-/* line 84, scss/components/_search-results.scss */
+/* line 85, scss/components/_search-results.scss */
 .search-results-page .print-links a {
   display: inline-block;
   margin-right: 20px;
 }
 
-/* line 89, scss/components/_search-results.scss */
+/* line 90, scss/components/_search-results.scss */
 .search-results-page .btn {
   margin-top: 50px;
 }
 
+/* line 95, scss/components/_search-results.scss */
+.search-result-single .item-content {
+  margin-top: 30px;
+}
+/* line 99, scss/components/_search-results.scss */
+.search-result-single .perf-indicators .table-row:first-of-type,
+.search-result-single .perf-indicators .table-row:first-of-type .table-cell:first-of-type {
+  padding-top: 0;
+}
+/* line 104, scss/components/_search-results.scss */
+.search-result-single .btn {
+  margin-top: 40px;
+}
+
 @media only screen and (min-width: 993px) {
-  /* line 94, scss/components/_search-results.scss */
+  /* line 112, scss/components/_search-results.scss */
   .search-results-page .content-block,
-  .search-results-page .print-links {
+  .search-results-page .print-links,
+  .search-result-single .content-block,
+  .search-result-single .print-links {
     padding-left: 12.8%;
     padding-right: 12.8%;
   }
-  /* line 99, scss/components/_search-results.scss */
-  .search-results-page .btn {
+  /* line 117, scss/components/_search-results.scss */
+  .search-results-page .btn,
+  .search-result-single .btn {
     margin-top: 90px;
+  }
+
+  /* line 121, scss/components/_search-results.scss */
+  .search-result-single .item-content {
+    margin-top: 40px;
   }
 }
