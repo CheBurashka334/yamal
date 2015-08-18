@@ -2,9 +2,9 @@
 <div class="page-title">Результаты поиска</div>
 <div class="search-results-page">
 	<div class="filter hide-on-small-only">
-		<div class="item">
+		<div class="item action-dep-box">
 			<div class="select-box hide-on-large-only">
-				<select class="" id="action-dep" name="action-dep-sel">
+				<select class="mobile-synh" id="action-dep" name="action-dep-sel">
 					<option value="v1" selected>Все отрасли</option>
 					<option value="v2">A. Сельское хозяйство, охота и лесное хозяйство</option>
 					<option value="v3">B. Рыболовство, рыбоводство</option>
@@ -33,7 +33,7 @@
 					</div>
 					<div class="item-text">Все отрасли</div>
 				</div>
-				<ul class="dropdown-list select-synh action-dep" data-select="action-dep">
+				<ul class="dropdown-list select-synh action-dep hide-on-med-and-down" data-select="action-dep">
 					<li class="dropdown-item" data-active="active">
 						<input type="radio" class="dropdown-inp" name="action-dep-rad" value="v1" id="action-dep-v1" checked="checked" data-value-text="Все отрасли" data-value-icon="#depart"/>
 						<label class="dropdown-title" for="action-dep-v1">
@@ -147,7 +147,7 @@
 		</div>
 		<div class="item">
 			<div class="select-box hide-on-large-only">
-				<select class="" id="rec-type" name="rec-type-sel">
+				<select class="mobile-synh" id="rec-type" name="rec-type-sel">
 					<option value="v1" selected>Начинающий предприниматель</option>
 					<option value="v2">Молодой предприниматель</option>
 					<option value="v3">Социальный предприниматель</option>
@@ -165,7 +165,7 @@
 					</div>
 					<div class="item-text">Начинающий предприниматель</div>
 				</div>
-				<ul class="dropdown-list select-synh rec-type" data-select="rec-type">
+				<ul class="dropdown-list select-synh rec-type hide-on-med-and-down" data-select="rec-type">
 					<li class="dropdown-item" data-active="active">
 						<input type="radio" class="dropdown-inp" name="rec-type-rad" value="v1" id="rec-type-v1" checked="checked" data-value-text="Начинающий <br/>предприниматель" data-value-icon="#starter"/>
 						<label class="dropdown-title" for="rec-type-v1">
@@ -213,7 +213,7 @@
 		</div>
 		<div class="item">
 			<div class="select-box hide-on-large-only">
-				<select class="" id="rec-cat" name="rec-cat-sel">
+				<select class="mobile-synh" id="rec-cat" name="rec-cat-sel">
 					<option value="v1" selected>Юридическое лицо</option>
 					<option value="v2">Индивидуальный предприниматель</option>
 					<option value="v3">Фермерское хозяйство</option>
@@ -227,7 +227,7 @@
 					</div>
 					<div class="item-text">Юридическое лицо</div>
 				</div>
-				<ul class="dropdown-list select-synh horz-label rec-cat" data-select="rec-cat">
+				<ul class="dropdown-list select-synh horz-label rec-cat hide-on-med-and-down" data-select="rec-cat">
 					<li class="dropdown-item" data-active="active">
 						<input type="radio" class="dropdown-inp" name="rec-cat-rad" value="v1" id="rec-cat-v1" checked="checked" data-value-text="Юридическое лицо" data-value-icon="#justice"/>
 						<label class="dropdown-title" for="rec-cat-v1">
@@ -249,61 +249,9 @@
 				</ul>
 			</div>
 		</div>
-		<div class="item">
+		<div class="item biz-size-box">
 			<div class="select-box hide-on-large-only">
-				<select class="" id="biz-period" name="biz-period-sel">
-					<option value="v1" selected>Еще не создан</option>
-					<option value="v2">Менее 1 года</option>
-					<option value="v3">От 1 до 2 лет</option>
-					<option value="v4">От 2 до 3 лет</option>
-					<option value="v5">Более 3 лет</option>
-				</select>
-				<label for="period" class="triangle"></label>
-			</div>
-			<div class="dropdown-box with-text-icon">
-				<div class="dropdown-value">
-					<div class="item-icon circle">
-						<span class="icon">0</span>
-					</div>
-					<div class="item-text">Еще не создан</div>
-				</div>
-				<ul class="dropdown-list select-synh biz-period" data-select="biz-period">
-					<li class="dropdown-item" data-active="active">
-						<input type="radio" class="dropdown-inp" name="biz-period-rad" value="v1" id="biz-period-rad-v1" checked="checked" data-value-text="Еще не создан" data-value-icon="0"/>
-						<label class="dropdown-title" for="biz-period-rad-v1">
-							<div class="item-text">Еще не создан</div>
-						</label>
-					</li>
-					<li class="dropdown-item">
-						<input type="radio" class="dropdown-inp" name="biz-period-rad" value="v2" id="biz-period-rad-v2" data-value-text="Менее 1 года" data-value-icon="&lt;1"/>
-						<label class="dropdown-title" for="biz-period-rad-v2">
-							<div class="item-text">Менее 1 года</div>
-						</label>
-					</li>
-					<li class="dropdown-item">
-						<input type="radio" class="dropdown-inp" name="biz-period-rad" value="v3" id="biz-period-rad-v3" data-value-text="От 1 до 2 лет" data-value-icon="1-2"/>
-						<label class="dropdown-title" for="biz-period-rad-v3">
-							<div class="item-text">От 1 до 2 лет</div>
-						</label>
-					</li>
-					<li class="dropdown-item">
-						<input type="radio" class="dropdown-inp" name="biz-period-rad" value="v4" id="biz-period-rad-v4" data-value-text="От 2 до 3 лет" data-value-icon="2-3"/>
-						<label class="dropdown-title" for="biz-period-rad-v4">
-							<div class="item-text">От 2 до 3 лет</div>
-						</label>
-					</li>
-					<li class="dropdown-item">
-						<input type="radio" class="dropdown-inp" name="biz-period-rad" value="v5" id="biz-period-rad-v5" data-value-text="Более 3 лет" data-value-icon="3+"/>
-						<label class="dropdown-title" for="biz-period-rad-v5">
-							<div class="item-text">Более 3 лет</div>
-						</label>
-					</li>
-				</ul>
-			</div>
-		</div>
-		<div class="item">
-			<div class="select-box hide-on-large-only">
-				<select class="" id="biz-size" name="biz-size-sel">
+				<select class="mobile-synh" id="biz-size" name="biz-size-sel">
 					<option value="v1" selected>Микропредприятие</option>
 					<option value="v2">Малое предприятие</option>
 					<option value="v3">Среднее предприятие</option>
@@ -318,7 +266,7 @@
 					</div>
 					<div class="item-text"></div>
 				</div>
-				<ul class="dropdown-list select-synh horz-label biz-size" data-select="biz-size">
+				<ul class="dropdown-list select-synh horz-label biz-size hide-on-med-and-down" data-select="biz-size">
 					<li class="dropdown-item" data-active="active">
 						<input type="radio" class="dropdown-inp" name="biz-size-rad" value="v1" id="biz-size-rad-v1" checked="checked" data-value-text="Микропредприятие<br/>Оборот до 60 млн.<br/>Не более 15 сотрудников" data-value-icon="#micro"/>
 						<label class="dropdown-title" for="biz-size-rad-v1">
@@ -354,11 +302,63 @@
 				</ul>
 			</div>
 		</div>
+		<div class="item">
+			<div class="select-box hide-on-large-only">
+				<select class="mobile-synh" id="biz-period" name="biz-period-sel">
+					<option value="v1" selected>Еще не создан</option>
+					<option value="v2">Менее 1 года</option>
+					<option value="v3">От 1 до 2 лет</option>
+					<option value="v4">От 2 до 3 лет</option>
+					<option value="v5">Более 3 лет</option>
+				</select>
+				<label for="period" class="triangle"></label>
+			</div>
+			<div class="dropdown-box with-text-icon">
+				<div class="dropdown-value">
+					<div class="item-icon circle">
+						<span class="icon">0</span>
+					</div>
+					<div class="item-text">Еще не создан</div>
+				</div>
+				<ul class="dropdown-list select-synh biz-period hide-on-med-and-down" data-select="biz-period">
+					<li class="dropdown-item" data-active="active">
+						<input type="radio" class="dropdown-inp" name="biz-period-rad" value="v1" id="biz-period-rad-v1" checked="checked" data-value-text="Еще не создан" data-value-icon="0"/>
+						<label class="dropdown-title" for="biz-period-rad-v1">
+							<div class="item-text">Еще не создан</div>
+						</label>
+					</li>
+					<li class="dropdown-item">
+						<input type="radio" class="dropdown-inp" name="biz-period-rad" value="v2" id="biz-period-rad-v2" data-value-text="Менее 1 года" data-value-icon="&lt;1"/>
+						<label class="dropdown-title" for="biz-period-rad-v2">
+							<div class="item-text">Менее 1 года</div>
+						</label>
+					</li>
+					<li class="dropdown-item">
+						<input type="radio" class="dropdown-inp" name="biz-period-rad" value="v3" id="biz-period-rad-v3" data-value-text="От 1 до 2 лет" data-value-icon="1-2"/>
+						<label class="dropdown-title" for="biz-period-rad-v3">
+							<div class="item-text">От 1 до 2 лет</div>
+						</label>
+					</li>
+					<li class="dropdown-item">
+						<input type="radio" class="dropdown-inp" name="biz-period-rad" value="v4" id="biz-period-rad-v4" data-value-text="От 2 до 3 лет" data-value-icon="2-3"/>
+						<label class="dropdown-title" for="biz-period-rad-v4">
+							<div class="item-text">От 2 до 3 лет</div>
+						</label>
+					</li>
+					<li class="dropdown-item">
+						<input type="radio" class="dropdown-inp" name="biz-period-rad" value="v5" id="biz-period-rad-v5" data-value-text="Более 3 лет" data-value-icon="3+"/>
+						<label class="dropdown-title" for="biz-period-rad-v5">
+							<div class="item-text">Более 3 лет</div>
+						</label>
+					</li>
+				</ul>
+			</div>
+		</div>
 	</div>
 	<div class="search-results">
 		<div class="tab-header">
 			<div class="select-box hide-on-med-and-up">
-				<select class="" id="tabber" data-tab-content="sr-content">
+				<select class="type-2" id="tabber" data-tab-content="sr-content">
 					<option value="v1">Микрозаймы</option>
 					<option value="v2">Целевые займы</option>
 					<option value="v3">Лизинг</option>
@@ -411,51 +411,69 @@
 		</div>
 		<div class="tab-content" id="sr-content">
 			<div class="content-item" data-tab="v1">
-				<div class="block-title item-title">Микрозаймы заголовок</div>
-				<div class="item-text">
-					<p>Микрозаймы текст текст текст</p>
+				<div class="content-block">
+					<div class="block-title item-title">Микрозаймы заголовок</div>
+					<div class="item-text">
+						<p>Микрозаймы текст текст текст</p>
+					</div>
 				</div>
 			</div>
 			<div class="content-item" data-tab="v2">
-				<div class="block-title item-title">Целевые займы заголовок</div>
-				<div class="item-text">
-					<p>Целевые займы текст текст текст</p>
+				<div class="content-block">
+					<div class="block-title item-title">Целевые займы заголовок</div>
+					<div class="item-text">
+						<p>Целевые займы текст текст текст</p>
+					</div>
 				</div>
 			</div>
 			<div class="content-item" data-tab="v3">
-				<div class="block-title item-title">Лизинг заголовок</div>
-				<div class="item-text">
-					<p>Лизинг текст текст текст</p>
+				<div class="content-block">
+					<div class="block-title item-title">Лизинг заголовок</div>
+					<div class="item-text">
+						<p>Лизинг текст текст текст</p>
+					</div>
 				</div>
 			</div>
 			<div class="content-item" data-tab="v4">
-				<div class="block-title">Условия предоставления поддержки</div>
-				<div class="item-text">
-					<p>Субсидии предоставляются инвесторам, реализующим особо значимые инвестиционные проекты Камчатского края. Субсидии предоставляются инвесторам с целью возмещения части затрат на уплату процентов по кредитам, привлеченным в российских кредитных организациях в валюте Российской Федерации в целях реализации особо значимых инвестиционных проектов Камчатского края. Субсидии предоставляются при соблюдении следующих условий;</p>
-					<p>1) заключения между Правительством Камчатского края и инвестором договора о предоставлении государственной поддержки инвестиционной деятельности в Камчатском крае в форме финансовых мер путем предоставления субсидии (далее - договор). Обязательным условием предоставления субсидии, включаемым в договор, является согласие инвестора на осуществление Министерством и органами государственного финансового контроля проверок соблюдения условий, целей и порядка ее предоставления;
-(в ред. Постановления Правительства Камчатского края от 24.03.2014 N 137-П)</p>
-					<p>2) отсутствия у инвестора просроченной задолженности по заработной плате, по ранее предоставленной государственной поддержке инвестиционной деятельности в Камчатском крае и (или) по налогам и сборам в бюджеты бюджетной системы Российской Федерации;</p>
-					<p>3) отсутствия у инвестора задолженности по оплате уставного капитала;</p>
-					<p>4) отсутствия у инвестора процедур реорганизации, ликвидации, банкротства;</p>
-					<p>5) выполнения инвестором обязательств по погашению основного долга и уплаты начисленных процентов в соответствии с кредитным договором, заключенным с российской кредитной организацией;</p>
-					<p>6) предоставления инвестором полного пакета документов, предусмотренных частью 8 настоящего Порядка.</p>
+				<div class="content-block">
+					<div class="block-title">Условия предоставления поддержки</div>
+					<div class="item-text">
+						<p>Субсидии предоставляются инвесторам, реализующим особо значимые инвестиционные проекты Камчатского края. Субсидии предоставляются инвесторам с целью возмещения части затрат на уплату процентов по кредитам, привлеченным в российских кредитных организациях в валюте Российской Федерации в целях реализации особо значимых инвестиционных проектов Камчатского края. Субсидии предоставляются при соблюдении следующих условий;</p>
+						<p>1) заключения между Правительством Камчатского края и инвестором договора о предоставлении государственной поддержки инвестиционной деятельности в Камчатском крае в форме финансовых мер путем предоставления субсидии (далее - договор). Обязательным условием предоставления субсидии, включаемым в договор, является согласие инвестора на осуществление Министерством и органами государственного финансового контроля проверок соблюдения условий, целей и порядка ее предоставления;
+						(в ред. Постановления Правительства Камчатского края от 24.03.2014 N 137-П)</p>
+						<p>2) отсутствия у инвестора просроченной задолженности по заработной плате, по ранее предоставленной государственной поддержке инвестиционной деятельности в Камчатском крае и (или) по налогам и сборам в бюджеты бюджетной системы Российской Федерации;</p>
+						<p>3) отсутствия у инвестора задолженности по оплате уставного капитала;</p>
+						<p>4) отсутствия у инвестора процедур реорганизации, ликвидации, банкротства;</p>
+						<p>5) выполнения инвестором обязательств по погашению основного долга и уплаты начисленных процентов в соответствии с кредитным договором, заключенным с российской кредитной организацией;</p>
+						<p>6) предоставления инвестором полного пакета документов, предусмотренных частью 8 настоящего Порядка.</p>
+					</div>
+				</div>
+				<div class="content-block">
 					<div class="block-title">Ограничения на получение поддержки</div>
 					<p>Представление неполного пакета документов, наличие в представленных документах недостоверных сведений является основанием для отказа в рассмотрении вопроса о предоставлении субсидии.</p>
 				</div>
 			</div>
 			<div class="content-item" data-tab="v5">
-				<div class="block-title item-title">Поручительство заголовок</div>
-				<div class="item-text">
-					<p>Поручительство текст текст текст</p>
+				<div class="content-block">
+					<div class="block-title item-title">Поручительство заголовок</div>
+					<div class="item-text">
+						<p>Поручительство текст текст текст</p>
+					</div>
 				</div>
 			</div>
 			<div class="content-item" data-tab="v6">
-				<div class="block-title item-title">Сопровождение проектов заголовок</div>
-				<div class="item-text">
-					<p>Сопровождение проектов текст текст текст</p>
+				<div class="content-block">
+					<div class="block-title item-title">Сопровождение проектов заголовок</div>
+					<div class="item-text">
+						<p>Сопровождение проектов текст текст текст</p>
+					</div>
 				</div>
 			</div>
 		</div>
+	</div>
+	<div class="print-links">
+		<a href="#" class="nostyle">Распечатать результат</a>
+		<a href="#" class="nostyle">Экспорт в PDF</a>
 	</div>
 	<a href="#" class="btn primary center">Новый поиск</a>
 </div>

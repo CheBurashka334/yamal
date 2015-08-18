@@ -11,6 +11,10 @@ select {
 		color: $base-text-color;
 	}
 }
+select.type-2 {
+	padding: 0 2em $gutter 0;
+	border-bottom: 1px solid #eeeeee;
+}
 select + .triangle {
 	position: absolute;
 	top: 1px;

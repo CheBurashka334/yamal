@@ -13,10 +13,9 @@ $(document).ready(function(){
 			$(this).removeClass('dirty');
 		}
 	});
+	
 	// select
 	// https://select2.github.io/
-	// http://materializecss.com/forms.html
-	
 	if($(window).outerWidth() > 992){
 		$('.customize-select option:first-child').removeAttr('value').text('');
 		$('.customize-select').select2({
@@ -26,13 +25,22 @@ $(document).ready(function(){
 			language: "ru",
 			theme: 'dropdown'
 		});
-		//$('.dropdown-select').material_select();
 		$('.select2-container').removeAttr('style');
+		
+	} else {
+		$('select.mobile-synh').change(function(){
+			var radio = $('.select-synh[data-select="'+$(this).attr('id')+'"]');
+			radio.find('input[type="radio"]').not('[value="'+$(this).val()+'"]').prop('checked', false);
+			radio.find('input[type="radio"][value="'+$(this).val()+'"]').prop('checked', true);
+			radio.find('input[type="radio"]:checked').parent('.dropdown-item').click();
+		});
 	}
 	$('.select-synh input[type="radio"]').change(function(){
 		var select = $(this).parent().parent('.select-synh').attr('data-select');
-		$('#'+select).val($(this).val());
-		$('#'+select).change();
+		if(($(window).outerWidth() > 992) || (!$('#'+select).hasClass('mobile-synh'))){
+			$('#'+select).val($(this).val());
+			$('#'+select).change();
+		}
 	});
 	
 	// dropdown init

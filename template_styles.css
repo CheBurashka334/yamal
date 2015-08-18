@@ -565,13 +565,13 @@ ul li {
 }
 
 /* line 89, scss/components/_global.scss */
-ul.nostyle, .dropdown-list, .tabs-list, .filter .tabs-list,
+ul.nostyle, .dropdown-list, .tabs-list,
 ol.nostyle {
   padding: 0;
   margin: 0;
 }
 /* line 93, scss/components/_global.scss */
-ul.nostyle li, .dropdown-list li, .tabs-list li, .filter .tabs-list li,
+ul.nostyle li, .dropdown-list li, .tabs-list li,
 ol.nostyle li {
   list-style-type: none;
 }
@@ -1775,6 +1775,12 @@ select option {
 }
 
 /* line 14, scss/components/_forms.scss */
+select.type-2 {
+  padding: 0 2em 10px 0;
+  border-bottom: 1px solid #eeeeee;
+}
+
+/* line 18, scss/components/_forms.scss */
 select + .triangle {
   position: absolute;
   top: 1px;
@@ -1785,12 +1791,12 @@ select + .triangle {
   font-size: 15px;
 }
 @media only screen and (min-width: 601px) {
-  /* line 14, scss/components/_forms.scss */
+  /* line 18, scss/components/_forms.scss */
   select + .triangle {
     right: 16px;
   }
 }
-/* line 25, scss/components/_forms.scss */
+/* line 29, scss/components/_forms.scss */
 select + .triangle:after {
   content: '';
   display: block;
@@ -1804,26 +1810,26 @@ select + .triangle:after {
   border-left: 4px solid transparent;
 }
 
-/* line 38, scss/components/_forms.scss */
+/* line 42, scss/components/_forms.scss */
 select:hover,
 select:focus {
   color: #0d4f9e;
   border-color: #0d4f9e;
   outline: none;
 }
-/* line 43, scss/components/_forms.scss */
+/* line 47, scss/components/_forms.scss */
 select:hover + .triangle:after,
 select:focus + .triangle:after {
   border-top-color: #0d4f9e;
 }
 
-/* line 47, scss/components/_forms.scss */
+/* line 51, scss/components/_forms.scss */
 .dropdown-select-box {
   width: auto;
   display: inline-block;
 }
 
-/* line 51, scss/components/_forms.scss */
+/* line 55, scss/components/_forms.scss */
 .dropdown-select {
   display: inline-block;
   padding-right: 30px;
@@ -1832,7 +1838,7 @@ select:focus + .triangle:after {
   font-size: 18px;
   line-height: 20px;
 }
-/* line 58, scss/components/_forms.scss */
+/* line 62, scss/components/_forms.scss */
 .dropdown-select + .triangle {
   right: 0;
   top: 3px;
@@ -2396,29 +2402,58 @@ select:focus + .triangle:after {
 
 /* line 2, scss/components/_tabs.scss */
 .tabs-list {
-  border-bottom: 1px solid #ededed;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: stretch;
+  -webkit-align-items: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+/* line 9, scss/components/_tabs.scss */
+.tabs-list:after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 0;
+  border-bottom: 1px solid #eeeeee;
+  left: 0;
+  bottom: 49px;
 }
 
-/* line 6, scss/components/_tabs.scss */
+/* line 20, scss/components/_tabs.scss */
 .tab-item {
   display: inline-block;
-  margin-right: 30px;
+  border-bottom: 1px solid #eeeeee;
+  bottom: -1px;
+  margin: 0;
+  margin-bottom: 50px;
 }
 
-/* line 10, scss/components/_tabs.scss */
+/* line 27, scss/components/_tabs.scss */
 .tab-inp {
   display: none;
 }
 
-/* line 13, scss/components/_tabs.scss */
+/* line 30, scss/components/_tabs.scss */
 .tab-title {
   display: block;
+  position: relative;
   font-size: 18px;
   line-height: 30px;
   padding: 0 0 10px;
   cursor: pointer;
 }
-/* line 19, scss/components/_tabs.scss */
+/* line 37, scss/components/_tabs.scss */
 .tab-title:after {
   content: '';
   display: block;
@@ -2433,19 +2468,19 @@ select:focus + .triangle:after {
   z-index: 2;
 }
 
-/* line 32, scss/components/_tabs.scss */
+/* line 50, scss/components/_tabs.scss */
 .tab-inp:checked + .tab-title:after {
   left: 0;
   width: 100%;
 }
 
-/* line 36, scss/components/_tabs.scss */
+/* line 54, scss/components/_tabs.scss */
 .tab-title .item-text {
   font-size: 15px;
   line-height: 20px;
 }
 
-/* line 40, scss/components/_tabs.scss */
+/* line 58, scss/components/_tabs.scss */
 .tab-title .item-icon {
   width: 67px;
   height: 67px;
@@ -2456,32 +2491,32 @@ select:focus + .triangle:after {
   color: #2d4e9d;
   margin-bottom: 20px;
 }
-/* line 49, scss/components/_tabs.scss */
+/* line 67, scss/components/_tabs.scss */
 .tab-title .item-icon .icon {
   fill: #2d4e9d;
   width: 100%;
   height: 100%;
 }
 
-/* line 55, scss/components/_tabs.scss */
+/* line 73, scss/components/_tabs.scss */
 .tab-inp:checked + .tab-title,
 .tab-inp:checked + .tab-title {
   color: #2d4e9d;
 }
-/* line 58, scss/components/_tabs.scss */
+/* line 76, scss/components/_tabs.scss */
 .tab-inp:checked + .tab-title .item-icon,
 .tab-inp:checked + .tab-title .item-icon {
   border-color: #2d4e9d;
   background: #2d4e9d;
   color: #fff;
 }
-/* line 63, scss/components/_tabs.scss */
+/* line 81, scss/components/_tabs.scss */
 .tab-inp:checked + .tab-title .icon,
 .tab-inp:checked + .tab-title .icon {
   fill: #fff;
 }
 
-/* line 67, scss/components/_tabs.scss */
+/* line 85, scss/components/_tabs.scss */
 .tabs-list.horz-label .tab-title {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2492,22 +2527,22 @@ select:focus + .triangle:after {
       -ms-flex-align: center;
           align-items: center;
 }
-/* line 70, scss/components/_tabs.scss */
+/* line 88, scss/components/_tabs.scss */
 .tabs-list.horz-label .tab-title .item-icon {
   display: inline-block;
   margin-right: 25px;
   margin-bottom: 0;
 }
-/* line 75, scss/components/_tabs.scss */
+/* line 93, scss/components/_tabs.scss */
 .tabs-list.horz-label .tab-title .item-text {
   display: inline-block;
 }
 
-/* line 80, scss/components/_tabs.scss */
+/* line 98, scss/components/_tabs.scss */
 .tab-content .content-item {
   display: none;
 }
-/* line 83, scss/components/_tabs.scss */
+/* line 101, scss/components/_tabs.scss */
 .tab-content .content-item.active {
   display: block;
 }
@@ -2995,106 +3030,6 @@ select:focus + .triangle:after {
   line-height: 2.67;
   height: 2.67em;
   padding: 0 2em 0 15px;
-}
-/* line 43, scss/components/_filter.scss */
-.filter .tabs-list {
-  border-bottom: 1px solid #ededed;
-}
-/* line 47, scss/components/_filter.scss */
-.filter .tab-item {
-  display: inline-block;
-  margin-right: 30px;
-}
-/* line 51, scss/components/_filter.scss */
-.filter .tab-inp {
-  display: none;
-}
-/* line 54, scss/components/_filter.scss */
-.filter .tab-title {
-  display: block;
-  font-size: 18px;
-  line-height: 30px;
-  padding: 0 0 10px;
-  cursor: pointer;
-}
-/* line 60, scss/components/_filter.scss */
-.filter .tab-title:after {
-  content: '';
-  display: block;
-  position: absolute;
-  left: 50%;
-  bottom: -1px;
-  width: 0;
-  height: 3px;
-  background: #2d4e9d;
-  -webkit-transition: width .3s, left .3s;
-          transition: width .3s, left .3s;
-  z-index: 2;
-}
-/* line 73, scss/components/_filter.scss */
-.filter .tab-inp:checked + .tab-title:after {
-  left: 0;
-  width: 100%;
-}
-/* line 77, scss/components/_filter.scss */
-.filter .tab-title .item-text {
-  font-size: 15px;
-  line-height: 20px;
-}
-/* line 81, scss/components/_filter.scss */
-.filter .tab-title .item-icon {
-  width: 67px;
-  height: 67px;
-  font-size: 26px;
-  line-height: 65px;
-  text-align: center;
-  border: 1px solid #e1e1e1;
-  color: #2d4e9d;
-  margin-bottom: 20px;
-}
-/* line 90, scss/components/_filter.scss */
-.filter .tab-title .item-icon .icon {
-  fill: #2d4e9d;
-  width: 100%;
-  height: 100%;
-}
-/* line 96, scss/components/_filter.scss */
-.filter .tab-inp:checked + .tab-title,
-.filter .tab-inp:checked + .tab-title {
-  color: #2d4e9d;
-}
-/* line 99, scss/components/_filter.scss */
-.filter .tab-inp:checked + .tab-title .item-icon,
-.filter .tab-inp:checked + .tab-title .item-icon {
-  border-color: #2d4e9d;
-  background: #2d4e9d;
-  color: #fff;
-}
-/* line 104, scss/components/_filter.scss */
-.filter .tab-inp:checked + .tab-title .icon,
-.filter .tab-inp:checked + .tab-title .icon {
-  fill: #fff;
-}
-/* line 108, scss/components/_filter.scss */
-.filter .tabs-list.horz-label .tab-title {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-/* line 111, scss/components/_filter.scss */
-.filter .tabs-list.horz-label .tab-title .item-icon {
-  display: inline-block;
-  margin-right: 25px;
-  margin-bottom: 0;
-}
-/* line 116, scss/components/_filter.scss */
-.filter .tabs-list.horz-label .tab-title .item-text {
-  display: inline-block;
 }
 
 /* line 2, scss/components/_projects.scss */
@@ -3598,149 +3533,111 @@ select:focus + .triangle:after {
   right: 0;
 }
 /* line 23, scss/components/_navigator.scss */
-.navigator .tabs-list {
-  border-bottom: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: stretch;
-  -webkit-align-items: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch;
-}
-/* line 29, scss/components/_navigator.scss */
-.navigator .tabs-list:after {
-  content: '';
-  display: block;
-  position: absolute;
-  width: 100%;
-  height: 0;
-  border-bottom: 1px solid #eeeeee;
-  left: 0;
-  bottom: 49px;
-}
-/* line 39, scss/components/_navigator.scss */
-.navigator .tabs-list .tab-item {
-  border-bottom: 1px solid #eeeeee;
-  bottom: -1px;
-  margin: 0;
-  margin-bottom: 50px;
-}
-/* line 46, scss/components/_navigator.scss */
 .navigator .tabs-list .tab-title {
-  position: relative;
   padding-bottom: 20px;
 }
-/* line 51, scss/components/_navigator.scss */
+/* line 27, scss/components/_navigator.scss */
 .navigator .rec-type .tab-item {
   width: 25%;
 }
 @media only screen and (min-width: 750px) {
-  /* line 51, scss/components/_navigator.scss */
+  /* line 27, scss/components/_navigator.scss */
   .navigator .rec-type .tab-item {
     width: 20%;
   }
 }
-/* line 57, scss/components/_navigator.scss */
+/* line 33, scss/components/_navigator.scss */
 .navigator .rec-type .tab-title {
   max-width: 130px;
   min-height: 148px;
   display: inline-block;
 }
 @media only screen and (min-width: 993px) {
-  /* line 50, scss/components/_navigator.scss */
+  /* line 26, scss/components/_navigator.scss */
   .navigator .rec-type {
     -webkit-flex-wrap: nowrap;
         -ms-flex-wrap: nowrap;
             flex-wrap: nowrap;
   }
-  /* line 64, scss/components/_navigator.scss */
+  /* line 40, scss/components/_navigator.scss */
   .navigator .rec-type .tab-item {
     width: auto;
     min-width: 155px;
   }
-  /* line 68, scss/components/_navigator.scss */
+  /* line 44, scss/components/_navigator.scss */
   .navigator .rec-type .tab-title {
     margin-right: 40px;
   }
 }
-/* line 74, scss/components/_navigator.scss */
+/* line 50, scss/components/_navigator.scss */
 .navigator .rec-cat .tab-item {
   width: 50%;
 }
 @media only screen and (min-width: 750px) {
-  /* line 74, scss/components/_navigator.scss */
+  /* line 50, scss/components/_navigator.scss */
   .navigator .rec-cat .tab-item {
     width: 33.33%;
   }
 }
-/* line 80, scss/components/_navigator.scss */
+/* line 56, scss/components/_navigator.scss */
 .navigator .rec-cat .tab-title {
   max-width: 250px;
 }
 @media only screen and (min-width: 993px) {
-  /* line 84, scss/components/_navigator.scss */
+  /* line 60, scss/components/_navigator.scss */
   .navigator .rec-cat .tab-item {
     width: auto;
   }
-  /* line 87, scss/components/_navigator.scss */
+  /* line 63, scss/components/_navigator.scss */
   .navigator .rec-cat .tab-title {
     margin-right: 70px;
   }
 }
-/* line 93, scss/components/_navigator.scss */
+/* line 69, scss/components/_navigator.scss */
 .navigator .biz-period .tab-item .tab-title {
   max-width: 100px;
   margin-right: 30px;
 }
 @media only screen and (min-width: 700px) {
-  /* line 93, scss/components/_navigator.scss */
+  /* line 69, scss/components/_navigator.scss */
   .navigator .biz-period .tab-item .tab-title {
     margin-right: 50px;
   }
 }
 @media only screen and (min-width: 750px) {
-  /* line 93, scss/components/_navigator.scss */
+  /* line 69, scss/components/_navigator.scss */
   .navigator .biz-period .tab-item .tab-title {
     margin-right: 60px;
   }
 }
-/* line 105, scss/components/_navigator.scss */
+/* line 81, scss/components/_navigator.scss */
 .navigator .biz-size .tab-item {
   width: 50%;
 }
-/* line 108, scss/components/_navigator.scss */
+/* line 84, scss/components/_navigator.scss */
 .navigator .biz-size .tab-item .tab-title {
   max-width: 270px;
 }
 @media only screen and (min-width: 993px) {
-  /* line 112, scss/components/_navigator.scss */
+  /* line 88, scss/components/_navigator.scss */
   .navigator .biz-size .tab-item {
     width: auto;
   }
-  /* line 115, scss/components/_navigator.scss */
+  /* line 91, scss/components/_navigator.scss */
   .navigator .biz-size .tab-title {
     margin-right: 45px;
   }
 }
-/* line 120, scss/components/_navigator.scss */
+/* line 96, scss/components/_navigator.scss */
 .navigator .tabs-list .tab-item:last-of-type .tab-title {
   margin-right: 0;
 }
-/* line 123, scss/components/_navigator.scss */
+/* line 99, scss/components/_navigator.scss */
 .navigator .btn {
   margin-top: 30px;
 }
 @media only screen and (min-width: 993px) {
-  /* line 123, scss/components/_navigator.scss */
+  /* line 99, scss/components/_navigator.scss */
   .navigator .btn {
     margin-top: 50px;
   }
@@ -3756,12 +3653,123 @@ select:focus + .triangle:after {
   -webkit-align-items: stretch;
       -ms-flex-align: stretch;
           align-items: stretch;
+  margin: 70px 0 60px;
 }
-/* line 5, scss/components/_search-results.scss */
+/* line 6, scss/components/_search-results.scss */
 .search-results-page .filter .item {
   width: 20%;
 }
 /* line 9, scss/components/_search-results.scss */
 .search-results-page .filter .dropdown-value {
   height: 170px;
+}
+
+@media only screen and (min-width: 601px) and (max-width: 992px) {
+  /* line 15, scss/components/_search-results.scss */
+  .search-results-page .filter .item {
+    width: 20%;
+  }
+  /* line 17, scss/components/_search-results.scss */
+  .search-results-page .filter .item.action-dep-box {
+    width: 17%;
+  }
+  /* line 20, scss/components/_search-results.scss */
+  .search-results-page .filter .item.biz-size-box {
+    width: 23%;
+  }
+  /* line 24, scss/components/_search-results.scss */
+  .search-results-page .filter .select-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 10;
+  }
+  /* line 32, scss/components/_search-results.scss */
+  .search-results-page .filter .select-box select {
+    width: 100%;
+    height: 100%;
+  }
+}
+@media only screen and (min-width: 601px) {
+  /* line 41, scss/components/_search-results.scss */
+  .search-results-page .tabs-list:after {
+    bottom: 30px;
+  }
+  /* line 44, scss/components/_search-results.scss */
+  .search-results-page .tab-item {
+    margin-bottom: 30px;
+  }
+  /* line 47, scss/components/_search-results.scss */
+  .search-results-page .tab-title {
+    margin-right: 60px;
+  }
+  /* line 49, scss/components/_search-results.scss */
+  .search-results-page .tab-title .item-text {
+    font-size: 20px;
+    line-height: normal;
+  }
+}
+@media only screen and (min-width: 993px) {
+  /* line 58, scss/components/_search-results.scss */
+  .search-results-page .tabs-list {
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  /* line 61, scss/components/_search-results.scss */
+  .search-results-page .tab-item {
+    border: 0;
+    bottom: 1px;
+  }
+  /* line 65, scss/components/_search-results.scss */
+  .search-results-page .tab-title {
+    margin: 0;
+  }
+}
+/* line 70, scss/components/_search-results.scss */
+.search-results {
+  margin-bottom: 20px;
+}
+/* line 72, scss/components/_search-results.scss */
+.search-results .content-block {
+  padding-bottom: 35px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ededed;
+}
+/* line 76, scss/components/_search-results.scss */
+.search-results .content-block:last-of-type:not(:only-of-type) {
+  border: 0;
+  padding-bottom: 10px;
+}
+
+/* line 82, scss/components/_search-results.scss */
+.search-results-page .print-links {
+  margin: 20px 0 50px;
+}
+/* line 84, scss/components/_search-results.scss */
+.search-results-page .print-links a {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+/* line 89, scss/components/_search-results.scss */
+.search-results-page .btn {
+  margin-top: 50px;
+}
+
+@media only screen and (min-width: 993px) {
+  /* line 94, scss/components/_search-results.scss */
+  .search-results-page .content-block,
+  .search-results-page .print-links {
+    padding-left: 12.8%;
+    padding-right: 12.8%;
+  }
+  /* line 99, scss/components/_search-results.scss */
+  .search-results-page .btn {
+    margin-top: 90px;
+  }
 }
