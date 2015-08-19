@@ -4413,6 +4413,43 @@ table.zaim tr th:nth-child(2):not(:last-child):after {
   margin-bottom: 40px;
 }
 
+/* line 3, scss/components/_partners.scss */
+.partners-page .page-title, .partners-page .project-single .item-title, .project-single .partners-page .item-title {
+  margin-bottom: 30px;
+}
+@media only screen and (min-width: 993px) {
+  /* line 3, scss/components/_partners.scss */
+  .partners-page .page-title, .partners-page .project-single .item-title, .project-single .partners-page .item-title {
+    margin-bottom: 40px;
+  }
+}
+/* line 9, scss/components/_partners.scss */
+.partners-page .block-title {
+  margin: 20px 0 60px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #ededed;
+}
+/* line 14, scss/components/_partners.scss */
+.partners-page .item {
+  text-align: center;
+  margin-bottom: 30px;
+}
+/* line 17, scss/components/_partners.scss */
+.partners-page .item a {
+  color: #434343;
+}
+/* line 19, scss/components/_partners.scss */
+.partners-page .item a:hover {
+  color: #2d4e9d;
+}
+/* line 24, scss/components/_partners.scss */
+.partners-page .item-title {
+  font-size: 15px;
+  line-height: 20px;
+  min-height: 40px;
+  margin-top: 30px;
+}
+
 @media print {
   /* line 3, scss/components/_print.scss */
   body {

@@ -1,0 +1,30 @@
+// partners-page
+.partners-page {
+	.page-title {
+		margin-bottom: 3*$gutter;
+		@media #{$large-and-up}{
+			margin-bottom: 4*$gutter;
+		}
+	}
+	.block-title {
+		margin: 2*$gutter 0 6*$gutter;
+		padding-bottom: 2*$gutter;
+		border-bottom: 1px solid #ededed;
+	}
+	.item {
+		text-align: center;
+		margin-bottom: 3*$gutter;
+		a {
+			color: $base-text-color;
+			&:hover {
+				color: $primary-color;
+			}
+		}
+	}
+	.item-title {
+		font-size: 15px;
+		line-height: 20px;
+		min-height: 4*$gutter;
+		margin-top: 3*$gutter;
+	}
+}
