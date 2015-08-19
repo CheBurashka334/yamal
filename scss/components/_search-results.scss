@@ -51,18 +51,22 @@
 				line-height: normal;
 			}
 		}
+		.tab-item:last-of-type .tab-title {
+			margin-right: 0;
+		}
 	}
 }
 @media #{$large-and-up}{
 	.search-results-page {
-		.tabs-list {
+		.tabs-list:not(.less) {
 			justify-content: space-between;
 		}
 		.tab-item {
 			border: 0;
 			bottom: 1px;
 		}
-		.tab-title {
+		
+		.tabs-list:not(.less) .tab-title {
 			margin: 0;
 		}
 	}

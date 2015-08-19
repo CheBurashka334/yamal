@@ -1,0 +1,56 @@
+// print 
+@media print {
+	body {
+		width: 100%;
+		margin: 0;
+		padding: 0;
+		background: none;
+		color: #000;
+	}
+	@page {
+		margin: 2cm 2cm 1.5cm;
+	}
+	h1, h2, h3, 
+	.page-title, 
+	.block-title, 
+	.item-title {
+		page-break-after: avoid;
+		margin-bottom: 1em;
+	}
+	.header {
+		border-width: 0 0 1px 0;
+	}
+	div {
+		position: static;
+	}
+	.header .btns-box,
+	.header-menu,
+	.header .phone-box,
+	.footer-menus,
+	.footer-bottom,
+	.footer .soc,
+	.tab-header,
+	.print-links,
+	.btn,
+	.filter .select-box,
+	.table-tabs {
+		display: none!important;
+	}
+	.footer-contacts {
+		position:absolute;
+		width: 30%;
+		top: 0;
+		left: 70%;
+		//right: 0!important;
+		float: none;
+		.soc .btn-icon {
+			display: block;
+			&:after {
+				content: 'attr(href)';
+			}
+		}
+	}
+	.filter .item-text {
+		font-size: 14px;
+	}
+}

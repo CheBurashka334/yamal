@@ -3921,75 +3921,79 @@ table.zaim tr th:nth-child(2):not(:last-child):after {
     font-size: 20px;
     line-height: normal;
   }
+  /* line 54, scss/components/_search-results.scss */
+  .search-results-page .tab-item:last-of-type .tab-title {
+    margin-right: 0;
+  }
 }
 @media only screen and (min-width: 993px) {
-  /* line 58, scss/components/_search-results.scss */
-  .search-results-page .tabs-list {
+  /* line 61, scss/components/_search-results.scss */
+  .search-results-page .tabs-list:not(.less) {
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
-  /* line 61, scss/components/_search-results.scss */
+  /* line 64, scss/components/_search-results.scss */
   .search-results-page .tab-item {
     border: 0;
     bottom: 1px;
   }
-  /* line 65, scss/components/_search-results.scss */
-  .search-results-page .tab-title {
+  /* line 69, scss/components/_search-results.scss */
+  .search-results-page .tabs-list:not(.less) .tab-title {
     margin: 0;
   }
 }
-/* line 70, scss/components/_search-results.scss */
+/* line 74, scss/components/_search-results.scss */
 .search-results,
 .search-result-single {
   margin-bottom: 20px;
 }
-/* line 73, scss/components/_search-results.scss */
+/* line 77, scss/components/_search-results.scss */
 .search-results .content-block,
 .search-result-single .content-block {
   padding-bottom: 35px;
   margin-bottom: 20px;
   border-bottom: 1px solid #ededed;
 }
-/* line 77, scss/components/_search-results.scss */
+/* line 81, scss/components/_search-results.scss */
 .search-results .content-block:last-of-type:not(:only-of-type),
 .search-result-single .content-block:last-of-type:not(:only-of-type) {
   border: 0;
   padding-bottom: 10px;
 }
 
-/* line 83, scss/components/_search-results.scss */
+/* line 87, scss/components/_search-results.scss */
 .print-links {
   margin: 20px 0 50px;
 }
-/* line 85, scss/components/_search-results.scss */
+/* line 89, scss/components/_search-results.scss */
 .print-links a {
   display: inline-block;
   margin-right: 20px;
 }
 
-/* line 90, scss/components/_search-results.scss */
+/* line 94, scss/components/_search-results.scss */
 .search-results-page .btn {
   margin-top: 50px;
 }
 
-/* line 95, scss/components/_search-results.scss */
+/* line 99, scss/components/_search-results.scss */
 .search-result-single .item-content {
   margin-top: 30px;
 }
-/* line 99, scss/components/_search-results.scss */
+/* line 103, scss/components/_search-results.scss */
 .search-result-single .perf-indicators .table-row:first-of-type,
 .search-result-single .perf-indicators .table-row:first-of-type .table-cell:first-of-type {
   padding-top: 0;
 }
-/* line 104, scss/components/_search-results.scss */
+/* line 108, scss/components/_search-results.scss */
 .search-result-single .btn {
   margin-top: 40px;
 }
 
 @media only screen and (min-width: 993px) {
-  /* line 112, scss/components/_search-results.scss */
+  /* line 116, scss/components/_search-results.scss */
   .search-results-page .content-block,
   .search-results-page .print-links,
   .search-result-single .content-block,
@@ -3997,13 +4001,13 @@ table.zaim tr th:nth-child(2):not(:last-child):after {
     padding-left: 12.8%;
     padding-right: 12.8%;
   }
-  /* line 117, scss/components/_search-results.scss */
+  /* line 121, scss/components/_search-results.scss */
   .search-results-page .btn,
   .search-result-single .btn {
     margin-top: 90px;
   }
 
-  /* line 121, scss/components/_search-results.scss */
+  /* line 125, scss/components/_search-results.scss */
   .search-result-single .item-content {
     margin-top: 40px;
   }
@@ -4242,5 +4246,76 @@ table.zaim tr th:nth-child(2):not(:last-child):after {
   /* line 150, scss/components/_sup-measures.scss */
   .sup-measures-single .item-content {
     margin-top: 30px;
+  }
+}
+
+@media print {
+  /* line 3, scss/components/_print.scss */
+  body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background: none;
+    color: #000;
+  }
+
+  @page {
+    margin: 2cm 2cm 1.5cm;
+  }
+  /* line 13, scss/components/_print.scss */
+  h1, h2, h3,
+  .page-title,
+  .project-single .item-title,
+  .block-title,
+  .item-title {
+    page-break-after: avoid;
+    margin-bottom: 1em;
+  }
+
+  /* line 20, scss/components/_print.scss */
+  .header {
+    border-width: 0 0 1px 0;
+  }
+
+  /* line 23, scss/components/_print.scss */
+  div {
+    position: static;
+  }
+
+  /* line 26, scss/components/_print.scss */
+  .header .btns-box,
+  .header-menu,
+  .header .phone-box,
+  .footer-menus,
+  .footer-bottom,
+  .footer .soc,
+  .tab-header,
+  .print-links,
+  .btn,
+  .filter .select-box,
+  .table-tabs {
+    display: none !important;
+  }
+
+  /* line 39, scss/components/_print.scss */
+  .footer-contacts {
+    position: absolute;
+    width: 30%;
+    top: 0;
+    left: 70%;
+    float: none;
+  }
+  /* line 46, scss/components/_print.scss */
+  .footer-contacts .soc .btn-icon {
+    display: block;
+  }
+  /* line 48, scss/components/_print.scss */
+  .footer-contacts .soc .btn-icon:after {
+    content: 'attr(href)';
+  }
+
+  /* line 53, scss/components/_print.scss */
+  .filter .item-text {
+    font-size: 14px;
   }
 }
