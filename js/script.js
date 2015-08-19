@@ -102,6 +102,7 @@ $(document).ready(function(){
 		$('#'+content).find('[data-tab='+tab+']').addClass('active');
 	});
 	
+	
 	/*
 	$(window).scroll(function(){
 		if($(window).scrollTop() > 50) {

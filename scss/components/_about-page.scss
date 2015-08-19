@@ -1,0 +1,99 @@
+// about-page
+.about-page {
+	.about-block {
+		background: url('images/map.png') center right no-repeat;
+		background-size: 50% auto;
+		margin-bottom: 8*$gutter;
+		p {
+			margin: 2.5*$gutter 0 4*$gutter;
+			line-height: 30px;
+		}
+		@media #{$large-and-up}{
+			padding-top: 9*$gutter;
+			margin-bottom: 17*$gutter;
+			p {
+				margin: 6*$gutter 0;
+			}
+		}
+	}
+	.block-title {
+		margin-top: 0;
+		@media #{$large-and-up}{
+			margin-top:  6*$gutter;
+		}
+	}
+	.item {
+		margin-bottom: 3.5*$gutter;
+		min-height: 230px;
+		@media #{$large-and-up}{
+			margin-bottom: 2*$gutter;
+		}
+	}
+	@media #{$large-and-up}{
+		.investdir-block .item {
+			min-height: 260px;
+		}
+	}
+	.item-icon,
+	.item-icon-text {
+		border: 1px solid #eeeeee;
+		width: 150px;
+		height: 150px;
+		text-align: center;
+		vertical-align: middle;
+		margin: 0 auto;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		color: $primary-color;
+		.icon {
+			fill: $primary-color;
+			max-width: 100%;
+			max-height: 115px;
+		}
+	}
+	.item-title {
+		text-align: center;
+		margin-top: 2.5*$gutter;
+	}
+	.cities-block {
+		.icon-aligner {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 150px;
+		}
+		.item-icon-text {
+			border-color: $primary-bg;
+			background: $primary-bg;
+			color: #fff;
+			margin: auto;
+		}
+		.xs-size {
+			width: 103px;
+			height: 103px;
+		}
+		.x-size {
+			width: 110px;
+			height: 110px;
+		}
+		.xx-size {
+			width: 145px;
+			height: 145px;
+		}
+		.xl-size {
+			width: 150px;
+			height: 150px;
+		}
+		.item {
+			min-height: 195px;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+		}
+	}
+	.industry-block {
+		margin-bottom: 40px;
+	}
+}
