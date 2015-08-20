@@ -1,0 +1,56 @@
+// fond
+.fond-page {
+	.page-title {
+		margin-bottom: 4*$gutter;
+	}
+	.tab-header {
+		margin-bottom: 4*$gutter;
+	}
+	.tabs-list:after {
+		bottom: -1px;
+	}
+	.tab-item  {
+		margin-bottom: 0;
+		.tab-title {
+			margin-right: 5*$gutter;
+			.item-text {
+				font-size: 20px;
+			}
+		}
+	}
+	@media #{$large-and-up}{
+		.content-block .item-text {
+			padding: 0 11.5%;
+		}
+	}
+}
+.group-page {
+	.logos-block {
+		margin: 4*$gutter 0 6*$gutter;
+		@media #{$large-and-up}{
+			margin: 8*$gutter 0;
+		}
+	}
+	.dividers {
+		margin-top: 2*$gutter;
+		margin-bottom: 2*$gutter;
+		.item {
+			height: 4*$gutter;
+			border-style: solid;
+			border-color: #ededed;
+			border-width: 0;
+		}
+		.b-left {
+			border-left-width: 1px;
+		}
+		.b-right {
+			border-right-width: 1px;
+		}
+		.b-top {
+			border-top-width: 1px;
+		}
+	}
+	.content-block {
+		padding: 0 11.5%;
+	}
+}

@@ -86,19 +86,19 @@
 			<div class="row">
 				<div class="item col l3 m4">
 					<div class="item-icon circle">
-						<svg class="icon"><use xlink:href="#"/></svg>
+						<svg class="icon"><use xlink:href="#proizv"/></svg>
 					</div>
 					<div class="item-title">Производство прочих машин и оборудования</div>
 				</div>
 				<div class="item col l3 m4">
 					<div class="item-icon circle">
-						<svg class="icon"><use xlink:href="#"/></svg>
+						<svg class="icon"><use xlink:href="#toplivo"/></svg>
 					</div>
 					<div class="item-title">Топливная промышленность</div>
 				</div>
 				<div class="item col l3 m4">
 					<div class="item-icon circle">
-						<svg class="icon"><use xlink:href="#"/></svg>
+						<svg class="icon"><use xlink:href="#chemistry"/></svg>
 					</div>
 					<div class="item-title">Химическая и нефтехимическая промышленность</div>
 				</div>
@@ -109,43 +109,43 @@
 		<div class="row">
 			<div class="item col l3 m4">
 				<div class="item-icon circle">
-					<svg class="icon"><use xlink:href="#innovation"/></svg>
+					<svg class="icon"><use xlink:href="#biotech"/></svg>
 				</div>
 				<div class="item-title">Биотехнологии</div>
 			</div>
 			<div class="item col l3 m4">
 				<div class="item-icon circle">
-					<svg class="icon"><use xlink:href="#"/></svg>
+					<svg class="icon"><use xlink:href="#gornodob"/></svg>
 				</div>
 				<div class="item-title">Горнодобывающая отрасль</div>
 			</div>
 			<div class="item col l3 m4">
 				<div class="item-icon circle">
-					<svg class="icon"><use xlink:href="#"/></svg>
+					<svg class="icon"><use xlink:href="#derevo"/></svg>
 				</div>
 				<div class="item-title">Лесная, деревообрабатывающая и целлюлозно-бумажная промышленность </div>
 			</div>
 			<div class="item col l3 m4">
 				<div class="item-icon circle">
-					<svg class="icon"><use xlink:href="#investor"/></svg>
+					<svg class="icon"><use xlink:href="#gasoil"/></svg>
 				</div>
 				<div class="item-title">Нефтегазовое машиностроение</div>
 			</div>
 			<div class="item col l3 m4">
 				<div class="item-icon circle">
-					<svg class="icon"><use xlink:href="#"/></svg>
+					<svg class="icon"><use xlink:href="#transport"/></svg>
 				</div>
 				<div class="item-title">Транспорт и связь</div>
 			</div>
 			<div class="item col l3 m4">
 				<div class="item-icon circle">
-					<svg class="icon"><use xlink:href="#"/></svg>
+					<svg class="icon"><use xlink:href="#tourism"/></svg>
 				</div>
 				<div class="item-title">Туризм</div>
 			</div>
 			<div class="item col l3 m4">
 				<div class="item-icon circle">
-					<svg class="icon"><use xlink:href="#"/></svg>
+					<svg class="icon"><use xlink:href="#electro"/></svg>
 				</div>
 				<div class="item-title">Электроэнергетика</div>
 			</div>

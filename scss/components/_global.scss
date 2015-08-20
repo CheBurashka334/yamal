@@ -68,19 +68,30 @@ a {
 	}
 }
 a.file {
-	display: inline-block;
+	display: inline-flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
 	vertical-align: middle;
-	min-height: 40px;
+	min-height: 50px;
 	padding-left: 45px;
 	line-height: 25px;
-	margin-bottom: 3*$gutter;
+	margin-bottom: 2*$gutter;
 	color: $base-text-color;
 	&[href$=".doc"],
 	&[href$=".docx"] {
-		background: url('images/icon-doc.png') top left no-repeat;
+		background: url('images/doc.svg') top 5px left no-repeat;
 	}
 	&[href$=".pdf"] {
-		background: url('images/icon-pdf.png') top left no-repeat;
+		background: url('images/pdf.svg') top 5px left no-repeat;
+	}
+	&[href$=".xls"],
+	&[href$=".xlsx"]{
+		background: url('images/xls.svg') top 5px left no-repeat;
+	}
+	&[href$=".ppt"],
+	&[href$=".pptx"] {
+		background: url('images/ppt.svg') top 5px left no-repeat;
 	}
 }
 
