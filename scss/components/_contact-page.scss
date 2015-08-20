@@ -6,10 +6,6 @@
 	}
 	.page-title {
 		margin-bottom: 2.5*$gutter;
-		
-		@media #{$large-and-up}{
-			margin-top: $gutter;
-		}
 	}
 	.block-title {
 		margin-bottom: 3.5*$gutter;

@@ -21,10 +21,22 @@
 			}
 		}
 	}
+	.item-logo {
+		filter: grayscale(100%);
+		transition: filter .3s;
+	}
 	.item-title {
 		font-size: 15px;
 		line-height: 20px;
 		min-height: 4*$gutter;
 		margin-top: 3*$gutter;
+	}
+	.item:hover {
+		.item-logo {
+			filter: grayscale(0);
+		}
+		a {
+			color: $primary-color;
+		}
 	}
 }

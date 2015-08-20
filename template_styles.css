@@ -3470,101 +3470,95 @@ table.zaim tr th:nth-child(2):not(:last-child):after {
 .contact-page .page-title, .contact-page .project-single .item-title, .project-single .contact-page .item-title {
   margin-bottom: 25px;
 }
-@media only screen and (min-width: 993px) {
-  /* line 7, scss/components/_contact-page.scss */
-  .contact-page .page-title, .contact-page .project-single .item-title, .project-single .contact-page .item-title {
-    margin-top: 10px;
-  }
-}
-/* line 14, scss/components/_contact-page.scss */
+/* line 10, scss/components/_contact-page.scss */
 .contact-page .block-title {
   margin-bottom: 35px;
 }
 @media only screen and (min-width: 601px) {
-  /* line 14, scss/components/_contact-page.scss */
+  /* line 10, scss/components/_contact-page.scss */
   .contact-page .block-title {
     margin-bottom: 45px;
   }
 }
 @media only screen and (min-width: 993px) {
-  /* line 14, scss/components/_contact-page.scss */
+  /* line 10, scss/components/_contact-page.scss */
   .contact-page .block-title {
     margin-top: 15px;
   }
 }
-/* line 24, scss/components/_contact-page.scss */
+/* line 20, scss/components/_contact-page.scss */
 .contact-page .map-box {
   height: 210px;
   margin-bottom: 10px;
 }
-/* line 27, scss/components/_contact-page.scss */
+/* line 23, scss/components/_contact-page.scss */
 .contact-page .map-box .map {
   height: 210px;
 }
 @media only screen and (min-width: 601px) {
-  /* line 24, scss/components/_contact-page.scss */
+  /* line 20, scss/components/_contact-page.scss */
   .contact-page .map-box {
     height: 380px;
     margin-bottom: 20px;
   }
-  /* line 34, scss/components/_contact-page.scss */
+  /* line 30, scss/components/_contact-page.scss */
   .contact-page .map-box .map {
     height: 380px;
   }
 }
 @media only screen and (min-width: 993px) {
-  /* line 24, scss/components/_contact-page.scss */
+  /* line 20, scss/components/_contact-page.scss */
   .contact-page .map-box {
     height: 440px;
     margin-top: 20px;
   }
-  /* line 41, scss/components/_contact-page.scss */
+  /* line 37, scss/components/_contact-page.scss */
   .contact-page .map-box .map {
     height: 440px;
   }
 }
-/* line 47, scss/components/_contact-page.scss */
+/* line 43, scss/components/_contact-page.scss */
 .contact-page .item *:first-child {
   margin-top: 0;
 }
-/* line 50, scss/components/_contact-page.scss */
+/* line 46, scss/components/_contact-page.scss */
 .contact-page .item p {
   line-height: 40px;
 }
 @media only screen and (min-width: 601px) and (max-width: 992px) {
-  /* line 55, scss/components/_contact-page.scss */
+  /* line 51, scss/components/_contact-page.scss */
   .contact-page .item:nth-child(odd) {
     padding-right: 30px;
   }
-  /* line 58, scss/components/_contact-page.scss */
+  /* line 54, scss/components/_contact-page.scss */
   .contact-page .item:nth-child(even) {
     padding-left: 30px;
   }
 }
 @media only screen and (min-width: 601px) {
-  /* line 46, scss/components/_contact-page.scss */
+  /* line 42, scss/components/_contact-page.scss */
   .contact-page .item {
     margin-bottom: 40px;
   }
-  /* line 64, scss/components/_contact-page.scss */
+  /* line 60, scss/components/_contact-page.scss */
   .contact-page .item p {
     line-height: 28px;
   }
 }
 @media only screen and (min-width: 993px) {
-  /* line 69, scss/components/_contact-page.scss */
+  /* line 65, scss/components/_contact-page.scss */
   .contact-page .item .item-title ~ p {
     margin-top: 10px;
   }
 }
 @media only screen and (min-width: 601px) {
-  /* line 74, scss/components/_contact-page.scss */
+  /* line 70, scss/components/_contact-page.scss */
   .contact-page .logos {
     margin-bottom: 20px;
   }
 }
 @media only screen and (min-width: 993px) {
-  /* line 74, scss/components/_contact-page.scss */
+  /* line 70, scss/components/_contact-page.scss */
   .contact-page .logos {
     margin-bottom: 25px;
   }
@@ -4443,11 +4437,27 @@ table.zaim tr th:nth-child(2):not(:last-child):after {
   color: #2d4e9d;
 }
 /* line 24, scss/components/_partners.scss */
+.partners-page .item-logo {
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+  -webkit-transition: -webkit-filter .3s, filter .3s;
+          transition: filter .3s;
+}
+/* line 28, scss/components/_partners.scss */
 .partners-page .item-title {
   font-size: 15px;
   line-height: 20px;
   min-height: 40px;
   margin-top: 30px;
+}
+/* line 35, scss/components/_partners.scss */
+.partners-page .item:hover .item-logo {
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
+}
+/* line 38, scss/components/_partners.scss */
+.partners-page .item:hover a {
+  color: #2d4e9d;
 }
 
 @media print {
