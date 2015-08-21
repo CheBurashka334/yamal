@@ -113,9 +113,21 @@
 			margin-bottom: 1.5*$gutter;
 		}
 		.block-title {
-			margin-top: 0;
-			margin-bottom: 2.5*$gutter;
+			margin: 0;
 			color: $primary-color;
+		}
+		.block-title + .item-text p {
+			margin: 1.5*$gutter 0 $gutter;
+		}
+		.block-title + .item-info {
+			margin-top: 5*$gutter;
+		}
+		.item-info {
+			p {
+				margin: 0 0 1.5*$gutter;
+				font-size: 17px;
+				line-height: 20px;
+			}
 		}
 		a {
 			display: block;

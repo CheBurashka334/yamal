@@ -4229,49 +4229,62 @@ table.zaim tr th:nth-child(2):not(:last-child):after {
 }
 /* line 115, scss/components/_sup-measures.scss */
 .sup-measures-page .content-item .item .block-title {
-  margin-top: 0;
-  margin-bottom: 25px;
+  margin: 0;
   color: #2d4e9d;
 }
-/* line 120, scss/components/_sup-measures.scss */
+/* line 119, scss/components/_sup-measures.scss */
+.sup-measures-page .content-item .item .block-title + .item-text p {
+  margin: 15px 0 10px;
+}
+/* line 122, scss/components/_sup-measures.scss */
+.sup-measures-page .content-item .item .block-title + .item-info {
+  margin-top: 50px;
+}
+/* line 126, scss/components/_sup-measures.scss */
+.sup-measures-page .content-item .item .item-info p {
+  margin: 0 0 15px;
+  font-size: 17px;
+  line-height: 20px;
+}
+/* line 132, scss/components/_sup-measures.scss */
 .sup-measures-page .content-item .item a {
   display: block;
   padding: 20px 15px 10px;
   color: #434343;
   border: 1px solid #ededed;
 }
-/* line 125, scss/components/_sup-measures.scss */
+/* line 137, scss/components/_sup-measures.scss */
 .sup-measures-page .content-item .item a:hover {
   background: #2d4e9d;
   border-color: #2d4e9d;
   color: #fff;
 }
-/* line 129, scss/components/_sup-measures.scss */
+/* line 141, scss/components/_sup-measures.scss */
 .sup-measures-page .content-item .item a:hover .block-title {
   color: #fff;
 }
 
-/* line 138, scss/components/_sup-measures.scss */
+/* line 150, scss/components/_sup-measures.scss */
 .sup-measures-single .order-btn {
   margin-top: 40px;
   margin-bottom: 50px;
 }
 @media only screen and (min-width: 601px) {
-  /* line 138, scss/components/_sup-measures.scss */
+  /* line 150, scss/components/_sup-measures.scss */
   .sup-measures-single .order-btn {
     margin-top: 60px;
     margin-bottom: 90px;
   }
 }
 @media only screen and (min-width: 993px) {
-  /* line 138, scss/components/_sup-measures.scss */
+  /* line 150, scss/components/_sup-measures.scss */
   .sup-measures-single .order-btn {
     margin-top: 50px;
     margin-bottom: 80px;
   }
 }
 @media only screen and (min-width: 601px) {
-  /* line 150, scss/components/_sup-measures.scss */
+  /* line 162, scss/components/_sup-measures.scss */
   .sup-measures-single .item-content {
     margin-top: 30px;
   }

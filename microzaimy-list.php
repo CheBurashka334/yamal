@@ -73,7 +73,8 @@
 					<div class="col l6 m12 s12 item">
 						<a href="#">
 							<div class="block-title">Микрозайм “Стандартный”</div>
-							<div class="item-text">
+							<div class="item-text"><p>Микрозайм “Стандартный” текст текст текст</p></div>
+							<div class="item-info">
 								<p>Сумма займа: от 100&nbsp;000 до 1&nbsp;000&nbsp;000 <span class="rouble">й</span></p>
 								<p>Срок займа: до 3 лет</p>
 								<p>Ставка: от 5.5% годовых</p>
@@ -83,7 +84,7 @@
 					<div class="col l6 m12 s12 item">
 						<a href="#">
 							<div class="block-title">Микрозайм “Северный завод”</div>
-							<div class="item-text">
+							<div class="item-info">
 								<p>Сумма займа: от 100&nbsp;000 до 1&nbsp;000&nbsp;000 <span class="rouble">й</span></p>
 								<p>Срок займа: до 3 лет</p>
 								<p>Ставка: от 6% годовых</p>
@@ -95,7 +96,7 @@
 					<div class="col l6 m12 s12 item">
 						<a href="#">
 							<div class="block-title">Микрозайм “Забота”</div>
-							<div class="item-text">
+							<div class="item-info">
 								<p>Сумма займа: от 100&nbsp;000 до 1&nbsp;000&nbsp;000 <span class="rouble">й</span></p>
 								<p>Срок займа: до 3 лет</p>
 								<p>Ставка: от 5.5% годовых</p>
@@ -105,7 +106,7 @@
 					<div class="col l6 m12 s12 item">
 						<a href="#">
 							<div class="block-title">Микрозайм “Забота-Рефинанс”</div>
-							<div class="item-text">
+							<div class="item-info">
 								<p>Сумма займа: от 100&nbsp;000 до 1&nbsp;000&nbsp;000 <span class="rouble">й</span></p>
 								<p>Срок займа: до 3 лет</p>
 								<p>Ставка: от 5.5% годовых</p>
@@ -117,7 +118,7 @@
 					<div class="col l6 m12 s12 item">
 						<a href="#">
 							<div class="block-title">Микрозайм “Франчайзинг”</div>
-							<div class="item-text">
+							<div class="item-info">
 								<p>Сумма займа: от 100&nbsp;000 до 1&nbsp;000&nbsp;000 <span class="rouble">й</span></p>
 								<p>Срок займа: до 3 лет</p>
 								<p>Ставка: от 5.5% годовых</p>
@@ -127,7 +128,7 @@
 					<div class="col l6 m12 s12 item">
 						<a href="#">
 							<div class="block-title">Микрозайм “Рефинансирование”</div>
-							<div class="item-text">
+							<div class="item-info">
 								<p>Сумма займа: от 100&nbsp;000 до 1&nbsp;000&nbsp;000 <span class="rouble">й</span></p>
 								<p>Срок займа: до 3 лет</p>
 								<p>Ставка: от 6% годовых</p>
