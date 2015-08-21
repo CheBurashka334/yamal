@@ -1,6 +1,6 @@
 <?include('header.php');?>
 <div class="home-page">
-	<div class="carousel m-full-width s-full-width">
+	<div class="home-slider carousel m-full-width s-full-width">
 		<div class="carousel-inner">
 			<div class="item">
 				<div class="item-img">
@@ -26,7 +26,7 @@
 	<div class="measures-block row">
 		<div class="item col l3 m4 s12">
 			<a href="#">
-				<div class="item-icon hide-on-small-only">
+				<div class="item-icon circle hide-on-small-only">
 					<svg class="icon"><use xlink:href="#microfinance"/></svg>
 				</div>
 				<div class="item-title">Микрофинансирование</div>
@@ -34,7 +34,7 @@
 		</div>
 		<div class="item col l3 m4 s12">
 			<a href="#">
-				<div class="item-icon hide-on-small-only">
+				<div class="item-icon circle hide-on-small-only">
 					<svg class="icon"><use xlink:href="#zaim"/></svg>
 				</div>
 				<div class="item-title">Целевые займы</div>
@@ -42,7 +42,7 @@
 		</div>
 		<div class="item col l3 m4 s12">
 			<a href="#">
-				<div class="item-icon hide-on-small-only">
+				<div class="item-icon circle hide-on-small-only">
 					<svg class="icon"><use xlink:href="#lease"/></svg>
 				</div>
 				<div class="item-title">Лизинг</div>
@@ -50,7 +50,7 @@
 		</div>
 		<div class="item col l3 m4 s12">
 			<a href="#">
-				<div class="item-icon hide-on-small-only">
+				<div class="item-icon circle hide-on-small-only">
 					<svg class="icon"><use xlink:href="#grants"/></svg>
 				</div>
 				<div class="item-title">Гранты, субсидии, компенсации</div>
@@ -58,7 +58,7 @@
 		</div>
 		<div class="item col l3 m4 s12">
 			<a href="#">
-				<div class="item-icon hide-on-small-only">
+				<div class="item-icon circle hide-on-small-only">
 					<svg class="icon"><use xlink:href="#navigator"/></svg>
 				</div>
 				<div class="item-title">Навигатор мер поддержки</div>
@@ -66,7 +66,7 @@
 		</div>
 		<div class="item col l3 m4 s12">
 			<a href="#">
-				<div class="item-icon hide-on-small-only">
+				<div class="item-icon circle hide-on-small-only">
 					<svg class="icon"><use xlink:href="#guarantee"/></svg>
 				</div>
 				<div class="item-title">Поручительство</div>
@@ -74,7 +74,7 @@
 		</div>
 		<div class="item col l3 m4 s12">
 			<a href="#">
-				<div class="item-icon hide-on-small-only">
+				<div class="item-icon circle hide-on-small-only">
 					<svg class="icon"><use xlink:href="#support"/></svg>
 				</div>
 				<div class="item-title">Сопровождение проектов</div>
@@ -159,13 +159,152 @@
 		</div>
 	</div>
 	<div class="projects-block">
-	
+		<div class="tab-header">
+			<div class="hide-on-med-and-up">
+				<select id="projects-tabber" class="type-2" data-tab-content="projects-content">
+					<option value="v1" selected>Истории успеха</option>
+					<option value="v2">Банк проектов</option>
+					<option value="v3">Предложить проект</option>
+				</select>
+				<label for="projects-tabber" class="triangle"></label>
+			</div>
+			<div class="tab-box hide-on-small-only">
+				<ul class="tabs-list select-synh" data-select="projects-tabber">
+					<li class="tab-item">
+						<input class="tab-inp" type="radio" name="projects-rad" value="v1" id="projects-v1" checked="checked"/>
+						<label class="tab-title" for="projects-v1">Истории успеха</label>
+					</li>
+					<li class="tab-item">
+						<input class="tab-inp" type="radio" name="projects-rad" value="v2" id="projects-v2"/>
+						<label class="tab-title" for="projects-v2">Банк проектов</label>
+					</li>
+					<li class="tab-item">
+						<input class="tab-inp" type="radio" name="projects-rad" value="v3" id="projects-v3"/>
+						<label class="tab-title" for="projects-v3">Предложить проект</label>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="tab-content" id="projects-content">
+			<div class="project-item content-item" data-tab="v1">
+				<div class="carousel l-full-width">
+					<div class="carousel-content">
+						<div class="carousel-inner">
+							<div class="item">
+								<div class="item-img">
+									<a href="#"><img src="images/content/proj-1.jpg" /></a>
+								</div>
+								<div class="item-title"><a href="#">ООО «Уральские локомотивы»</a></div>
+							</div>
+							<div class="item">
+								<div class="item-img">
+									<a href="#"><img src="images/content/proj-2.jpg" /></a>
+								</div>
+								<div class="item-title"><a href="#">ООО «Либхерр-Нижний Новгород»</a></div>
+							</div>
+							<div class="item">
+								<div class="item-img">
+									<a href="#"><img src="images/content/proj-3.jpg" /></a>
+								</div>
+								<div class="item-title"><a href="#">ОАО «Ямалтрансстрой»</a></div>
+							</div>
+							<div class="item">
+								<div class="item-img">
+									<a href="#"><img src="images/content/proj-4.jpg" /></a>
+								</div>
+								<div class="item-title"><a href="#">ООО «Юрхаровнефтегаз»</a></div>
+							</div>
+						</div>
+					</div>
+					<div class="carousel-controlls">
+						<button class="prev"><svg class="icon"><use xlink:href="#arr"/></svg></button>
+						<button class="next"><svg class="icon"><use xlink:href="#arr"/></svg></button>
+					</div>
+				</div>
+			</div>
+			<div class="project-item content-item" data-tab="v2">
+				<div class="carousel l-full-width">
+					<div class="carousel-content">
+						<div class="carousel-inner">
+							<div class="item">
+								<div class="item-img">
+									<a href="#"><img src="images/content/proj-1.jpg" /></a>
+								</div>
+								<div class="item-title"><a href="#">ООО «Уральские локомотивы»</a></div>
+							</div>
+							<div class="item">
+								<div class="item-img">
+									<a href="#"><img src="images/content/proj-2.jpg" /></a>
+								</div>
+								<div class="item-title"><a href="#">ООО «Либхерр-Нижний Новгород»</a></div>
+							</div>
+							<div class="item">
+								<div class="item-img">
+									<a href="#"><img src="images/content/proj-3.jpg" /></a>
+								</div>
+								<div class="item-title"><a href="#">ОАО «Ямалтрансстрой»</a></div>
+							</div>
+							<div class="item">
+								<div class="item-img">
+									<a href="#"><img src="images/content/proj-4.jpg" /></a>
+								</div>
+								<div class="item-title"><a href="#">ООО «Юрхаровнефтегаз»</a></div>
+							</div>
+						</div>
+					</div>
+					<div class="carousel-controlls">
+						<button class="prev"><svg class="icon"><use xlink:href="#arr"/></svg></button>
+						<button class="next"><svg class="icon"><use xlink:href="#arr"/></svg></button>
+					</div>
+				</div>
+			</div>
+			<div class="project-item content-item" data-tab="v3">
+				text here...
+			</div>
+		</div>
 	</div>
 	<div class="partners-block hide-on-small-only">
-		<div class="block-title-tab"></div>
+		<div class="block-title-tab">Партнеры</div>
 		<div  class="partners-list row">
 			<div class="item col l3 m4">
-			
+				<a href="#">
+					<div class="item-title">Органы государственной власти</div>
+				</a>
+			</div>
+			<div class="item col l3 m4">
+				<a href="#">
+					<div class="item-title">Контролирующие структуры</div>
+				</a>
+			</div>
+			<div class="item col l3 m4">
+				<a href="#">
+					<div class="item-title">Государственные услуги</div>
+				</a>
+			</div>
+			<div class="item col l3 m4">
+				<a href="#">
+					<div class="item-title">Бизнес-омбутсмен</div>
+				</a>
+			</div>
+			<div class="item col l3 m4">
+				<a href="#">
+					<div class="item-title">Финансовые организации</div>
+				</a>
+			</div>
+			<div class="item col l3 m4">
+				<a href="#">
+					<div class="item-title">Бизнес-сообщества</div>
+				</a>
+			</div>
+			<div class="item col l3 m4">
+				<a href="#">
+					<div class="item-title">Общественные организации</div>
+				</a>
+			</div>
+			<div class="item col l3 m4">
+				<a href="#">
+					<div class="item-title">Информационные партнеры</div>
+				</a>
 			</div>
 		</div>
 	</div>

@@ -806,7 +806,7 @@ ul.staggered-list li {
 }
 
 /* line 301, scss/components/_global.scss */
-.left {
+.left, .carousel .item {
   float: left !important;
 }
 
@@ -1010,7 +1010,7 @@ ul.staggered-list li {
   }
 }
 /* line 55, scss/components/_grid.scss */
-.row:after, .clearfix:before, .clearfix:after {
+.row:after, .clearfix:before, .clearfix:after, .carousel .carousel-inner:after {
   content: "";
   display: table;
   clear: both;
@@ -1636,6 +1636,180 @@ ol:not(.nostyle) li:before {
   }
 }
 
+/* line 2, scss/components/_carousel.scss */
+.carousel {
+  margin: 5px auto 20px;
+}
+/* line 4, scss/components/_carousel.scss */
+.carousel .carousel-content {
+  overflow: hidden;
+  z-index: 2;
+}
+/* line 8, scss/components/_carousel.scss */
+.carousel .carousel-inner {
+  width: 9999px;
+}
+/* line 17, scss/components/_carousel.scss */
+.carousel .carousel-controlls {
+  position: absolute;
+  z-index: 3;
+  width: 100%;
+  height: 48px;
+  top: 50%;
+  margin-top: -24px;
+  left: 0;
+  overflow: hidden;
+  -webkit-transition: width .3s, left .3s;
+          transition: width .3s, left .3s;
+}
+/* line 27, scss/components/_carousel.scss */
+.carousel .carousel-controlls .prev,
+.carousel .carousel-controlls .next {
+  position: absolute;
+  z-index: 3;
+  display: block;
+  width: 48px;
+  height: 48px;
+  top: 0;
+  background: #c7213a;
+  color: #fff;
+  opacity: 0.35;
+  border: 0;
+}
+/* line 39, scss/components/_carousel.scss */
+.carousel .carousel-controlls .prev:before,
+.carousel .carousel-controlls .next:before {
+  display: block;
+  position: absolute;
+  top: 13px;
+  font-size: 22px;
+  line-height: 1;
+  -webkit-transform: scale(1, 2);
+      -ms-transform: scale(1, 2);
+          transform: scale(1, 2);
+}
+/* line 48, scss/components/_carousel.scss */
+.carousel .carousel-controlls .prev {
+  left: -15px;
+  -webkit-transition: left .3s, background .3s, opacity .3s;
+          transition: left .3s, background .3s, opacity .3s;
+  border-radius: 0 50% 50% 0;
+}
+/* line 52, scss/components/_carousel.scss */
+.carousel .carousel-controlls .prev:before {
+  content: '<';
+  right: 16px;
+}
+/* line 57, scss/components/_carousel.scss */
+.carousel .carousel-controlls .next {
+  right: -15px;
+  -webkit-transition: right .3s, background .3s, opacity .3s;
+          transition: right .3s, background .3s, opacity .3s;
+  border-radius: 50% 0 0 50%;
+}
+/* line 61, scss/components/_carousel.scss */
+.carousel .carousel-controlls .next:before {
+  content: '>';
+  left: 16px;
+}
+/* line 67, scss/components/_carousel.scss */
+.carousel:hover .carousel-controlls {
+  width: calc(100% + 40px);
+  left: -20px;
+  overflow: visible;
+  z-index: 1;
+  -webkit-transition: width .3s, left .3s, z-index .1s;
+          transition: width .3s, left .3s, z-index .1s;
+}
+/* line 73, scss/components/_carousel.scss */
+.carousel:hover .carousel-controlls .prev,
+.carousel:hover .carousel-controlls .next {
+  background: #2d4e9d;
+  opacity: .85;
+  border-radius: 50%;
+}
+/* line 79, scss/components/_carousel.scss */
+.carousel:hover .carousel-controlls .prev {
+  left: -8px;
+  -webkit-transition: background .3s, opacity .3s, left .3s;
+          transition: background .3s, opacity .3s, left .3s;
+}
+/* line 82, scss/components/_carousel.scss */
+.carousel:hover .carousel-controlls .prev:before {
+  -webkit-transform: scale(1, 2) translate(-10px, 0);
+      -ms-transform: scale(1, 2) translate(-10px, 0);
+          transform: scale(1, 2) translate(-10px, 0);
+}
+/* line 86, scss/components/_carousel.scss */
+.carousel:hover .carousel-controlls .next {
+  right: -8px;
+  -webkit-transition: background .3s, opacity .3s, right .3s;
+          transition: background .3s, opacity .3s, right .3s;
+}
+/* line 89, scss/components/_carousel.scss */
+.carousel:hover .carousel-controlls .next:before {
+  -webkit-transform: scale(1, 2) translate(10px, 0);
+      -ms-transform: scale(1, 2) translate(10px, 0);
+          transform: scale(1, 2) translate(10px, 0);
+}
+
+/* line 95, scss/components/_carousel.scss */
+.home-slider {
+  margin-top: 0;
+}
+/* line 97, scss/components/_carousel.scss */
+.home-slider .item .item-img {
+  display: block;
+}
+/* line 100, scss/components/_carousel.scss */
+.home-slider .item-content {
+  position: absolute;
+  top: 35px;
+  left: 0;
+  z-index: 4;
+  min-width: 375px;
+  padding: 22px 15px 25px;
+  background: rgba(255, 255, 255, 0.6);
+}
+/* line 110, scss/components/_carousel.scss */
+.home-slider .item-title {
+  font-size: 30px;
+  line-height: 1.5;
+  margin: 0;
+}
+/* line 115, scss/components/_carousel.scss */
+.home-slider .item-text {
+  font-size: 18px;
+  line-height: 1.2;
+  margin: 0;
+}
+
+@media only screen and (max-width: 600px) {
+  /* line 122, scss/components/_carousel.scss */
+  .carousel {
+    width: 100%;
+    left: 0;
+    margin-left: 0;
+    padding: 0;
+  }
+  /* line 127, scss/components/_carousel.scss */
+  .carousel .carousel-controlls, .carousel:hover .carousel-controlls {
+    width: 100%;
+    left: 0;
+    z-index: 3;
+    overflow: hidden;
+  }
+  /* line 133, scss/components/_carousel.scss */
+  .carousel .carousel-controlls .prev, .carousel:hover .carousel-controlls .prev {
+    border-radius: 0 50% 50% 0;
+    left: -15px;
+  }
+  /* line 137, scss/components/_carousel.scss */
+  .carousel .carousel-controlls .next, .carousel:hover .carousel-controlls .next {
+    border-radius: 50% 0 0 50%;
+    right: -15px;
+  }
+}
 /* line 2, scss/components/_dropdown.scss */
 .dropdown-inp {
   display: none;
@@ -2838,81 +3012,86 @@ table.zaim tr th:nth-child(2):not(:last-child):after {
   /* line 44, scss/components/_header.scss */
   .header .header-menu {
     padding: 0 10px;
+    height: 58px;
   }
   /* line 47, scss/components/_header.scss */
+  .header .header-menu .container {
+    height: 58px;
+  }
+  /* line 51, scss/components/_header.scss */
   .header .search-box {
     width: calc(100% - 50px);
     float: right;
     padding: 17px 15px;
   }
-  /* line 52, scss/components/_header.scss */
+  /* line 56, scss/components/_header.scss */
   .header .btn-menu {
     float: left;
     margin-top: 20px;
   }
 }
 @media only screen and (min-width: 601px) and (max-width: 752px) {
-  /* line 58, scss/components/_header.scss */
+  /* line 62, scss/components/_header.scss */
   .header .logo-box {
     width: 16.66667%;
   }
-  /* line 61, scss/components/_header.scss */
+  /* line 65, scss/components/_header.scss */
   .header .phone-box.col {
     width: 33.33333%;
     padding-top: 30px;
   }
-  /* line 65, scss/components/_header.scss */
+  /* line 69, scss/components/_header.scss */
   .header .btns-box {
     width: 50%;
     padding-top: 20px;
   }
 }
 @media only screen and (min-width: 753px) {
-  /* line 72, scss/components/_header.scss */
+  /* line 76, scss/components/_header.scss */
   .header .logo-box {
     width: 33.33333%;
   }
-  /* line 75, scss/components/_header.scss */
+  /* line 79, scss/components/_header.scss */
   .header .phone-box.col {
     width: 25%;
     max-width: calc(66.66667% - 300px);
   }
-  /* line 79, scss/components/_header.scss */
+  /* line 83, scss/components/_header.scss */
   .header .btns-box {
     width: 41.66667%;
     min-width: 300px;
     float: right;
   }
-  /* line 83, scss/components/_header.scss */
+  /* line 87, scss/components/_header.scss */
   .header .btns-box .btn-icon {
     margin-left: 25px;
   }
 }
 @media only screen and (min-width: 993px) {
-  /* line 89, scss/components/_header.scss */
+  /* line 93, scss/components/_header.scss */
   .header .header-menu {
     padding: 0;
   }
-  /* line 92, scss/components/_header.scss */
+  /* line 96, scss/components/_header.scss */
   .header .header-menu .container.row {
     padding: 0 15px;
   }
-  /* line 95, scss/components/_header.scss */
+  /* line 99, scss/components/_header.scss */
   .header .phone-box.col {
     width: 50%;
     max-width: calc(75% - 310px);
   }
-  /* line 99, scss/components/_header.scss */
+  /* line 103, scss/components/_header.scss */
   .header .btns-box {
     min-width: 310px;
   }
-  /* line 102, scss/components/_header.scss */
+  /* line 106, scss/components/_header.scss */
   .header .main-menu-box {
     width: 820px;
     height: 58px;
     float: left;
   }
-  /* line 107, scss/components/_header.scss */
+  /* line 111, scss/components/_header.scss */
   .header .search-box {
     width: calc(100% - 820px);
   }
@@ -4051,14 +4230,8 @@ table.zaim tr th:nth-child(2):not(:last-child):after {
     margin-bottom: 40px;
   }
 }
-@media only screen and (min-width: 993px) {
-  /* line 3, scss/components/_sup-measures.scss */
-  .sup-measures-page .sup-measures {
-    margin-bottom: 60px;
-  }
-}
 @media only screen and (min-width: 993px) and (max-width: 1115px) {
-  /* line 13, scss/components/_sup-measures.scss */
+  /* line 10, scss/components/_sup-measures.scss */
   .sup-measures-page .tabs-list {
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
@@ -4070,7 +4243,7 @@ table.zaim tr th:nth-child(2):not(:last-child):after {
   }
 }
 @media only screen and (max-width: 720px) {
-  /* line 13, scss/components/_sup-measures.scss */
+  /* line 10, scss/components/_sup-measures.scss */
   .sup-measures-page .tabs-list {
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
@@ -4081,53 +4254,53 @@ table.zaim tr th:nth-child(2):not(:last-child):after {
             flex-wrap: nowrap;
   }
 }
-/* line 22, scss/components/_sup-measures.scss */
+/* line 19, scss/components/_sup-measures.scss */
 .sup-measures-page .tabs-list:after {
   bottom: 24px;
 }
-/* line 26, scss/components/_sup-measures.scss */
+/* line 23, scss/components/_sup-measures.scss */
 .sup-measures-page .tab-item {
   margin-bottom: 25px;
 }
-/* line 28, scss/components/_sup-measures.scss */
+/* line 25, scss/components/_sup-measures.scss */
 .sup-measures-page .tab-item .tab-title {
   margin-right: 30px;
 }
-/* line 30, scss/components/_sup-measures.scss */
+/* line 27, scss/components/_sup-measures.scss */
 .sup-measures-page .tab-item .tab-title .item-text {
   font-size: 18px;
 }
 @media only screen and (min-width: 993px) and (max-width: 1115px) {
-  /* line 28, scss/components/_sup-measures.scss */
+  /* line 25, scss/components/_sup-measures.scss */
   .sup-measures-page .tab-item .tab-title {
     margin-right: 0;
   }
-  /* line 35, scss/components/_sup-measures.scss */
+  /* line 32, scss/components/_sup-measures.scss */
   .sup-measures-page .tab-item .tab-title .item-text {
     font-size: 16px;
   }
 }
 @media only screen and (max-width: 720px) {
-  /* line 28, scss/components/_sup-measures.scss */
+  /* line 25, scss/components/_sup-measures.scss */
   .sup-measures-page .tab-item .tab-title {
     margin-right: 0;
   }
-  /* line 41, scss/components/_sup-measures.scss */
+  /* line 38, scss/components/_sup-measures.scss */
   .sup-measures-page .tab-item .tab-title .item-text {
     font-size: 16px;
   }
 }
-/* line 46, scss/components/_sup-measures.scss */
+/* line 43, scss/components/_sup-measures.scss */
 .sup-measures-page .tab-item:last-of-type .tab-title {
   margin-right: 0;
 }
 @media only screen and (min-width: 993px) and (max-width: 1115px) {
-  /* line 50, scss/components/_sup-measures.scss */
+  /* line 47, scss/components/_sup-measures.scss */
   .sup-measures-page .more {
     min-width: 48%;
   }
 }
-/* line 55, scss/components/_sup-measures.scss */
+/* line 52, scss/components/_sup-measures.scss */
 .sup-measures-page .more-title {
   cursor: pointer;
   -webkit-transform: translate(0, 0);
@@ -4138,7 +4311,7 @@ table.zaim tr th:nth-child(2):not(:last-child):after {
   color: #2d4e9d;
   top: -2px;
 }
-/* line 62, scss/components/_sup-measures.scss */
+/* line 59, scss/components/_sup-measures.scss */
 .sup-measures-page .more-list {
   display: -webkit-box;
   display: -webkit-flex;
@@ -4146,7 +4319,7 @@ table.zaim tr th:nth-child(2):not(:last-child):after {
   display: flex;
 }
 @media only screen and (min-width: 601px) and (max-width: 992px) {
-  /* line 62, scss/components/_sup-measures.scss */
+  /* line 59, scss/components/_sup-measures.scss */
   .sup-measures-page .more-list {
     position: absolute;
     top: 0;
@@ -4168,7 +4341,7 @@ table.zaim tr th:nth-child(2):not(:last-child):after {
   }
 }
 @media only screen and (min-width: 993px) and (max-width: 1115px) {
-  /* line 62, scss/components/_sup-measures.scss */
+  /* line 59, scss/components/_sup-measures.scss */
   .sup-measures-page .more-list {
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
@@ -4180,13 +4353,13 @@ table.zaim tr th:nth-child(2):not(:last-child):after {
   }
 }
 @media only screen and (min-width: 601px) and (max-width: 992px) {
-  /* line 84, scss/components/_sup-measures.scss */
+  /* line 81, scss/components/_sup-measures.scss */
   .sup-measures-page .more.open .more-title {
     -webkit-transform: translate(0, 10px);
         -ms-transform: translate(0, 10px);
             transform: translate(0, 10px);
   }
-  /* line 87, scss/components/_sup-measures.scss */
+  /* line 84, scss/components/_sup-measures.scss */
   .sup-measures-page .more.open .more-list {
     -webkit-transform: scale(1) translate(0, 0);
         -ms-transform: scale(1) translate(0, 0);
@@ -4194,78 +4367,84 @@ table.zaim tr th:nth-child(2):not(:last-child):after {
     opacity: 1;
     top: -20px;
   }
-  /* line 92, scss/components/_sup-measures.scss */
+  /* line 89, scss/components/_sup-measures.scss */
   .sup-measures-page .more.open .tab-item {
     margin-bottom: 0;
     padding: 15px 20px;
   }
-  /* line 95, scss/components/_sup-measures.scss */
+  /* line 92, scss/components/_sup-measures.scss */
   .sup-measures-page .more.open .tab-item .tab-title {
     padding: 0;
   }
-  /* line 97, scss/components/_sup-measures.scss */
+  /* line 94, scss/components/_sup-measures.scss */
   .sup-measures-page .more.open .tab-item .tab-title:after {
     display: none;
   }
 }
-/* line 104, scss/components/_sup-measures.scss */
+/* line 101, scss/components/_sup-measures.scss */
 .sup-measures-page .content-item .item {
   margin-top: 20px;
   margin-bottom: 20px;
 }
 @media only screen and (min-width: 601px) {
-  /* line 104, scss/components/_sup-measures.scss */
+  /* line 101, scss/components/_sup-measures.scss */
   .sup-measures-page .content-item .item {
     margin-top: 10px;
     margin-bottom: 10px;
   }
 }
 @media only screen and (min-width: 993px) {
-  /* line 104, scss/components/_sup-measures.scss */
+  /* line 101, scss/components/_sup-measures.scss */
   .sup-measures-page .content-item .item {
     margin-top: 15px;
     margin-bottom: 15px;
   }
 }
-/* line 115, scss/components/_sup-measures.scss */
+/* line 112, scss/components/_sup-measures.scss */
 .sup-measures-page .content-item .item .block-title {
   margin: 0;
   color: #2d4e9d;
 }
-/* line 119, scss/components/_sup-measures.scss */
+/* line 116, scss/components/_sup-measures.scss */
 .sup-measures-page .content-item .item .block-title + .item-text p {
   margin: 15px 0 10px;
 }
-/* line 122, scss/components/_sup-measures.scss */
+/* line 119, scss/components/_sup-measures.scss */
 .sup-measures-page .content-item .item .item-text p {
   font-size: 15px;
 }
-/* line 125, scss/components/_sup-measures.scss */
+/* line 122, scss/components/_sup-measures.scss */
 .sup-measures-page .content-item .item .block-title + .item-info {
   margin-top: 45px;
 }
-/* line 129, scss/components/_sup-measures.scss */
+/* line 126, scss/components/_sup-measures.scss */
 .sup-measures-page .content-item .item .item-info p {
   margin: 0 0 15px;
   font-size: 17px;
   line-height: 20px;
 }
-/* line 135, scss/components/_sup-measures.scss */
+/* line 132, scss/components/_sup-measures.scss */
 .sup-measures-page .content-item .item a {
   display: block;
   padding: 20px 15px 10px;
   color: #434343;
   border: 1px solid #ededed;
 }
-/* line 140, scss/components/_sup-measures.scss */
+/* line 137, scss/components/_sup-measures.scss */
 .sup-measures-page .content-item .item a:hover {
   background: #2d4e9d;
   border-color: #2d4e9d;
   color: #fff;
 }
-/* line 144, scss/components/_sup-measures.scss */
+/* line 141, scss/components/_sup-measures.scss */
 .sup-measures-page .content-item .item a:hover .block-title {
   color: #fff;
+}
+@media only screen and (min-width: 601px) {
+  /* line 132, scss/components/_sup-measures.scss */
+  .sup-measures-page .content-item .item a {
+    padding: 40px 20px 30px;
+  }
 }
 
 /* line 153, scss/components/_sup-measures.scss */

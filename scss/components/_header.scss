@@ -43,6 +43,10 @@
 		}
 		.header-menu {
 			padding: 0 $gutter;
+			height: 58px;
+			.container {
+				height: 58px;
+			}
 		}
 		.search-box {
 			width: calc(100% - 50px);
