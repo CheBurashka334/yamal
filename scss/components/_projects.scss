@@ -190,3 +190,70 @@
 		}
 	}
 }
+
+.projects-block {
+	@media #{$medium-and-up} {
+		margin-bottom: 6*$gutter;
+	}
+	@media #{$large-and-up} {
+		margin-bottom: 10*$gutter;
+	}
+	.tab-header {
+		margin-bottom: 2*$gutter;
+		@media #{$medium-and-up}{
+			margin-bottom: 4*$gutter;
+			.tabs-list:after {
+				bottom: -1px;
+			}
+			.tab-item {
+				margin-bottom: 0;
+			}
+			.tab-title {
+				margin-right: 6*$gutter;
+				font-size: 20px;
+				line-height: 30px;
+			}
+		}
+	}
+	.carousel .item {
+		width: calc(100vw - #{4*$gutter});
+		.item-img {
+			height: 16*$gutter;
+			img {
+				max-width: 115%;
+			}
+			@media #{$medium-and-up} {
+				height: auto;
+			}
+		}
+	}
+	@media #{$large-and-up} {
+		.carousel-content {
+			max-width: 1200px;
+			margin: 0 auto;
+			padding: 0 1.5*$gutter;
+			.carousel-inner {
+				margin-left: -1.5*$gutter;
+				margin-right: -1.5*$gutter;
+			}
+			.item {
+				width: 50vw;
+				max-width: 600px;
+				padding: 0 1.5*$gutter;
+			}
+			.item .item-img {
+				height: 34*$gutter;
+				img {
+					max-width: 150%;
+				}
+			}
+		}
+	}
+	@media only screen and (min-width: 1361px) {
+		.carousel-controlls {
+			max-width: 1360px;
+			left: 50%;
+			margin-left: -680px;
+		}
+	}
+}

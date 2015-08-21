@@ -143,15 +143,6 @@ $(document).ready(function(){
 		}
 	});
 	
-	
-	/*
-	$('.dropdown-btn').dropdown({
-		//gutter: 40,
-		constrain_width: false,
-		beloworigin: true
-	});
-	*/
-	
 	// scrollFire
 	// http://materializecss.com/scrollfire.html
 	/*
@@ -163,13 +154,13 @@ $(document).ready(function(){
 	
 	// jcarousel
 	// http://sorgalla.com/jcarousel/docs/
-	/*
+	
 	$('.carousel').jcarousel({
 		list: '.carousel-inner',
 		wrap: 'circular'
 	});
-	*/
-	/*$('.carousel-nav')
+	
+	$('.carousel-pagination')
 		.jcarouselPagination({
 			item: function(page){
 				return '<li class="nav-item"><a class="nav-link" href="#'+page+'"></a></li>';
@@ -180,8 +171,8 @@ $(document).ready(function(){
 		})
 		.on('jcarouselpagination:inactive', 'a', function(){ // - и эта (а должна!)
 			$(this).removeClass('active');
-		});*/
-	/*
+		});
+	
 	$('.carousel-controlls .prev')
 		.on('jcarouselcontrol:active', function(){
 			$(this).addClass('active');
@@ -202,8 +193,6 @@ $(document).ready(function(){
 		.jcarouselControl({
 			target: '+=1'
 		});
-	
-	*/
 
 });
 

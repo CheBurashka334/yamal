@@ -1,24 +1,20 @@
 <?include('header.php');?>
 <div class="home-page">
-	<div class="home-slider carousel m-full-width s-full-width">
-		<div class="carousel-inner">
-			<div class="item">
-				<div class="item-img">
-					<img src="images/content/slide-1.jpg" />
+	<div class="home-slider carousel">
+		<div class="carousel-content m-full-width s-full-width">
+			<div class="carousel-inner">
+				<div class="item">
+					<div class="item-img" style="background-image: url(images/content/slide-1.jpg);"></div>
+					<div class="item-title">Помощь среднему и <br/>малому бизнесу в ЯНАО</div>
 				</div>
-				<div class="item-title">Помощь среднему и <br/>малому бизнесу в ЯНАО</div>
-			</div>
-			<div class="item">
-				<div class="item-img">
-					<img src="images/content/slide-2.jpg" />
+				<div class="item">
+					<div class="item-img" style="background-image: url(images/content/slide-2.jpg);"></div>
+					<div class="item-title">Помощь среднему и <br/>малому бизнесу в ЯНАО</div>
 				</div>
-				<div class="item-title">Помощь среднему и <br/>малому бизнесу в ЯНАО</div>
-			</div>
-			<div class="item">
-				<div class="item-img">
-					<img src="images/content/slide-3.jpg" />
+				<div class="item">
+					<div class="item-img" style="background-image: url(images/content/slide-3.jpg);"></div>
+					<div class="item-title">Помощь среднему и <br/>малому бизнесу в ЯНАО</div>
 				</div>
-				<div class="item-title">Помощь среднему и <br/>малому бизнесу в ЯНАО</div>
 			</div>
 		</div>
 		<ul class="carousel-pagination"></ul>
@@ -132,26 +128,26 @@
 			<a href="#" class="readmore">Смотреть все новости</a>
 		</div>
 		<div class="events col l6 m12 s12">
-			<div class="block-title-tab"></div>
+			<div class="block-title-like-tab"><span class="text">Анонсы событий</span></div>
 			<div class="events-list">
 				<div class="item">
-					<a href="#"><div class="item-title">Аси запустило новую аналитическую карту</div></a>
+					<div class="item-title"><a href="#">Аси запустило новую аналитическую карту</a></div>
 					<span class="item-date light-text">22.07.2015</span>
 				</div>
 				<div class="item">
-					<a href="#"><div class="item-title">Лекция о нейросетевых и молекулярных механизмах памяти</div></a>
+					<div class="item-title"><a href="#">Лекция о нейросетевых и молекулярных механизмах памяти</a></div>
 					<span class="item-date light-text">20.07.2015</span>
 				</div>
 				<div class="item">
-					<a href="#"><div class="item-title">Встреча с кандидатами на стажировку в проектах национальной технологической инициативы</div></a>
+					<div class="item-title"><a href="#">Встреча с кандидатами на стажировку в проектах национальной технологической инициативы</a></div>
 					<span class="item-date light-text">16.07.2015</span>
 				</div>
 				<div class="item">
-					<a href="#"><div class="item-title">Южно-Российский Игровой Форум “Южный РИФ - 2015. Передовые технологии геймификации”</div></a>
+					<div class="item-title"><a href="#">Южно-Российский Игровой Форум “Южный РИФ - 2015. Передовые технологии геймификации”</a></div>
 					<span class="item-date light-text">11.05.2015</span>
 				</div>
 				<div class="item">
-					<a href="#"><div class="item-title">Мониторинг дорожной карты “Поддержка доступа на рынки зарубежных стран и поддержка экспорта”</div></a>
+					<div class="item-title"><a href="#">Мониторинг дорожной карты “Поддержка доступа на рынки зарубежных стран и поддержка экспорта”</a></div>
 					<span class="item-date light-text">06.05.2015</span>
 				</div>
 			</div>
@@ -186,29 +182,29 @@
 			</div>
 		</div>
 		<div class="tab-content" id="projects-content">
-			<div class="project-item content-item" data-tab="v1">
+			<div class="projects-item content-item" data-tab="v1">
 				<div class="carousel l-full-width">
 					<div class="carousel-content">
 						<div class="carousel-inner">
-							<div class="item">
+							<div class="item project-item">
 								<div class="item-img">
 									<a href="#"><img src="images/content/proj-1.jpg" /></a>
 								</div>
 								<div class="item-title"><a href="#">ООО «Уральские локомотивы»</a></div>
 							</div>
-							<div class="item">
+							<div class="item project-item">
 								<div class="item-img">
 									<a href="#"><img src="images/content/proj-2.jpg" /></a>
 								</div>
 								<div class="item-title"><a href="#">ООО «Либхерр-Нижний Новгород»</a></div>
 							</div>
-							<div class="item">
+							<div class="item project-item">
 								<div class="item-img">
 									<a href="#"><img src="images/content/proj-3.jpg" /></a>
 								</div>
 								<div class="item-title"><a href="#">ОАО «Ямалтрансстрой»</a></div>
 							</div>
-							<div class="item">
+							<div class="item project-item">
 								<div class="item-img">
 									<a href="#"><img src="images/content/proj-4.jpg" /></a>
 								</div>
@@ -222,29 +218,29 @@
 					</div>
 				</div>
 			</div>
-			<div class="project-item content-item" data-tab="v2">
+			<div class="projects-item content-item" data-tab="v2">
 				<div class="carousel l-full-width">
 					<div class="carousel-content">
 						<div class="carousel-inner">
-							<div class="item">
+							<div class="item project-item">
 								<div class="item-img">
 									<a href="#"><img src="images/content/proj-1.jpg" /></a>
 								</div>
 								<div class="item-title"><a href="#">ООО «Уральские локомотивы»</a></div>
 							</div>
-							<div class="item">
+							<div class="item project-item">
 								<div class="item-img">
 									<a href="#"><img src="images/content/proj-2.jpg" /></a>
 								</div>
 								<div class="item-title"><a href="#">ООО «Либхерр-Нижний Новгород»</a></div>
 							</div>
-							<div class="item">
+							<div class="item project-item">
 								<div class="item-img">
 									<a href="#"><img src="images/content/proj-3.jpg" /></a>
 								</div>
 								<div class="item-title"><a href="#">ОАО «Ямалтрансстрой»</a></div>
 							</div>
-							<div class="item">
+							<div class="item project-item">
 								<div class="item-img">
 									<a href="#"><img src="images/content/proj-4.jpg" /></a>
 								</div>
@@ -258,13 +254,13 @@
 					</div>
 				</div>
 			</div>
-			<div class="project-item content-item" data-tab="v3">
+			<div class="projects-item content-item" data-tab="v3">
 				text here...
 			</div>
 		</div>
 	</div>
 	<div class="partners-block hide-on-small-only">
-		<div class="block-title-tab">Партнеры</div>
+		<div class="block-title-like-tab"><span class="text">Партнеры</span></div>
 		<div  class="partners-list row">
 			<div class="item col l3 m4">
 				<a href="#">
