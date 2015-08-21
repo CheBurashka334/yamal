@@ -4237,54 +4237,58 @@ table.zaim tr th:nth-child(2):not(:last-child):after {
   margin: 15px 0 10px;
 }
 /* line 122, scss/components/_sup-measures.scss */
-.sup-measures-page .content-item .item .block-title + .item-info {
-  margin-top: 50px;
+.sup-measures-page .content-item .item .item-text p {
+  font-size: 15px;
 }
-/* line 126, scss/components/_sup-measures.scss */
+/* line 125, scss/components/_sup-measures.scss */
+.sup-measures-page .content-item .item .block-title + .item-info {
+  margin-top: 45px;
+}
+/* line 129, scss/components/_sup-measures.scss */
 .sup-measures-page .content-item .item .item-info p {
   margin: 0 0 15px;
   font-size: 17px;
   line-height: 20px;
 }
-/* line 132, scss/components/_sup-measures.scss */
+/* line 135, scss/components/_sup-measures.scss */
 .sup-measures-page .content-item .item a {
   display: block;
   padding: 20px 15px 10px;
   color: #434343;
   border: 1px solid #ededed;
 }
-/* line 137, scss/components/_sup-measures.scss */
+/* line 140, scss/components/_sup-measures.scss */
 .sup-measures-page .content-item .item a:hover {
   background: #2d4e9d;
   border-color: #2d4e9d;
   color: #fff;
 }
-/* line 141, scss/components/_sup-measures.scss */
+/* line 144, scss/components/_sup-measures.scss */
 .sup-measures-page .content-item .item a:hover .block-title {
   color: #fff;
 }
 
-/* line 150, scss/components/_sup-measures.scss */
+/* line 153, scss/components/_sup-measures.scss */
 .sup-measures-single .order-btn {
   margin-top: 40px;
   margin-bottom: 50px;
 }
 @media only screen and (min-width: 601px) {
-  /* line 150, scss/components/_sup-measures.scss */
+  /* line 153, scss/components/_sup-measures.scss */
   .sup-measures-single .order-btn {
     margin-top: 60px;
     margin-bottom: 90px;
   }
 }
 @media only screen and (min-width: 993px) {
-  /* line 150, scss/components/_sup-measures.scss */
+  /* line 153, scss/components/_sup-measures.scss */
   .sup-measures-single .order-btn {
     margin-top: 50px;
     margin-bottom: 80px;
   }
 }
 @media only screen and (min-width: 601px) {
-  /* line 162, scss/components/_sup-measures.scss */
+  /* line 165, scss/components/_sup-measures.scss */
   .sup-measures-single .item-content {
     margin-top: 30px;
   }

@@ -119,8 +119,11 @@
 		.block-title + .item-text p {
 			margin: 1.5*$gutter 0 $gutter;
 		}
+		.item-text p {
+			font-size: 15px;
+		}
 		.block-title + .item-info {
-			margin-top: 5*$gutter;
+			margin-top: 4.5*$gutter;
 		}
 		.item-info {
 			p {
