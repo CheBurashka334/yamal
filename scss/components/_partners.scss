@@ -45,13 +45,24 @@
 	.partners-list .item  {
 		margin-bottom: 2*$gutter;
 	}
+	.item-icon {
+		width: 60px;
+		height: 60px;
+		margin-bottom: 2*$gutter;
+		.icon {
+			width: 100%;
+			height: 100%;
+			fill: $primary-color;
+		}
+	}
 	.partners-list .item a {
 		display: flex;
+		flex-direction: column;
 		justify-content: center;
 		align-items: center;
 		width: 100%;
-		height: 160px;
-		padding: 2*$gutter;
+		height: 180px;
+		padding: 2*$gutter $gutter;
 		border: 1px solid #eeeeee;
 		text-align: center;
 		color: $base-text-color;
@@ -61,6 +72,9 @@
 			background: $primary-bg;
 			border-color: $primary-bg;
 			color: #fff;
+			.icon {
+				fill: #fff;
+			}
 		}
 	}
 }

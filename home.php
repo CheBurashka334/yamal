@@ -264,41 +264,49 @@
 		<div  class="partners-list row">
 			<div class="item col l3 m4">
 				<a href="#">
+					<div class="item-icon"><svg class="icon"><use xlink:href="#gosorgan"/></svg></div>
 					<div class="item-title">Органы государственной власти</div>
 				</a>
 			</div>
 			<div class="item col l3 m4">
 				<a href="#">
+					<div class="item-icon"><svg class="icon"><use xlink:href="#control"/></svg></div>
 					<div class="item-title">Контролирующие структуры</div>
 				</a>
 			</div>
 			<div class="item col l3 m4">
 				<a href="#">
+					<div class="item-icon"><svg class="icon"><use xlink:href="#gosuslugi"/></svg></div>
 					<div class="item-title">Государственные услуги</div>
 				</a>
 			</div>
 			<div class="item col l3 m4">
 				<a href="#">
+					<div class="item-icon"><svg class="icon"><use xlink:href="#ombudsmen"/></svg></div>
 					<div class="item-title">Бизнес-омбутсмен</div>
 				</a>
 			</div>
 			<div class="item col l3 m4">
 				<a href="#">
+					<div class="item-icon"><svg class="icon"><use xlink:href="#financial"/></svg></div>
 					<div class="item-title">Финансовые организации</div>
 				</a>
 			</div>
 			<div class="item col l3 m4">
 				<a href="#">
+					<div class="item-icon"><svg class="icon"><use xlink:href="#business"/></svg></div>
 					<div class="item-title">Бизнес-сообщества</div>
 				</a>
 			</div>
 			<div class="item col l3 m4">
 				<a href="#">
+					<div class="item-icon"><svg class="icon"><use xlink:href="#social"/></svg></div>
 					<div class="item-title">Общественные организации</div>
 				</a>
 			</div>
 			<div class="item col l3 m4">
 				<a href="#">
+					<div class="item-icon"><svg class="icon"><use xlink:href="#info"/></svg></div>
 					<div class="item-title">Информационные партнеры</div>
 				</a>
 			</div>
