@@ -1,0 +1,36 @@
+// 404
+.page-404 {
+	padding-top: 6*$gutter;
+	.item-img {
+		text-align: center;
+	}
+	.item-title {
+		font-size: 26px;
+		line-height: 30px;
+		margin-top: 2*$gutter;
+		text-align: center;
+	}
+	@media #{$medium-and-up}{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding-top: 100px;
+		.item-img {
+			text-align: right;
+		}
+		.item-title {
+			margin: 2.5*$gutter 0 2*$gutter;
+			text-align: left;
+		}
+		.item-text {
+			line-height: 35px;
+		}
+	}
+	@media #{$large-and-up}{
+		padding-top: 250px;
+		padding-bottom: 170px;
+		.item-title {
+			font-size: 40px;
+		}
+	}
+}
