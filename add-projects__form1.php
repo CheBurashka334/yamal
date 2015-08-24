@@ -131,7 +131,10 @@
 			</div>
 			<div class="field-box inputfile-box col l12">
 				<input type="file" ng-model="" />
-				<div class="value-text"></div>
+				<div class="inputfile-value">
+					<span class="item-text"></span>
+					<button class="btn-delete"></button>
+				</div>
 				<div class="note-text">
 					Размер файла: не более 10 Мб.<br/>
 					Тип файла: *ppt, *pptx, *doc, *docx, *xls, *xlsx, *txt, *pdf, *png, *jpg.
