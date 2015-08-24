@@ -226,7 +226,7 @@
 				max-width: 115%;
 			}
 			@media #{$medium-and-up} {
-				height: auto;
+				height: 43*$gutter;
 			}
 		}
 	}

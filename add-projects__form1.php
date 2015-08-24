@@ -130,10 +130,13 @@
 				<div class="error-text"></div>
 			</div>
 			<div class="field-box inputfile-box col l12">
-				<input type="file" ng-model="" accept="image/png,image/jpg,application/pdf,application/excel,application/msword,text/plane,application/powerpoint,application/vnd.openxmlformats-officedocument.wordprocessingml.document" />
-				<div class="inputfile-value">
-					<span class="item-text"></span>
-					<button class="btn-delete"></button>
+				<div class="inputfile">
+					<input type="file" ng-model="" accept="image/png,image/jpg,application/pdf,application/excel,application/msword,text/plane,application/powerpoint,application/vnd.openxmlformats-officedocument.wordprocessingml.document" />
+					<div class="inputfile-value">
+						<span class="item-text"></span>
+						<button class="btn-delete"></button>
+					</div>
+					<button class="btn-inputfile">Прикрепить файл</button>
 				</div>
 				<div class="note-text">
 					Размер файла: не более 10 Мб.<br/>

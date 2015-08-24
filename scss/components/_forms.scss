@@ -123,6 +123,56 @@ select:focus {
 	}
 }
 
+// inputfile
+.inputfile-box {
+	input[type="file"]{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 2;
+		opacity: 0;
+	}
+	.inputfile {
+		display: inline-block;
+		margin-right: 3*$gutter;
+		font-size: 15px;
+		line-height: 39px;
+		height: 41px;
+		vertical-align: middle;
+	}
+	.inputfile-value {
+		display: inline-block;
+		height: 100%;
+		background: #e1e1e1;
+		padding: 0 3*$gutter;
+		margin-right: 3*$gutter;
+		vertical-align: middle;
+	}
+	.btn-delete {
+		position: absolute;
+		top: 13px;
+		right: 13px;
+		width: 15px;
+		height: 15px;
+		background: url('images/delete.png') center no-repeat;
+	}
+	.btn-inputfile {
+		display: inline-block;
+		border: 1px solid $base-text-color;
+		padding: 0 3*$gutter;
+		margin-top: -1px;
+		vertical-align: middle;
+	}
+	.note-text {
+		display: inline-block;
+		vertical-align: middle;
+		font-size: 14px;
+		line-height: 18px;
+	}
+}
+
 .add-project-page {
 	.dropdown-box .dropdown-value {
 		@extend .inputtext;
