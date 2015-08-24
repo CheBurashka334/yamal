@@ -855,6 +855,30 @@ ul.staggered-list li {
   padding: 0 !important;
 }
 
+/* line 339, scss/components/_global.scss */
+.triangle {
+  position: absolute;
+  width: 30px;
+  height: 2.5em;
+  background: #fff;
+  font-size: 15px;
+  top: 0;
+  right: 0;
+}
+/* line 347, scss/components/_global.scss */
+.triangle:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 17px;
+  right: 17px;
+  width: 0;
+  height: 0;
+  border-top: 7px solid #434343;
+  border-right: 4px solid transparent;
+  border-left: 4px solid transparent;
+}
+
 /* line 2, scss/components/_buttons.scss */
 .btn, .btn-icon {
   border: 1px solid;
@@ -2049,26 +2073,91 @@ ol:not(.nostyle) li:before {
   margin: 16px 0;
 }
 
-/* line 4, scss/components/_forms.scss */
+/* line 5, scss/components/_forms.scss */
+.field-box {
+  margin-bottom: 5px;
+}
+
+/* line 8, scss/components/_forms.scss */
+input:focus {
+  outline: none;
+}
+
+/* line 11, scss/components/_forms.scss */
+.inputtext, .add-project-page .dropdown-box .dropdown-value {
+  display: block;
+  width: 100%;
+  height: 41px;
+  font-size: 15px;
+  line-height: 39px;
+  vertical-align: middle;
+  padding: 0 15px;
+  border: 1px solid #e1e1e1;
+  margin: 5px 0 7px;
+}
+/* line 21, scss/components/_forms.scss */
+.inputtext:focus, .add-project-page .dropdown-box .dropdown-value:focus {
+  outline: none;
+}
+
+/* line 25, scss/components/_forms.scss */
+textarea.inputtext, .add-project-page .dropdown-box textarea.dropdown-value {
+  line-height: 20px;
+  max-width: 100%;
+  height: auto;
+  min-height: 90px;
+  padding: 5px 15px;
+}
+
+/* line 34, scss/components/_forms.scss */
+input[type="checkbox"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: #fff;
+  width: 21px;
+  height: 21px;
+  border: 1px solid #e1e1e1;
+  vertical-align: middle;
+}
+/* line 43, scss/components/_forms.scss */
+input[type="checkbox"]:checked {
+  background: url("images/tick.png") center no-repeat;
+}
+/* line 46, scss/components/_forms.scss */
+input[type="checkbox"] + label {
+  margin-left: 15px;
+  vertical-align: middle;
+}
+
+/* line 53, scss/components/_forms.scss */
+.error-text {
+  color: #c7213a;
+  font-size: 14px;
+  line-height: 1em;
+  height: 1em;
+}
+
+/* line 62, scss/components/_forms.scss */
 select {
   width: 100%;
   vertical-align: middle;
   height: 2.67em;
   padding: 0 2em 0 15px;
 }
-/* line 9, scss/components/_forms.scss */
+/* line 67, scss/components/_forms.scss */
 select option {
   max-width: 100%;
   color: #434343;
 }
 
-/* line 14, scss/components/_forms.scss */
+/* line 72, scss/components/_forms.scss */
 select.type-2 {
   padding: 0 2em 10px 0;
   border-bottom: 1px solid #eeeeee;
 }
 
-/* line 18, scss/components/_forms.scss */
+/* line 76, scss/components/_forms.scss */
 select + .triangle {
   position: absolute;
   top: 1px;
@@ -2079,12 +2168,12 @@ select + .triangle {
   font-size: 15px;
 }
 @media only screen and (min-width: 601px) {
-  /* line 18, scss/components/_forms.scss */
+  /* line 76, scss/components/_forms.scss */
   select + .triangle {
     right: 16px;
   }
 }
-/* line 29, scss/components/_forms.scss */
+/* line 87, scss/components/_forms.scss */
 select + .triangle:after {
   content: '';
   display: block;
@@ -2098,26 +2187,26 @@ select + .triangle:after {
   border-left: 4px solid transparent;
 }
 
-/* line 42, scss/components/_forms.scss */
+/* line 100, scss/components/_forms.scss */
 select:hover,
 select:focus {
   color: #0d4f9e;
   border-color: #0d4f9e;
   outline: none;
 }
-/* line 47, scss/components/_forms.scss */
+/* line 105, scss/components/_forms.scss */
 select:hover + .triangle:after,
 select:focus + .triangle:after {
   border-top-color: #0d4f9e;
 }
 
-/* line 51, scss/components/_forms.scss */
+/* line 109, scss/components/_forms.scss */
 .dropdown-select-box {
   width: auto;
   display: inline-block;
 }
 
-/* line 55, scss/components/_forms.scss */
+/* line 113, scss/components/_forms.scss */
 .dropdown-select {
   display: inline-block;
   padding-right: 30px;
@@ -2126,10 +2215,19 @@ select:focus + .triangle:after {
   font-size: 18px;
   line-height: 20px;
 }
-/* line 62, scss/components/_forms.scss */
+/* line 120, scss/components/_forms.scss */
 .dropdown-select + .triangle {
   right: 0;
   top: 3px;
+}
+
+/* line 129, scss/components/_forms.scss */
+.add-project-page .dropdown-box .dropdown-value .item-text {
+  line-height: inherit;
+}
+/* line 133, scss/components/_forms.scss */
+.add-project-page .btn-submit {
+  margin-top: 30px;
 }
 
 /* line 1, scss/components/select2/_core.scss */
@@ -3489,14 +3587,20 @@ table.zaim tr th:nth-child(2):not(:last-child):after {
   overflow: hidden;
   height: 210px;
 }
-/* line 14, scss/components/_projects.scss */
+/* line 11, scss/components/_projects.scss */
+.project-item .item-img a {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/* line 17, scss/components/_projects.scss */
 .project-item .item-img img {
   display: block;
   min-width: 100%;
   min-height: 100%;
   max-width: 500%;
 }
-/* line 21, scss/components/_projects.scss */
+/* line 24, scss/components/_projects.scss */
 .project-item .item-title {
   margin-top: 15px;
   font-size: 26px;
@@ -3504,277 +3608,277 @@ table.zaim tr th:nth-child(2):not(:last-child):after {
 }
 
 @media only screen and (min-width: 601px) {
-  /* line 39, scss/components/_projects.scss */
+  /* line 42, scss/components/_projects.scss */
   .project-list {
     margin: 45px 0 30px;
   }
 
-  /* line 42, scss/components/_projects.scss */
+  /* line 45, scss/components/_projects.scss */
   .project-item {
     margin-bottom: 45px;
   }
-  /* line 44, scss/components/_projects.scss */
+  /* line 47, scss/components/_projects.scss */
   .project-item .item-img {
     height: 280px;
     margin-bottom: 25px;
   }
-  /* line 48, scss/components/_projects.scss */
+  /* line 51, scss/components/_projects.scss */
   .project-item .item-title {
     font-size: 26px;
     margin-top: 25px;
   }
 }
 @media only screen and (min-width: 993px) {
-  /* line 55, scss/components/_projects.scss */
+  /* line 58, scss/components/_projects.scss */
   .project-list {
     margin: 35px 0 65px;
   }
 
-  /* line 58, scss/components/_projects.scss */
+  /* line 61, scss/components/_projects.scss */
   .project-item {
     margin-bottom: 35px;
   }
 }
-/* line 64, scss/components/_projects.scss */
+/* line 67, scss/components/_projects.scss */
 .project-single {
   line-height: 25px;
 }
-/* line 66, scss/components/_projects.scss */
+/* line 69, scss/components/_projects.scss */
 .project-single .item-title {
   margin-bottom: 10px;
 }
-/* line 70, scss/components/_projects.scss */
+/* line 73, scss/components/_projects.scss */
 .project-single .item-logo {
   position: absolute;
   top: 20px;
   right: 0;
   max-width: 255px;
 }
-/* line 76, scss/components/_projects.scss */
+/* line 79, scss/components/_projects.scss */
 .project-single .project-links {
   margin-top: 20px;
 }
-/* line 79, scss/components/_projects.scss */
+/* line 82, scss/components/_projects.scss */
 .project-single .share-box {
   margin-top: 20px;
 }
-/* line 81, scss/components/_projects.scss */
+/* line 84, scss/components/_projects.scss */
 .project-single .share-box .like_button:first-of-type {
   margin-right: 15px;
 }
-/* line 85, scss/components/_projects.scss */
+/* line 88, scss/components/_projects.scss */
 .project-single .project-img {
   margin-top: 40px;
   height: 210px;
   overflow: hidden;
 }
-/* line 89, scss/components/_projects.scss */
+/* line 92, scss/components/_projects.scss */
 .project-single .project-img .img {
   height: 100%;
   width: auto;
   max-width: 500%;
   min-width: 100%;
 }
-/* line 96, scss/components/_projects.scss */
+/* line 99, scss/components/_projects.scss */
 .project-single .project-indicators {
   text-align: center;
   padding: 0 10px;
   margin-bottom: 25px;
 }
-/* line 100, scss/components/_projects.scss */
+/* line 103, scss/components/_projects.scss */
 .project-single .project-indicators .indic-item {
   padding-top: 20px;
   padding-bottom: 5px;
   border-bottom: 1px solid #e1e1e1;
 }
-/* line 106, scss/components/_projects.scss */
+/* line 109, scss/components/_projects.scss */
 .project-single .project-text {
   padding-bottom: 12px;
   border-bottom: 1px solid #e1e1e1;
 }
-/* line 110, scss/components/_projects.scss */
+/* line 113, scss/components/_projects.scss */
 .project-single .project-contacts {
   margin-bottom: 40px;
 }
-/* line 112, scss/components/_projects.scss */
+/* line 115, scss/components/_projects.scss */
 .project-single .project-contacts p {
   margin: 0.5em 0;
 }
 
 @media only screen and (min-width: 601px) {
-  /* line 119, scss/components/_projects.scss */
+  /* line 122, scss/components/_projects.scss */
   .project-single .item-title,
   .project-single .item-desc {
     max-width: calc(100% - 255px);
   }
-  /* line 123, scss/components/_projects.scss */
+  /* line 126, scss/components/_projects.scss */
   .project-single .share-box {
     margin-top: 0;
   }
-  /* line 125, scss/components/_projects.scss */
+  /* line 128, scss/components/_projects.scss */
   .project-single .share-box .social_sharing {
     text-align: right;
   }
-  /* line 129, scss/components/_projects.scss */
+  /* line 132, scss/components/_projects.scss */
   .project-single .project-img {
     height: 380px;
   }
-  /* line 132, scss/components/_projects.scss */
+  /* line 135, scss/components/_projects.scss */
   .project-single .project-indicators {
     margin-bottom: 35px;
   }
-  /* line 134, scss/components/_projects.scss */
+  /* line 137, scss/components/_projects.scss */
   .project-single .project-indicators .indic-item {
     padding-top: 40px;
     padding-bottom: 15px;
     height: 190px;
   }
-  /* line 140, scss/components/_projects.scss */
+  /* line 143, scss/components/_projects.scss */
   .project-single .project-text {
     padding-bottom: 22px;
   }
-  /* line 143, scss/components/_projects.scss */
+  /* line 146, scss/components/_projects.scss */
   .project-single .project-contacts p {
     margin: 0.3em 0;
   }
 }
 @media only screen and (min-width: 993px) {
-  /* line 150, scss/components/_projects.scss */
+  /* line 153, scss/components/_projects.scss */
   .project-single .item-title {
     margin-bottom: 30px;
   }
-  /* line 153, scss/components/_projects.scss */
+  /* line 156, scss/components/_projects.scss */
   .project-single .item-logo {
     top: 30px;
     right: 15px;
   }
-  /* line 157, scss/components/_projects.scss */
+  /* line 160, scss/components/_projects.scss */
   .project-single .project-links {
     margin-top: 5px;
   }
-  /* line 160, scss/components/_projects.scss */
+  /* line 163, scss/components/_projects.scss */
   .project-single .share-box {
     margin-top: -7px;
   }
-  /* line 163, scss/components/_projects.scss */
+  /* line 166, scss/components/_projects.scss */
   .project-single .project-img {
     margin-top: 35px;
   }
-  /* line 166, scss/components/_projects.scss */
+  /* line 169, scss/components/_projects.scss */
   .project-single .project-indicators {
     margin-bottom: 40px;
     padding: 0 15px;
   }
-  /* line 169, scss/components/_projects.scss */
+  /* line 172, scss/components/_projects.scss */
   .project-single .project-indicators .indic-item {
     padding-top: 50px;
     padding-bottom: 25px;
     height: 210px;
     border: 0;
   }
-  /* line 174, scss/components/_projects.scss */
+  /* line 177, scss/components/_projects.scss */
   .project-single .project-indicators .indic-item p {
     margin-top: 25px;
   }
-  /* line 179, scss/components/_projects.scss */
+  /* line 182, scss/components/_projects.scss */
   .project-single .project-text {
     padding: 0 11.6% 22px;
     line-height: 28px;
     border: 0;
   }
-  /* line 183, scss/components/_projects.scss */
+  /* line 186, scss/components/_projects.scss */
   .project-single .project-text p {
     margin: 25px 0;
   }
-  /* line 187, scss/components/_projects.scss */
+  /* line 190, scss/components/_projects.scss */
   .project-single .project-contacts {
     padding: 0 11.6%;
     margin-bottom: 70px;
   }
 }
 @media only screen and (min-width: 601px) {
-  /* line 194, scss/components/_projects.scss */
+  /* line 197, scss/components/_projects.scss */
   .projects-block {
     margin-bottom: 60px;
   }
 }
 @media only screen and (min-width: 993px) {
-  /* line 194, scss/components/_projects.scss */
+  /* line 197, scss/components/_projects.scss */
   .projects-block {
     margin-bottom: 100px;
   }
 }
-/* line 201, scss/components/_projects.scss */
+/* line 204, scss/components/_projects.scss */
 .projects-block .tab-header {
   margin-bottom: 20px;
 }
 @media only screen and (min-width: 601px) {
-  /* line 201, scss/components/_projects.scss */
+  /* line 204, scss/components/_projects.scss */
   .projects-block .tab-header {
     margin-bottom: 40px;
   }
-  /* line 205, scss/components/_projects.scss */
+  /* line 208, scss/components/_projects.scss */
   .projects-block .tab-header .tabs-list:after {
     bottom: -1px;
   }
-  /* line 208, scss/components/_projects.scss */
+  /* line 211, scss/components/_projects.scss */
   .projects-block .tab-header .tab-item {
     margin-bottom: 0;
   }
-  /* line 211, scss/components/_projects.scss */
+  /* line 214, scss/components/_projects.scss */
   .projects-block .tab-header .tab-title {
     margin-right: 60px;
     font-size: 20px;
     line-height: 30px;
   }
 }
-/* line 218, scss/components/_projects.scss */
+/* line 221, scss/components/_projects.scss */
 .projects-block .carousel .item {
   width: calc(100vw - 40px);
 }
-/* line 220, scss/components/_projects.scss */
+/* line 223, scss/components/_projects.scss */
 .projects-block .carousel .item .item-img {
   height: 160px;
 }
-/* line 222, scss/components/_projects.scss */
+/* line 225, scss/components/_projects.scss */
 .projects-block .carousel .item .item-img img {
   max-width: 115%;
 }
 @media only screen and (min-width: 601px) {
-  /* line 220, scss/components/_projects.scss */
+  /* line 223, scss/components/_projects.scss */
   .projects-block .carousel .item .item-img {
     height: auto;
   }
 }
 @media only screen and (min-width: 993px) {
-  /* line 231, scss/components/_projects.scss */
+  /* line 234, scss/components/_projects.scss */
   .projects-block .carousel-content {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 15px;
   }
-  /* line 235, scss/components/_projects.scss */
+  /* line 238, scss/components/_projects.scss */
   .projects-block .carousel-content .carousel-inner {
     margin-left: -15px;
     margin-right: -15px;
   }
-  /* line 239, scss/components/_projects.scss */
+  /* line 242, scss/components/_projects.scss */
   .projects-block .carousel-content .item {
     width: 50vw;
     max-width: 600px;
     padding: 0 15px;
   }
-  /* line 244, scss/components/_projects.scss */
+  /* line 247, scss/components/_projects.scss */
   .projects-block .carousel-content .item .item-img {
     height: 340px;
   }
-  /* line 246, scss/components/_projects.scss */
+  /* line 249, scss/components/_projects.scss */
   .projects-block .carousel-content .item .item-img img {
     max-width: 150%;
   }
 }
 @media only screen and (min-width: 1361px) {
-  /* line 253, scss/components/_projects.scss */
+  /* line 256, scss/components/_projects.scss */
   .projects-block .carousel-controlls {
     max-width: 1360px;
     left: 50%;

@@ -335,3 +335,25 @@ ul.staggered-list li {
 .no-padding {
   padding: 0 !important;
 }
+
+.triangle {
+	position: absolute;
+	width: 30px;
+	height: 2.5em;
+	background: #fff;
+	font-size: 15px;
+	top: 0;
+	right: 0;
+	&:after {
+		content: '';
+		display: block;
+		position: absolute;
+		top: 17px;
+		right: 17px;
+		width: 0;
+		height: 0;
+		border-top: 7px solid #434343;
+		border-right: 4px solid transparent;
+		border-left: 4px solid transparent;
+	}
+}

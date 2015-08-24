@@ -27,7 +27,7 @@
 <div class="project-list row">
 	<div class="project-item col l6 m12 s12">
 		<div class="item-img">
-			<a href="#"><img src="images/content/proj-1.jpg" /></a>
+			<a href="#" class="img" style="background-image:url(images/content/proj-1.jpg)"></a>
 		</div>
 		<div class="item-title"><a href="#">ООО «Уральские локомотивы»</a></div>
 	</div>
@@ -39,7 +39,7 @@
 	</div>
 	<div class="project-item col l6 m12 s12">
 		<div class="item-img">
-			<a href="#"><img src="images/content/proj-3.jpg" /></a>
+			<a href="#" class="img" style="background-image:url(images/content/proj-3.jpg)"></a>
 		</div>
 		<div class="item-title"><a href="#">ОАО «Ямалтрансстрой»</a></div>
 	</div>

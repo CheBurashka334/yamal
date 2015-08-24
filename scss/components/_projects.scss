@@ -10,6 +10,9 @@
 		height: 210px;
 		a {
 			@extend .img-link;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
 		}
 		img {
 			display: block;
