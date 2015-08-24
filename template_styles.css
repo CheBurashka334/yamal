@@ -318,8 +318,6 @@ html input[type="button"],
 button,
 input[type="reset"],
 input[type="submit"] {
-  -webkit-appearance: button;
-  /* 2 */
   cursor: pointer
   /* 3 */
 }
@@ -865,18 +863,19 @@ ul.staggered-list li {
   font-size: 17px;
   height: 50px;
   line-height: 45px;
+  padding-bottom: 5px;
   outline: 0;
   vertical-align: middle;
   -webkit-tap-highlight-color: transparent;
 }
-/* line 13, scss/components/_buttons.scss */
+/* line 14, scss/components/_buttons.scss */
 .btn.center, .btn-icon.center {
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
 
-/* line 21, scss/components/_buttons.scss */
+/* line 22, scss/components/_buttons.scss */
 .btn {
   width: 190px;
   text-decoration: none;
@@ -886,47 +885,47 @@ ul.staggered-list li {
   text-align: center;
   cursor: pointer;
 }
-/* line 29, scss/components/_buttons.scss */
+/* line 30, scss/components/_buttons.scss */
 .btn:hover, .btn:active {
   background-color: #c7213a;
   color: #fff;
 }
 
-/* line 36, scss/components/_buttons.scss */
+/* line 37, scss/components/_buttons.scss */
 .btn.primary {
   background-color: #c7213a;
   border-color: #c7213a;
   color: #fff;
 }
-/* line 40, scss/components/_buttons.scss */
+/* line 41, scss/components/_buttons.scss */
 .btn.primary:hover, .btn.primary:active {
   background-color: #f33955;
   border-color: #f33955;
 }
 
-/* line 47, scss/components/_buttons.scss */
+/* line 48, scss/components/_buttons.scss */
 .btn-icon {
   width: 3em;
   background: transparent;
   border-color: #0b4f9f;
   padding: 0 15px;
 }
-/* line 52, scss/components/_buttons.scss */
+/* line 53, scss/components/_buttons.scss */
 .btn-icon .icon {
   width: 100%;
   height: 100%;
   fill: #0b4f9f;
 }
-/* line 57, scss/components/_buttons.scss */
+/* line 58, scss/components/_buttons.scss */
 .btn-icon:hover, .btn-icon:active {
   background: #0d4f9e;
   border-color: #0d4f9e;
 }
-/* line 61, scss/components/_buttons.scss */
+/* line 62, scss/components/_buttons.scss */
 .btn-icon:hover .icon, .btn-icon:active .icon {
   fill: #fff;
 }
-/* line 65, scss/components/_buttons.scss */
+/* line 66, scss/components/_buttons.scss */
 .btn-icon.small {
   width: 38px;
   height: 38px;
@@ -934,7 +933,7 @@ ul.staggered-list li {
   border-color: #ededed;
   padding: 0 10px;
 }
-/* line 72, scss/components/_buttons.scss */
+/* line 73, scss/components/_buttons.scss */
 .btn-icon.default {
   border: 0;
   line-height: 1em;
@@ -942,15 +941,15 @@ ul.staggered-list li {
   width: 1em;
   padding: 0;
 }
-/* line 78, scss/components/_buttons.scss */
+/* line 79, scss/components/_buttons.scss */
 .btn-icon.default .icon {
   fill: #0d4f9e;
 }
-/* line 81, scss/components/_buttons.scss */
+/* line 82, scss/components/_buttons.scss */
 .btn-icon.default:hover, .btn-icon.default:active {
   background: transparent;
 }
-/* line 84, scss/components/_buttons.scss */
+/* line 85, scss/components/_buttons.scss */
 .btn-icon.default:hover .icon, .btn-icon.default:active .icon {
   fill: #0d4f9e;
 }
@@ -1671,11 +1670,27 @@ ol:not(.nostyle) li:before {
   overflow: hidden;
   z-index: 2;
 }
-/* line 7, scss/components/_carousel.scss */
+/* line 6, scss/components/_carousel.scss */
+.carousel .carousel-content:not(.s-full-width) {
+  width: 100%;
+}
+@media only screen and (min-width: 601px) {
+  /* line 10, scss/components/_carousel.scss */
+  .carousel .carousel-content:not(.m-full-width) {
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 993px) {
+  /* line 15, scss/components/_carousel.scss */
+  .carousel .carousel-content:not(.l-full-width) {
+    width: 100%;
+  }
+}
+/* line 20, scss/components/_carousel.scss */
 .carousel .carousel-inner {
   width: 9999px;
 }
-/* line 16, scss/components/_carousel.scss */
+/* line 29, scss/components/_carousel.scss */
 .carousel .carousel-pagination {
   position: absolute;
   width: 100%;
@@ -1684,23 +1699,23 @@ ol:not(.nostyle) li:before {
   text-align: center;
   z-index: 2;
 }
-/* line 24, scss/components/_carousel.scss */
+/* line 37, scss/components/_carousel.scss */
 .carousel .carousel-pagination .nav-item {
   display: inline-block;
   margin: 0 10px;
 }
-/* line 28, scss/components/_carousel.scss */
+/* line 41, scss/components/_carousel.scss */
 .carousel .carousel-pagination .nav-link {
   display: block;
   width: 12px;
   height: 12px;
   background: #f3f3f3;
 }
-/* line 34, scss/components/_carousel.scss */
+/* line 47, scss/components/_carousel.scss */
 .carousel .carousel-pagination .nav-link:hover, .carousel .carousel-pagination .nav-link.active {
   background: #2d4e9d;
 }
-/* line 40, scss/components/_carousel.scss */
+/* line 53, scss/components/_carousel.scss */
 .carousel .carousel-controlls {
   position: absolute;
   z-index: 3;
@@ -1710,7 +1725,7 @@ ol:not(.nostyle) li:before {
   left: 0;
   overflow: hidden;
 }
-/* line 48, scss/components/_carousel.scss */
+/* line 61, scss/components/_carousel.scss */
 .carousel .carousel-controlls .prev,
 .carousel .carousel-controlls .next {
   position: absolute;
@@ -1723,56 +1738,70 @@ ol:not(.nostyle) li:before {
   border: 0;
   padding: 15px;
 }
-/* line 59, scss/components/_carousel.scss */
+/* line 72, scss/components/_carousel.scss */
 .carousel .carousel-controlls .prev .icon,
 .carousel .carousel-controlls .next .icon {
   fill: #2d4e9d;
   width: 30px;
   height: 30px;
 }
-/* line 64, scss/components/_carousel.scss */
+/* line 77, scss/components/_carousel.scss */
 .carousel .carousel-controlls .prev:hover .icon,
 .carousel .carousel-controlls .next:hover .icon {
   fill: #c7213a;
 }
-/* line 68, scss/components/_carousel.scss */
+/* line 81, scss/components/_carousel.scss */
 .carousel .carousel-controlls .prev {
   left: 0px;
 }
-/* line 71, scss/components/_carousel.scss */
+/* line 84, scss/components/_carousel.scss */
 .carousel .carousel-controlls .next {
   right: 0px;
 }
-/* line 73, scss/components/_carousel.scss */
+/* line 86, scss/components/_carousel.scss */
 .carousel .carousel-controlls .next .icon {
   -webkit-transform: rotate(180deg);
       -ms-transform: rotate(180deg);
           transform: rotate(180deg);
 }
 @media only screen and (min-width: 601px) {
-  /* line 40, scss/components/_carousel.scss */
+  /* line 53, scss/components/_carousel.scss */
   .carousel .carousel-controlls {
     top: 170px;
   }
 }
+@media only screen and (min-width: 1200px) and (max-width: 1280px) {
+  /* line 53, scss/components/_carousel.scss */
+  .carousel .carousel-controlls {
+    max-width: 1200px;
+    left: calc((100% - 1200px)/2);
+  }
+}
+@media only screen and (min-width: 1280px) {
+  /* line 98, scss/components/_carousel.scss */
+  .carousel .carousel-controlls .prev,
+  .carousel .carousel-controlls .next {
+    background: none;
+  }
+}
 
-/* line 82, scss/components/_carousel.scss */
+/* line 105, scss/components/_carousel.scss */
 .home-slider {
   margin-top: 0;
 }
-/* line 84, scss/components/_carousel.scss */
+/* line 107, scss/components/_carousel.scss */
 .home-slider .item {
   height: 300px;
   width: 100vw;
   max-width: 1170px;
 }
 @media only screen and (min-width: 601px) {
-  /* line 84, scss/components/_carousel.scss */
+  /* line 107, scss/components/_carousel.scss */
   .home-slider .item {
     height: 630px;
   }
 }
-/* line 92, scss/components/_carousel.scss */
+/* line 115, scss/components/_carousel.scss */
 .home-slider .item-img {
   width: 100%;
   height: 100%;
@@ -1780,7 +1809,7 @@ ol:not(.nostyle) li:before {
   background-position: center;
   background-size: auto 100%;
 }
-/* line 99, scss/components/_carousel.scss */
+/* line 122, scss/components/_carousel.scss */
 .home-slider .item-title {
   margin: 0;
   padding: 0 20px;
@@ -1792,11 +1821,17 @@ ol:not(.nostyle) li:before {
   color: #fff;
 }
 @media only screen and (min-width: 601px) {
-  /* line 99, scss/components/_carousel.scss */
+  /* line 122, scss/components/_carousel.scss */
   .home-slider .item-title {
     top: 190px;
     font-size: 50px;
     line-height: 60px;
+  }
+}
+@media only screen and (min-width: 993px) {
+  /* line 122, scss/components/_carousel.scss */
+  .home-slider .item-title {
+    margin-left: 6%;
   }
 }
 
@@ -3017,7 +3052,7 @@ table.zaim tr th:nth-child(2):not(:last-child):after {
   /* line 56, scss/components/_header.scss */
   .header .btn-menu {
     float: left;
-    margin-top: 20px;
+    margin-top: 16px;
   }
 }
 @media only screen and (min-width: 601px) and (max-width: 752px) {
@@ -4047,87 +4082,91 @@ table.zaim tr th:nth-child(2):not(:last-child):after {
     font-size: 20px;
     line-height: 30px;
   }
+  /* line 157, scss/components/_news.scss */
+  .news-block .tab-header .tab-item:last-of-type .tab-title {
+    margin-right: 0;
+  }
 }
-/* line 159, scss/components/_news.scss */
+/* line 162, scss/components/_news.scss */
 .news-block .news,
 .news-block .events {
   margin-bottom: 30px;
 }
 @media only screen and (min-width: 601px) {
-  /* line 159, scss/components/_news.scss */
+  /* line 162, scss/components/_news.scss */
   .news-block .news,
   .news-block .events {
     margin-bottom: 60px;
   }
 }
 @media only screen and (min-width: 993px) {
-  /* line 159, scss/components/_news.scss */
+  /* line 162, scss/components/_news.scss */
   .news-block .news,
   .news-block .events {
     margin-bottom: 0;
     padding-bottom: 20px;
   }
-  /* line 168, scss/components/_news.scss */
+  /* line 171, scss/components/_news.scss */
   .news-block .news .readmore,
   .news-block .events .readmore {
     position: absolute;
     bottom: 0;
   }
 }
-/* line 175, scss/components/_news.scss */
+/* line 178, scss/components/_news.scss */
 .news-block .news-item .item-img img {
   display: block;
 }
 @media only screen and (min-width: 601px) {
-  /* line 179, scss/components/_news.scss */
+  /* line 182, scss/components/_news.scss */
   .news-block .news-item .item-img {
     height: auto;
     max-height: 100%;
   }
 }
-/* line 184, scss/components/_news.scss */
+/* line 187, scss/components/_news.scss */
 .news-block .news-item .item-title {
   margin: 20px 0;
 }
 @media only screen and (min-width: 601px) {
-  /* line 184, scss/components/_news.scss */
+  /* line 187, scss/components/_news.scss */
   .news-block .news-item .item-title {
     margin: 30px 0;
   }
 }
-/* line 191, scss/components/_news.scss */
+/* line 194, scss/components/_news.scss */
 .news-block .events-list {
   margin-bottom: 10px;
 }
 @media only screen and (min-width: 993px) {
-  /* line 191, scss/components/_news.scss */
+  /* line 194, scss/components/_news.scss */
   .news-block .events-list {
     margin-bottom: 0;
   }
 }
-/* line 197, scss/components/_news.scss */
+/* line 200, scss/components/_news.scss */
 .news-block .events-list .item {
   padding: 10px 0 20px;
   border-bottom: 1px solid #eeeeee;
 }
-/* line 203, scss/components/_news.scss */
+/* line 206, scss/components/_news.scss */
 .news-block .events-list .item .item-title {
   font-size: 18px;
   line-height: 20px;
 }
-/* line 207, scss/components/_news.scss */
+/* line 210, scss/components/_news.scss */
 .news-block .events-list .item .item-date {
   display: inline-block;
   font-size: 14px;
   line-height: 1;
   margin-top: 15px;
 }
-/* line 213, scss/components/_news.scss */
+/* line 216, scss/components/_news.scss */
 .news-block .events-list .item:last-of-type {
   border-bottom: 0;
 }
 @media only screen and (min-width: 993px) {
-  /* line 217, scss/components/_news.scss */
+  /* line 220, scss/components/_news.scss */
   .news-block .events-list .item:first-of-type {
     padding-top: 0;
   }

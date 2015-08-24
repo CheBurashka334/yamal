@@ -3,6 +3,19 @@
 	.carousel-content {
 		overflow: hidden;
 		z-index: 2;
+		&:not(.s-full-width){
+			width: 100%;
+		}
+		@media #{$medium-and-up}{
+			&:not(.m-full-width){
+				width: 100%;
+			}
+		}
+		@media #{$large-and-up}{
+			&:not(.l-full-width){
+				width: 100%;
+			}
+		}
 	}
 	.carousel-inner {
 		width: 9999px;
@@ -77,6 +90,16 @@
 		@media #{$medium-and-up} {
 			top: 17*$gutter;
 		}
+		@media only screen and (min-width: 1200px) and (max-width: 1280px){
+			max-width: 1200px;
+			left: calc((100% - 1200px)/2);
+		}
+		@media only screen and (min-width: 1280px){
+			.prev,
+			.next {
+				background: none;
+			}
+		}
 	}
 }
 .home-slider {
@@ -109,6 +132,9 @@
 			top: 19*$gutter;
 			font-size: 50px;
 			line-height: 60px;
+		}
+		@media #{$large-and-up}{
+			margin-left: 6%;
 		}
 	}
 }
