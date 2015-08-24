@@ -130,7 +130,7 @@
 				<div class="error-text"></div>
 			</div>
 			<div class="field-box inputfile-box col l12">
-				<input type="file" ng-model="" />
+				<input type="file" ng-model="" accept="image/png,image/jpg,application/pdf,application/excel,application/msword,text/plane,application/powerpoint,application/vnd.openxmlformats-officedocument.wordprocessingml.document" />
 				<div class="inputfile-value">
 					<span class="item-text"></span>
 					<button class="btn-delete"></button>

@@ -34,9 +34,6 @@
 			margin: $gutter 0 1.5*$gutter;
 			a {
 				@extend .title-link;
-				background-position: center;
-				background-repeat: no-repeat;
-				background-size: cover;
 			}
 		}
 		.item-date {
@@ -46,13 +43,17 @@
 		.item-img {
 			overflow: hidden;
 			margin-bottom: $gutter;
+			height: 210px;
 			
 			a {
 				@extend .img-link;
+				background-position: center;
+				background-repeat: no-repeat;
+				background-size: cover;
 			}
 			
 			@media #{$medium-and-up}{
-				max-height: 280px;
+				height: 280px;
 				margin-bottom: 2*$gutter;
 			
 				img {
