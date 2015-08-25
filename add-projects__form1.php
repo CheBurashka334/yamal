@@ -4,37 +4,37 @@
 	<form name="add-project-1" ng-controller="addProj1Ctrl" novalidate>
 		<div class="form-block row">
 			<div class="block-title col">Информация об инвесторе</div>
-			<div class="field-box col l6">
+			<div class="field-box col l6 m12 s12">
 				<label>Имя <sup class="required-mark">*</sup></label>
 				<input type="text" class="inputtext" ng-model="form.name" ng-required="true" />
 				<div class="error-text">Заполните поля формы</div>
 			</div>
-			<div class="field-box col l6">
+			<div class="field-box col l6 m12 s12">
 				<label>Отчество</label>
 				<input type="text" class="inputtext" ng-model="form.patronym" />
 				<div class="error-text">Заполните поля формы</div>
 			</div>
-			<div class="field-box col l6">
+			<div class="field-box col l6 m12 s12">
 				<label>Фамилия</label>
 				<input type="text" class="inputtext" ng-model="form.familyname" />
 				<div class="error-text">Заполните поля формы</div>
 			</div>
-			<div class="field-box col l6">
+			<div class="field-box col l6 m12 s12">
 				<label>Электронная почта <sup class="required-mark">*</sup></label>
 				<input type="email" class="inputtext" ng-model="form.email" ng-required="true" />
 				<div class="error-text">Заполните поля формы</div>
 			</div>
-			<div class="field-box col l6">
+			<div class="field-box col l6 m12 s12">
 				<label>Телефон <sup class="required-mark">*</sup></label>
 				<input type="tel" class="inputtext" ng-model="form.phone" ng-required="true" />
 				<div class="error-text">Заполните поля формы</div>
 			</div>
-			<div class="field-box col l6">
+			<div class="field-box col l6 m12 s12">
 				<label>Компания <sup class="required-mark">*</sup></label>
 				<input type="text" class="inputtext" ng-model="form.company" ng-required="true" />
 				<div class="error-text">Заполните поля формы</div>
 			</div>
-			<div class="field-box col l6">
+			<div class="field-box col l6 m12 s12">
 				<label>Город <sup class="required-mark">*</sup></label>
 				<input type="text" class="inputtext" ng-model="form.city" ng-required="true" />
 				<div class="error-text">Заполните поля формы</div>
@@ -42,22 +42,22 @@
 		</div>
 		<div class="form-block row">
 			<div class="block-title col">Информация о проекте</div>
-			<div class="field-box col l12">
+			<div class="field-box col l12 m12 s12">
 				<label>Название проекта <sup class="required-mark">*</sup></label>
 				<input type="text" class="inputtext" ng-model="form.project" ng-required="true" />
 				<div class="error-text">Заполните поля формы</div>
 			</div>
-			<div class="field-box col l12">
+			<div class="field-box col l12 m12 s12">
 				<label>Планируемый объем инвестиций, млн. руб <sup class="required-mark">*</sup></label>
 				<input type="text" class="inputtext" ng-model="form.invest" ng-required="true" />
 				<div class="error-text">Заполните поля формы</div>
 			</div>
-			<div class="field-box col l6">
+			<div class="field-box col l6 m12 s12">
 				<label>Источники средств: заемная доля <sup class="required-mark">*</sup></label>
 				<input type="text" class="inputtext" ng-model="form.source" ng-required="true" />
 				<div class="error-text">Заполните поля формы</div>
 			</div>
-			<div class="field-box col l6">
+			<div class="field-box col l6 m12 s12">
 				<label>Период реализации проекта, лет <sup class="required-mark">*</sup></label>
 				<div class="select-box hide-on-large-only">
 					<select class="type-2" id="add-proj-period" name="add-proj-period-sel" ng-model="form.period" ng-required="true">
@@ -69,7 +69,7 @@
 					</select>
 					<label for="add-project-sel" class="triangle"></label>
 				</div>
-				<div class="dropdown-box">
+				<div class="dropdown-box hide-on-med-and-down">
 					<div class="dropdown-value">
 						<div class="item-text"></div>
 						<div class="triangle"></div>
@@ -109,32 +109,32 @@
 				</div>
 				<div class="error-text">Заполните поля формы</div>
 			</div>
-			<div class="field-box col l12">
+			<div class="field-box col l12 m12 s12">
 				<label>Планируемая к выпуску продукция, услуги <sup class="required-mark">*</sup></label>
 				<input type="text" class="inputtext" ng-model="form.product" ng-required="true" />
 				<div class="error-text">Заполните поля формы</div>
 			</div>
-			<div class="field-box col l6">
+			<div class="field-box col l6 m12 s12">
 				<label>Средний уровень заработной платы: руб <sup class="required-mark">*</sup></label>
 				<input type="text" class="inputtext" ng-model="form.pay" ng-required="true" />
 				<div class="error-text">Заполните поля формы</div>
 			</div>
-			<div class="field-box col l6">
+			<div class="field-box col l6 m12 s12">
 				<label>Количество создаваемых рабочих мест <sup class="required-mark">*</sup></label>
 				<input type="text" class="inputtext" ng-model="form.positions" ng-required="true" />
 				<div class="error-text">Заполните поля формы</div>
 			</div>
-			<div class="field-box col l12">
+			<div class="field-box col l12 m12 s12">
 				<label>Описание проекта</label>
 				<textarea class="inputtext" row="4" ng-model="form.desc" ng-required="true"></textarea>
 				<div class="error-text">Заполните поля формы</div>
 			</div>
-			<div class="field-box inputfile-box col l12">
+			<div class="field-box inputfile-box col l12 m12 s12">
 				<div class="inputfile">
-					<input type="file" ng-model="form.file" accept="image/png,image/jpg,application/pdf,application/excel,application/msword,text/plane,application/powerpoint,application/vnd.openxmlformats-officedocument.wordprocessingml.document"  onchange="angular.element(this).scope().setFiles(this)" />
-					<div class="inputfile-value" ng-if="file">
-						<span class="item-text">{{$scope.addProject1.file.value}}</span>
-						<button class="btn-delete"></button>
+					<input type="file" ng-model="form.file" accept="image/png,image/jpg,application/pdf,application/excel,application/msword,application/powerpoint,application/vnd.openxmlformats-officedocument.wordprocessingml.document,text/plane"  onchange="angular.element(this).scope().setFiles(this)" id="file_01" />
+					<div class="inputfile-value" ng-if="form.file.isset">
+						<span class="item-text">{{form.file.value}}</span>
+						<button class="btn-delete" onclick="angular.element(getElementById('file_01')).scope().deleteFile(getElementById('file_01'))"></button>
 					</div>
 					<button class="btn-inputfile">Прикрепить файл</button>
 				</div>
@@ -144,18 +144,18 @@
 				</div>
 				<div class="error-text">Заполните поля формы</div>
 			</div>
-			<div class="field-box captcha-box col l12">
-				<img class="captcha" />
+			<div class="field-box captcha-box col l12 m12 s12">
+				<img class="captcha" src="images/captcha.jpg" />
 				<input type="text" class="inputtext" ng-model="form.captcha" />
 				<label>Введите код, указанный на картинке</label>
 				<div class="error-text">Заполните поля формы</div>
 			</div>
-			<div class="field-box col l12">
-				<input type="checkbox" checked ng-model="form.agreement" />
+			<div class="field-box col l12 m12 s12">
+				<input type="checkbox" ng-model="form.agreement" />
 				<label>Я даю свое разрешение на обработку и хранение персональных данных</label>
 			</div>
 		</div>
-		<button class="btn btn-submit primary center">Отправить</button>
+		<button class="btn btn-submit primary center" ng-click="formSubmit();">Отправить</button>
 	</form>
 </div>
 <?include('footer.php');?>

@@ -203,18 +203,28 @@ function position() {
 var yamal = angular.module('yamal',[]);
 yamal.controller('addProj1Ctrl', ['$scope', function($scope){
 	$scope.form = {};
-	$scope.file = false;
+	$scope.form.file = {'isset': false};
 	$scope.setFiles = function(element){
 		$scope.$apply(function(scope){
 			if(element.files.length == 1){
-				$scope.file = true;
-				$scope.addProject1.file.value = element.files[0].name;
+				$scope.form.file.isset = true;
+				$scope.form.file.value = element.files[0].name;
 			} else if (element.files.length > 1) {
-				$scope.file = true;
-				$scope.addProject1.file.value = 'Выбрано файлов: '+element.files.length;
+				$scope.form.file.isset = true;
+				$scope.form.file.value = 'Выбрано файлов: '+element.files.length;
 			}
-			//console.log($scope.photos.values);
 		});
+	}
+	$scope.deleteFile = function(element){
+		$scope.$apply(function(scope){
+			angular.element(element).val(null); // не удаляется файл :(
+			$scope.form.file.isset = false;
+			$scope.form.file.value = '';
+		});
+	}
+	// удалить
+	$scope.formSubmit = function(){
+		console.log($scope.form);
 	}
 }]);
 yamal.controller('addProj2Ctrl', ['$scope', function($scope){

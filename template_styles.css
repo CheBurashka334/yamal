@@ -2075,20 +2075,26 @@ ol:not(.nostyle) li:before {
 
 /* line 5, scss/components/_forms.scss */
 .field-box {
-  margin-bottom: 5px;
+  margin-bottom: 25px;
 }
-/* line 7, scss/components/_forms.scss */
+@media only screen and (min-width: 993px) {
+  /* line 5, scss/components/_forms.scss */
+  .field-box {
+    margin-bottom: 5px;
+  }
+}
+/* line 10, scss/components/_forms.scss */
 .field-box label {
   font-size: 15px;
   line-height: 20px;
 }
 
-/* line 12, scss/components/_forms.scss */
+/* line 15, scss/components/_forms.scss */
 input:focus {
   outline: none;
 }
 
-/* line 15, scss/components/_forms.scss */
+/* line 18, scss/components/_forms.scss */
 .inputtext, .add-project-page .dropdown-box .dropdown-value {
   display: block;
   width: 100%;
@@ -2100,12 +2106,12 @@ input:focus {
   border: 1px solid #e1e1e1;
   margin: 5px 0 7px;
 }
-/* line 25, scss/components/_forms.scss */
+/* line 28, scss/components/_forms.scss */
 .inputtext:focus, .add-project-page .dropdown-box .dropdown-value:focus {
   outline: none;
 }
 
-/* line 29, scss/components/_forms.scss */
+/* line 32, scss/components/_forms.scss */
 textarea.inputtext, .add-project-page .dropdown-box textarea.dropdown-value {
   line-height: 20px;
   max-width: 100%;
@@ -2114,7 +2120,7 @@ textarea.inputtext, .add-project-page .dropdown-box textarea.dropdown-value {
   padding: 5px 15px;
 }
 
-/* line 38, scss/components/_forms.scss */
+/* line 41, scss/components/_forms.scss */
 input[type="checkbox"] {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -2125,33 +2131,33 @@ input[type="checkbox"] {
   border: 1px solid #e1e1e1;
   vertical-align: middle;
 }
-/* line 47, scss/components/_forms.scss */
+/* line 50, scss/components/_forms.scss */
 input[type="checkbox"]:checked {
   background: url("images/tick.png") center no-repeat;
 }
-/* line 50, scss/components/_forms.scss */
+/* line 53, scss/components/_forms.scss */
 input[type="checkbox"] + label {
   margin-left: 15px;
   vertical-align: middle;
 }
 
-/* line 57, scss/components/_forms.scss */
+/* line 60, scss/components/_forms.scss */
 .required-mark {
   color: #c7213a;
   font-size: 1em;
   top: -0.2em;
 }
 
-/* line 62, scss/components/_forms.scss */
+/* line 65, scss/components/_forms.scss */
 .ng-invalid:not(.ng-pristine) {
   border-color: #c7213a;
 }
-/* line 64, scss/components/_forms.scss */
+/* line 67, scss/components/_forms.scss */
 .ng-invalid:not(.ng-pristine) ~ .error-text {
   opacity: 1;
 }
 
-/* line 68, scss/components/_forms.scss */
+/* line 71, scss/components/_forms.scss */
 .error-text {
   color: #c7213a;
   font-size: 14px;
@@ -2162,26 +2168,26 @@ input[type="checkbox"] + label {
           transition: opacity .1s;
 }
 
-/* line 79, scss/components/_forms.scss */
+/* line 82, scss/components/_forms.scss */
 select {
   width: 100%;
   vertical-align: middle;
   height: 2.67em;
   padding: 0 2em 0 15px;
 }
-/* line 84, scss/components/_forms.scss */
+/* line 87, scss/components/_forms.scss */
 select option {
   max-width: 100%;
   color: #434343;
 }
 
-/* line 89, scss/components/_forms.scss */
+/* line 92, scss/components/_forms.scss */
 select.type-2 {
   padding: 0 2em 10px 0;
   border-bottom: 1px solid #eeeeee;
 }
 
-/* line 93, scss/components/_forms.scss */
+/* line 96, scss/components/_forms.scss */
 select + .triangle {
   position: absolute;
   top: 1px;
@@ -2192,12 +2198,12 @@ select + .triangle {
   font-size: 15px;
 }
 @media only screen and (min-width: 601px) {
-  /* line 93, scss/components/_forms.scss */
+  /* line 96, scss/components/_forms.scss */
   select + .triangle {
     right: 16px;
   }
 }
-/* line 104, scss/components/_forms.scss */
+/* line 107, scss/components/_forms.scss */
 select + .triangle:after {
   content: '';
   display: block;
@@ -2211,26 +2217,26 @@ select + .triangle:after {
   border-left: 4px solid transparent;
 }
 
-/* line 117, scss/components/_forms.scss */
+/* line 120, scss/components/_forms.scss */
 select:hover,
 select:focus {
   color: #0d4f9e;
   border-color: #0d4f9e;
   outline: none;
 }
-/* line 122, scss/components/_forms.scss */
+/* line 125, scss/components/_forms.scss */
 select:hover + .triangle:after,
 select:focus + .triangle:after {
   border-top-color: #0d4f9e;
 }
 
-/* line 126, scss/components/_forms.scss */
+/* line 129, scss/components/_forms.scss */
 .dropdown-select-box {
   width: auto;
   display: inline-block;
 }
 
-/* line 130, scss/components/_forms.scss */
+/* line 133, scss/components/_forms.scss */
 .dropdown-select {
   display: inline-block;
   padding-right: 30px;
@@ -2239,13 +2245,13 @@ select:focus + .triangle:after {
   font-size: 18px;
   line-height: 20px;
 }
-/* line 137, scss/components/_forms.scss */
+/* line 140, scss/components/_forms.scss */
 .dropdown-select + .triangle {
   right: 0;
   top: 3px;
 }
 
-/* line 145, scss/components/_forms.scss */
+/* line 148, scss/components/_forms.scss */
 .inputfile-box input[type="file"] {
   position: absolute;
   top: 0;
@@ -2255,31 +2261,30 @@ select:focus + .triangle:after {
   z-index: 2;
   opacity: 0;
 }
-/* line 154, scss/components/_forms.scss */
+/* line 157, scss/components/_forms.scss */
 .inputfile-box .inputfile {
   display: inline-block;
-  margin-right: 30px;
+  margin-bottom: 10px;
   font-size: 15px;
   line-height: 39px;
-  height: 41px;
   vertical-align: middle;
-  max-width: calc(100% - 435px);
+  max-width: 100%;
 }
-/* line 163, scss/components/_forms.scss */
+/* line 165, scss/components/_forms.scss */
 .inputfile-box .inputfile-value {
   display: inline-block;
   height: 100%;
   background: #e1e1e1;
   padding: 0 45px 0 30px;
-  margin-right: 13px;
+  margin-bottom: 10px;
   vertical-align: middle;
   min-width: 200px;
-  max-width: calc(100% - 200px);
+  max-width: 100%;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-/* line 176, scss/components/_forms.scss */
+/* line 178, scss/components/_forms.scss */
 .inputfile-box .btn-delete {
   position: absolute;
   top: 13px;
@@ -2290,7 +2295,7 @@ select:focus + .triangle:after {
   cursor: pointer;
   z-index: 3;
 }
-/* line 186, scss/components/_forms.scss */
+/* line 188, scss/components/_forms.scss */
 .inputfile-box .btn-inputfile {
   display: inline-block;
   border: 1px solid #434343;
@@ -2298,15 +2303,35 @@ select:focus + .triangle:after {
   vertical-align: middle;
   width: 180px;
 }
-/* line 193, scss/components/_forms.scss */
+/* line 195, scss/components/_forms.scss */
 .inputfile-box .note-text {
   display: inline-block;
   vertical-align: middle;
   font-size: 14px;
   line-height: 18px;
 }
+@media medium-and-up {
+  /* line 205, scss/components/_forms.scss */
+  .inputfile-box .inputfile {
+    margin-right: 30px;
+    height: 41px;
+  }
+  /* line 209, scss/components/_forms.scss */
+  .inputfile-box .inputfile-value {
+    max-width: calc(100% - 200px);
+    margin-right: 13px;
+    margin-bottom: 0;
+  }
+}
+@media large-and-up {
+  /* line 228, scss/components/_forms.scss */
+  .inputfile-box .inputfile {
+    max-width: calc(100% - 435px);
+    margin-bottom: 0;
+  }
+}
 
-/* line 203, scss/components/_forms.scss */
+/* line 249, scss/components/_forms.scss */
 .captcha-box .captcha,
 .captcha-box .inputtext,
 .captcha-box .add-project-page .dropdown-box .dropdown-value,
@@ -2315,27 +2340,35 @@ select:focus + .triangle:after {
   display: inline-block;
   vertical-align: middle;
 }
-/* line 209, scss/components/_forms.scss */
+/* line 255, scss/components/_forms.scss */
 .captcha-box .captcha {
   width: 135px;
   height: 41px;
   border: 1px solid #e1e1e1;
 }
-/* line 214, scss/components/_forms.scss */
+/* line 260, scss/components/_forms.scss */
 .captcha-box .inputtext, .captcha-box .add-project-page .dropdown-box .dropdown-value, .add-project-page .dropdown-box .captcha-box .dropdown-value {
   width: 270px;
   margin: 0 27px;
 }
 
-/* line 221, scss/components/_forms.scss */
-.add-project-page .form-block {
-  padding: 0 11.5%;
+@media only screen and (min-width: 601px) {
+  /* line 268, scss/components/_forms.scss */
+  .add-project-page .form-block {
+    padding: 0 20%;
+  }
 }
-/* line 226, scss/components/_forms.scss */
+@media only screen and (min-width: 993px) {
+  /* line 273, scss/components/_forms.scss */
+  .add-project-page .form-block {
+    padding: 0 11.5%;
+  }
+}
+/* line 279, scss/components/_forms.scss */
 .add-project-page .dropdown-box .dropdown-value .item-text {
   line-height: inherit;
 }
-/* line 230, scss/components/_forms.scss */
+/* line 283, scss/components/_forms.scss */
 .add-project-page .btn-submit {
   margin-top: 45px;
 }
