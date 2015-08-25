@@ -179,13 +179,18 @@ margin-top: $gutter;
 		}
 	}
 	.news-item {
+		height: 16,5*$gutter;
 		.item-img img{
 			display: block;
 		}
 		@media #{$medium-and-up}{
 			.item-img {
-				height: auto;
-				max-height: 100%;
+				height: 43*$gutter;
+			}
+		}
+		@media #{$large-and-up}{
+			.item-img {
+				height: 34*$gutter;
 			}
 		}
 		.item-title {

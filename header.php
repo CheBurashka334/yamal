@@ -19,7 +19,7 @@
 	<script src="js/svg-lib.js"></script>
 	<script src="js/script.js"></script>
 </head>
-<body>
+<body ng-app="yamal">
 <div id="svg-placeholder" class="hide"></div>
 <div class="layout">
 <div class="page-aside hide-on-large-only">

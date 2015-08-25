@@ -129,17 +129,13 @@ $(document).ready(function(){
 		var act = $(this).attr('data-action');
 		switch(act){
 			case 'open':
-				//position();
 				$('.page-aside').addClass('open');
 				$('.js-menu').attr('data-action', 'close');
 			break;
 			case 'close':
 			default:
-				//var pos = parseInt($('.page').css('top'), 10);
 				$('.page-aside').removeClass('open');
 				$('.js-menu').attr('data-action', 'open');
-				//$('.page').css({'position': 'relative', 'top': '0px'});
-				//$(window).scrollTop(-pos);
 		}
 	});
 	
@@ -204,3 +200,23 @@ function position() {
 // angularjs 
 // https://docs.angularjs.org/guide
 // http://angular.ru/guide/
+var yamal = angular.module('yamal',[]);
+yamal.controller('addProj1Ctrl', ['$scope', function($scope){
+	$scope.form = {};
+	$scope.file = false;
+	$scope.setFiles = function(element){
+		$scope.$apply(function(scope){
+			if(element.files.length == 1){
+				$scope.file = true;
+				$scope.addProject1.file.value = element.files[0].name;
+			} else if (element.files.length > 1) {
+				$scope.file = true;
+				$scope.addProject1.file.value = 'Выбрано файлов: '+element.files.length;
+			}
+			//console.log($scope.photos.values);
+		});
+	}
+}]);
+yamal.controller('addProj2Ctrl', ['$scope', function($scope){
+	$scope.form = {};
+}]);

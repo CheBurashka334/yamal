@@ -1,66 +1,66 @@
 <?include('header.php');?>
 <div class="add-project-page">
 	<div class="page-title">Предложить проект</div>
-	<form name="add-project-1">
+	<form name="add-project-1" ng-controller="addProj1Ctrl" novalidate>
 		<div class="form-block row">
 			<div class="block-title col">Информация об инвесторе</div>
 			<div class="field-box col l6">
-				<label>Имя</label>
-				<input type="text" class="inputtext" ng-model="" />
-				<div class="error-text"></div>
-			</div>
-			<div class="field-box col l6">
-				<label>Отчество</label>
-				<input type="text" class="inputtext" ng-model="" />
-				<div class="error-text"></div>
-			</div>
-			<div class="field-box col l6">
-				<label>Фамилия</label>
-				<input type="text" class="inputtext" ng-model="" />
-				<div class="error-text"></div>
-			</div>
-			<div class="field-box col l6">
-				<label>Электронная почта</label>
-				<input type="text" class="inputtext" ng-model="" />
-				<div class="error-text"></div>
-			</div>
-			<div class="field-box col l6">
-				<label>Телефон</label>
-				<input type="text" class="inputtext" ng-model="" />
-				<div class="error-text"></div>
-			</div>
-			<div class="field-box col l6">
-				<label>Компания</label>
-				<input type="text" class="inputtext" ng-model="" />
+				<label>Имя <sup class="required-mark">*</sup></label>
+				<input type="text" class="inputtext" ng-model="form.name" ng-required="true" />
 				<div class="error-text">Заполните поля формы</div>
 			</div>
 			<div class="field-box col l6">
-				<label>Город</label>
-				<input type="text" class="inputtext" ng-model="" />
-				<div class="error-text"></div>
+				<label>Отчество</label>
+				<input type="text" class="inputtext" ng-model="form.patronym" />
+				<div class="error-text">Заполните поля формы</div>
+			</div>
+			<div class="field-box col l6">
+				<label>Фамилия</label>
+				<input type="text" class="inputtext" ng-model="form.familyname" />
+				<div class="error-text">Заполните поля формы</div>
+			</div>
+			<div class="field-box col l6">
+				<label>Электронная почта <sup class="required-mark">*</sup></label>
+				<input type="email" class="inputtext" ng-model="form.email" ng-required="true" />
+				<div class="error-text">Заполните поля формы</div>
+			</div>
+			<div class="field-box col l6">
+				<label>Телефон <sup class="required-mark">*</sup></label>
+				<input type="tel" class="inputtext" ng-model="form.phone" ng-required="true" />
+				<div class="error-text">Заполните поля формы</div>
+			</div>
+			<div class="field-box col l6">
+				<label>Компания <sup class="required-mark">*</sup></label>
+				<input type="text" class="inputtext" ng-model="form.company" ng-required="true" />
+				<div class="error-text">Заполните поля формы</div>
+			</div>
+			<div class="field-box col l6">
+				<label>Город <sup class="required-mark">*</sup></label>
+				<input type="text" class="inputtext" ng-model="form.city" ng-required="true" />
+				<div class="error-text">Заполните поля формы</div>
 			</div>
 		</div>
 		<div class="form-block row">
 			<div class="block-title col">Информация о проекте</div>
 			<div class="field-box col l12">
-				<label>Название проекта</label>
-				<input type="text" class="inputtext" ng-model="" />
-				<div class="error-text"></div>
+				<label>Название проекта <sup class="required-mark">*</sup></label>
+				<input type="text" class="inputtext" ng-model="form.project" ng-required="true" />
+				<div class="error-text">Заполните поля формы</div>
 			</div>
 			<div class="field-box col l12">
-				<label>Планируемый объем инвестиций, млн. руб</label>
-				<input type="text" class="inputtext" ng-model="" />
-				<div class="error-text"></div>
+				<label>Планируемый объем инвестиций, млн. руб <sup class="required-mark">*</sup></label>
+				<input type="text" class="inputtext" ng-model="form.invest" ng-required="true" />
+				<div class="error-text">Заполните поля формы</div>
 			</div>
 			<div class="field-box col l6">
-				<label>Источники средств: заемная доля</label>
-				<input type="text" class="inputtext" ng-model="" />
-				<div class="error-text"></div>
+				<label>Источники средств: заемная доля <sup class="required-mark">*</sup></label>
+				<input type="text" class="inputtext" ng-model="form.source" ng-required="true" />
+				<div class="error-text">Заполните поля формы</div>
 			</div>
 			<div class="field-box col l6">
-				<label>Период реализации проекта, лет</label>
+				<label>Период реализации проекта, лет <sup class="required-mark">*</sup></label>
 				<div class="select-box hide-on-large-only">
-					<select class="type-2" id="add-proj-period" name="add-proj-period-sel">
+					<select class="type-2" id="add-proj-period" name="add-proj-period-sel" ng-model="form.period" ng-required="true">
 						<option value="v1" selected>0,5</option>
 						<option value="v2">1</option>
 						<option value="v3">3</option>
@@ -107,33 +107,33 @@
 						</li>
 					</ul>
 				</div>
-				<div class="error-text"></div>
+				<div class="error-text">Заполните поля формы</div>
 			</div>
 			<div class="field-box col l12">
-				<label>Планируемая к выпуску продукция, услуги</label>
-				<input type="text" class="inputtext" ng-model="" />
-				<div class="error-text"></div>
+				<label>Планируемая к выпуску продукция, услуги <sup class="required-mark">*</sup></label>
+				<input type="text" class="inputtext" ng-model="form.product" ng-required="true" />
+				<div class="error-text">Заполните поля формы</div>
 			</div>
 			<div class="field-box col l6">
-				<label>Средний уровень заработной платы: руб</label>
-				<input type="text" class="inputtext" ng-model="" />
-				<div class="error-text"></div>
+				<label>Средний уровень заработной платы: руб <sup class="required-mark">*</sup></label>
+				<input type="text" class="inputtext" ng-model="form.pay" ng-required="true" />
+				<div class="error-text">Заполните поля формы</div>
 			</div>
 			<div class="field-box col l6">
-				<label>Количество создаваемых рабочих мест</label>
-				<input type="text" class="inputtext" ng-model="" />
-				<div class="error-text"></div>
+				<label>Количество создаваемых рабочих мест <sup class="required-mark">*</sup></label>
+				<input type="text" class="inputtext" ng-model="form.positions" ng-required="true" />
+				<div class="error-text">Заполните поля формы</div>
 			</div>
 			<div class="field-box col l12">
 				<label>Описание проекта</label>
-				<textarea class="inputtext" row="4" ng-model=""></textarea>
-				<div class="error-text"></div>
+				<textarea class="inputtext" row="4" ng-model="form.desc" ng-required="true"></textarea>
+				<div class="error-text">Заполните поля формы</div>
 			</div>
 			<div class="field-box inputfile-box col l12">
 				<div class="inputfile">
-					<input type="file" ng-model="" accept="image/png,image/jpg,application/pdf,application/excel,application/msword,text/plane,application/powerpoint,application/vnd.openxmlformats-officedocument.wordprocessingml.document" />
-					<div class="inputfile-value">
-						<span class="item-text"></span>
+					<input type="file" ng-model="form.file" accept="image/png,image/jpg,application/pdf,application/excel,application/msword,text/plane,application/powerpoint,application/vnd.openxmlformats-officedocument.wordprocessingml.document"  onchange="angular.element(this).scope().setFiles(this)" />
+					<div class="inputfile-value" ng-if="file">
+						<span class="item-text">{{$scope.addProject1.file.value}}</span>
 						<button class="btn-delete"></button>
 					</div>
 					<button class="btn-inputfile">Прикрепить файл</button>
@@ -142,16 +142,16 @@
 					Размер файла: не более 10 Мб.<br/>
 					Тип файла: *ppt, *pptx, *doc, *docx, *xls, *xlsx, *txt, *pdf, *png, *jpg.
 				</div>
-				<div class="error-text"></div>
+				<div class="error-text">Заполните поля формы</div>
 			</div>
 			<div class="field-box captcha-box col l12">
 				<img class="captcha" />
-				<input type="text" class="inputtext" ng-model="" />
+				<input type="text" class="inputtext" ng-model="form.captcha" />
 				<label>Введите код, указанный на картинке</label>
-				<div class="error-text"></div>
+				<div class="error-text">Заполните поля формы</div>
 			</div>
 			<div class="field-box col l12">
-				<input type="checkbox" checked />
+				<input type="checkbox" checked ng-model="form.agreement" />
 				<label>Я даю свое разрешение на обработку и хранение персональных данных</label>
 			</div>
 		</div>
