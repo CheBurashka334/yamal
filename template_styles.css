@@ -461,20 +461,22 @@ th {
 html {
   box-sizing: border-box;
   color: #434343;
+  height: 100%;
 }
 
-/* line 10, scss/components/_global.scss */
+/* line 11, scss/components/_global.scss */
 *, *:before, *:after {
   box-sizing: inherit;
 }
 
-/* line 14, scss/components/_global.scss */
+/* line 15, scss/components/_global.scss */
 body {
   width: 100%;
+  height: 100%;
   overflow-x: hidden;
 }
 
-/* line 21, scss/components/_global.scss */
+/* line 23, scss/components/_global.scss */
 .layout {
   display: -webkit-box;
   display: -webkit-flex;
@@ -485,47 +487,70 @@ body {
   -webkit-align-items: stretch;
       -ms-flex-align: stretch;
           align-items: stretch;
+  min-height: 100%;
 }
 
-/* line 27, scss/components/_global.scss */
+/* line 29, scss/components/_global.scss */
+.page {
+  min-height: 100%;
+}
+
+/* line 32, scss/components/_global.scss */
+.workarea {
+  min-height: calc(96vh - 330px);
+}
+@media only screen and (min-width: 601px) {
+  /* line 32, scss/components/_global.scss */
+  .workarea {
+    min-height: calc(96vh - 680px);
+  }
+}
+@media only screen and (min-width: 993px) {
+  /* line 32, scss/components/_global.scss */
+  .workarea {
+    min-height: calc(96vh - 610px);
+  }
+}
+
+/* line 42, scss/components/_global.scss */
 ul {
   list-style-type: none;
 }
 
-/* line 31, scss/components/_global.scss */
+/* line 46, scss/components/_global.scss */
 a {
   color: #2d4e9d;
   text-decoration: none;
   -webkit-tap-highlight-color: transparent;
 }
-/* line 35, scss/components/_global.scss */
+/* line 50, scss/components/_global.scss */
 a:hover {
   color: #c7213a;
 }
-/* line 38, scss/components/_global.scss */
+/* line 53, scss/components/_global.scss */
 a.nostyle, a.nostyle:hover {
   color: inherit;
 }
 
-/* line 45, scss/components/_global.scss */
+/* line 60, scss/components/_global.scss */
 .title-link, .project-item .item-title a, .news-page .news-item .item-title a,
 .news-block .news-item .item-title a, .news-block .events-list .item a, .measures-block a {
   color: inherit;
 }
-/* line 47, scss/components/_global.scss */
+/* line 62, scss/components/_global.scss */
 .title-link:hover, .project-item .item-title a:hover, .project-item:hover .item-title a, .news-page .news-item .item-title a:hover,
 .news-block .news-item .item-title a:hover, .news-page .news-item:hover .item-title a,
 .news-block .news-item:hover .item-title a, .news-block .events-list .item a:hover, .measures-block a:hover {
   color: #2d4e9d;
 }
 
-/* line 51, scss/components/_global.scss */
+/* line 66, scss/components/_global.scss */
 .img-link, .project-item .item-img a, .news-page .news-item .item-img a,
 .news-block .news-item .item-img a {
   display: block;
   height: 100%;
 }
-/* line 54, scss/components/_global.scss */
+/* line 69, scss/components/_global.scss */
 .img-link:after, .project-item .item-img a:after, .news-page .news-item .item-img a:after,
 .news-block .news-item .item-img a:after {
   content: '';
@@ -540,14 +565,14 @@ a.nostyle, a.nostyle:hover {
   -webkit-transition: background .2s;
           transition: background .2s;
 }
-/* line 66, scss/components/_global.scss */
+/* line 81, scss/components/_global.scss */
 .img-link:hover:after, .project-item .item-img a:hover:after, .project-item:hover .item-img a:after, .news-page .news-item .item-img a:hover:after,
 .news-block .news-item .item-img a:hover:after, .news-page .news-item:hover .item-img a:after,
 .news-block .news-item:hover .item-img a:after {
   background: rgba(0, 0, 0, 0.2);
 }
 
-/* line 70, scss/components/_global.scss */
+/* line 85, scss/components/_global.scss */
 a.file {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -573,50 +598,50 @@ a.file {
   margin-bottom: 20px;
   color: #434343;
 }
-/* line 81, scss/components/_global.scss */
+/* line 96, scss/components/_global.scss */
 a.file[href$=".doc"], a.file[href$=".docx"] {
   background: url("images/doc.svg") top 5px left no-repeat;
 }
-/* line 85, scss/components/_global.scss */
+/* line 100, scss/components/_global.scss */
 a.file[href$=".pdf"] {
   background: url("images/pdf.svg") top 5px left no-repeat;
 }
-/* line 88, scss/components/_global.scss */
+/* line 103, scss/components/_global.scss */
 a.file[href$=".xls"], a.file[href$=".xlsx"] {
   background: url("images/xls.svg") top 5px left no-repeat;
 }
-/* line 92, scss/components/_global.scss */
+/* line 107, scss/components/_global.scss */
 a.file[href$=".ppt"], a.file[href$=".pptx"] {
   background: url("images/ppt.svg") top 5px left no-repeat;
 }
 
-/* line 99, scss/components/_global.scss */
+/* line 114, scss/components/_global.scss */
 ul {
   padding: 0;
 }
-/* line 101, scss/components/_global.scss */
+/* line 116, scss/components/_global.scss */
 ul li {
   list-style-type: none;
 }
 
-/* line 105, scss/components/_global.scss */
+/* line 120, scss/components/_global.scss */
 ul.nostyle, .carousel .carousel-pagination, .dropdown-list, .tabs-list,
 ol.nostyle {
   padding: 0;
   margin: 0;
 }
-/* line 109, scss/components/_global.scss */
+/* line 124, scss/components/_global.scss */
 ul.nostyle li, .carousel .carousel-pagination li, .dropdown-list li, .tabs-list li,
 ol.nostyle li {
   list-style-type: none;
 }
 
-/* line 115, scss/components/_global.scss */
+/* line 130, scss/components/_global.scss */
 .clearfix {
   clear: both;
 }
 
-/* line 124, scss/components/_global.scss */
+/* line 139, scss/components/_global.scss */
 .loader,
 .btn.loader {
   margin: 60px auto;
@@ -634,13 +659,13 @@ ol.nostyle li {
   animation: load8 1.1s infinite linear;
 }
 
-/* line 140, scss/components/_global.scss */
+/* line 155, scss/components/_global.scss */
 .btn.loader {
   -webkit-transition: all .3s;
           transition: all .3s;
 }
 
-/* line 143, scss/components/_global.scss */
+/* line 158, scss/components/_global.scss */
 .loader,
 .btn.loader,
 .loader:after,
@@ -670,17 +695,17 @@ ol.nostyle li {
     transform: rotate(360deg);
   }
 }
-/* line 173, scss/components/_global.scss */
+/* line 188, scss/components/_global.scss */
 .map-box {
   overflow: hidden;
   margin-top: 30px;
   margin-bottom: 30px;
 }
-/* line 177, scss/components/_global.scss */
+/* line 192, scss/components/_global.scss */
 .map-box .map {
   height: 760px;
 }
-/* line 180, scss/components/_global.scss */
+/* line 195, scss/components/_global.scss */
 .map-box .loader {
   position: absolute;
   top: 20%;
@@ -688,35 +713,35 @@ ol.nostyle li {
   margin: 0;
 }
 
-/* line 190, scss/components/_global.scss */
+/* line 205, scss/components/_global.scss */
 .divider {
   height: 1px;
   overflow: hidden;
   background-color: #e1e1e1;
 }
 
-/* line 199, scss/components/_global.scss */
+/* line 214, scss/components/_global.scss */
 blockquote {
   margin: 20px 0;
   padding-left: 1.5rem;
   border-left: 5px solid #2d4e9d;
 }
 
-/* line 206, scss/components/_global.scss */
+/* line 221, scss/components/_global.scss */
 img.responsive-img,
 video.responsive-video {
   max-width: 100%;
   height: auto;
 }
 
-/* line 213, scss/components/_global.scss */
+/* line 228, scss/components/_global.scss */
 .parallax-container {
   position: relative;
   overflow: hidden;
   height: 500px;
 }
 
-/* line 219, scss/components/_global.scss */
+/* line 234, scss/components/_global.scss */
 .parallax {
   position: absolute;
   top: 0;
@@ -725,7 +750,7 @@ video.responsive-video {
   bottom: 0;
   z-index: -1;
 }
-/* line 227, scss/components/_global.scss */
+/* line 242, scss/components/_global.scss */
 .parallax img {
   display: none;
   position: absolute;
@@ -740,12 +765,12 @@ video.responsive-video {
           transform: translateX(-50%);
 }
 
-/* line 241, scss/components/_global.scss */
+/* line 256, scss/components/_global.scss */
 .pin-top, .pin-bottom {
   position: relative;
 }
 
-/* line 244, scss/components/_global.scss */
+/* line 259, scss/components/_global.scss */
 .pinned {
   position: fixed !important;
 }
@@ -753,12 +778,12 @@ video.responsive-video {
 /*********************
   Transition Classes
 **********************/
-/* line 252, scss/components/_global.scss */
+/* line 267, scss/components/_global.scss */
 ul.staggered-list li {
   opacity: 0;
 }
 
-/* line 256, scss/components/_global.scss */
+/* line 271, scss/components/_global.scss */
 .fade-in {
   opacity: 0;
   -webkit-transform-origin: 0 50%;
@@ -766,7 +791,7 @@ ul.staggered-list li {
           transform-origin: 0 50%;
 }
 
-/* line 262, scss/components/_global.scss */
+/* line 277, scss/components/_global.scss */
 .video-container {
   position: relative;
   padding-bottom: 56.25%;
@@ -774,11 +799,11 @@ ul.staggered-list li {
   height: 0;
   overflow: hidden;
 }
-/* line 268, scss/components/_global.scss */
+/* line 283, scss/components/_global.scss */
 .video-container.no-controls {
   padding-top: 0;
 }
-/* line 272, scss/components/_global.scss */
+/* line 287, scss/components/_global.scss */
 .video-container iframe, .video-container object, .video-container embed {
   position: absolute;
   top: 0;
@@ -790,37 +815,37 @@ ul.staggered-list li {
 /*******************
   Utility Classes
 *******************/
-/* line 286, scss/components/_global.scss */
+/* line 301, scss/components/_global.scss */
 .hide {
   display: none !important;
 }
 
-/* line 291, scss/components/_global.scss */
+/* line 306, scss/components/_global.scss */
 .left-align {
   text-align: left;
 }
 
-/* line 294, scss/components/_global.scss */
+/* line 309, scss/components/_global.scss */
 .right-align {
   text-align: right;
 }
 
-/* line 297, scss/components/_global.scss */
+/* line 312, scss/components/_global.scss */
 .center, .center-align {
   text-align: center;
 }
 
-/* line 301, scss/components/_global.scss */
+/* line 316, scss/components/_global.scss */
 .left, .carousel .item {
   float: left !important;
 }
 
-/* line 304, scss/components/_global.scss */
+/* line 319, scss/components/_global.scss */
 .right {
   float: right !important;
 }
 
-/* line 309, scss/components/_global.scss */
+/* line 324, scss/components/_global.scss */
 .no-select {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
@@ -830,19 +855,19 @@ ul.staggered-list li {
   user-select: none;
 }
 
-/* line 318, scss/components/_global.scss */
+/* line 333, scss/components/_global.scss */
 .circle, .carousel .carousel-pagination .nav-link {
   border-radius: 50%;
 }
 
-/* line 322, scss/components/_global.scss */
+/* line 337, scss/components/_global.scss */
 .center-block {
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
 
-/* line 328, scss/components/_global.scss */
+/* line 343, scss/components/_global.scss */
 .truncate {
   display: block;
   white-space: nowrap;
@@ -850,12 +875,12 @@ ul.staggered-list li {
   text-overflow: ellipsis;
 }
 
-/* line 335, scss/components/_global.scss */
+/* line 350, scss/components/_global.scss */
 .no-padding {
   padding: 0 !important;
 }
 
-/* line 339, scss/components/_global.scss */
+/* line 354, scss/components/_global.scss */
 .triangle {
   position: absolute;
   width: 30px;
@@ -865,7 +890,7 @@ ul.staggered-list li {
   top: 0;
   right: 0;
 }
-/* line 347, scss/components/_global.scss */
+/* line 362, scss/components/_global.scss */
 .triangle:after {
   content: '';
   display: block;
@@ -2077,24 +2102,18 @@ ol:not(.nostyle) li:before {
 .field-box {
   margin-bottom: 25px;
 }
-@media only screen and (min-width: 993px) {
-  /* line 5, scss/components/_forms.scss */
-  .field-box {
-    margin-bottom: 5px;
-  }
-}
-/* line 10, scss/components/_forms.scss */
+/* line 7, scss/components/_forms.scss */
 .field-box label {
   font-size: 15px;
   line-height: 20px;
 }
 
-/* line 15, scss/components/_forms.scss */
+/* line 12, scss/components/_forms.scss */
 input:focus {
   outline: none;
 }
 
-/* line 18, scss/components/_forms.scss */
+/* line 15, scss/components/_forms.scss */
 .inputtext, select.type-3,
 select.type-3:focus, .add-project-page .dropdown-box .dropdown-value {
   display: block;
@@ -2107,12 +2126,12 @@ select.type-3:focus, .add-project-page .dropdown-box .dropdown-value {
   border: 1px solid #e1e1e1;
   margin: 5px 0 7px;
 }
-/* line 28, scss/components/_forms.scss */
+/* line 25, scss/components/_forms.scss */
 .inputtext:focus, select.type-3:focus, .add-project-page .dropdown-box .dropdown-value:focus {
   outline: none;
 }
 
-/* line 32, scss/components/_forms.scss */
+/* line 29, scss/components/_forms.scss */
 textarea.inputtext, .add-project-page .dropdown-box textarea.dropdown-value {
   line-height: 20px;
   max-width: 100%;
@@ -2121,17 +2140,19 @@ textarea.inputtext, .add-project-page .dropdown-box textarea.dropdown-value {
   padding: 5px 15px;
 }
 
-/* line 41, scss/components/_forms.scss */
+/* line 38, scss/components/_forms.scss */
 input[type="checkbox"] {
   display: none;
 }
-/* line 43, scss/components/_forms.scss */
+/* line 40, scss/components/_forms.scss */
 input[type="checkbox"] + label {
   position: relative;
   padding-left: 35px;
   vertical-align: middle;
+  display: block;
+  margin: 5px 0 7px;
 }
-/* line 47, scss/components/_forms.scss */
+/* line 46, scss/components/_forms.scss */
 input[type="checkbox"] + label:before {
   position: absolute;
   top: 0;
@@ -2143,36 +2164,36 @@ input[type="checkbox"] + label:before {
   border: 1px solid #e1e1e1;
   vertical-align: middle;
 }
-/* line 59, scss/components/_forms.scss */
+/* line 58, scss/components/_forms.scss */
 input[type="checkbox"]:checked + label:before {
   background: url("images/tick.png") center no-repeat;
 }
 
-/* line 65, scss/components/_forms.scss */
+/* line 64, scss/components/_forms.scss */
 .required-mark {
   color: #c7213a;
   font-size: 1em;
   top: -0.2em;
 }
 
-/* line 70, scss/components/_forms.scss */
+/* line 69, scss/components/_forms.scss */
 [class*='invalid'] {
   border-color: #c7213a;
 }
-/* line 72, scss/components/_forms.scss */
+/* line 71, scss/components/_forms.scss */
 [class*='invalid'].invalid-required ~ .error-text {
   display: block;
 }
-/* line 76, scss/components/_forms.scss */
+/* line 75, scss/components/_forms.scss */
 [class*='invalid'].invalid-pattern ~ .pattern-error-text {
   display: block;
 }
-/* line 80, scss/components/_forms.scss */
+/* line 79, scss/components/_forms.scss */
 [class*='invalid'].invalid-file ~ .note-text {
   color: #c7213a;
 }
 
-/* line 84, scss/components/_forms.scss */
+/* line 83, scss/components/_forms.scss */
 .error-text,
 .pattern-error-text {
   color: #c7213a;
@@ -2181,32 +2202,32 @@ input[type="checkbox"]:checked + label:before {
   display: none;
 }
 
-/* line 97, scss/components/_forms.scss */
+/* line 96, scss/components/_forms.scss */
 select {
   width: 100%;
   vertical-align: middle;
   height: 2.67em;
   padding: 0 2em 0 15px;
 }
-/* line 102, scss/components/_forms.scss */
+/* line 101, scss/components/_forms.scss */
 select option {
   max-width: 100%;
   color: #434343;
 }
 
-/* line 107, scss/components/_forms.scss */
+/* line 106, scss/components/_forms.scss */
 select.type-2 {
   padding: 0 2em 10px 0;
   border-bottom: 1px solid #eeeeee;
 }
 
-/* line 114, scss/components/_forms.scss */
+/* line 113, scss/components/_forms.scss */
 select.type-3 + .triangle,
 select.type-3:focus + .triangle {
   right: 1px;
 }
 
-/* line 118, scss/components/_forms.scss */
+/* line 117, scss/components/_forms.scss */
 select + .triangle {
   position: absolute;
   top: 1px;
@@ -2217,12 +2238,12 @@ select + .triangle {
   font-size: 15px;
 }
 @media only screen and (min-width: 601px) {
-  /* line 118, scss/components/_forms.scss */
+  /* line 117, scss/components/_forms.scss */
   select + .triangle {
     right: 16px;
   }
 }
-/* line 129, scss/components/_forms.scss */
+/* line 128, scss/components/_forms.scss */
 select + .triangle:after {
   content: '';
   display: block;
@@ -2236,26 +2257,26 @@ select + .triangle:after {
   border-left: 4px solid transparent;
 }
 
-/* line 142, scss/components/_forms.scss */
+/* line 141, scss/components/_forms.scss */
 select:hover,
 select:focus {
   color: #0d4f9e;
   border-color: #0d4f9e;
   outline: none;
 }
-/* line 147, scss/components/_forms.scss */
+/* line 146, scss/components/_forms.scss */
 select:hover + .triangle:after,
 select:focus + .triangle:after {
   border-top-color: #0d4f9e;
 }
 
-/* line 151, scss/components/_forms.scss */
+/* line 150, scss/components/_forms.scss */
 .dropdown-select-box {
   width: auto;
   display: inline-block;
 }
 
-/* line 155, scss/components/_forms.scss */
+/* line 154, scss/components/_forms.scss */
 .dropdown-select {
   display: inline-block;
   padding-right: 30px;
@@ -2264,13 +2285,13 @@ select:focus + .triangle:after {
   font-size: 18px;
   line-height: 20px;
 }
-/* line 162, scss/components/_forms.scss */
+/* line 161, scss/components/_forms.scss */
 .dropdown-select + .triangle {
   right: 0;
   top: 3px;
 }
 
-/* line 170, scss/components/_forms.scss */
+/* line 169, scss/components/_forms.scss */
 .inputfile-box input[type="file"] {
   position: absolute;
   top: 0;
@@ -2280,7 +2301,7 @@ select:focus + .triangle:after {
   z-index: 2;
   opacity: 0;
 }
-/* line 179, scss/components/_forms.scss */
+/* line 178, scss/components/_forms.scss */
 .inputfile-box .inputfile {
   display: inline-block;
   margin-bottom: 10px;
@@ -2289,7 +2310,22 @@ select:focus + .triangle:after {
   vertical-align: middle;
   max-width: 100%;
 }
-/* line 187, scss/components/_forms.scss */
+@media only screen and (min-width: 601px) {
+  /* line 178, scss/components/_forms.scss */
+  .inputfile-box .inputfile {
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 993px) {
+  /* line 178, scss/components/_forms.scss */
+  .inputfile-box .inputfile {
+    max-width: calc(100% - 430px);
+    width: auto;
+    margin-bottom: 0;
+    margin-right: 25px;
+  }
+}
+/* line 195, scss/components/_forms.scss */
 .inputfile-box .inputfile-value {
   display: none;
   height: 100%;
@@ -2303,11 +2339,21 @@ select:focus + .triangle:after {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-/* line 199, scss/components/_forms.scss */
+/* line 207, scss/components/_forms.scss */
 .inputfile-box .inputfile-value.shown {
-  display: inline-block;
+  display: block;
 }
-/* line 203, scss/components/_forms.scss */
+@media only screen and (min-width: 993px) {
+  /* line 207, scss/components/_forms.scss */
+  .inputfile-box .inputfile-value.shown {
+    display: inline-block;
+    max-width: calc(100% - 210px);
+    min-width: 0;
+    margin-bottom: 0;
+    margin-right: 25px;
+  }
+}
+/* line 218, scss/components/_forms.scss */
 .inputfile-box .btn-delete {
   position: absolute;
   top: 13px;
@@ -2318,7 +2364,7 @@ select:focus + .triangle:after {
   cursor: pointer;
   z-index: 3;
 }
-/* line 213, scss/components/_forms.scss */
+/* line 228, scss/components/_forms.scss */
 .inputfile-box .btn-inputfile {
   display: inline-block;
   border: 1px solid #434343;
@@ -2326,81 +2372,148 @@ select:focus + .triangle:after {
   vertical-align: middle;
   width: 180px;
 }
-/* line 220, scss/components/_forms.scss */
+/* line 235, scss/components/_forms.scss */
 .inputfile-box .note-text {
-  display: inline-block;
+  display: block;
   vertical-align: middle;
   font-size: 14px;
   line-height: 18px;
 }
-@media medium-and-up {
-  /* line 230, scss/components/_forms.scss */
-  .inputfile-box .inputfile {
-    margin-right: 30px;
-    height: 41px;
-  }
-  /* line 234, scss/components/_forms.scss */
-  .inputfile-box .inputfile-value {
-    max-width: calc(100% - 200px);
-    margin-right: 13px;
-    margin-bottom: 0;
+@media only screen and (min-width: 711px) {
+  /* line 235, scss/components/_forms.scss */
+  .inputfile-box .note-text {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    max-width: calc(100% - 210px);
   }
 }
-@media large-and-up {
-  /* line 253, scss/components/_forms.scss */
-  .inputfile-box .inputfile {
-    max-width: calc(100% - 435px);
-    margin-bottom: 0;
+@media only screen and (min-width: 993px) {
+  /* line 235, scss/components/_forms.scss */
+  .inputfile-box .note-text {
+    display: inline-block;
+    max-width: 400px;
+    position: relative;
+    top: 0;
+    left: 0;
   }
 }
 
-/* line 274, scss/components/_forms.scss */
+/* line 258, scss/components/_forms.scss */
 .captcha-box .captcha,
 .captcha-box .inputtext,
 .captcha-box select.type-3,
 .captcha-box .add-project-page .dropdown-box .dropdown-value,
 .add-project-page .dropdown-box .captcha-box .dropdown-value,
 .captcha-box label {
-  display: inline-block;
+  display: block;
   vertical-align: middle;
 }
-/* line 280, scss/components/_forms.scss */
+@media only screen and (min-width: 993px) {
+  /* line 258, scss/components/_forms.scss */
+  .captcha-box .captcha,
+  .captcha-box .inputtext,
+  .captcha-box select.type-3,
+  .captcha-box .add-project-page .dropdown-box .dropdown-value,
+  .add-project-page .dropdown-box .captcha-box .dropdown-value,
+  .captcha-box label {
+    display: inline-block;
+  }
+}
+/* line 267, scss/components/_forms.scss */
 .captcha-box .captcha {
   width: 135px;
   height: 41px;
   border: 1px solid #e1e1e1;
-}
-/* line 285, scss/components/_forms.scss */
-.captcha-box .inputtext, .captcha-box select.type-3, .captcha-box .add-project-page .dropdown-box .dropdown-value, .add-project-page .dropdown-box .captcha-box .dropdown-value {
-  width: 270px;
   margin: 5px 0 7px;
 }
-@media only screen and (min-width: 601px) {
-  /* line 285, scss/components/_forms.scss */
+@media only screen and (min-width: 740px) {
+  /* line 267, scss/components/_forms.scss */
+  .captcha-box .captcha {
+    margin-right: 30px;
+    float: left;
+  }
+}
+@media only screen and (min-width: 993px) {
+  /* line 267, scss/components/_forms.scss */
+  .captcha-box .captcha {
+    margin: 0;
+  }
+}
+/* line 280, scss/components/_forms.scss */
+.captcha-box .inputtext, .captcha-box select.type-3, .captcha-box .add-project-page .dropdown-box .dropdown-value, .add-project-page .dropdown-box .captcha-box .dropdown-value {
+  width: 100%;
+  margin: 5px 0 7px;
+}
+@media only screen and (min-width: 740px) {
+  /* line 280, scss/components/_forms.scss */
   .captcha-box .inputtext, .captcha-box select.type-3, .captcha-box .add-project-page .dropdown-box .dropdown-value, .add-project-page .dropdown-box .captcha-box .dropdown-value {
-    margin: 0 27px;
+    width: calc(100% - 165px);
+  }
+}
+@media only screen and (min-width: 993px) {
+  /* line 280, scss/components/_forms.scss */
+  .captcha-box .inputtext, .captcha-box select.type-3, .captcha-box .add-project-page .dropdown-box .dropdown-value, .add-project-page .dropdown-box .captcha-box .dropdown-value {
+    width: 270px;
+    margin: 0 30px;
+  }
+}
+@media only screen and (min-width: 740px) {
+  /* line 257, scss/components/_forms.scss */
+  .captcha-box {
+    margin-top: 15px;
+  }
+  /* line 293, scss/components/_forms.scss */
+  .captcha-box label {
+    position: absolute;
+    top: -20px;
+    left: 175px;
+  }
+  /* line 298, scss/components/_forms.scss */
+  .captcha-box .error-text {
+    margin: 5px 0 0 165px;
+  }
+}
+@media only screen and (min-width: 993px) {
+  /* line 257, scss/components/_forms.scss */
+  .captcha-box {
+    margin-top: 0;
+  }
+  /* line 304, scss/components/_forms.scss */
+  .captcha-box label {
+    top: 0;
+    left: 480px;
+    line-height: 39px;
   }
 }
 
 @media only screen and (min-width: 601px) {
-  /* line 296, scss/components/_forms.scss */
+  /* line 314, scss/components/_forms.scss */
   .add-project-page .form-block {
     padding: 0 20%;
   }
 }
 @media only screen and (min-width: 993px) {
-  /* line 301, scss/components/_forms.scss */
+  /* line 319, scss/components/_forms.scss */
+  .add-project-page .page-title, .add-project-page .project-single .item-title, .project-single .add-project-page .item-title {
+    margin-bottom: 35px;
+  }
+  /* line 322, scss/components/_forms.scss */
+  .add-project-page .block-title:first-of-type {
+    margin-top: 0;
+  }
+  /* line 325, scss/components/_forms.scss */
   .add-project-page .form-block {
     padding: 0 11.5%;
   }
 }
-/* line 307, scss/components/_forms.scss */
+/* line 331, scss/components/_forms.scss */
 .add-project-page .dropdown-box .dropdown-value .item-text {
   line-height: inherit;
 }
-/* line 311, scss/components/_forms.scss */
+/* line 335, scss/components/_forms.scss */
 .add-project-page .btn-submit {
-  margin-top: 45px;
+  margin-top: 20px;
 }
 
 /* line 1, scss/components/select2/_core.scss */

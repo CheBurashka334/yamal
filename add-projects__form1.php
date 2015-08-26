@@ -144,7 +144,6 @@
 					Размер файла: не более 10 Мб.<br/>
 					Тип файла: *ppt, *pptx, *doc, *docx, *xls, *xlsx, *txt, *pdf, *png, *jpg.
 				</div>
-				<div class="error-text">Заполните поля формы</div>
 			</div>
 			<div class="field-box captcha-box col l12 m12 s12">
 				<img class="captcha" src="images/captcha.jpg" />

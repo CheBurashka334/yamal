@@ -6,6 +6,7 @@
 html {
 	box-sizing: border-box;
 	color: $base-text-color;
+	height: 100%;
 }
 *, *:before, *:after {
 	box-sizing: inherit;
@@ -16,12 +17,26 @@ body {
 	// min-height: 100vh;
 	// flex-direction: column;
 	width: 100%;
+	height: 100%;
 	overflow-x: hidden;
 }
 .layout {
 	display: flex;
 	overflow: hidden;
 	align-items: stretch;
+	min-height: 100%;
+}
+.page {
+	min-height: 100%;
+}
+.workarea {
+	min-height: calc(96vh - 330px);
+	@media #{$medium-and-up}{
+		min-height: calc(96vh - 680px);
+	}
+	@media #{$large-and-up}{
+		min-height: calc(96vh - 610px);
+	}
 }
 
 ul {

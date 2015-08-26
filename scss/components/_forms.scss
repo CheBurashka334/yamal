@@ -4,9 +4,6 @@
 // textarea
 .field-box {
 	margin-bottom: 2.5*$gutter;
-	@media #{$large-and-up}{
-		margin-bottom: 0.5*$gutter;
-	}
 	label {
 		font-size: 15px;
 		line-height: 20px;
@@ -44,6 +41,8 @@ input[type="checkbox"] {
 		position: relative;
 		padding-left: 3.5*$gutter;
 		vertical-align: middle;
+		display: block;
+		margin: 0.5*$gutter 0 0.7*$gutter;
 		&:before {
 			position: absolute;
 			top: 0;
@@ -183,6 +182,15 @@ select:focus {
 		line-height: 39px;
 		vertical-align: middle;
 		max-width: 100%;
+		@media #{$medium-and-up}{
+			width: 100%;
+		}
+		@media #{$large-and-up}{
+			max-width: calc(100% - 430px);
+			width: auto;
+			margin-bottom: 0;
+			margin-right: 2.5*$gutter;
+		}
 	}
 	.inputfile-value {
 		display: none;
@@ -197,7 +205,14 @@ select:focus {
 		overflow: hidden;
 		text-overflow: ellipsis;
 		&.shown {
-			display: inline-block;
+			display: block;
+			@media #{$large-and-up}{
+				display: inline-block;
+				max-width: calc(100% - 210px);
+				min-width: 0;
+				margin-bottom: 0;
+				margin-right: 2.5*$gutter;
+			}
 		}
 	}
 	.btn-delete {
@@ -218,53 +233,22 @@ select:focus {
 		width: 180px;
 	}
 	.note-text {
-		display: inline-block;
+		display: block;
 		vertical-align: middle;
 		font-size: 14px;
 		line-height: 18px;
-	}
-	@media #{medium-and-up}{
-		input[type="file"]{
-		
+		@media only screen and (min-width: 711px){
+			position: absolute;
+			right: 0;
+			bottom: 0;
+			max-width: calc(100% - 210px);
 		}
-		.inputfile {
-			margin-right: 3*$gutter;
-			height: 41px;
-		}
-		.inputfile-value {
-			max-width: calc(100% - 200px);
-			margin-right: 1.3*$gutter;
-			margin-bottom: 0;
-		}
-		.btn-delete {
-			
-		}
-		.btn-inputfile {
-			
-		}
-		.note-text {
-			
-		}
-	}
-	@media #{large-and-up}{
-		input[type="file"]{
-		
-		}
-		.inputfile {
-			max-width: calc(100% - 435px);
-			margin-bottom: 0;
-		}
-		.inputfile-value {
-			
-		}
-		.btn-delete {
-			
-		}
-		.btn-inputfile {
-			
-		}
-		.note-text {
-			
+		@media #{$large-and-up}{
+			display: inline-block;
+			max-width: 400px;
+			position: relative;
+			top: 0;
+			left: 0;
 		}
 	}
 }
@@ -274,19 +258,53 @@ select:focus {
 	.captcha, 
 	.inputtext,
 	label {
-		display: inline-block;
+		display: block;
 		vertical-align: middle;
+		@media #{$large-and-up}{
+			display: inline-block;
+		}
 	}
 	.captcha {
 		width: 135px;
 		height: 41px;
 		border: 1px solid #e1e1e1;
+		margin: 0.5*$gutter 0 0.7*$gutter;
+		@media only screen and (min-width: 740px){
+			margin-right: 3*$gutter;
+			float: left;
+		}
+		@media #{$large-and-up}{
+			margin: 0;
+		}
 	}
 	.inputtext {
-		width: 270px;
+		width: 100%;
 		margin: 0.5*$gutter 0 0.7*$gutter;
-		@media #{$medium-and-up}{
-			margin: 0 2.7*$gutter;
+		@media only screen and (min-width: 740px){
+			width: calc(100% - 165px);
+		}
+		@media #{$large-and-up}{
+			width: 270px;
+			margin: 0 3*$gutter;
+		}
+	}
+	@media only screen and (min-width: 740px){
+		margin-top: 1.5*$gutter;
+		label {
+			position: absolute;
+			top: -2*$gutter;
+			left: 175px;
+		}
+		.error-text {
+			margin: 0.5*$gutter 0 0 165px;
+		}
+	}
+	@media #{$large-and-up}{
+		margin-top: 0;
+		label {
+			top: 0;
+			left: 480px;
+			line-height: 39px;
 		}
 	}
 }
@@ -298,6 +316,12 @@ select:focus {
 		}
 	}
 	@media #{$large-and-up}{
+		.page-title {
+			margin-bottom: 3.5*$gutter;
+		}
+		.block-title:first-of-type {
+			margin-top: 0;
+		}
 		.form-block {
 			padding: 0 11.5%;
 		}
@@ -309,6 +333,6 @@ select:focus {
 		}
 	}
 	.btn-submit {
-		margin-top: 4.5*$gutter;
+		margin-top: 2*$gutter;
 	}
 }
