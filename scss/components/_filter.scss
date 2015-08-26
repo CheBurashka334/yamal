@@ -34,10 +34,15 @@
 			}
 		}
 	}
-	select {
+	select,
+	select:focus {
 		font-size: 15px;
-		line-height: 2.67;
+		line-height: 39px;
 		height: 2.67em;
 		padding: 0 2em 0 1.5*$gutter;
+		margin: 0;
+	}
+	select.type-3:focus {
+		bprder-color: $primary-color;
 	}
 }

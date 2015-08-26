@@ -1,7 +1,7 @@
 <?include('header.php');?>
 <div class="contact-page">
 	<div class="page-title">Контакты</div>
-	<div class="dropdown-select-box">
+	<!--div class="dropdown-select-box">
 		<select class="dropdown-select hide-on-large-only" id="city">
 			<option value="v1" selected>Салехард</option>
 			<option value="v2">Надым</option>
@@ -9,6 +9,75 @@
 			<option value="v4">Губкинский</option>
 		</select>
 		<label for="city" class="triangle"></label>
+	</div-->
+	<div class="select-box hide-on-large-only">
+		<select class="type-2" id="city" name="city-sel">
+			<option value="v1" selected>Салехард</option>
+			<option value="v2">Губкинский</option>
+			<option value="v3">Муравленко</option>
+			<option value="v4">Надым</option>
+			<option value="v5">Новый Уренгой</option>
+			<option value="v6">Ноябрьск</option>
+			<option value="v7">Тазовский</option>
+			<option value="v8">Тарко-Сале</option>
+		</select>
+		<label for="city" class="triangle"></label>
+	</div>
+	<div class="dropdown-box hide-on-med-and-down">
+		<div class="dropdown-value">
+			<div class="item-text"></div>
+			<div class="triangle"></div>
+		</div>
+		<ul class="dropdown-list select-synh hide-on-med-and-down" data-select="city">
+			<li class="dropdown-item" data-active="active">
+				<input type="radio" class="dropdown-inp" name="city" value="v1" id="city-rad-v1" checked="checked" data-value-text="Салехард"/>
+				<label class="dropdown-title" for="city-rad-v1">
+					<div class="item-text">Салехард</div>
+				</label>
+			</li>
+			<li class="dropdown-item">
+				<input type="radio" class="dropdown-inp" name="city-rad" value="v2" id="city-rad-v2" data-value-text="Губкинский"/>
+				<label class="dropdown-title" for="city-rad-v2">
+					<div class="item-text">Губкинский</div>
+				</label>
+			</li>
+			<li class="dropdown-item">
+				<input type="radio" class="dropdown-inp" name="city-rad" value="v3" id="city-rad-v3" data-value-text="Муравленко"/>
+				<label class="dropdown-title" for="city-rad-v3">
+					<div class="item-text">Муравленко</div>
+				</label>
+			</li>
+			<li class="dropdown-item">
+				<input type="radio" class="dropdown-inp" name="city-rad" value="v4" id="city-rad-v4" data-value-text="Надым"/>
+				<label class="dropdown-title" for="city-rad-v4">
+					<div class="item-text">Надым</div>
+				</label>
+			</li>
+			<li class="dropdown-item">
+				<input type="radio" class="dropdown-inp" name="city-rad" value="v5" id="city-rad-v5" data-value-text="Новый Уренгой"/>
+				<label class="dropdown-title" for="city-rad-v5">
+					<div class="item-text">Новый Уренгой</div>
+				</label>
+			</li>
+			<li class="dropdown-item">
+				<input type="radio" class="dropdown-inp" name="city-rad" value="v6" id="city-rad-v6" data-value-text="Ноябрьск"/>
+				<label class="dropdown-title" for="city-rad-v6">
+					<div class="item-text">Ноябрьск</div>
+				</label>
+			</li>
+			<li class="dropdown-item">
+				<input type="radio" class="dropdown-inp" name="city-rad" value="v7" id="city-rad-v7" data-value-text="Тазовский"/>
+				<label class="dropdown-title" for="city-rad-v7">
+					<div class="item-text">Тазовский</div>
+				</label>
+			</li>
+			<li class="dropdown-item">
+				<input type="radio" class="dropdown-inp" name="city-rad" value="v8" id="city-rad-v8" data-value-text="Тарко-Сале"/>
+				<label class="dropdown-title" for="city-rad-v8">
+					<div class="item-text">Тарко-Сале</div>
+				</label>
+			</li>
+		</ul>
 	</div>
 	<div class="map-box s-full-width m-full-width">
 		<div class="loader"></div>

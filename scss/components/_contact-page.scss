@@ -17,6 +17,21 @@
 			margin-top: 1.5*$gutter;
 		}
 	}
+	.select-box .type-2 + .triangle {
+		right: 0;
+	}
+	@media #{$medium-and-up}{
+		.select-box,
+		.dropdown-box {
+			display: inline-block;
+			width: auto;
+			min-width: 180px;
+			max-width: 50%;
+		}
+		.dropdown-value {
+			padding: $gutter 3*$gutter $gutter 0;
+		}
+	}
 	.map-box {
 		height: 210px;
 		margin-bottom: $gutter;

@@ -14,20 +14,7 @@ $(document).ready(function(){
 		}
 	});
 	
-	// select
-	// https://select2.github.io/
-	if($(window).outerWidth() > 992){
-		$('.customize-select option:first-child').removeAttr('value').text('');
-		$('.customize-select').select2({
-			language: "ru"
-		});
-		$('.dropdown-select').select2({
-			language: "ru",
-			theme: 'dropdown'
-		});
-		$('.select2-container').removeAttr('style');
-		
-	} else {
+	if($(window).outerWidth() < 992){
 		$('select.mobile-synh').change(function(){
 			var radio = $('.select-synh[data-select="'+$(this).attr('id')+'"]');
 			radio.find('input[type="radio"]').not('[value="'+$(this).val()+'"]').prop('checked', false);
@@ -57,11 +44,12 @@ $(document).ready(function(){
 	// dropdown open
 	$('.dropdown-box').click(function(e){
 		$('.dropdown-box').not($(this)).removeClass('open');
+		$('.dropdown-sublist').removeClass('open');
 		$(this).toggleClass('open');
 		e.stopPropagation();
 	});
 	$('.page').click(function(){
-		$('.dropdown-box, .more').removeClass('open');
+		$('.dropdown-box, .dropdown-sublist, .more').removeClass('open');
 	});
 	$('.more').click(function(e){
 		e.stopPropagation();
@@ -73,20 +61,26 @@ $(document).ready(function(){
 	});
 	// dropdown change
 	$('.dropdown-box .dropdown-item').click(function(e){
-		var value = $(this).find('[data-value-text]');
-		var box = $(this).parent('.dropdown-list').parent('.dropdown-box');
-		
-		$(this).attr('data-active', 'active').siblings().removeAttr('data-active');
-		box.find('.dropdown-value > .item-text').html(value.attr('data-value-text'));
-		
-		if(box.hasClass('with-icon')){
-			box.find('.dropdown-value > .item-icon > .icon > use').attr('xlink:href', value.attr('data-value-icon'));
+		if($(this).hasClass('parent')){
+			$(this).siblings('.dropdown-item').find('.dropdown-sublist').removeClass('open');
+			$(this).find('.dropdown-sublist').toggleClass('open');
+			e.stopPropagation();
+		} else {
+			var value = $(this).find('[data-value-text]');
+			var box = $(this).parent('.dropdown-list').parent('.dropdown-box');
+			
+			$(this).attr('data-active', 'active').siblings().removeAttr('data-active');
+			box.find('.dropdown-value > .item-text').html(value.attr('data-value-text'));
+			
+			if(box.hasClass('with-icon')){
+				box.find('.dropdown-value > .item-icon > .icon > use').attr('xlink:href', value.attr('data-value-icon'));
+			}
+			if(box.hasClass('with-text-icon')){
+				box.find('.dropdown-value > .item-icon > .icon').html(value.attr('data-value-icon'));
+			}
+			e.stopPropagation();
+			box.removeClass('open');
 		}
-		if(box.hasClass('with-text-icon')){
-			box.find('.dropdown-value > .item-icon > .icon').html(value.attr('data-value-icon'));
-		}
-		e.stopPropagation();
-		box.removeClass('open');
 	});
 	// tabs init
 	$('[data-tab-content]').each(function(){
@@ -150,7 +144,6 @@ $(document).ready(function(){
 	
 	// jcarousel
 	// http://sorgalla.com/jcarousel/docs/
-	
 	$('.carousel').jcarousel({
 		list: '.carousel-inner',
 		wrap: 'circular'

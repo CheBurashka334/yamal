@@ -8,21 +8,41 @@
 					<option value="v1" selected>Все отрасли</option>
 					<option value="v2">A. Сельское хозяйство, охота и лесное хозяйство</option>
 					<option value="v3">B. Рыболовство, рыбоводство</option>
-					<option value="v4">C. Добыча полезных ископаемых</option>
-					<option value="v5">D. Обрабатывающие производства</option>
-					<option value="v6">E. Производство и распределение электроэнергии, газа и воды</option>
-					<option value="v7">F. Строительство</option>
-					<option value="v8">G. Оптовая и розничная торговля; ремонт автотранспортных средств, мотоциклов, бытовых изделий и предметов личного пользования</option>
-					<option value="v9">H. Гостиницы и рестораны</option>
-					<option value="v10">I. Транспорт и связь</option>
-					<option value="v11">J. Финансовая деятельность</option>
-					<option value="v12">K. Операции с недвижимым имуществом, аренда и предоставление услуг</option>
-					<option value="v13">L. Государственное управление и обеспечение военной безопасности; социальное страхование</option>
-					<option value="v14">M. Образование</option>
-					<option value="v15">N. Здравоохранение и предоставление социальных услуг</option>
-					<option value="v16">O. Предоставление прочих коммунальных, социальных и персональных услуг</option>
-					<option value="v17">P. Деятельность домашних хозяйств</option>
-					<option value="v18">Q. Деятельность экстерриториальных организаций</option>
+					<optgroup label="C. Добыча полезных ископаемых">
+						<option value="v4">Все отрасли</option>
+						<option value="v5">CA. Добыча топливно-энергетических полезных ископаемых</option>
+						<option value="v6">CB. Добыча полезных ископаемых, кроме топливно-энергетических</option>
+					<optgroup>
+					<optgroup label="D. Обрабатывающие производства">
+						<option value="v7">Все отрасли</option>
+						<option value="v8">DA. Производство пищевых продуктов, включая напитки, и табака</option>
+						<option value="v9">DB. Текстильное и швейное производство</option>
+						<option value="v10">DC. Производство кожи, изделий из кожи и производство обуви</option>
+						<option value="v11">DD. Обработка древесины и производство изделий из дерева</option>
+						<option value="v12">DE. Целлюлозно-бумажное производство; издательская и полиграфическая деятельность</option>
+						<option value="v13">DF. Производство кокса, нефтепродуктов и ядерных материалов</option>
+						<option value="v14">DG. Химическое производство</option>
+						<option value="v15">DH. Производство резиновых и пластмассовых изделий</option>
+						<option value="v16">DI. Производство прочих неметаллических минеральных продуктов</option>
+						<option value="v17">DJ. Металлургическое производство и производство готовых металлических изделий</option>
+						<option value="v18">DK. Производство машин и оборудования</option>
+						<option value="v19">DL. Производство электрооборудования, электронного и оптического оборудования</option>
+						<option value="v20">DM. Производство транспортных средств и оборудования</option>
+						<option value="v21">DN. Прочие производства</option>
+					</optgroup>
+					<option value="v22">E. Производство и распределение электроэнергии, газа и воды</option>
+					<option value="v23">F. Строительство</option>
+					<option value="v24">G. Оптовая и розничная торговля; ремонт автотранспортных средств, мотоциклов, бытовых изделий и предметов личного пользования</option>
+					<option value="v25">H. Гостиницы и рестораны</option>
+					<option value="v26">I. Транспорт и связь</option>
+					<option value="v27">J. Финансовая деятельность</option>
+					<option value="v28">K. Операции с недвижимым имуществом, аренда и предоставление услуг</option>
+					<option value="v29">L. Государственное управление и обеспечение военной безопасности; социальное страхование</option>
+					<option value="v30">M. Образование</option>
+					<option value="v31">N. Здравоохранение и предоставление социальных услуг</option>
+					<option value="v32">O. Предоставление прочих коммунальных, социальных и персональных услуг</option>
+					<option value="v33">P. Деятельность домашних хозяйств</option>
+					<option value="v34">Q. Деятельность экстерриториальных организаций</option>
 				</select>
 				<label for="rec-type" class="triangle"></label>
 			</div>
@@ -52,93 +72,203 @@
 							<div class="item-text">B. Рыболовство, рыбоводство</div>
 						</label>
 					</li>
-					<li class="dropdown-item">
-						<input type="radio" class="dropdown-inp" name="action-dep-rad" value="v4" id="action-dep-v4" data-value-text="C. Добыча полезных ископаемых" data-value-icon="#depart"/>
-						<label class="dropdown-title" for="action-dep-v4">
+					<li class="dropdown-item parent">
+						<label class="dropdown-title">
 							<div class="item-text">C. Добыча полезных ископаемых</div>
 						</label>
+						<ul class="dropdown-sublist">
+							<li class="dropdown-item">
+								<input type="radio" class="dropdown-inp" name="action-dep-rad" value="v4" id="action-dep-v4" data-value-text="Выбрать все" data-value-icon="#depart"/>
+								<label class="dropdown-title" for="action-dep-v4">
+									<div class="item-text">Выбрать все</div>
+								</label>
+							</li>
+							<li class="dropdown-item">
+								<input type="radio" class="dropdown-inp" name="action-dep-rad" value="v5" id="action-dep-v5" data-value-text="CA. Добыча топливно-энергетических полезных ископаемых" data-value-icon="#depart"/>
+								<label class="dropdown-title" for="action-dep-v5">
+									<div class="item-text">CA. Добыча топливно-энергетических полезных ископаемых</div>
+								</label>
+							</li>
+							<li class="dropdown-item">
+								<input type="radio" class="dropdown-inp" name="action-dep-rad" value="v6" id="action-dep-v6" data-value-text="CB. Добыча полезных ископаемых, кроме топливно-энергетических" data-value-icon="#depart"/>
+								<label class="dropdown-title" for="action-dep-v6">
+									<div class="item-text">CB. Добыча полезных ископаемых, кроме топливно-энергетических</div>
+								</label>
+							</li>
+						</ul>
 					</li>
-					<li class="dropdown-item">
-						<input type="radio" class="dropdown-inp" name="action-dep-rad" value="v5" id="action-dep-v5" data-value-text="D. Обрабатывающие производства" data-value-icon="#depart"/>
-						<label class="dropdown-title" for="action-dep-v5">
+					<li class="dropdown-item parent">
+						<label class="dropdown-title">
 							<div class="item-text">D. Обрабатывающие производства</div>
 						</label>
+						<ul class="dropdown-sublist">
+							<li class="dropdown-item">
+								<input type="radio" class="dropdown-inp" name="action-dep-rad" value="v7" id="action-dep-v7" data-value-text="Выбрать все" data-value-icon="#depart"/>
+								<label class="dropdown-title" for="action-dep-v7">
+									<div class="item-text">Выбрать все</div>
+								</label>
+							</li>
+							<li class="dropdown-item">
+								<input type="radio" class="dropdown-inp" name="action-dep-rad" value="v8" id="action-dep-v8" data-value-text="DA. Производство пищевых продуктов, включая напитки, и табака" data-value-icon="#depart"/>
+								<label class="dropdown-title" for="action-dep-v8">
+									<div class="item-text">DA. Производство пищевых продуктов, включая напитки, и табака</div>
+								</label>
+							</li>
+							<li class="dropdown-item">
+								<input type="radio" class="dropdown-inp" name="action-dep-rad" value="v9" id="action-dep-v9" data-value-text="DB. Текстильное и швейное производство" data-value-icon="#depart"/>
+								<label class="dropdown-title" for="action-dep-v9">
+									<div class="item-text">DB. Текстильное и швейное производство</div>
+								</label>
+							</li>
+							<li class="dropdown-item">
+								<input type="radio" class="dropdown-inp" name="action-dep-rad" value="v10" id="action-dep-v10" data-value-text="DC. Производство кожи, изделий из кожи и производство обуви" data-value-icon="#depart"/>
+								<label class="dropdown-title" for="action-dep-v10">
+									<div class="item-text">DC. Производство кожи, изделий из кожи и производство обуви</div>
+								</label>
+							</li>
+							<li class="dropdown-item">
+								<input type="radio" class="dropdown-inp" name="action-dep-rad" value="v11" id="action-dep-v11" data-value-text="DD. Обработка древесины и производство изделий из дерева" data-value-icon="#depart"/>
+								<label class="dropdown-title" for="action-dep-v11">
+									<div class="item-text">DD. Обработка древесины и производство изделий из дерева</div>
+								</label>
+							</li>
+							<li class="dropdown-item">
+								<input type="radio" class="dropdown-inp" name="action-dep-rad" value="v12" id="action-dep-v12" data-value-text="DE. Целлюлозно-бумажное производство; издательская и полиграфическая деятельность" data-value-icon="#depart"/>
+								<label class="dropdown-title" for="action-dep-v12">
+									<div class="item-text">DE. Целлюлозно-бумажное производство; издательская и полиграфическая деятельность</div>
+								</label>
+							</li>
+							<li class="dropdown-item">
+								<input type="radio" class="dropdown-inp" name="action-dep-rad" value="v13" id="action-dep-v13" data-value-text="DF. Производство кокса, нефтепродуктов и ядерных материалов" data-value-icon="#depart"/>
+								<label class="dropdown-title" for="action-dep-v13">
+									<div class="item-text">DF. Производство кокса, нефтепродуктов и ядерных материалов</div>
+								</label>
+							</li>
+							<li class="dropdown-item">
+								<input type="radio" class="dropdown-inp" name="action-dep-rad" value="v14" id="action-dep-v14" data-value-text="DG. Химическое производство" data-value-icon="#depart"/>
+								<label class="dropdown-title" for="action-dep-v14">
+									<div class="item-text">DG. Химическое производство</div>
+								</label>
+							</li>
+							<li class="dropdown-item">
+								<input type="radio" class="dropdown-inp" name="action-dep-rad" value="v15" id="action-dep-v15" data-value-text="DH. Производство резиновых и пластмассовых изделий" data-value-icon="#depart"/>
+								<label class="dropdown-title" for="action-dep-v15">
+									<div class="item-text">DH. Производство резиновых и пластмассовых изделий</div>
+								</label>
+							</li>
+							<li class="dropdown-item">
+								<input type="radio" class="dropdown-inp" name="action-dep-rad" value="v16" id="action-dep-v16" data-value-text="DI. Производство прочих неметаллических минеральных продуктов" data-value-icon="#depart"/>
+								<label class="dropdown-title" for="action-dep-v16">
+									<div class="item-text">DI. Производство прочих неметаллических минеральных продуктов</div>
+								</label>
+							</li>
+							<li class="dropdown-item">
+								<input type="radio" class="dropdown-inp" name="action-dep-rad" value="v17" id="action-dep-v17" data-value-text="DJ. Металлургическое производство и производство готовых металлических изделий" data-value-icon="#depart"/>
+								<label class="dropdown-title" for="action-dep-v17">
+									<div class="item-text">DJ. Металлургическое производство и производство готовых металлических изделий</div>
+								</label>
+							</li>
+							<li class="dropdown-item">
+								<input type="radio" class="dropdown-inp" name="action-dep-rad" value="v18" id="action-dep-v18" data-value-text="DK. Производство машин и оборудования" data-value-icon="#depart"/>
+								<label class="dropdown-title" for="action-dep-v18">
+									<div class="item-text">DK. Производство машин и оборудования</div>
+								</label>
+							</li>
+							<li class="dropdown-item">
+								<input type="radio" class="dropdown-inp" name="action-dep-rad" value="v19" id="action-dep-v19" data-value-text="DL. Производство электрооборудования, электронного и оптического оборудования" data-value-icon="#depart"/>
+								<label class="dropdown-title" for="action-dep-v19">
+									<div class="item-text">DL. Производство электрооборудования, электронного и оптического оборудования</div>
+								</label>
+							</li>
+							<li class="dropdown-item">
+								<input type="radio" class="dropdown-inp" name="action-dep-rad" value="v20" id="action-dep-v20" data-value-text="DM. Производство транспортных средств и оборудования" data-value-icon="#depart"/>
+								<label class="dropdown-title" for="action-dep-v20">
+									<div class="item-text">DM. Производство транспортных средств и оборудования</div>
+								</label>
+							</li>
+							<li class="dropdown-item">
+								<input type="radio" class="dropdown-inp" name="action-dep-rad" value="v21" id="action-dep-v21" data-value-text="DN. Прочие производства" data-value-icon="#depart"/>
+								<label class="dropdown-title" for="action-dep-v21">
+									<div class="item-text">DN. Прочие производства</div>
+								</label>
+							</li>
+						</ul>
 					</li>
 					<li class="dropdown-item">
-						<input type="radio" class="dropdown-inp" name="action-dep-rad" value="v6" id="action-dep-v6" data-value-text="E. Производство и распределение электроэнергии, газа и воды" data-value-icon="#depart"/>
-						<label class="dropdown-title" for="action-dep-v6">
+						<input type="radio" class="dropdown-inp" name="action-dep-rad" value="v22" id="action-dep-v22" data-value-text="E. Производство и распределение электроэнергии, газа и воды" data-value-icon="#depart"/>
+						<label class="dropdown-title" for="action-dep-v22">
 							<div class="item-text">E. Производство и распределение электроэнергии, газа и воды</div>
 						</label>
 					</li>
 					<li class="dropdown-item">
-						<input type="radio" class="dropdown-inp" name="action-dep-rad" value="v7" id="action-dep-v7" data-value-text="F. Строительство" data-value-icon="#depart"/>
-						<label class="dropdown-title" for="action-dep-v7">
+						<input type="radio" class="dropdown-inp" name="action-dep-rad" value="v23" id="action-dep-v23" data-value-text="F. Строительство" data-value-icon="#depart"/>
+						<label class="dropdown-title" for="action-dep-v23">
 							<div class="item-text">F. Строительство</div>
 						</label>
 					</li>
 					<li class="dropdown-item">
-						<input type="radio" class="dropdown-inp" name="action-dep-rad" value="v8" id="action-dep-v8" data-value-text="G. Оптовая и розничная торговля; ремонт автотранспортных средств, мотоциклов, бытовых изделий и предметов личного пользования" data-value-icon="#depart"/>
-						<label class="dropdown-title" for="action-dep-v8">
+						<input type="radio" class="dropdown-inp" name="action-dep-rad" value="v24" id="action-dep-v24" data-value-text="G. Оптовая и розничная торговля; ремонт автотранспортных средств, мотоциклов, бытовых изделий и предметов личного пользования" data-value-icon="#depart"/>
+						<label class="dropdown-title" for="action-dep-v24">
 							<div class="item-text">G. Оптовая и розничная торговля; ремонт автотранспортных средств, мотоциклов, бытовых изделий и предметов личного пользования</div>
 						</label>
 					</li>
 					<li class="dropdown-item">
-						<input type="radio" class="dropdown-inp" name="action-dep-rad" value="v9" id="action-dep-v9" data-value-text="H. Гостиницы и рестораны" data-value-icon="#depart"/>
-						<label class="dropdown-title" for="action-dep-v9">
+						<input type="radio" class="dropdown-inp" name="action-dep-rad" value="v25" id="action-dep-v25" data-value-text="H. Гостиницы и рестораны" data-value-icon="#depart"/>
+						<label class="dropdown-title" for="action-dep-v25">
 							<div class="item-text">H. Гостиницы и рестораны</div>
 						</label>
 					</li>
 					<li class="dropdown-item">
-						<input type="radio" class="dropdown-inp" name="action-dep-rad" value="v10" id="action-dep-v10" data-value-text="I. Транспорт и связь" data-value-icon="#depart"/>
-						<label class="dropdown-title" for="action-dep-v10">
+						<input type="radio" class="dropdown-inp" name="action-dep-rad" value="v26" id="action-dep-v26" data-value-text="I. Транспорт и связь" data-value-icon="#depart"/>
+						<label class="dropdown-title" for="action-dep-v26">
 							<div class="item-text">I. Транспорт и связь</div>
 						</label>
 					</li>
 					<li class="dropdown-item">
-						<input type="radio" class="dropdown-inp" name="action-dep-rad" value="v11" id="action-dep-v11" data-value-text="J. Финансовая деятельность" data-value-icon="#depart"/>
-						<label class="dropdown-title" for="action-dep-v11">
+						<input type="radio" class="dropdown-inp" name="action-dep-rad" value="v27" id="action-dep-v27" data-value-text="J. Финансовая деятельность" data-value-icon="#depart"/>
+						<label class="dropdown-title" for="action-dep-v27">
 							<div class="item-text">J. Финансовая деятельность</div>
 						</label>
 					</li>
 					<li class="dropdown-item">
-						<input type="radio" class="dropdown-inp" name="action-dep-rad" value="v12" id="action-dep-v12" data-value-text="K. Операции с недвижимым имуществом, аренда и предоставление услуг" data-value-icon="#depart"/>
-						<label class="dropdown-title" for="action-dep-v12">
+						<input type="radio" class="dropdown-inp" name="action-dep-rad" value="v28" id="action-dep-v28" data-value-text="K. Операции с недвижимым имуществом, аренда и предоставление услуг" data-value-icon="#depart"/>
+						<label class="dropdown-title" for="action-dep-v28">
 							<div class="item-text">K. Операции с недвижимым имуществом, аренда и предоставление услуг</div>
 						</label>
 					</li>
 					<li class="dropdown-item">
-						<input type="radio" class="dropdown-inp" name="action-dep-rad" value="v13" id="action-dep-v13" data-value-text="L. Государственное управление и обеспечение военной безопасности; социальное страхование" data-value-icon="#depart"/>
-						<label class="dropdown-title" for="action-dep-v13">
+						<input type="radio" class="dropdown-inp" name="action-dep-rad" value="v29" id="action-dep-v29" data-value-text="L. Государственное управление и обеспечение военной безопасности; социальное страхование" data-value-icon="#depart"/>
+						<label class="dropdown-title" for="action-dep-v29">
 							<div class="item-text">L. Государственное управление и обеспечение военной безопасности; социальное страхование</div>
 						</label>
 					</li>
 					<li class="dropdown-item">
-						<input type="radio" class="dropdown-inp" name="action-dep-rad" value="v14" id="action-dep-v14" data-value-text="M. Образование" data-value-icon="#depart"/>
-						<label class="dropdown-title" for="action-dep-v14">
+						<input type="radio" class="dropdown-inp" name="action-dep-rad" value="v30" id="action-dep-v30" data-value-text="M. Образование" data-value-icon="#depart"/>
+						<label class="dropdown-title" for="action-dep-v30">
 							<div class="item-text">M. Образование</div>
 						</label>
 					</li>
 					<li class="dropdown-item">
-						<input type="radio" class="dropdown-inp" name="action-dep-rad" value="v15" id="action-dep-v15" data-value-text="N. Здравоохранение и предоставление социальных услуг" data-value-icon="#depart"/>
-						<label class="dropdown-title" for="action-dep-v15">
+						<input type="radio" class="dropdown-inp" name="action-dep-rad" value="v31" id="action-dep-v31" data-value-text="N. Здравоохранение и предоставление социальных услуг" data-value-icon="#depart"/>
+						<label class="dropdown-title" for="action-dep-v31">
 							<div class="item-text">N. Здравоохранение и предоставление социальных услуг</div>
 						</label>
 					</li>
 					<li class="dropdown-item">
-						<input type="radio" class="dropdown-inp" name="action-dep-rad" value="v16" id="action-dep-v16" data-value-text="O. Предоставление прочих коммунальных, социальных и персональных услуг" data-value-icon="#depart"/>
-						<label class="dropdown-title" for="action-dep-v16">
+						<input type="radio" class="dropdown-inp" name="action-dep-rad" value="v32" id="action-dep-v32" data-value-text="O. Предоставление прочих коммунальных, социальных и персональных услуг" data-value-icon="#depart"/>
+						<label class="dropdown-title" for="action-dep-v32">
 							<div class="item-text">O. Предоставление прочих коммунальных, социальных и персональных услуг</div>
 						</label>
 					</li>
 					<li class="dropdown-item">
-						<input type="radio" class="dropdown-inp" name="action-dep-rad" value="v17" id="action-dep-v17" data-value-text="P. Деятельность домашних хозяйств" data-value-icon="#depart"/>
-						<label class="dropdown-title" for="action-dep-v17">
+						<input type="radio" class="dropdown-inp" name="action-dep-rad" value="v33" id="action-dep-v33" data-value-text="P. Деятельность домашних хозяйств" data-value-icon="#depart"/>
+						<label class="dropdown-title" for="action-dep-v33">
 							<div class="item-text">P. Деятельность домашних хозяйств</div>
 						</label>
 					</li>
 					<li class="dropdown-item">
-						<input type="radio" class="dropdown-inp" name="action-dep-rad" value="v18" id="action-dep-v18" data-value-text="Q. Деятельность экстерриториальных организаций" data-value-icon="#depart"/>
-						<label class="dropdown-title" for="action-dep-v18">
+						<input type="radio" class="dropdown-inp" name="action-dep-rad" value="v34" id="action-dep-v34" data-value-text="Q. Деятельность экстерриториальных организаций" data-value-icon="#depart"/>
+						<label class="dropdown-title" for="action-dep-v34">
 							<div class="item-text">Q. Деятельность экстерриториальных организаций</div>
 						</label>
 					</li>
