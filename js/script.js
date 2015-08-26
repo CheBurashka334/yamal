@@ -190,43 +190,82 @@ $(document).ready(function(){
 			target: '+=1'
 		});
 
+		
+	// forms
+	$('[required]').change(function(){
+		validateRequired($(this));
+	});
+	$('input[type="email"]').change(function(){
+		validateEmail($(this));
+	});
+	$('input[type="tel"]').change(function(){
+		validateTel($(this));
+	});
+	$('input[type="file"]').change(function(){
+		if($(this).val().length > 0){
+			var isValid = validateFile($(this));
+			$(this).siblings('.inputfile-value').find('.item-text').text($(this)[0].files[0].name);
+			$(this).siblings('.inputfile-value').addClass('shown');
+		} else {
+			$(this).parents('.inputfile').removeClass('invalid-file');
+			$(this).siblings('.inputfile-value .item-text').text('');
+			$(this).siblings('.inputfile-value').removeClass('shown');
+		}
+	});
+	$('.inputfile .btn-delete').click(function(){
+		$(this).parents('.inputfile').find('input[type="file"]').val('');
+		$(this).parents('.inputfile').removeClass('invalid-file');
+		$(this).parents('.inputfile').find('input[type="file"]').change();
+		return false;
+	});
+	$('form').submit(function(){
+		if(($(this).find('.invalid-required, .invalid-pattern, .invalid-file').length > 0) || ($(this).find('[required]').val().length == 0)){
+			if($(this).find('[required]').val().length == 0){
+				$(this).find('[required]').each(function(){
+					validateRequired($(this));
+				});
+			}
+			return false;
+		} 
+	});
+		
 });
 
 function position() {
 	var pos = $(window).scrollTop();
 	$('.page').css({'position': 'fixed', 'top': - pos+'px'});
 }
-
-// angularjs 
-// https://docs.angularjs.org/guide
-// http://angular.ru/guide/
-var yamal = angular.module('yamal',[]);
-yamal.controller('addProj1Ctrl', ['$scope', function($scope){
-	$scope.form = {};
-	$scope.form.file = {'isset': false};
-	$scope.setFiles = function(element){
-		$scope.$apply(function(scope){
-			if(element.files.length == 1){
-				$scope.form.file.isset = true;
-				$scope.form.file.value = element.files[0].name;
-			} else if (element.files.length > 1) {
-				$scope.form.file.isset = true;
-				$scope.form.file.value = 'Выбрано файлов: '+element.files.length;
-			}
-		});
+// validation functions
+function validateEmail(el){
+	var pattern = /.+@.+\..+/i;
+	if(pattern.test(el.val())){
+		el.removeClass('invalid-pattern');
+	} else {
+		el.addClass('invalid-pattern');
 	}
-	$scope.deleteFile = function(element){
-		$scope.$apply(function(scope){
-			angular.element(element).val(null); // не удаляется файл :(
-			$scope.form.file.isset = false;
-			$scope.form.file.value = '';
-		});
+}
+function validateTel(el){
+	var pattern = /\d{10,11}/;
+	if(pattern.test(el.val())){
+		el.removeClass('invalid-pattern');
+	} else {
+		el.addClass('invalid-pattern');
 	}
-	// удалить
-	$scope.formSubmit = function(){
-		console.log($scope.form);
+}
+function validateFile(el){
+	var typePattern = /ppt|pptx|doc|docx|xls|xlsx|txt|pdf|png|jpg/i;
+	if((el[0].files[0].size > 10485760) || !(typePattern.test(el[0].files[0].name.split('.').pop()))) {
+		el.parents('.inputfile').addClass('invalid-file');
+		return false;
+	} else {
+		el.parents('.inputfile').removeClass('invalid-file');
+		return true;
 	}
-}]);
-yamal.controller('addProj2Ctrl', ['$scope', function($scope){
-	$scope.form = {};
-}]);
+}
+function validateRequired(el){
+	if((el.val().length == 0) || ((el.attr('type') == 'checkbox') && (el.prop('checked') == false))){
+		el.addClass('invalid-required');
+	} else {
+		el.removeClass('invalid-required');
+	}
+}

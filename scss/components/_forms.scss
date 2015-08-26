@@ -62,19 +62,29 @@ input[type="checkbox"] {
 	font-size: 1em;
 	top: -0.2em;
 }
-.ng-invalid:not(.ng-pristine){
+[class*='invalid']{
 	border-color: $error-color;
-	& ~ .error-text {
-		opacity: 1;
+	&.invalid-required ~ .error-text {
+		//opacity: 1;
+		display: block;
+	}
+	&.invalid-pattern ~ .pattern-error-text {
+		//opacity: 1;
+		display: block;
+	}
+	&.invalid-file ~ .note-text {
+		color: $error-color;
 	}
 }
-.error-text {
+.error-text,
+.pattern-error-text {
 	color: $error-color;
 	font-size: 14px;
 	line-height: 1em;
 	height: 1em;
-	opacity: 0;
-	transition: opacity .1s;
+	//opacity: 0;
+	//transition: opacity .1s;
+	display: none;
 }
 
 
@@ -163,7 +173,7 @@ select:focus {
 		max-width: 100%;
 	}
 	.inputfile-value {
-		display: inline-block;
+		display: none;
 		height: 100%;
 		background: #e1e1e1;
 		padding: 0 4.5*$gutter 0 3*$gutter;
@@ -174,6 +184,9 @@ select:focus {
 		white-space: nowrap;
 		overflow: hidden;
 		text-overflow: ellipsis;
+		&.shown {
+			display: inline-block;
+		}
 	}
 	.btn-delete {
 		position: absolute;
