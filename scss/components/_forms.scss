@@ -39,20 +39,25 @@ textarea.inputtext {
 
 // checkbox 
 input[type="checkbox"] {
-	-webkit-appearance: none;
-	-moz-appearance: none;
-	appearance: none;
-	background: #fff;
-	width: 21px;
-	height: 21px;
-	border: 1px solid #e1e1e1;
-	vertical-align: middle;
-	&:checked {
-		background: url('images/tick.png') center no-repeat;
-	}
+	display: none;
 	& + label {
-		margin-left: 1.5*$gutter;
+		position: relative;
+		padding-left: 3.5*$gutter;
 		vertical-align: middle;
+		&:before {
+			position: absolute;
+			top: 0;
+			left: 0;
+			content: '';
+			background: #fff;
+			width: 21px;
+			height: 21px;
+			border: 1px solid #e1e1e1;
+			vertical-align: middle;
+		}
+	}
+	&:checked + label:before {
+		background: url('images/tick.png') center no-repeat;
 	}
 }
 
@@ -81,7 +86,7 @@ input[type="checkbox"] {
 	color: $error-color;
 	font-size: 14px;
 	line-height: 1em;
-	height: 1em;
+	//height: 1em;
 	//opacity: 0;
 	//transition: opacity .1s;
 	display: none;
@@ -102,6 +107,13 @@ select {
 select.type-2 {
 	padding: 0 2em $gutter 0;
 	border-bottom: 1px solid #eeeeee;
+}
+select.type-3,
+select.type-3:focus {
+	@extend .inputtext;
+	& + .triangle {
+		right: 1px;
+	}
 }
 select + .triangle {
 	position: absolute;
@@ -272,7 +284,10 @@ select:focus {
 	}
 	.inputtext {
 		width: 270px;
-		margin: 0 2.7*$gutter;
+		margin: 0.5*$gutter 0 0.7*$gutter;
+		@media #{$medium-and-up}{
+			margin: 0 2.7*$gutter;
+		}
 	}
 }
 

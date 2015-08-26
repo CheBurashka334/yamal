@@ -219,12 +219,10 @@ $(document).ready(function(){
 		return false;
 	});
 	$('form').submit(function(){
-		if(($(this).find('.invalid-required, .invalid-pattern, .invalid-file').length > 0) || ($(this).find('[required]').val().length == 0)){
-			if($(this).find('[required]').val().length == 0){
-				$(this).find('[required]').each(function(){
-					validateRequired($(this));
-				});
-			}
+		$(this).find('[required]').each(function(){
+			validateRequired($(this));
+		});
+		if($(this).find('.invalid-required, .invalid-pattern, .invalid-file').length > 0){
 			return false;
 		} 
 	});

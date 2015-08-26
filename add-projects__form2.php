@@ -80,8 +80,9 @@
 				<div class="error-text">Заполните поля формы</div>
 			</div>
 			<div class="field-box col l12">
-				<input type="checkbox" checked required />
-				<label>Я даю свое разрешение на обработку и хранение персональных данных</label>
+				<input id="agreement" type="checkbox" checked required />
+				<label for="agreement">Я даю свое разрешение на обработку и хранение персональных данных <sup class="required-mark">*</sup></label>
+				<div class="error-text">Нельзя отправить данные без этого разрешения</div>
 			</div>
 		</div>
 		<input type="submit" class="btn btn-submit primary center" value="Отправить"/>

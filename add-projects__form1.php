@@ -62,7 +62,7 @@
 			<div class="field-box col l6 m12 s12">
 				<label>Период реализации проекта, лет <sup class="required-mark">*</sup></label>
 				<div class="select-box hide-on-large-only">
-					<select class="type-2" id="add-proj-period" name="add-proj-period-sel" required>
+					<select class="type-3" id="add-proj-period" name="add-proj-period-sel" required>
 						<option value="v1" selected>0,5</option>
 						<option value="v2">1</option>
 						<option value="v3">3</option>
@@ -154,8 +154,8 @@
 				<div class="error-text">текст ошибки для капчи</div>
 			</div>
 			<div class="field-box col l12 m12 s12">
-				<input type="checkbox" checked required />
-				<label>Я даю свое разрешение на обработку и хранение персональных данных <sup class="required-mark">*</sup></label>
+				<input id="agreement" type="checkbox" checked required />
+				<label for="agreement">Я даю свое разрешение на обработку и хранение персональных данных <sup class="required-mark">*</sup></label>
 				<div class="error-text">Нельзя отправить данные без этого разрешения</div>
 			</div>
 		</div>
