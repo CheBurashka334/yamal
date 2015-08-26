@@ -9,12 +9,12 @@
 					<option value="v2">A. Сельское хозяйство, охота и лесное хозяйство</option>
 					<option value="v3">B. Рыболовство, рыбоводство</option>
 					<optgroup label="C. Добыча полезных ископаемых">
-						<option value="v4">Все отрасли</option>
+						<option value="v4">C. Добыча полезных ископаемых - Все отрасли</option>
 						<option value="v5">CA. Добыча топливно-энергетических полезных ископаемых</option>
 						<option value="v6">CB. Добыча полезных ископаемых, кроме топливно-энергетических</option>
 					<optgroup>
 					<optgroup label="D. Обрабатывающие производства">
-						<option value="v7">Все отрасли</option>
+						<option value="v7">D. Обрабатывающие производства - Все отрасли</option>
 						<option value="v8">DA. Производство пищевых продуктов, включая напитки, и табака</option>
 						<option value="v9">DB. Текстильное и швейное производство</option>
 						<option value="v10">DC. Производство кожи, изделий из кожи и производство обуви</option>
@@ -78,7 +78,7 @@
 						</label>
 						<ul class="dropdown-sublist">
 							<li class="dropdown-item">
-								<input type="radio" class="dropdown-inp" name="action-dep-rad" value="v4" id="action-dep-v4" data-value-text="Выбрать все" data-value-icon="#depart"/>
+								<input type="radio" class="dropdown-inp" name="action-dep-rad" value="v4" id="action-dep-v4" data-value-text="C. Добыча полезных ископаемых - Все отрасли" data-value-icon="#depart"/>
 								<label class="dropdown-title" for="action-dep-v4">
 									<div class="item-text">Выбрать все</div>
 								</label>
@@ -103,7 +103,7 @@
 						</label>
 						<ul class="dropdown-sublist">
 							<li class="dropdown-item">
-								<input type="radio" class="dropdown-inp" name="action-dep-rad" value="v7" id="action-dep-v7" data-value-text="Выбрать все" data-value-icon="#depart"/>
+								<input type="radio" class="dropdown-inp" name="action-dep-rad" value="v7" id="action-dep-v7" data-value-text="D. Обрабатывающие производства - Все отрасли" data-value-icon="#depart"/>
 								<label class="dropdown-title" for="action-dep-v7">
 									<div class="item-text">Выбрать все</div>
 								</label>

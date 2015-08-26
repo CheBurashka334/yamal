@@ -2019,6 +2019,7 @@ ol:not(.nostyle) li:before {
 .dropdown-sublist {
   position: absolute;
   width: 100%;
+  height: 100%;
   top: 0;
   left: 0;
   background: #fff;
@@ -2031,7 +2032,7 @@ ol:not(.nostyle) li:before {
           transition: all .3s;
   z-index: 4;
 }
-/* line 102, scss/components/_dropdown.scss */
+/* line 103, scss/components/_dropdown.scss */
 .dropdown-sublist.open {
   -webkit-transform: scale(1) translate(100%, 0);
       -ms-transform: scale(1) translate(100%, 0);
@@ -2039,28 +2040,28 @@ ol:not(.nostyle) li:before {
   opacity: 1;
 }
 
-/* line 108, scss/components/_dropdown.scss */
+/* line 109, scss/components/_dropdown.scss */
 .dropdown-box.type-2 .dropdown-value {
   border: 1px solid #e2e2e2;
 }
-/* line 113, scss/components/_dropdown.scss */
+/* line 114, scss/components/_dropdown.scss */
 .dropdown-box.type-2.open .dropdown-value,
 .dropdown-box.type-2.open .dropdown-item:hover, .dropdown-box.type-2:hover .dropdown-value,
 .dropdown-box.type-2:hover .dropdown-item:hover {
   color: #2d4e9d;
   border-color: #2d4e9d;
 }
-/* line 118, scss/components/_dropdown.scss */
+/* line 119, scss/components/_dropdown.scss */
 .dropdown-box.type-2.open .triangle:after, .dropdown-box.type-2:hover .triangle:after {
   border-top-color: #2d4e9d;
 }
-/* line 122, scss/components/_dropdown.scss */
+/* line 123, scss/components/_dropdown.scss */
 .dropdown-box.type-2 .dropdown-list {
   box-shadow: none;
   border: 1px solid #2d4e9d;
 }
 
-/* line 127, scss/components/_dropdown.scss */
+/* line 128, scss/components/_dropdown.scss */
 .action-dep {
   width: 200%;
 }

@@ -67,7 +67,7 @@ $(document).ready(function(){
 			e.stopPropagation();
 		} else {
 			var value = $(this).find('[data-value-text]');
-			var box = $(this).parent('.dropdown-list').parent('.dropdown-box');
+			var box = $(this).parents('.dropdown-box');
 			
 			$(this).attr('data-active', 'active').siblings().removeAttr('data-active');
 			box.find('.dropdown-value > .item-text').html(value.attr('data-value-text'));
