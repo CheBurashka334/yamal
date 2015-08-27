@@ -1,6 +1,6 @@
 <?include('header.php');?>
-<div class="page-title">Банк проектов</div>
-<div class="filter row">
+<div class="page-title first-line">Банк проектов</div>
+<div class="filter row second-line">
 	<div class="col l3 m6 s12 field-box">
 		<div class="select-box hide-on-large-only">
 			<select class="type-3" id="type">
@@ -93,37 +93,37 @@
 	</div>
 </div>
 <div class="project-list row">
-	<div class="project-item col l6 m12 s12">
+	<div class="project-item trans-line col l6 m12 s12">
 		<div class="item-img">
 			<a href="#" class="img" style="background-image:url(images/content/proj-1.jpg)"></a>
 		</div>
 		<div class="item-title"><a href="#">ООО «Уральские локомотивы»</a></div>
 	</div>
-	<div class="project-item col l6 m12 s12">
+	<div class="project-item trans-line col l6 m12 s12">
 		<div class="item-img">
 			<a href="#"><img src="images/content/proj-2.jpg" /></a>
 		</div>
 		<div class="item-title"><a href="#">ООО «Либхерр-Нижний Новгород»</a></div>
 	</div>
-	<div class="project-item col l6 m12 s12">
+	<div class="project-item trans-line col l6 m12 s12">
 		<div class="item-img">
 			<a href="#" class="img" style="background-image:url(images/content/proj-3.jpg)"></a>
 		</div>
 		<div class="item-title"><a href="#">ОАО «Ямалтрансстрой»</a></div>
 	</div>
-	<div class="project-item col l6 m12 s12">
+	<div class="project-item trans-line col l6 m12 s12">
 		<div class="item-img">
 			<a href="#"><img src="images/content/proj-4.jpg" /></a>
 		</div>
 		<div class="item-title"><a href="#">ООО «Юрхаровнефтегаз»</a></div>
 	</div>
-	<div class="project-item col l6 m12 s12">
+	<div class="project-item trans-line col l6 m12 s12">
 		<div class="item-img">
 			<a href="#"><img src="images/content/proj-5.jpg" /></a>
 		</div>
 		<div class="item-title"><a href="#">ОАО «Пургаздобыча»</a></div>
 	</div>
-	<div class="project-item col l6 m12 s12">
+	<div class="project-item trans-line col l6 m12 s12">
 		<div class="item-img">
 			<a href="#"><img src="images/content/proj-6.jpg" /></a>
 		</div>

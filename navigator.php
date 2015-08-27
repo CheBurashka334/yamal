@@ -1,7 +1,7 @@
 <?include('header.php');?>
-<div class="page-title">Навигатор мер государственной поддержки бизнеса</div>
+<div class="page-title first-line">Навигатор мер государственной поддержки бизнеса</div>
 <div class="navigator filter">
-	<div class="nav-item">
+	<div class="nav-item second-line">
 		<div class="block-title">Тип получателя поддержки</div>
 		<div class="select-box hide-on-med-and-up">
 			<select class="" id="rec-type" name="rec-type-sel">
@@ -83,7 +83,7 @@
 			</ul>
 		</div>
 	</div>
-	<div class="nav-item">
+	<div class="nav-item third-line">
 		<div class="block-title">Категория получателя поддержки</div>
 		<div class="select-box hide-on-med-and-up">
 			<select class="" id="rec-cat" name="rec-cat-sel">
@@ -125,7 +125,7 @@
 			</ul>
 		</div>
 	</div>
-	<div class="nav-item">
+	<div class="nav-item fourth-line">
 		<div class="block-title">Срок существования бизнеса</div>
 		<div class="select-box hide-on-med-and-up">
 			<select class="" id="biz-period" name="biz-period-sel">

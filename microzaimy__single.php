@@ -1,14 +1,14 @@
 <?include('header.php');?>
-<div class="breadcrumbs">
+<div class="breadcrumbs first-line">
 	<ul class="nostyle">
 		<li class="breadcrumbs-item"><a href="#" class="breadcrumbs-link">Меры поддержки</a></li>
 		<li class="breadcrumbs-item"><a href="#" class="breadcrumbs-link">Микрозаймы</a></li>
 	</ul>
 </div>
 <div class="sup-measures-single micro-z">
-	<div class="page-title">Мирозайм “Северный завод”</div>
+	<div class="page-title first-line">Мирозайм “Северный завод”</div>
 	<div class="item-content">
-		<div class="table-tabs hide-on-med-and-up">
+		<div class="table-tabs hide-on-med-and-up second-line">
 			<div class="select-box">
 				<select class="hide-on-med-and-up type-2" id="tabber" data-tab-content="micro-content">
 					<option value="v1" selected>Краткосрочный займ</option>
@@ -55,7 +55,7 @@
 				</div>
 			</div>
 		</div>
-		<table class="zaim hide-on-small-only">
+		<table class="zaim hide-on-small-only second-line">
 			<tr>
 				<th></th>
 				<th>Краткосрочный микрозайм</th>
@@ -81,8 +81,8 @@
 				<td>до 12 месяцев</td>
 			</tr>
 		</table>
-		<a href="#" class="btn primary center order-btn">Отправить заявку</a>
-		<div class="content-block">
+		<a href="#" class="btn primary center order-btn second-line">Отправить заявку</a>
+		<div class="content-block third-line">
 			<div class="block-title">Дополнительные документы</div>
 			<div class="row">
 				<div class="col l6 m12 s12">

@@ -1,13 +1,13 @@
 <?include('header.php');?>
 <div class="project-single">
 	<div class="project-info row">
-		<div class="item-title col l9 m8 s12">ОАО «Ямалтрансстрой»</div>
-		<div class="item-desc col l9 m8 s12">Строительство и эксплуатация железнодорожной магистрали</div>
-		<div class="item-logo hide-on-small-only">
+		<div class="item-title first-line col l9 m8 s12">ОАО «Ямалтрансстрой»</div>
+		<div class="item-desc third-line col l9 m8 s12">Строительство и эксплуатация железнодорожной магистрали</div>
+		<div class="item-logo third-line hide-on-small-only">
 			<img class="logo" src="images/content/project-logo.png" />
 		</div>
 	</div>
-	<div class="project-links row">
+	<div class="project-links third-line row">
 		<div class="col l9 m6 s12"><a href="#" target="_blank">Перейти на сайт компании</a></div>
 		<div class="share-box col l3 m6 s12">
 			<!-- Сережа сказал пиздить отсюда 
@@ -29,10 +29,10 @@
 			</div>
 		</div>
 	</div>
-	<div class="project-img m-full-width">
+	<div class="project-img second-line m-full-width">
 		<img class="img" src="images/content/project-img.jpg" />
 	</div>
-	<div class="project-indicators row">
+	<div class="project-indicators fourth-line row">
 		<div class="indic-item col l3 m6 s12">
 			<span><span class="large">700</span> единиц</span>
 			<p>Строительной и ремонтной техники</p>

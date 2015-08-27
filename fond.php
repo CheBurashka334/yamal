@@ -1,7 +1,7 @@
 <?include('header.php');?>
 <div class="fond-page">
-	<div class="page-title">Гарантийный фонд поддержки малого предпринимательства Ямало-Ненецкого автономного округа</div>
-	<div class="tab-header">
+	<div class="page-title first-line">Гарантийный фонд поддержки малого предпринимательства Ямало-Ненецкого автономного округа</div>
+	<div class="tab-header second-line">
 		<div class="select-box hide-on-med-and-up">
 			<select class="type-2" id="tabber" data-tab-content="fond-content">
 				<option value="v1" selected>О фонде</option>
@@ -26,7 +26,7 @@
 			</ul>
 		</div>
 	</div>
-	<div class="tab-content" id="fond-content">
+	<div class="tab-content third-line" id="fond-content">
 		<div class="content-item" data-tab="v1">
 			<div class="content-block">
 				<div class="item-text">

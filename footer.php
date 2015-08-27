@@ -30,8 +30,8 @@
 						<span class="address">г. Салехард, ул. Комсомольская, 13</span>
 					</p>
 					<p class="soc">
-						<a class="btn-icon small vk" href="#" target="_blank"><svg class="icon"><use xlink:href="#vk"</svg></a>
-						<a class="btn-icon small fb" href="#" target="_blank"><svg class="icon"><use xlink:href="#fb"</svg></a>
+						<a class="btn-icon small vk" href="#" target="_blank"><svg class="icon"><use xlink:href="#vk"/></svg></a>
+						<a class="btn-icon small fb" href="#" target="_blank"><svg class="icon"><use xlink:href="#fb"/></svg></a>
 					</p>
 				</div>
 			</div>

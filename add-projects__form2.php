@@ -1,7 +1,7 @@
 <?include('header.php');?>
 <div class="add-project-page form-2">
-	<div class="page-title">Предложить проект</div>
-	<form name="add-project-2" novalidate>
+	<div class="page-title first-line">Предложить проект</div>
+	<form name="add-project-2" novalidate class="second-line">
 		<div class="form-block row">
 			<div class="field-box col l12">
 				<label>Организационно-правовая форма предприятия (ООО, ЗАО, ИП) <sup class="required-mark">*</sup></label>

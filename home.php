@@ -1,6 +1,6 @@
 <?include('header.php');?>
 <div class="home-page">
-	<div class="home-slider carousel">
+	<div class="home-slider carousel first-line">
 		<div class="carousel-content m-full-width s-full-width">
 			<div class="carousel-inner">
 				<div class="item">
@@ -19,7 +19,7 @@
 		</div>
 		<ul class="carousel-pagination"></ul>
 	</div>
-	<div class="measures-block row">
+	<div class="measures-block row second-line">
 		<div class="item col l3 m4 s12">
 			<a href="#">
 				<div class="item-icon circle hide-on-small-only">

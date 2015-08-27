@@ -12,7 +12,10 @@
 			margin-bottom: 0;
 		}
 	}
-	select {
+	select,
+	select:focus,
+	select.type-2,
+	select.type-2:focus{
 		border-bottom: 1px solid #e1e1e1;
 		padding-bottom: $gutter;
 		padding-left: 0;

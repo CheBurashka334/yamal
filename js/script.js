@@ -1,6 +1,23 @@
+$(window).load(function(){
+	$('.layout').removeClass('noanim');
+});
 $(document).ready(function(){
 	
 	$('#svg-placeholder').html(svg);
+	
+	$('.layout').addClass('animation');
+	setTimeout(function(){
+		$('.animation .first-line').addClass('anim');
+	},50);
+	setTimeout(function(){
+		$('.animation .second-line').addClass('anim');
+	},250);
+	setTimeout(function(){
+		$('.animation .third-line, .animation .trans-line:eq(0), .animation .trans-line:eq(3), .animation .trans-line:eq(5)').addClass('anim');
+	},400);
+	setTimeout(function(){
+		$('.animation .fourth-line, .animation .trans-line:eq(1), .animation .trans-line:eq(2), .animation .trans-line:eq(4)').addClass('anim');
+	},600);
 	
 	// search 
 	$('.search').keyup(function(){
@@ -97,27 +114,6 @@ $(document).ready(function(){
 	});
 	
 	
-	/*
-	$(window).scroll(function(){
-		if($(window).scrollTop() > 50) {
-			$('.header').addClass('fixed');
-		} else {
-			$('.header').removeClass('fixed');
-		}
-	});
-	*/
-	
-	// modal
-	/*
-	$('.btn-modal').click(function(){
-		var modal = $(this).attr('data-modal');
-		$('.dark-bg, #'+modal).fadeIn(500);
-	});
-	$('.modal .btn-close, .dark-bg').click(function(){
-		$('.dark-bg, .modal').fadeOut(500);
-	});
-	*/
-	
 	// menu
 	$('.js-menu').click(function(){
 		var act = $(this).attr('data-action');
@@ -132,15 +128,6 @@ $(document).ready(function(){
 				$('.js-menu').attr('data-action', 'open');
 		}
 	});
-	
-	// scrollFire
-	// http://materializecss.com/scrollfire.html
-	/*
-	var options = [
-		
-	];
-	Materialize.scrollFire(options);
-	*/
 	
 	// jcarousel
 	// http://sorgalla.com/jcarousel/docs/

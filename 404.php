@@ -1,5 +1,5 @@
 <?include('header.php');?>
-<div class="page-404 row">
+<div class="page-404 row first-line">
 	<div class="col l6 m6 s12 item-img">
 		<img src="images/404.png"/>
 	</div>

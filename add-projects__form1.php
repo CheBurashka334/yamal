@@ -1,7 +1,7 @@
 <?include('header.php');?>
 <div class="add-project-page">
-	<div class="page-title">Предложить проект</div>
-	<form name="add-project-1" novalidate>
+	<div class="page-title first-line">Предложить проект</div>
+	<form name="add-project-1" novalidate class="second-line">
 		<div class="form-block row">
 			<div class="block-title col">Информация об инвесторе</div>
 			<div class="field-box col l6 m12 s12">

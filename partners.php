@@ -1,8 +1,8 @@
 <?include('header.php');?>
 <div class="partners-page">
-	<div class="page-title">Партнеры</div>
-	<div class="block-title">Органы государственной власти</div>
-	<div class="row">
+	<div class="page-title first-line">Партнеры</div>
+	<div class="block-title second-line">Органы государственной власти</div>
+	<div class="row second-line">
 		<div class="item col l3 m4">
 			<a href="#">
 				<img class="item-logo" src="images/content/partner-logo-universal.png" />
@@ -28,8 +28,8 @@
 			</a>
 		</div>
 	</div>
-	<div class="block-title">Контролирующие структуры</div>
-	<div class="row">
+	<div class="block-title third-line">Контролирующие структуры</div>
+	<div class="row third-line">
 		<div class="item col l3 m4">
 			<a href="#">
 				<img class="item-logo" src="images/content/partner-logo-universal.png" />
@@ -55,8 +55,8 @@
 			</a>
 		</div>
 	</div>
-	<div class="block-title">Государственные услуги</div>
-	<div class="row">
+	<div class="block-title fourth-line">Государственные услуги</div>
+	<div class="row fourth-line">
 		<div class="item col l3 m4">
 			<a href="#">
 				<img class="item-logo" src="images/content/partner-logo-universal.png" />

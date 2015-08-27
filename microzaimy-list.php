@@ -1,8 +1,8 @@
 <?include('header.php');?>
 <div class="sup-measures-page">
-	<div class="page-title">Меры поддержки</div>
+	<div class="page-title first-line">Меры поддержки</div>
 	<div class="sup-measures">
-		<div class="tab-header">
+		<div class="tab-header second-line">
 			<div class="select-box hide-on-med-and-up">
 				<select class="type-2" id="tabber" data-tab-content="sm-content">
 					<option value="v1" selected>Микрозаймы</option>
@@ -70,7 +70,7 @@
 		<div class="tab-content" id="sm-content">
 			<div class="content-item micro-z" data-tab="v1">
 				<div class="row">
-					<div class="col l6 m12 s12 item">
+					<div class="col l6 m12 s12 item trans-line">
 						<a href="#">
 							<div class="block-title">Микрозайм “Стандартный”</div>
 							<div class="item-text"><p>Микрозайм “Стандартный” текст текст текст</p></div>
@@ -81,7 +81,7 @@
 							</div>
 						</a>
 					</div>
-					<div class="col l6 m12 s12 item">
+					<div class="col l6 m12 s12 item trans-line">
 						<a href="#">
 							<div class="block-title">Микрозайм “Северный завод”</div>
 							<div class="item-info">
@@ -93,7 +93,7 @@
 					</div>
 				</div>
 				<div class="row">
-					<div class="col l6 m12 s12 item">
+					<div class="col l6 m12 s12 item trans-line">
 						<a href="#">
 							<div class="block-title">Микрозайм “Забота”</div>
 							<div class="item-info">
@@ -103,7 +103,7 @@
 							</div>
 						</a>
 					</div>
-					<div class="col l6 m12 s12 item">
+					<div class="col l6 m12 s12 item trans-line">
 						<a href="#">
 							<div class="block-title">Микрозайм “Забота-Рефинанс”</div>
 							<div class="item-info">
@@ -115,7 +115,7 @@
 					</div>
 				</div>
 				<div class="row">
-					<div class="col l6 m12 s12 item">
+					<div class="col l6 m12 s12 item trans-line">
 						<a href="#">
 							<div class="block-title">Микрозайм “Франчайзинг”</div>
 							<div class="item-info">
@@ -125,7 +125,7 @@
 							</div>
 						</a>
 					</div>
-					<div class="col l6 m12 s12 item">
+					<div class="col l6 m12 s12 item trans-line">
 						<a href="#">
 							<div class="block-title">Микрозайм “Рефинансирование”</div>
 							<div class="item-info">

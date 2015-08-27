@@ -1,7 +1,7 @@
 <?include('header.php');?>
 <div class="group-page">
-	<div class="page-title">Наша группа</div>
-	<div class="logos-block">
+	<div class="page-title first-line">Наша группа</div>
+	<div class="logos-block second-line">
 		<div class="firstline-logo-box row">
 			<div class="logo-item col l4 m4 s4 center center-align">
 				<img src="images/content/group/logo.png" />
@@ -24,7 +24,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="content-block">
+	<div class="content-block third-line">
 		<p>В соответствии с Федеральным законом от 24.07.2007 г. № 209-ФЗ «О развитии малого и среднего предпринимательства в Российской Федерации», Законом Ямало-Ненецкого автономного округа от 25.12.2008 г. № 128-ЗАО «О развитии малого и среднего предпринимательства в Ямало-Ненецком автономном округе», Приказом Министерства экономического развития Российской Федерации от 30.01.2009 г. № 31 "О мерах по реализации в 2009 году мероприятий по государственной поддержке малого и среднего предпринимательства", на основании Распоряжения Администрации ЯНАО от 02.12.2009 г. </p>
 	</div>
 </div>

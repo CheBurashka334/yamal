@@ -1,8 +1,8 @@
 <?include('header.php');?>
 <div class="sup-measures-page">
-	<div class="page-title">Меры поддержки</div>
+	<div class="page-title first-line">Меры поддержки</div>
 	<div class="sup-measures">
-		<div class="tab-header">
+		<div class="tab-header second-line">
 			<div class="select-box hide-on-med-and-up">
 				<select class="type-2" id="tabber" data-tab-content="sm-content">
 					<option value="v1">Микрозаймы</option>
@@ -138,9 +138,9 @@
 			</div>
 			<div class="content-item purp-z" data-tab="v2">
 				<div class="content-block">
-					<div class="block-title item-title">Целевые займы субъектам малого предпринимательства</div>
+					<div class="block-title item-title third-line">Целевые займы субъектам малого предпринимательства</div>
 					<div class="row">
-					<div class="col l6 m12 s12 item">
+					<div class="col l6 m12 s12 item trans-line">
 						<a href="#">
 							<div class="block-title">Займ “Франчайзинг”</div>
 							<div class="item-text">
@@ -150,7 +150,7 @@
 							</div>
 						</a>
 					</div>
-					<div class="col l6 m12 s12 item">
+					<div class="col l6 m12 s12 item trans-line">
 						<a href="#">
 							<div class="block-title">Займ “Приоритет МО”</div>
 							<div class="item-text">
@@ -162,7 +162,7 @@
 					</div>
 				</div>
 					<div class="row">
-						<div class="col l6 m12 s12 item">
+						<div class="col l6 m12 s12 item trans-line">
 							<a href="#">
 								<div class="block-title">Займ “Приоритет ЯНАО”</div>
 								<div class="item-text">
@@ -172,7 +172,7 @@
 								</div>
 							</a>
 						</div>
-						<div class="col l6 m12 s12 item">
+						<div class="col l6 m12 s12 item trans-line">
 							<a href="#">
 								<div class="block-title">Займ “Молодежный”</div>
 								<div class="item-text">
@@ -184,7 +184,7 @@
 						</div>
 					</div>
 					<div class="row">
-						<div class="col l6 m12 s12 item">
+						<div class="col l6 m12 s12 item trans-line">
 							<a href="#">
 								<div class="block-title">Займ “Коммерческий”</div>
 								<div class="item-text">
@@ -197,7 +197,7 @@
 					</div>
 					<div class="block-title item-title">Целевые займы организациям инфраструктуры поддержки</div>
 					<div class="row">
-						<div class="col l6 m12 s12 item">
+						<div class="col l6 m12 s12 item trans-line">
 							<a href="#">
 								<div class="block-title">Займ “Франчайзинг”</div>
 								<div class="item-text">
@@ -207,7 +207,7 @@
 								</div>
 							</a>
 						</div>
-						<div class="col l6 m12 s12 item">
+						<div class="col l6 m12 s12 item trans-line">
 							<a href="#">
 								<div class="block-title">Займ “Инфраструктурный-Микрофинанс”</div>
 								<div class="item-text">
@@ -219,7 +219,7 @@
 						</div>
 					</div>
 					<div class="row">
-						<div class="col l6 m12 s12 item">
+						<div class="col l6 m12 s12 item trans-line">
 							<a href="#">
 								<div class="block-title">Займ “Приоритет ЯНАО”</div>
 								<div class="item-text">

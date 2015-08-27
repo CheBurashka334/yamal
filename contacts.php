@@ -1,6 +1,6 @@
 <?include('header.php');?>
 <div class="contact-page">
-	<div class="page-title">Контакты</div>
+	<div class="page-title first-line">Контакты</div>
 	<!--div class="dropdown-select-box">
 		<select class="dropdown-select hide-on-large-only" id="city">
 			<option value="v1" selected>Салехард</option>
@@ -10,7 +10,7 @@
 		</select>
 		<label for="city" class="triangle"></label>
 	</div-->
-	<div class="select-box hide-on-large-only">
+	<div class="select-box hide-on-large-only second-line">
 		<select class="type-2" id="city" name="city-sel">
 			<option value="v1" selected>Салехард</option>
 			<option value="v2">Губкинский</option>
@@ -23,7 +23,7 @@
 		</select>
 		<label for="city" class="triangle"></label>
 	</div>
-	<div class="dropdown-box hide-on-med-and-down">
+	<div class="dropdown-box hide-on-med-and-down second-line">
 		<div class="dropdown-value">
 			<div class="item-text"></div>
 			<div class="triangle"></div>
@@ -79,14 +79,14 @@
 			</li>
 		</ul>
 	</div>
-	<div class="map-box s-full-width m-full-width">
+	<div class="map-box s-full-width m-full-width third-line">
 		<div class="loader"></div>
 		<div class="map" id="map-cnt"></div>
 	</div>
-	<div class="block-title">
+	<div class="block-title fourth-line">
 		Финансовая группа поддержки субъектов малого и среднего предпринимательства ЯНАО
 	</div>
-	<div class="row">
+	<div class="row fourth-line">
 		<div class="col l6 m9 s12 row logos center">
 			<div class="col l4 m4 s4 left-align">
 				<img src="images/content/cnt-logo-1.png" class="img"/>

@@ -1,7 +1,7 @@
 <?include('header.php');?>
-<div class="page-title">Результаты поиска</div>
+<div class="page-title first-line">Результаты поиска</div>
 <div class="search-results-page">
-	<div class="filter hide-on-small-only">
+	<div class="filter hide-on-small-only second-line">
 		<div class="item action-dep-box">
 			<div class="select-box hide-on-large-only">
 				<select class="mobile-synh" id="action-dep" name="action-dep-sel">
@@ -486,7 +486,7 @@
 		</div>
 	</div>
 	<div class="search-results">
-		<div class="tab-header">
+		<div class="tab-header third-line">
 			<div class="select-box hide-on-med-and-up">
 				<select class="type-2" id="tabber" data-tab-content="sr-content">
 					<option value="v1">Микрозаймы</option>
@@ -539,7 +539,7 @@
 				</ul>
 			</div>
 		</div>
-		<div class="tab-content" id="sr-content">
+		<div class="tab-content fourth-line" id="sr-content">
 			<div class="content-item" data-tab="v1">
 				<div class="content-block">
 					<div class="block-title item-title">Микрозаймы заголовок</div>

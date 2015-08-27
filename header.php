@@ -10,18 +10,13 @@
 	<link rel="shortcut icon" href="favicon.png" type="image/png"-->
 	<script src="js/jquery-1.11.3.min.js"></script>
 	<script src="js/jquery.jcarousel.min.js"></script>
-	<script src="//cdnjs.cloudflare.com/ajax/libs/select2/4.0.0/js/select2.min.js"></script>
-	<script src="js/materialize.min.js"></script>
-	<!--script src="js/angular.js"></script-->
-	<!--link href="//cdnjs.cloudflare.com/ajax/libs/select2/4.0.0/css/select2.min.css" rel="stylesheet" /-->
 	<link rel="stylesheet" type="text/css" href="template_styles.css" />
-	<!--script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script-->
 	<script src="js/svg-lib.js"></script>
 	<script src="js/script.js"></script>
 </head>
 <body>
 <div id="svg-placeholder" class="hide"></div>
-<div class="layout">
+<div class="layout noanim">
 <div class="page-aside hide-on-large-only">
 	<div class="inner">
 		<?include('mobile-menu.php');?>

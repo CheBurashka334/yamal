@@ -1,7 +1,7 @@
 <?include('header.php');?>
 <div class="about-page">
-	<div class="page-title">О Ямале</div>
-	<div class="about-block">
+	<div class="page-title first-line">О Ямале</div>
+	<div class="about-block second-line">
 		<p>Площадь региона: <span class="xx-big">769,3</span> тыс.км<sup>2</sup></p>
 		<p>Административный центр: <span class="xx-big">Салехард</span></p>
 		<p>Население: <span class="x-big">0.54</span> млн. чел</p>
