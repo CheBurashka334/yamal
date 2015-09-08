@@ -5841,9 +5841,14 @@ table.zaim tr th:nth-child(2):not(:last-child):after {
   z-index: 995;
   opacity: 0;
   will-change: transform, opacity;
-  -webkit-transform: translate(0, -200%);
+  /*начало косяка*/
+  /*-webkit-transform: translate(0, -200%);
       -ms-transform: translate(0, -200%);
-          transform: translate(0, -200%);
+          transform: translate(0, -200%);*/
+	-webkit-transform: translate(0, -500%);
+      -ms-transform: translate(0, -500%);
+          transform: translate(0, -500%);
+  /*конец косяка*/
   -webkit-transition: opacity .3s ease .1s;
           transition: opacity .3s ease .1s;
 }
