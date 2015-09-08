@@ -60,6 +60,35 @@ input[type="checkbox"] {
 	}
 }
 
+// radio
+input[type="radio"] {
+	display: none;
+	& + .radiolabel {
+		position: relative;
+		padding-left: 3*$gutter;
+		vertical-align: middle;
+		display: block;
+		margin: 0.5*$gutter 0 0.7*$gutter;
+		&:before {
+			position: absolute;
+			top: 0;
+			left: 0;
+			content: '';
+			background-color: #fff;
+			width: 21px;
+			height: 21px;
+			border: 1px solid $base-text-color;
+			vertical-align: middle;
+			padding: 5px;
+			border-radius: 50%;
+			background-clip: content-box;
+		}
+	}
+	&:checked + .radiolabel:before {
+		background-color: $base-text-color;
+	}
+}
+
 // error
 .required-mark {
 	color: $error-color;

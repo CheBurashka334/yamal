@@ -1,0 +1,105 @@
+// modal
+.dark-bg {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #3b4f99;
+	z-index: 990;
+	opacity: 0;
+	will-change: transform, opacity;
+	transform: translate(0,-100%);
+	transition: opacity .3s ease .1s;
+	&.open {
+		opacity: 0.2;
+		transform: translate(0,0);
+	}
+}
+.modal {
+	position: absolute;
+	top: 5%;
+	left: 5%;
+	width: 90%;
+	max-width: 570px;
+	background: #fff;
+	padding: 4*$gutter 10% 3*$gutter;
+	z-index: 995;
+	opacity: 0;
+	will-change: transform, opacity;
+	transform: translate(0,-200%);
+	transition: opacity .3s ease .1s;
+	&.open {
+		opacity: 1;
+		transform: translate(0,0);
+	}
+	&.small {
+		max-width: 470px;
+	}
+	@media #{$medium-and-up}{
+		top: 23*$gutter;
+		left: 50%;
+		padding: 4*$gutter 6*$gutter;
+		margin-left: -285px;
+		&.small {
+			margin-left: -235px;
+		}
+	}
+	.btn-close {
+		position: absolute;
+		top: 2*$gutter;
+		right: 2*$gutter;
+		width: 34px;
+		height: 34px;
+		padding: 0 5px;
+		will-change: transform;
+		transition: transform .3s ease;
+		transform: rotate(0deg);
+		.icon {
+			fill: $primary-color;
+			width: 100%;
+			height: 100%;
+		}
+		&:hover {
+			transform: rotate(90deg);
+		}
+	}
+	.block-title {
+		margin-top: 2*$gutter;
+	}
+}
+
+.modal .social {
+	.soc {
+		margin: 4.5*$gutter auto;
+		padding: 0 .5*$gutter;
+	}
+	.btn-icon {
+		width: 60px;
+		height: 60px;
+		border-color: #eeeeee;
+		margin: 0 1.5*$gutter;
+	}
+}
+.modal .links-box {
+	padding: 4.5*$gutter 0 0;
+	text-align: center;
+	.btn {
+		margin: 1.5*$gutter;
+	}
+}
+.modal .opros-box {
+	.block-title.large {
+		line-height: 1.1em;
+		margin: 3*$gutter 0 4*$gutter;
+	}
+	.form-box label {
+		font-size: 18px;
+	}
+	.field-box {
+		margin: 3*$gutter 0;
+	}
+	.btn {
+		margin-top: 5.5*$gutter;
+	}
+}

@@ -1,14 +1,17 @@
 // about-page
 .about-page {
 	.about-block {
-		background: url('images/map.png') center right no-repeat;
-		background-size: 50% auto;
 		margin-bottom: 8*$gutter;
 		p {
 			margin: 2.5*$gutter 0 4*$gutter;
 			line-height: 30px;
 		}
+		@media #{$medium-and-up}{
+			background: url('images/map-tablet.png') center right no-repeat;
+			background-size: auto;
+		}
 		@media #{$large-and-up}{
+			background: url('images/map.png') center right no-repeat;
 			padding-top: 9*$gutter;
 			margin-bottom: 17*$gutter;
 			p {

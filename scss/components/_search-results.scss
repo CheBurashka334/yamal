@@ -3,6 +3,9 @@
 	display: flex;
 	align-items: stretch;
 	margin: 7*$gutter 0 6*$gutter;
+	.tab-header {
+		z-index: 1;
+	}
 	.item {
 		width: 20%;
 	}

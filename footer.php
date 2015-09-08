@@ -48,6 +48,19 @@
 		</div>
 	</div>
 </div> <!-- /.page -->
+<div class="dark-bg"></div>
+<div class="modal small" id="modal-soc">
+	<button class="btn-close"><svg class="icon"><use xlink:href="#cross"/></svg></button>
+	<div class="modal-content"><? include('modal-soc.php');?></div>
+</div>
+<div class="modal" id="modal-links">
+	<button class="btn-close"><svg class="icon"><use xlink:href="#cross"/></svg></button>
+	<div class="modal-content"><? include('modal-links.php');?></div>
+</div>
+<div class="modal" id="modal-opros">
+	<button class="btn-close"><svg class="icon"><use xlink:href="#cross"/></svg></button>
+	<div class="modal-content"><? include('modal-opros.php');?></div>
+</div>
 </div> <!-- /.layout -->
 </body>
 </html>

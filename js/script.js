@@ -1,11 +1,10 @@
-$(window).load(function(){
-	$('.layout').removeClass('noanim');
-});
 $(document).ready(function(){
 	
 	$('#svg-placeholder').html(svg);
 	
-	$('.layout').addClass('animation');
+	setTimeout(function(){
+		$('.layout').addClass('animation');
+	},10);
 	setTimeout(function(){
 		$('.animation .first-line').addClass('anim');
 	},50);
@@ -18,6 +17,24 @@ $(document).ready(function(){
 	setTimeout(function(){
 		$('.animation .fourth-line, .animation .trans-line:eq(1), .animation .trans-line:eq(2), .animation .trans-line:eq(4)').addClass('anim');
 	},600);
+	
+	// modals
+	// open
+	$('.show-modal').click(function(){
+		var modal = $(this).attr('data-modal');
+		$('.dark-bg,'+modal).addClass('open');
+	});
+	setTimeout(function(){
+		$('.dark-bg,#modal-opros').addClass('open');
+	},20000);
+	setTimeout(function(){
+		$('.dark-bg,#modal-soc').addClass('open');
+	},60000);
+	
+	// close
+	$('.btn-close, .dark-bg').click(function(){
+		$('.dark-bg, .modal').removeClass('open');
+	});
 	
 	// search 
 	$('.search').keyup(function(){
