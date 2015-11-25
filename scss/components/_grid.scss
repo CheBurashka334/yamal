@@ -196,12 +196,14 @@
     display: initial !important;
   }
 }
-.full-width {
+.full-width,
+.full-width.row {
 	width: 100vw;
 	margin-left: calc(-1*(100vw - 100%)/2);
 }
 
-.s-full-width {
+.s-full-width,
+.s-full-width.row {
 	@media #{$small-and-down} {
 		width: 100vw;
 		margin-left: calc(-1*(100vw - 100%)/2);
@@ -213,13 +215,15 @@
 		}
 	}
 }
-.m-full-width {
+.m-full-width,
+.m-full-width.row {
 	@media #{$medium-only} {
 		width: 100vw;
 		margin-left: calc(-1*(100vw - 100%)/2);
 	}
 }
-.l-full-width {
+.l-full-width,
+.l-full-width.row {
 	@media #{$large-and-up} {
 		width: 100vw;
 		margin-left: calc(-1*(100vw - 100%)/2);

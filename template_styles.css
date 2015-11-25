@@ -1521,19 +1521,22 @@ ul.staggered-list li {
 }
 
 /* line 199, scss/components/_grid.scss */
-.full-width {
+.full-width,
+.full-width.row {
   width: 100vw;
   margin-left: calc(-1*(100vw - 100%)/2);
 }
 
 @media only screen and (max-width: 600px) {
-  /* line 204, scss/components/_grid.scss */
-  .s-full-width {
+  /* line 205, scss/components/_grid.scss */
+  .s-full-width,
+  .s-full-width.row {
     width: 100vw;
     margin-left: calc(-1*(100vw - 100%)/2);
   }
-  /* line 208, scss/components/_grid.scss */
-  .s-full-width .col {
+  /* line 210, scss/components/_grid.scss */
+  .s-full-width .col,
+  .s-full-width.row .col {
     padding-left: 20px;
     padding-right: 20px;
     float: none;
@@ -1542,16 +1545,18 @@ ul.staggered-list li {
 }
 
 @media only screen and (min-width: 601px) and (max-width: 992px) {
-  /* line 216, scss/components/_grid.scss */
-  .m-full-width {
+  /* line 218, scss/components/_grid.scss */
+  .m-full-width,
+  .m-full-width.row {
     width: 100vw;
     margin-left: calc(-1*(100vw - 100%)/2);
   }
 }
 
 @media only screen and (min-width: 993px) {
-  /* line 222, scss/components/_grid.scss */
-  .l-full-width {
+  /* line 225, scss/components/_grid.scss */
+  .l-full-width,
+  .l-full-width.row {
     width: 100vw;
     margin-left: calc(-1*(100vw - 100%)/2);
   }
@@ -3522,6 +3527,317 @@ table.zaim tr th:nth-child(2):not(:last-child):after {
 /* line 20, scss/components/_breadcrumbs.scss */
 .breadcrumbs .breadcrumbs-link:hover {
   color: #c7213a;
+}
+
+/*! jQuery UI - v1.11.4 - 2015-11-25
+* http://jqueryui.com
+* Includes: core.css, slider.css
+* Copyright jQuery Foundation and other contributors; Licensed MIT */
+/* Layout helpers
+----------------------------------*/
+/* line 8, scss/components/_jquery-ui.scss */
+.ui-helper-hidden {
+  display: none;
+}
+
+/* line 11, scss/components/_jquery-ui.scss */
+.ui-helper-hidden-accessible {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+/* line 21, scss/components/_jquery-ui.scss */
+.ui-helper-reset {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  line-height: 1.3;
+  text-decoration: none;
+  font-size: 100%;
+  list-style: none;
+}
+
+/* line 31, scss/components/_jquery-ui.scss */
+.ui-helper-clearfix:before,
+.ui-helper-clearfix:after {
+  content: "";
+  display: table;
+  border-collapse: collapse;
+}
+
+/* line 37, scss/components/_jquery-ui.scss */
+.ui-helper-clearfix:after {
+  clear: both;
+}
+
+/* line 40, scss/components/_jquery-ui.scss */
+.ui-helper-clearfix {
+  min-height: 0
+  /* support: IE7 */
+}
+
+/* line 43, scss/components/_jquery-ui.scss */
+.ui-helper-zfix {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  opacity: 0;
+  filter: Alpha(Opacity=0)
+  /* support: IE8 */
+}
+
+/* line 53, scss/components/_jquery-ui.scss */
+.ui-front {
+  z-index: 100;
+}
+
+/* Interaction Cues
+----------------------------------*/
+/* line 60, scss/components/_jquery-ui.scss */
+.ui-state-disabled {
+  cursor: default !important;
+}
+
+/* Icons
+----------------------------------*/
+/* states and images */
+/* line 69, scss/components/_jquery-ui.scss */
+.ui-icon {
+  display: block;
+  text-indent: -99999px;
+  overflow: hidden;
+  background-repeat: no-repeat;
+}
+
+/* Misc visuals
+----------------------------------*/
+/* Overlays */
+/* line 81, scss/components/_jquery-ui.scss */
+.ui-widget-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* line 88, scss/components/_jquery-ui.scss */
+.ui-slider {
+  position: relative;
+  text-align: left;
+}
+
+/* line 92, scss/components/_jquery-ui.scss */
+.ui-slider .slider-input {
+  width: 100%;
+  height: 40px;
+  font-size: 17px;
+  line-height: 40px;
+  vertical-align: middle;
+  padding: 0 12px;
+  border: 0;
+  background: #fff;
+}
+
+/* line 102, scss/components/_jquery-ui.scss */
+.ui-slider .unit {
+  position: absolute;
+  top: 0;
+  font-size: 17px;
+  line-height: 40px;
+}
+
+/* line 108, scss/components/_jquery-ui.scss */
+.ui-slider .min,
+.ui-slider .max {
+  font-size: 12px;
+  position: absolute;
+  top: 50px;
+}
+
+/* line 114, scss/components/_jquery-ui.scss */
+.ui-slider .min {
+  left: 0;
+}
+
+/* line 117, scss/components/_jquery-ui.scss */
+.ui-slider .max {
+  right: 1em;
+}
+
+/* line 120, scss/components/_jquery-ui.scss */
+.ui-slider .ui-slider-handle {
+  position: absolute;
+  z-index: 2;
+  width: 7px;
+  height: 14px;
+  cursor: pointer;
+  -ms-touch-action: none;
+  touch-action: none;
+  background: url("images/slider-handle.png") top center no-repeat;
+}
+/* line 129, scss/components/_jquery-ui.scss */
+.ui-slider .ui-slider-handle:focus {
+  outline: none;
+}
+
+/* line 133, scss/components/_jquery-ui.scss */
+.ui-slider .ui-slider-range {
+  position: absolute;
+  z-index: 1;
+  font-size: .7em;
+  display: block;
+  border: 0;
+  background-position: 0 0;
+}
+
+/* support: IE8 - See #6727 */
+/* line 143, scss/components/_jquery-ui.scss */
+.ui-slider.ui-state-disabled .ui-slider-handle,
+.ui-slider.ui-state-disabled .ui-slider-range {
+  -webkit-filter: inherit;
+          filter: inherit;
+}
+
+/* line 148, scss/components/_jquery-ui.scss */
+.ui-slider-horizontal {
+  min-height: 65px;
+}
+
+/* line 151, scss/components/_jquery-ui.scss */
+.ui-slider-horizontal .ui-slider-handle {
+  top: 32px;
+  margin-left: -3px;
+}
+
+/* line 155, scss/components/_jquery-ui.scss */
+.ui-slider-horizontal .ui-slider-range {
+  top: 0;
+  height: 100%;
+}
+
+/* line 159, scss/components/_jquery-ui.scss */
+.ui-slider-horizontal .ui-slider-range-min {
+  left: 0;
+}
+
+/* line 162, scss/components/_jquery-ui.scss */
+.ui-slider-horizontal .ui-slider-range-max {
+  right: 0;
+}
+
+/* line 166, scss/components/_jquery-ui.scss */
+.ui-slider-vertical {
+  width: .8em;
+  height: 100px;
+}
+
+/* line 170, scss/components/_jquery-ui.scss */
+.ui-slider-vertical .ui-slider-handle {
+  left: -.3em;
+  margin-left: 0;
+  margin-bottom: -.6em;
+}
+
+/* line 175, scss/components/_jquery-ui.scss */
+.ui-slider-vertical .ui-slider-range {
+  left: 0;
+  width: 100%;
+}
+
+/* line 179, scss/components/_jquery-ui.scss */
+.ui-slider-vertical .ui-slider-range-min {
+  bottom: 0;
+}
+
+/* line 182, scss/components/_jquery-ui.scss */
+.ui-slider-vertical .ui-slider-range-max {
+  top: 0;
+}
+
+/* line 2, scss/components/_calculator.scss */
+.calc-block {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+/* line 5, scss/components/_calculator.scss */
+.calc-block .calc-form {
+  background: #e1e1e1;
+  padding: 30px 70px;
+  margin-bottom: 40px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+@media only screen and (max-width: 992px) {
+  /* line 5, scss/components/_calculator.scss */
+  .calc-block .calc-form {
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+  }
+}
+@media only screen and (max-width: 600px) {
+  /* line 5, scss/components/_calculator.scss */
+  .calc-block .calc-form {
+    padding: 30px 25px;
+  }
+  /* line 18, scss/components/_calculator.scss */
+  .calc-block .calc-form .calc-field:last-child {
+    margin-bottom: 0;
+  }
+}
+@media only screen and (max-width: 992px) {
+  /* line 23, scss/components/_calculator.scss */
+  .calc-block .calc-field {
+    margin-bottom: 15px;
+    -webkit-flex-basis: 270px;
+        -ms-flex-preferred-size: 270px;
+            flex-basis: 270px;
+  }
+}
+/* line 28, scss/components/_calculator.scss */
+.calc-block .calc-field .field-label {
+  font-size: 15px;
+  margin-bottom: 5px;
+}
+/* line 32, scss/components/_calculator.scss */
+.calc-block .calc-field .field-value {
+  padding-top: 7px;
+  min-height: 65px;
+}
+@media only screen and (max-width: 600px) {
+  /* line 32, scss/components/_calculator.scss */
+  .calc-block .calc-field .field-value {
+    min-height: 20px;
+  }
+}
+/* line 40, scss/components/_calculator.scss */
+.calc-block .calc-res-item {
+  font-size: 20px;
 }
 
 /* line 2, scss/components/_header.scss */

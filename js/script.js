@@ -24,12 +24,13 @@ $(document).ready(function(){
 		var modal = $(this).attr('data-modal');
 		$('.dark-bg,'+modal).addClass('open');
 	});
-	setTimeout(function(){
+	/*setTimeout(function(){
 		$('.dark-bg,#modal-opros').addClass('open');
 	},20000);
 	setTimeout(function(){
 		$('.dark-bg,#modal-soc').addClass('open');
 	},60000);
+	*/
 	
 	// close
 	$('.btn-close, .dark-bg').click(function(){
@@ -223,8 +224,146 @@ $(document).ready(function(){
 			return false;
 		} 
 	});
+	
+	// ui-slider
+	// http://api.jqueryui.com/slider/
+	$('.calc-ui-slider').each(function(){
+		$(this).slider();
+		if($(this).attr('data-min')){
+			var min = parseInt($(this).attr('data-min'),10);
+			if(!isNaN(min)){
+				$(this).slider("option", "min", min);
+				if($(this).hasClass('money')){
+					$(this).append('<span class="min">'+convert(min,'toMoney')+'</span>');
+				} else {
+					$(this).append('<span class="min">'+min+'</span>');
+				}
+			}
+		}
+		if($(this).attr('data-max')){
+			var max =  parseInt($(this).attr('data-max'),10);
+			if(!isNaN(max)){
+				$(this).slider("option", "max", max);
+				if($(this).hasClass('money')){
+					$(this).append('<span class="max">'+convert(max,'toMoney')+'</span>');
+				} else {
+					$(this).append('<span class="max">'+max+'</span>');
+				}
+			}
+		}
+		if($(this).attr('data-step')){
+			var step = parseInt($(this).attr('data-step'),10);
+			if(!isNaN(step)){
+				$(this).slider("option", "step", step);
+			}
+		}
+		if($(this).attr('data-value')){
+			var value;
+			if(($(this).attr('data-value') == 'max') && max){
+				value = max;
+			} else if(($(this).attr('data-value') == 'min') && min){
+				value = min;
+			} else {
+				value = parseInt($(this).attr('data-value'),10);
+			}
+		} else {
+			if(min) {
+				var value = min;
+			} else {
+				var value = 0;
+			}
+		}
+		$(this).slider("option", "value", value);
+		if($(this).find('.slider-input').length >  0){
+			if($(this).hasClass('money')){
+				$(this).find('.slider-input').val(convert($(this).slider("option", "value"),'toMoney'));
+			} else {
+				$(this).find('.slider-input').val($(this).slider("option", "value"));
+			}
+		}
+		if($(this).attr('data-unit')){
+			var unit = $(this).attr('data-unit');
+			$(this).append('<span class="unit"></span>');
+			getSliderUnit($(this),value,unit);
+		}
+	});
+	// change-slide
+	$('.calc-ui-slider').on("slidechange slide", function(event, ui){
+		if($(this).find('.slider-input').length >  0){
+			//$(this).find('.slider-input').val($(this).slider("option", "value"));
+			if($(this).hasClass('money')){
+				$(this).find('.slider-input').val(convert($(this).slider("option", "value"),'toMoney'));
+				//console.log($(this).find('.slider-input').val());
+			} else {
+				$(this).find('.slider-input').val($(this).slider("option", "value"));
+			}
+			if($(this).attr('data-unit')){
+				getSliderUnit($(this),$(this).slider("option", "value"),$(this).attr('data-unit'));
+			}
+		}
+	});
+	// change input
+	/*$('.calc-ui-slider .slider-input').keyup(function(){
+		//var value = parseInt($(this).val(),10);
+		var value = $(this).val();
+		if(!isNaN(value)){
+			$(this).parent('.calc-ui-slider').slider("option","value", value);
+		} else {
+			$(this).val($(this).parent('.calc-ui-slider').slider("option","value"));
+		}
+		//console.log(value);
+	});*/
+	$('.calc-ui-slider .slider-input').change(function(){
+		var value = convert($(this).val(),'toInt');
+		if(!isNaN(value)){
+			if(value < $(this).parent('.calc-ui-slider').slider("option","min")){
+				value = $(this).parent('.calc-ui-slider').slider("option","min");
+			}
+			if(value > $(this).parent('.calc-ui-slider').slider("option","max")){
+				value = $(this).parent('.calc-ui-slider').slider("option","max");
+			}
+			if(value % $(this).parent('.calc-ui-slider').slider("option","step") != 0){
+				value = Math.floor(value/$(this).parent('.calc-ui-slider').slider("option","step"))*$(this).parent('.calc-ui-slider').slider("option","step");
+			}
+			$(this).parent('.calc-ui-slider').slider("option","value", value);
+		} else {
+			console.error('не надо так');
+			$(this).val(convert($(this).parent('.calc-ui-slider').slider("option","value"),'toMoney'));
+		}
+	});
 		
 });
+
+function getSliderUnit(el,value,unit){
+	switch(unit) {
+		case 'month':
+			if ((value % 10 == 1)&& !((value % 100 > 10) && (value % 100 < 20))) {
+				unit = 'месяц';
+			} else if(((value % 10 > 1) && (value % 10 < 5)) && !((value % 100 > 10) && (value % 100 < 20))) {
+				unit = 'месяца';
+			} else {
+				unit = 'месяцев';
+			}
+			el.children('.unit').html(unit);
+		break;
+		default:
+			el.children('.unit').html(unit);
+		break;
+	}
+	el.children('.unit').css('left', (value.toString().length+1)*8+12);
+}
+function convert(value,view){
+	switch(view){
+		case 'toMoney':
+			value = value.toString().replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 ');
+		break;
+		case 'toInt':
+		default:
+			value = parseInt(value.replace(/\s+/g, ''),10);
+		break;
+	}
+	return value;
+}
 
 function position() {
 	var pos = $(window).scrollTop();

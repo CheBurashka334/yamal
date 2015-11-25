@@ -1,0 +1,43 @@
+// calculator
+.calc-block {
+	margin-top: $gutter*5;
+	margin-bottom: $gutter*5;
+	.calc-form {
+		background: #e1e1e1;
+		padding: $gutter*3 $gutter*7;
+		margin-bottom: $gutter*4;
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: flex-end;
+		@media #{$medium-and-down}{
+			flex-wrap: wrap;
+		}
+		@media #{$small-and-down}{
+			padding: $gutter*3 $gutter*2.5;
+			.calc-field:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+	.calc-field {
+		@media #{$medium-and-down}{
+			margin-bottom: $gutter*1.5;
+			flex-basis: 270px;
+		}
+		.field-label {
+			font-size: 15px;
+			margin-bottom: $gutter/2;
+		}
+		.field-value {
+			padding-top: 7px;
+			min-height: 65px;
+			@media #{$small-and-down}{
+				min-height: 20px;
+			}
+		}
+	}
+	.calc-res-item {
+		font-size: 20px;
+	}
+}

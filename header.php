@@ -10,6 +10,7 @@
 	<link rel="shortcut icon" href="favicon.png" type="image/png"-->
 	<script src="js/jquery-1.11.3.min.js"></script>
 	<script src="js/layoutvisibily.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
 	<script src="js/jquery.jcarousel.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="template_styles.css" />
 	<script src="js/svg-lib.js"></script>

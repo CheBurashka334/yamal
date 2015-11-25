@@ -81,8 +81,65 @@
 				<td>до 12 месяцев</td>
 			</tr>
 		</table>
-		<a href="#" class="btn primary center order-btn second-line">Отправить заявку</a>
-		<div class="content-block third-line">
+		
+		<!-- калькулятор -->
+		<div class="calc-block second-line">
+			<div class="block-title">Калькулятор платежей</div>
+			<div class="calc-form row m-full-width s-full-width">
+				<div class="calc-field col l3 m5 s12">
+					<div class="field-label">Сумма займа</div>
+					<div class="field">
+						<!-- стандартный слайдер без единиц измерения в инпуте, .money - разбивать значение на разряды -->
+						<div class="calc-ui-slider money" data-min="100000" data-max="1000000" data-step="100" data-value="min">
+							<input class="slider-input" type="text"/>
+						</div>
+					</div>
+				</div>
+				<div class="calc-field col l3 m5 s12">
+					<div class="field-label">Срок займа</div>
+					<div class="field">
+						<!-- 	слайдер со склоняемой единицей измерения
+								data-unit="предустановленная ед.изм." 
+								напр.
+								data-unit="month"
+						-->
+						<div class="calc-ui-slider" data-min="1" data-max="36" data-step="1" data-unit="month" data-value="max">
+							<input class="slider-input" type="text"/>
+						</div>
+					</div>
+				</div>
+				<div class="calc-field col l3 m5 s12">
+					<div class="field-label">Отрочка по основному долгу</div>
+					<div class="field">
+						<!-- 	слайдер с произвольной несклоняемой единицей измерения, 
+								data-unit="ед.изм, можно html" 
+								напр.
+								data-unit="%"
+								data-unit="<span class='rouble'>й</span>"
+						-->
+						<div class="calc-ui-slider" data-min="0" data-max="11" data-step="1" data-unit="%" data-value="5">
+							<input class="slider-input" type="text"/>
+						</div>
+					</div>
+				</div>
+				<div class="calc-field col l3 m5 s12">
+					<div class="field-label">Процентная ставка</div>
+					<div class="field-value">
+						8,25%
+					</div>
+				</div>
+			</div>
+			<div class="calc-res">
+				<div class="calc-res-item">Максимальный платеж: <span class="value">19 000</span> <span class="rouble">й</span></div>
+				<div class="calc-res-item">Общая сумма платежей:  <span class="value">119 000</span> <span class="rouble">й</span></div>
+				<div class="calc-res-item">Переплата по займу:  <span class="value">9 000</span> <span class="rouble">й</span></div>
+				<p><a href="#">График платежей</a></p>
+			</div>
+		</div>
+		<!-- /калькулятор -->
+		
+		<a href="#" class="btn primary center order-btn third-line">Отправить заявку</a>
+		<div class="content-block fourth-line">
 			<div class="block-title">Дополнительные документы</div>
 			<div class="row">
 				<div class="col l6 m12 s12">
@@ -93,7 +150,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="content-block">
+		<div class="content-block fourth-line">
 			<div class="block-title">Формы документов для получения микрозайма</div>
 			<div class="row">
 				<div class="col l6 m12 s12">
