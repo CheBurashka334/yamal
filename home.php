@@ -1,4 +1,4 @@
-<?include('header.php');?>
+<?php include('header.php');?>
 <div class="home-page">
 	<div class="home-slider carousel first-line">
 		<div class="carousel-content m-full-width s-full-width">
@@ -183,8 +183,8 @@
 		</div>
 		<div class="tab-content" id="projects-content">
 			<div class="projects-item content-item" data-tab="v1">
-				<div class="carousel l-full-width">
-					<div class="carousel-content">
+				<div class="carousel">
+					<div class="carousel-content no-padding">
 						<div class="carousel-inner">
 							<div class="item project-item">
 								<div class="item-img">
@@ -204,12 +204,12 @@
 								</div>
 								<div class="item-title"><a href="#">ОАО «Ямалтрансстрой»</a></div>
 							</div>
-							<div class="item project-item">
+							<!--div class="item project-item">
 								<div class="item-img">
 									<a href="#"><img src="images/content/proj-4.jpg" /></a>
 								</div>
 								<div class="item-title"><a href="#">ООО «Юрхаровнефтегаз»</a></div>
-							</div>
+							</div-->
 						</div>
 					</div>
 					<div class="carousel-controlls">
@@ -219,8 +219,8 @@
 				</div>
 			</div>
 			<div class="projects-item content-item" data-tab="v2">
-				<div class="carousel l-full-width">
-					<div class="carousel-content">
+				<div class="carousel">
+					<div class="carousel-content no-padding">
 						<div class="carousel-inner">
 							<div class="item project-item">
 								<div class="item-img">
@@ -313,4 +313,4 @@
 		</div>
 	</div>
 </div>
-<?include('footer.php');?>
+<?php include('footer.php');?>

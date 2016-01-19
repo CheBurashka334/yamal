@@ -1874,38 +1874,36 @@ ol:not(.nostyle) li:before {
     top: 150px;
   }
 }
-@media only screen and (min-width: 1200px) and (max-width: 1280px) {
+@media only screen and (min-width: 1280px) {
   /* line 53, scss/components/_carousel.scss */
   .carousel .carousel-controlls {
-    max-width: 1200px;
-    left: calc((100% - 1200px)/2);
+    width: 1280px;
+    left: calc((100% - 1280px)/2);
   }
-}
-@media only screen and (min-width: 1280px) {
-  /* line 98, scss/components/_carousel.scss */
+  /* line 96, scss/components/_carousel.scss */
   .carousel .carousel-controlls .prev,
   .carousel .carousel-controlls .next {
     background: none;
   }
 }
 
-/* line 105, scss/components/_carousel.scss */
+/* line 103, scss/components/_carousel.scss */
 .home-slider {
   margin-top: 0;
 }
-/* line 107, scss/components/_carousel.scss */
+/* line 105, scss/components/_carousel.scss */
 .home-slider .item {
   height: 300px;
   width: 100vw;
   max-width: 1170px;
 }
 @media only screen and (min-width: 601px) {
-  /* line 107, scss/components/_carousel.scss */
+  /* line 105, scss/components/_carousel.scss */
   .home-slider .item {
     height: 630px;
   }
 }
-/* line 115, scss/components/_carousel.scss */
+/* line 113, scss/components/_carousel.scss */
 .home-slider .item-img {
   width: 100%;
   height: 100%;
@@ -1913,7 +1911,7 @@ ol:not(.nostyle) li:before {
   background-position: center;
   background-size: auto 100%;
 }
-/* line 122, scss/components/_carousel.scss */
+/* line 120, scss/components/_carousel.scss */
 .home-slider .item-title {
   margin: 0;
   padding: 0 20px;
@@ -1925,7 +1923,7 @@ ol:not(.nostyle) li:before {
   color: #fff;
 }
 @media only screen and (min-width: 601px) {
-  /* line 122, scss/components/_carousel.scss */
+  /* line 120, scss/components/_carousel.scss */
   .home-slider .item-title {
     top: 190px;
     font-size: 50px;
@@ -1933,7 +1931,7 @@ ol:not(.nostyle) li:before {
   }
 }
 @media only screen and (min-width: 993px) {
-  /* line 122, scss/components/_carousel.scss */
+  /* line 120, scss/components/_carousel.scss */
   .home-slider .item-title {
     margin-left: 6%;
   }
@@ -4651,6 +4649,7 @@ table.zaim tr th:nth-child(2):not(:last-child):after {
 @media only screen and (min-width: 1361px) {
   /* line 256, scss/components/_projects.scss */
   .projects-block .carousel-controlls {
+    width: 100vw;
     max-width: 1360px;
     left: 50%;
     margin-left: -680px;
@@ -6157,14 +6156,9 @@ table.zaim tr th:nth-child(2):not(:last-child):after {
   z-index: 995;
   opacity: 0;
   will-change: transform, opacity;
-  /*начало косяка*/
-  /*-webkit-transform: translate(0, -200%);
+  -webkit-transform: translate(0, -200%);
       -ms-transform: translate(0, -200%);
-          transform: translate(0, -200%);*/
-	-webkit-transform: translate(0, -500%);
-      -ms-transform: translate(0, -500%);
-          transform: translate(0, -500%);
-  /*конец косяка*/
+          transform: translate(0, -200%);
   -webkit-transition: opacity .3s ease .1s;
           transition: opacity .3s ease .1s;
 }
